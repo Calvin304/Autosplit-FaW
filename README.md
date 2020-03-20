@@ -1,3 +1,5 @@
+#Autosplit-FaW
+
 setup:
 
 1. download flashplayer_31_sa_debug.exe aka "Flash Player projector content debugger" from https://www.adobe.com/support/flashplayer/debug_downloads.html for your system archetecture
