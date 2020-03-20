@@ -3,7 +3,7 @@
 ## setup:
 
 1. download flashplayer_31_sa_debug.exe aka "Flash Player projector content debugger" from https://www.adobe.com/support/flashplayer/debug_downloads.html for your system archetecture
-	windows x64 download: http://go.microsoft.com/fwlink/?LinkId=325411
+	windows x64 download: https://fpdownload.macromedia.com/pub/flashplayer/updaters/32/flashplayer_32_sa_debug.exe
 2. place inclueded mm.cfg in %USERPROFILE%\mm.cfg
 3. edit livesplit layout -> add -> control -> scriptable auto splitter, double click on scriptable auto splitter and set the script path to the included Autosplit-FaW.asl
 4. run the-forest-temple.swf in flashplayer_32_sa_debug.exe
