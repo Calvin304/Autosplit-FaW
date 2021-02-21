@@ -1,0 +1,1291 @@
+class
+ refid "Box2D.Collision:b2PairManager"
+ instance QName(PackageNamespace("Box2D.Collision"), "b2PairManager")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision:b2PairManager")
+  iinit
+   refid "Box2D.Collision:b2PairManager/instance/init"
+   body
+    maxstack 4
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     convert_u
+     setlocal1
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+     getproperty         QName(PackageNamespace(""), "b2_tableCapacity")
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     initproperty        QName(PackageNamespace(""), "m_hashTable")
+
+     pushbyte            0
+     convert_u
+     setlocal1
+
+     jump                L28
+
+L17:
+     label
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "m_hashTable")
+     getlocal1
+     getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+     getproperty         QName(PackageNamespace(""), "b2_nullPair")
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+
+     getlocal1
+     increment
+     convert_u
+     setlocal1
+
+L28:
+     getlocal1
+     getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+     getproperty         QName(PackageNamespace(""), "b2_tableCapacity")
+     iflt                L17
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxPairs")
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     initproperty        QName(PackageNamespace(""), "m_pairs")
+
+     pushbyte            0
+     convert_u
+     setlocal1
+
+     jump                L53
+
+L42:
+     label
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "m_pairs")
+     getlocal1
+     findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+     constructprop       QName(PackageNamespace("Box2D.Collision"), "b2Pair"), 0
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+
+     getlocal1
+     increment
+     convert_u
+     setlocal1
+
+L53:
+     getlocal1
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxPairs")
+     iflt                L42
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxPairs")
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     initproperty        QName(PackageNamespace(""), "m_pairBuffer")
+
+     pushbyte            0
+     convert_u
+     setlocal1
+
+     jump                L78
+
+L67:
+     label
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "m_pairBuffer")
+     getlocal1
+     findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2BufferedPair")
+     constructprop       QName(PackageNamespace("Box2D.Collision"), "b2BufferedPair"), 0
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+
+     getlocal1
+     increment
+     convert_u
+     setlocal1
+
+L78:
+     getlocal1
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxPairs")
+     iflt                L67
+
+     pushbyte            0
+     convert_u
+     setlocal1
+
+     jump                L125
+
+L86:
+     label
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "m_pairs")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+     getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+     getproperty         QName(PackageNamespace(""), "b2_nullProxy")
+     setproperty         Multiname("proxyId1", [PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "m_pairs")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+     getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+     getproperty         QName(PackageNamespace(""), "b2_nullProxy")
+     setproperty         Multiname("proxyId2", [PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "m_pairs")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+     pushnull
+     setproperty         Multiname("userData", [PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "m_pairs")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+     pushbyte            0
+     setproperty         Multiname("status", [PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "m_pairs")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+     getlocal1
+     pushbyte            1
+     add
+     setproperty         Multiname("next", [PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+
+     getlocal1
+     increment
+     convert_u
+     setlocal1
+
+L125:
+     getlocal1
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxPairs")
+     iflt                L86
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "m_pairs")
+     findpropstrict      QName(PackageNamespace(""), "int")
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxPairs")
+     decrement
+     callproperty        QName(PackageNamespace(""), "int"), 1
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+     getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+     getproperty         QName(PackageNamespace(""), "b2_nullPair")
+     setproperty         Multiname("next", [PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+
+     getlocal0
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_pairCount")
+
+     getlocal0
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_pairBufferCount")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "Initialize")
+   method
+    refid "Box2D.Collision:b2PairManager/instance/Initialize"
+    param QName(PackageNamespace("Box2D.Collision"), "b2BroadPhase")
+    param QName(PackageNamespace("Box2D.Collision"), "b2PairCallback")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "m_broadPhase")
+
+      getlocal0
+      getlocal2
+      initproperty        QName(PackageNamespace(""), "m_callback")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "AddBufferedPair")
+   method
+    refid "Box2D.Collision:b2PairManager/instance/AddBufferedPair"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2BufferedPair")
+      setlocal3
+
+      getlocal0
+      getlocal1
+      getlocal2
+      callproperty        QName(PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), "AddPair"), 2
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      dup
+      setlocal            4
+
+      callproperty        QName(PackageNamespace(""), "IsBuffered"), 0
+      pushfalse
+      ifne                L43
+
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "SetBuffered"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_pairBuffer")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_pairBufferCount")
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2BufferedPair")
+      setlocal3
+
+      getlocal3
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "proxyId1")
+      setproperty         QName(PackageNamespace(""), "proxyId1")
+
+      getlocal3
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "proxyId2")
+      setproperty         QName(PackageNamespace(""), "proxyId2")
+
+      getlocal0
+      dup
+      setlocal            5
+
+      getproperty         QName(PackageNamespace(""), "m_pairBufferCount")
+      increment_i
+      setlocal            6
+
+      getlocal            5
+      getlocal            6
+      setproperty         QName(PackageNamespace(""), "m_pairBufferCount")
+
+      kill                6
+      kill                5
+L43:
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "ClearRemoved"), 0
+
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2BroadPhase")
+      getproperty         QName(PackageNamespace(""), "s_validate")
+      iffalse             L50
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), "ValidateBuffer"), 0
+
+L50:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "RemoveBufferedPair")
+   method
+    refid "Box2D.Collision:b2PairManager/instance/RemoveBufferedPair"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2BufferedPair")
+      setlocal3
+
+      getlocal0
+      getlocal1
+      getlocal2
+      callproperty        QName(PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), "Find"), 2
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      dup
+      setlocal            4
+
+      pushnull
+      ifne                L15
+
+      returnvoid
+
+L15:
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "IsBuffered"), 0
+      pushfalse
+      ifne                L47
+
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "SetBuffered"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_pairBuffer")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_pairBufferCount")
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2BufferedPair")
+      setlocal3
+
+      getlocal3
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "proxyId1")
+      setproperty         QName(PackageNamespace(""), "proxyId1")
+
+      getlocal3
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "proxyId2")
+      setproperty         QName(PackageNamespace(""), "proxyId2")
+
+      getlocal0
+      dup
+      setlocal            5
+
+      getproperty         QName(PackageNamespace(""), "m_pairBufferCount")
+      increment_i
+      setlocal            6
+
+      getlocal            5
+      getlocal            6
+      setproperty         QName(PackageNamespace(""), "m_pairBufferCount")
+
+      kill                6
+      kill                5
+L47:
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "SetRemoved"), 0
+
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2BroadPhase")
+      getproperty         QName(PackageNamespace(""), "s_validate")
+      iffalse             L54
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), "ValidateBuffer"), 0
+
+L54:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "Commit")
+   method
+    refid "Box2D.Collision:b2PairManager/instance/Commit"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2BufferedPair")
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            7
+
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_broadPhase")
+      getproperty         QName(PackageNamespace(""), "m_proxyPool")
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      pushbyte            0
+      setlocal2
+
+      jump                L103
+
+L26:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_pairBuffer")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2BufferedPair")
+      setlocal1
+
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "proxyId1")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "proxyId2")
+      callproperty        QName(PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), "Find"), 2
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      dup
+      setlocal            5
+
+      callpropvoid        QName(PackageNamespace(""), "ClearBuffered"), 0
+
+      getlocal            4
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "proxyId1")
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            6
+
+      getlocal            4
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "proxyId2")
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            7
+
+      getlocal            5
+      callproperty        QName(PackageNamespace(""), "IsRemoved"), 0
+      iffalse             L87
+
+      getlocal            5
+      callproperty        QName(PackageNamespace(""), "IsFinal"), 0
+      pushtrue
+      ifne                L71
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_callback")
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "userData")
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "userData")
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "userData")
+      callpropvoid        QName(PackageNamespace(""), "PairRemoved"), 3
+
+L71:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_pairBuffer")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2BufferedPair")
+      setlocal1
+
+      getlocal1
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "proxyId1")
+      setproperty         QName(PackageNamespace(""), "proxyId1")
+
+      getlocal1
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "proxyId2")
+      setproperty         QName(PackageNamespace(""), "proxyId2")
+
+      inclocal_i          3
+      jump                L102
+
+L87:
+      getlocal            5
+      callproperty        QName(PackageNamespace(""), "IsFinal"), 0
+      pushfalse
+      ifne                L102
+
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_callback")
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "userData")
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "userData")
+      callproperty        QName(PackageNamespace(""), "PairAdded"), 2
+      setproperty         QName(PackageNamespace(""), "userData")
+
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "SetFinal"), 0
+
+L102:
+      inclocal_i          2
+L103:
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_pairBufferCount")
+      iflt                L26
+
+      pushbyte            0
+      setlocal2
+
+      jump                L124
+
+L110:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_pairBuffer")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2BufferedPair")
+      setlocal1
+
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "proxyId1")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "proxyId2")
+      callpropvoid        QName(PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), "RemovePair"), 2
+
+      inclocal_i          2
+L124:
+      getlocal2
+      getlocal3
+      iflt                L110
+
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "m_pairBufferCount")
+
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2BroadPhase")
+      getproperty         QName(PackageNamespace(""), "s_validate")
+      iffalse             L135
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), "ValidateTable"), 0
+
+L135:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), "AddPair")
+   method
+    refid "Box2D.Collision:b2PairManager/instance/Box2D.Collision:b2PairManager/instance/AddPair"
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+    body
+     maxstack 4
+     localcount 9
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      getlocal1
+      getlocal2
+      ifngt               L17
+
+      getlocal1
+      convert_u
+      setlocal            6
+
+      getlocal2
+      convert_u
+      setlocal1
+
+      getlocal            6
+      convert_u
+      setlocal2
+
+L17:
+      findpropstrict      QName(PackageNamespace(""), "Hash")
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "Hash"), 2
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      getproperty         QName(PackageNamespace(""), "b2_tableMask")
+      bitand
+      convert_u
+      setlocal3
+
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callproperty        QName(PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), "FindHash"), 3
+      dup
+      setlocal            7
+
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      setlocal            4
+
+      getlocal            7
+      kill                7
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      dup
+      setlocal            4
+
+      pushnull
+      ifeq                L44
+
+      getlocal            4
+      returnvalue
+
+L44:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_freePair")
+      convert_u
+      setlocal            5
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_pairs")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      setlocal            4
+
+      getlocal0
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "next")
+      initproperty        QName(PackageNamespace(""), "m_freePair")
+
+      getlocal            4
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "proxyId1")
+
+      getlocal            4
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "proxyId2")
+
+      getlocal            4
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "status")
+
+      getlocal            4
+      pushnull
+      setproperty         QName(PackageNamespace(""), "userData")
+
+      getlocal            4
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_hashTable")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "next")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_hashTable")
+      getlocal3
+      getlocal            5
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+
+      getlocal0
+      dup
+      setlocal            7
+
+      getproperty         QName(PackageNamespace(""), "m_pairCount")
+      increment_i
+      setlocal            8
+
+      getlocal            7
+      getlocal            8
+      setproperty         QName(PackageNamespace(""), "m_pairCount")
+
+      kill                8
+      kill                7
+      getlocal            4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), "RemovePair")
+   method
+    refid "Box2D.Collision:b2PairManager/instance/Box2D.Collision:b2PairManager/instance/RemovePair"
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "uint")
+    body
+     maxstack 4
+     localcount 12
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            7
+
+      pushbyte            0
+      convert_u
+      setlocal            8
+
+      pushundefined
+      coerce_a
+      setlocal            9
+
+      getlocal1
+      getlocal2
+      ifngt               L26
+
+      getlocal1
+      convert_u
+      setlocal            7
+
+      getlocal2
+      convert_u
+      setlocal1
+
+      getlocal            7
+      convert_u
+      setlocal2
+
+L26:
+      findpropstrict      QName(PackageNamespace(""), "Hash")
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "Hash"), 2
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      getproperty         QName(PackageNamespace(""), "b2_tableMask")
+      bitand
+      convert_u
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_hashTable")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      convert_u
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      setlocal            6
+
+      jump                L135
+
+L45:
+      label
+      findpropstrict      QName(PackageNamespace(""), "Equals")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_pairs")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "Equals"), 3
+      iffalse             L125
+
+      getlocal            5
+      convert_u
+      setlocal            8
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_pairs")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      setlocal3
+
+      getlocal            6
+      iffalse             L71
+
+      getlocal            6
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "next")
+      setproperty         QName(PackageNamespace(""), "next")
+
+      jump                L77
+
+L71:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_hashTable")
+      getlocal            4
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "next")
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+
+L77:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_pairs")
+      getlocal            8
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      setlocal3
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "userData")
+      coerce_a
+      setlocal            9
+
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_freePair")
+      setproperty         QName(PackageNamespace(""), "next")
+
+      getlocal3
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      getproperty         QName(PackageNamespace(""), "b2_nullProxy")
+      setproperty         QName(PackageNamespace(""), "proxyId1")
+
+      getlocal3
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      getproperty         QName(PackageNamespace(""), "b2_nullProxy")
+      setproperty         QName(PackageNamespace(""), "proxyId2")
+
+      getlocal3
+      pushnull
+      setproperty         QName(PackageNamespace(""), "userData")
+
+      getlocal3
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "status")
+
+      getlocal0
+      getlocal            8
+      initproperty        QName(PackageNamespace(""), "m_freePair")
+
+      getlocal0
+      dup
+      setlocal            10
+
+      getproperty         QName(PackageNamespace(""), "m_pairCount")
+      decrement_i
+      setlocal            11
+
+      getlocal            10
+      getlocal            11
+      setproperty         QName(PackageNamespace(""), "m_pairCount")
+
+      kill                11
+      kill                10
+      getlocal            9
+      returnvalue
+
+      ; 0x10
+      ; 0x14
+      ; 0x00
+      ; 0x00
+L125:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_pairs")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      dup
+      setlocal            6
+
+      getproperty         QName(PackageNamespace(""), "next")
+      convert_u
+      setlocal            5
+
+L135:
+      getlocal            5
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      getproperty         QName(PackageNamespace(""), "b2_nullPair")
+      ifne                L45
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), "Find")
+   method
+    refid "Box2D.Collision:b2PairManager/instance/Box2D.Collision:b2PairManager/instance/Find"
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      getlocal1
+      getlocal2
+      ifngt               L17
+
+      getlocal1
+      convert_u
+      setlocal            4
+
+      getlocal2
+      convert_u
+      setlocal1
+
+      getlocal            4
+      convert_u
+      setlocal2
+
+L17:
+      findpropstrict      QName(PackageNamespace(""), "Hash")
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "Hash"), 2
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      getproperty         QName(PackageNamespace(""), "b2_tableMask")
+      bitand
+      convert_u
+      setlocal3
+
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callproperty        QName(PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), "FindHash"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), "FindHash")
+   method
+    refid "Box2D.Collision:b2PairManager/instance/Box2D.Collision:b2PairManager/instance/FindHash"
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_hashTable")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      convert_u
+      setlocal            5
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_pairs")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      setlocal            4
+
+      jump                L29
+
+L18:
+      label
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "next")
+      convert_u
+      setlocal            5
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_pairs")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2PairManager"), StaticProtectedNs("Box2D.Collision:b2PairManager"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      setlocal            4
+
+L29:
+      getlocal            5
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      getproperty         QName(PackageNamespace(""), "b2_nullPair")
+      equals
+      not
+      dup
+      iffalse             L44
+
+      pop
+      findpropstrict      QName(PackageNamespace(""), "Equals")
+      getlocal            4
+      getlocal1
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "Equals"), 3
+      pushfalse
+      equals
+L44:
+      iftrue              L18
+
+      getlocal            5
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      getproperty         QName(PackageNamespace(""), "b2_nullPair")
+      ifne                L51
+
+      pushnull
+      returnvalue
+
+L51:
+      getlocal            4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), "ValidateBuffer")
+   method
+    refid "Box2D.Collision:b2PairManager/instance/Box2D.Collision:b2PairManager/instance/ValidateBuffer"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Box2D.Collision:b2PairManager/instance#0"), "ValidateTable")
+   method
+    refid "Box2D.Collision:b2PairManager/instance/Box2D.Collision:b2PairManager/instance/ValidateTable"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_broadPhase") type QName(PackageNamespace("Box2D.Collision"), "b2BroadPhase") end
+  trait slot QName(PackageNamespace(""), "m_callback") type QName(PackageNamespace("Box2D.Collision"), "b2PairCallback") end
+  trait slot QName(PackageNamespace(""), "m_pairs") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "m_freePair") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "m_pairCount") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "m_pairBuffer") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "m_pairBufferCount") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "m_hashTable") type QName(PackageNamespace(""), "Array") end
+ end ; instance
+ cinit
+  refid "Box2D.Collision:b2PairManager/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "Hash") flag FINAL dispid 3
+  method
+   refid "Box2D.Collision:b2PairManager/class/Hash"
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "uint")
+   returns QName(PackageNamespace(""), "uint")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal2
+     pushbyte            16
+     lshift
+     pushdouble          4294901760
+     bitand
+     getlocal1
+     bitor
+     convert_u
+     setlocal3
+
+     getlocal3
+     bitnot
+     getlocal3
+     pushbyte            15
+     lshift
+     pushdouble          4294934528
+     bitand
+     add
+     convert_u
+     setlocal3
+
+     getlocal3
+     getlocal3
+     pushbyte            12
+     rshift
+     pushint             1048575
+     bitand
+     bitxor
+     convert_u
+     setlocal3
+
+     getlocal3
+     getlocal3
+     pushbyte            2
+     lshift
+     pushdouble          4294967292
+     bitand
+     add
+     convert_u
+     setlocal3
+
+     getlocal3
+     getlocal3
+     pushbyte            4
+     rshift
+     pushint             268435455
+     bitand
+     bitxor
+     convert_u
+     setlocal3
+
+     getlocal3
+     pushshort           2057
+     multiply
+     convert_u
+     setlocal3
+
+     getlocal3
+     getlocal3
+     pushbyte            16
+     rshift
+     pushint             65535
+     bitand
+     bitxor
+     convert_u
+     setlocal3
+
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "Equals") flag FINAL dispid 4
+  method
+   refid "Box2D.Collision:b2PairManager/class/Equals"
+   param QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "uint")
+   returns QName(PackageNamespace(""), "Boolean")
+   body
+    maxstack 2
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "proxyId1")
+     getlocal2
+     equals
+     dup
+     iffalse             L13
+
+     pop
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "proxyId2")
+     getlocal3
+     equals
+L13:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "EqualsPair") flag FINAL dispid 5
+  method
+   refid "Box2D.Collision:b2PairManager/class/EqualsPair"
+   param QName(PackageNamespace("Box2D.Collision"), "b2BufferedPair")
+   param QName(PackageNamespace("Box2D.Collision"), "b2BufferedPair")
+   returns QName(PackageNamespace(""), "Boolean")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "proxyId1")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "proxyId1")
+     equals
+     dup
+     iffalse             L15
+
+     pop
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "proxyId2")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "proxyId2")
+     equals
+L15:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,153 @@
+class
+ refid "Box2D.Collision:b2ManifoldPoint"
+ instance QName(PackageNamespace("Box2D.Collision"), "b2ManifoldPoint")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision:b2ManifoldPoint")
+  iinit
+   refid "Box2D.Collision:b2ManifoldPoint/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PackageNamespace(""), "localPoint1")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "localPoint1")
+
+     findproperty        QName(PackageNamespace(""), "localPoint2")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "localPoint2")
+
+     findproperty        QName(PackageNamespace(""), "id")
+     findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2ContactID")
+     constructprop       QName(PackageNamespace("Box2D.Collision"), "b2ContactID"), 0
+     initproperty        QName(PackageNamespace(""), "id")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "Set")
+   method
+    refid "Box2D.Collision:b2ManifoldPoint/instance/Set"
+    param QName(PackageNamespace("Box2D.Collision"), "b2ManifoldPoint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "localPoint1")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "localPoint1")
+      callpropvoid        QName(PackageNamespace(""), "SetV"), 1
+
+      getlex              QName(PackageNamespace(""), "localPoint2")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "localPoint2")
+      callpropvoid        QName(PackageNamespace(""), "SetV"), 1
+
+      findproperty        QName(PackageNamespace(""), "separation")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "separation")
+      initproperty        QName(PackageNamespace(""), "separation")
+
+      findproperty        QName(PackageNamespace(""), "normalImpulse")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "normalImpulse")
+      initproperty        QName(PackageNamespace(""), "normalImpulse")
+
+      findproperty        QName(PackageNamespace(""), "tangentImpulse")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "tangentImpulse")
+      initproperty        QName(PackageNamespace(""), "tangentImpulse")
+
+      getlex              QName(PackageNamespace(""), "id")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "id")
+      getproperty         QName(PackageNamespace(""), "key")
+      setproperty         QName(PackageNamespace(""), "key")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "separation") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "localPoint2") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "normalImpulse") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "tangentImpulse") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "localPoint1") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait method QName(PackageNamespace(""), "Reset")
+   method
+    refid "Box2D.Collision:b2ManifoldPoint/instance/Reset"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "localPoint1")
+      callpropvoid        QName(PackageNamespace(""), "SetZero"), 0
+
+      getlex              QName(PackageNamespace(""), "localPoint2")
+      callpropvoid        QName(PackageNamespace(""), "SetZero"), 0
+
+      findproperty        QName(PackageNamespace(""), "separation")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "separation")
+
+      findproperty        QName(PackageNamespace(""), "normalImpulse")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "normalImpulse")
+
+      findproperty        QName(PackageNamespace(""), "tangentImpulse")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "tangentImpulse")
+
+      getlex              QName(PackageNamespace(""), "id")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "key")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "id") type QName(PackageNamespace("Box2D.Collision"), "b2ContactID") end
+ end ; instance
+ cinit
+  refid "Box2D.Collision:b2ManifoldPoint/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,71 @@
+class
+ refid "Watch"
+ instance QName(PackageNamespace(""), "Watch")
+  extends QName(PackageNamespace("flash.display"), "MovieClip")
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Watch")
+  iinit
+   refid "Watch/instance/init"
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "addFrameScript")
+     pushbyte            0
+     getlex              QName(PackageInternalNs(""), "frame1")
+     callpropvoid        QName(PackageNamespace(""), "addFrameScript"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageInternalNs(""), "frame1")
+   method
+    refid "Watch/instance/frame1"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "mins") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "startTime") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "secs") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "s") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "ms") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "cents") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "currentTime") type QName(PackageNamespace(""), "Number") end
+ end ; instance
+ cinit
+  refid "Watch/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

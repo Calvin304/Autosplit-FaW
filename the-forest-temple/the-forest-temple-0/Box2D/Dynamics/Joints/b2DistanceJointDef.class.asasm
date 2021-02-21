@@ -1,0 +1,158 @@
+class
+ refid "Box2D.Dynamics.Joints:b2DistanceJointDef"
+ instance QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2DistanceJointDef")
+  extends QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointDef")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics.Joints:b2DistanceJointDef")
+  iinit
+   refid "Box2D.Dynamics.Joints:b2DistanceJointDef/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PackageNamespace(""), "localAnchor1")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "localAnchor1")
+
+     findproperty        QName(PackageNamespace(""), "localAnchor2")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "localAnchor2")
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "type")
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+     getproperty         QName(PackageNamespace(""), "e_distanceJoint")
+     initproperty        QName(PackageNamespace(""), "type")
+
+     findproperty        QName(PackageNamespace(""), "length")
+     pushbyte            1
+     initproperty        QName(PackageNamespace(""), "length")
+
+     findproperty        QName(PackageNamespace(""), "frequencyHz")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "frequencyHz")
+
+     findproperty        QName(PackageNamespace(""), "dampingRatio")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "dampingRatio")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "length") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "dampingRatio") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "frequencyHz") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "localAnchor2") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait method QName(PackageNamespace(""), "Initialize")
+   method
+    refid "Box2D.Dynamics.Joints:b2DistanceJointDef/instance/Initialize"
+    param QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+    param QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      findproperty        QName(PackageNamespace(""), "body1")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "body1")
+
+      findproperty        QName(PackageNamespace(""), "body2")
+      getlocal2
+      initproperty        QName(PackageNamespace(""), "body2")
+
+      getlex              QName(PackageNamespace(""), "localAnchor1")
+      getlex              QName(PackageNamespace(""), "body1")
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "GetLocalPoint"), 1
+      callpropvoid        QName(PackageNamespace(""), "SetV"), 1
+
+      getlex              QName(PackageNamespace(""), "localAnchor2")
+      getlex              QName(PackageNamespace(""), "body2")
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "GetLocalPoint"), 1
+      callpropvoid        QName(PackageNamespace(""), "SetV"), 1
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            5
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            6
+
+      findproperty        QName(PackageNamespace(""), "length")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            5
+      getlocal            5
+      multiply
+      getlocal            6
+      getlocal            6
+      multiply
+      add
+      callproperty        QName(PackageNamespace(""), "sqrt"), 1
+      initproperty        QName(PackageNamespace(""), "length")
+
+      findproperty        QName(PackageNamespace(""), "frequencyHz")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "frequencyHz")
+
+      findproperty        QName(PackageNamespace(""), "dampingRatio")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "dampingRatio")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "localAnchor1") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics.Joints:b2DistanceJointDef/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,153 @@
+class
+ refid "Box2D.Dynamics.Joints:b2RevoluteJointDef"
+ instance QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2RevoluteJointDef")
+  extends QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointDef")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics.Joints:b2RevoluteJointDef")
+  iinit
+   refid "Box2D.Dynamics.Joints:b2RevoluteJointDef/instance/init"
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PackageNamespace(""), "localAnchor1")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "localAnchor1")
+
+     findproperty        QName(PackageNamespace(""), "localAnchor2")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "localAnchor2")
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "type")
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+     getproperty         QName(PackageNamespace(""), "e_revoluteJoint")
+     initproperty        QName(PackageNamespace(""), "type")
+
+     getlex              QName(PackageNamespace(""), "localAnchor1")
+     pushbyte            0
+     dup
+     callpropvoid        QName(PackageNamespace(""), "Set"), 2
+
+     getlex              QName(PackageNamespace(""), "localAnchor2")
+     pushbyte            0
+     dup
+     callpropvoid        QName(PackageNamespace(""), "Set"), 2
+
+     findproperty        QName(PackageNamespace(""), "referenceAngle")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "referenceAngle")
+
+     findproperty        QName(PackageNamespace(""), "lowerAngle")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "lowerAngle")
+
+     findproperty        QName(PackageNamespace(""), "upperAngle")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "upperAngle")
+
+     findproperty        QName(PackageNamespace(""), "maxMotorTorque")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "maxMotorTorque")
+
+     findproperty        QName(PackageNamespace(""), "motorSpeed")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "motorSpeed")
+
+     findproperty        QName(PackageNamespace(""), "enableLimit")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "enableLimit")
+
+     findproperty        QName(PackageNamespace(""), "enableMotor")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "enableMotor")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "referenceAngle") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "upperAngle") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "lowerAngle") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "motorSpeed") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "maxMotorTorque") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "Initialize")
+   method
+    refid "Box2D.Dynamics.Joints:b2RevoluteJointDef/instance/Initialize"
+    param QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+    param QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "body1")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "body1")
+
+      findproperty        QName(PackageNamespace(""), "body2")
+      getlocal2
+      initproperty        QName(PackageNamespace(""), "body2")
+
+      findproperty        QName(PackageNamespace(""), "localAnchor1")
+      getlex              QName(PackageNamespace(""), "body1")
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "GetLocalPoint"), 1
+      initproperty        QName(PackageNamespace(""), "localAnchor1")
+
+      findproperty        QName(PackageNamespace(""), "localAnchor2")
+      getlex              QName(PackageNamespace(""), "body2")
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "GetLocalPoint"), 1
+      initproperty        QName(PackageNamespace(""), "localAnchor2")
+
+      findproperty        QName(PackageNamespace(""), "referenceAngle")
+      getlex              QName(PackageNamespace(""), "body2")
+      callproperty        QName(PackageNamespace(""), "GetAngle"), 0
+      getlex              QName(PackageNamespace(""), "body1")
+      callproperty        QName(PackageNamespace(""), "GetAngle"), 0
+      subtract
+      initproperty        QName(PackageNamespace(""), "referenceAngle")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "localAnchor1") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "localAnchor2") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "enableLimit") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "enableMotor") type QName(PackageNamespace(""), "Boolean") end
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics.Joints:b2RevoluteJointDef/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

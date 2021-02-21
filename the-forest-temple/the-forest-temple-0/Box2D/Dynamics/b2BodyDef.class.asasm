@@ -1,0 +1,111 @@
+class
+ refid "Box2D.Dynamics:b2BodyDef"
+ instance QName(PackageNamespace("Box2D.Dynamics"), "b2BodyDef")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics:b2BodyDef")
+  iinit
+   refid "Box2D.Dynamics:b2BodyDef/instance/init"
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PackageNamespace(""), "massData")
+     findpropstrict      QName(PackageNamespace("Box2D.Collision.Shapes"), "b2MassData")
+     constructprop       QName(PackageNamespace("Box2D.Collision.Shapes"), "b2MassData"), 0
+     initproperty        QName(PackageNamespace(""), "massData")
+
+     findproperty        QName(PackageNamespace(""), "position")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "position")
+
+     getlocal0
+     constructsuper      0
+
+     getlex              QName(PackageNamespace(""), "massData")
+     getproperty         QName(PackageNamespace(""), "center")
+     callpropvoid        QName(PackageNamespace(""), "SetZero"), 0
+
+     getlex              QName(PackageNamespace(""), "massData")
+     pushbyte            0
+     setproperty         QName(PackageNamespace(""), "mass")
+
+     getlex              QName(PackageNamespace(""), "massData")
+     pushbyte            0
+     setproperty         QName(PackageNamespace(""), "I")
+
+     findproperty        QName(PackageNamespace(""), "userData")
+     pushnull
+     initproperty        QName(PackageNamespace(""), "userData")
+
+     getlex              QName(PackageNamespace(""), "position")
+     pushbyte            0
+     dup
+     callpropvoid        QName(PackageNamespace(""), "Set"), 2
+
+     findproperty        QName(PackageNamespace(""), "angle")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "angle")
+
+     findproperty        QName(PackageNamespace(""), "linearDamping")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "linearDamping")
+
+     findproperty        QName(PackageNamespace(""), "angularDamping")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "angularDamping")
+
+     findproperty        QName(PackageNamespace(""), "allowSleep")
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "allowSleep")
+
+     findproperty        QName(PackageNamespace(""), "isSleeping")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "isSleeping")
+
+     findproperty        QName(PackageNamespace(""), "fixedRotation")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "fixedRotation")
+
+     findproperty        QName(PackageNamespace(""), "isBullet")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "isBullet")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "isSleeping") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "position") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "isBullet") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "allowSleep") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "userData") end
+  trait slot QName(PackageNamespace(""), "angularDamping") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "fixedRotation") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "angle") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "linearDamping") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "massData") type QName(PackageNamespace("Box2D.Collision.Shapes"), "b2MassData") end
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics:b2BodyDef/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

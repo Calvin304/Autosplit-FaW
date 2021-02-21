@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "Box2D.Dynamics:b2BoundaryListener/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("b2BoundaryListener", [PackageNamespace("Box2D.Dynamics")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "Box2D.Dynamics:b2BoundaryListener"
+    popscope
+    initproperty        QName(PackageNamespace("Box2D.Dynamics"), "b2BoundaryListener")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("Box2D.Dynamics"), "b2BoundaryListener")
+  #include "b2BoundaryListener.class.asasm"
+ end ; trait
+end ; script

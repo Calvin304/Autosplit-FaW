@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "Box2D.Dynamics:b2DebugDraw/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("b2DebugDraw", [PackageNamespace("Box2D.Dynamics")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "Box2D.Dynamics:b2DebugDraw"
+    popscope
+    initproperty        QName(PackageNamespace("Box2D.Dynamics"), "b2DebugDraw")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("Box2D.Dynamics"), "b2DebugDraw")
+  #include "b2DebugDraw.class.asasm"
+ end ; trait
+end ; script

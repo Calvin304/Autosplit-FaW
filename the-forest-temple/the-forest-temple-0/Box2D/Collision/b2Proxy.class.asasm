@@ -1,0 +1,141 @@
+class
+ refid "Box2D.Collision:b2Proxy"
+ instance QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision:b2Proxy")
+  iinit
+   refid "Box2D.Collision:b2Proxy/instance/init"
+   body
+    maxstack 4
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PackageNamespace(""), "lowerBounds")
+     findpropstrict      QName(PackageNamespace(""), "uint")
+     pushbyte            0
+     callproperty        QName(PackageNamespace(""), "uint"), 1
+     findpropstrict      QName(PackageNamespace(""), "uint")
+     pushbyte            0
+     callproperty        QName(PackageNamespace(""), "uint"), 1
+     newarray            2
+     initproperty        QName(PackageNamespace(""), "lowerBounds")
+
+     findproperty        QName(PackageNamespace(""), "upperBounds")
+     findpropstrict      QName(PackageNamespace(""), "uint")
+     pushbyte            0
+     callproperty        QName(PackageNamespace(""), "uint"), 1
+     findpropstrict      QName(PackageNamespace(""), "uint")
+     pushbyte            0
+     callproperty        QName(PackageNamespace(""), "uint"), 1
+     newarray            2
+     initproperty        QName(PackageNamespace(""), "upperBounds")
+
+     findproperty        QName(PackageNamespace(""), "userData")
+     pushnull
+     initproperty        QName(PackageNamespace(""), "userData")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "overlapCount") type QName(PackageNamespace(""), "uint") end
+  trait method QName(PackageNamespace(""), "GetNext")
+   method
+    refid "Box2D.Collision:b2Proxy/instance/GetNext"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "lowerBounds")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2Proxy/instance"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2Proxy"), StaticProtectedNs("Box2D.Collision:b2Proxy"), StaticProtectedNs("Object")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "IsValid")
+   method
+    refid "Box2D.Collision:b2Proxy/instance/IsValid"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "overlapCount")
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2BroadPhase")
+      getproperty         QName(PackageNamespace(""), "b2_invalid")
+      equals
+      not
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SetNext")
+   method
+    refid "Box2D.Collision:b2Proxy/instance/SetNext"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "lowerBounds")
+      pushbyte            0
+      getlocal1
+      pushint             65535
+      bitand
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2Proxy/instance"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2Proxy"), StaticProtectedNs("Box2D.Collision:b2Proxy"), StaticProtectedNs("Object")])
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "lowerBounds") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "upperBounds") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "userData") value Null() end
+  trait slot QName(PackageNamespace(""), "timeStamp") type QName(PackageNamespace(""), "uint") end
+ end ; instance
+ cinit
+  refid "Box2D.Collision:b2Proxy/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

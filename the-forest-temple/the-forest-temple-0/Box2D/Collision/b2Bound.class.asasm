@@ -1,0 +1,161 @@
+class
+ refid "Box2D.Collision:b2Bound"
+ instance QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision:b2Bound")
+  iinit
+   refid "Box2D.Collision:b2Bound/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "proxyId") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "stabbingCount") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "value") type QName(PackageNamespace(""), "uint") end
+  trait method QName(PackageNamespace(""), "Swap")
+   method
+    refid "Box2D.Collision:b2Bound/instance/Swap"
+    param QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      pushbyte            0
+      convert_u
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "value")
+      convert_u
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "proxyId")
+      convert_u
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "stabbingCount")
+      convert_u
+      setlocal            4
+
+      findproperty        QName(PackageNamespace(""), "value")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "value")
+      initproperty        QName(PackageNamespace(""), "value")
+
+      findproperty        QName(PackageNamespace(""), "proxyId")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      initproperty        QName(PackageNamespace(""), "proxyId")
+
+      findproperty        QName(PackageNamespace(""), "stabbingCount")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      initproperty        QName(PackageNamespace(""), "stabbingCount")
+
+      getlocal1
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "value")
+
+      getlocal1
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "proxyId")
+
+      getlocal1
+      getlocal            4
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "IsLower")
+   method
+    refid "Box2D.Collision:b2Bound/instance/IsLower"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "value")
+      pushbyte            1
+      bitand
+      pushbyte            0
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "IsUpper")
+   method
+    refid "Box2D.Collision:b2Bound/instance/IsUpper"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "value")
+      pushbyte            1
+      bitand
+      pushbyte            1
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Box2D.Collision:b2Bound/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

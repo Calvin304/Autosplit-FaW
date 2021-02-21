@@ -1,0 +1,133 @@
+class
+ refid "Box2D.Collision:b2AABB"
+ instance QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision:b2AABB")
+  iinit
+   refid "Box2D.Collision:b2AABB/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PackageNamespace(""), "lowerBound")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "lowerBound")
+
+     findproperty        QName(PackageNamespace(""), "upperBound")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "upperBound")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "IsValid")
+   method
+    refid "Box2D.Collision:b2AABB/instance/IsValid"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal1
+
+      pushnan
+      setlocal2
+
+      pushfalse
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal2
+
+      getlocal1
+      pushbyte            0
+      greaterequals
+      dup
+      iffalse             L31
+
+      pop
+      getlocal2
+      pushbyte            0
+      greaterequals
+L31:
+      convert_b
+      setlocal3
+
+      getlocal3
+      convert_b
+      dup
+      iffalse             L41
+
+      pop
+      getlex              QName(PackageNamespace(""), "lowerBound")
+      callproperty        QName(PackageNamespace(""), "IsValid"), 0
+      convert_b
+L41:
+      dup
+      iffalse             L47
+
+      pop
+      getlex              QName(PackageNamespace(""), "upperBound")
+      callproperty        QName(PackageNamespace(""), "IsValid"), 0
+      convert_b
+L47:
+      convert_b
+      setlocal3
+
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "upperBound") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "lowerBound") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+ end ; instance
+ cinit
+  refid "Box2D.Collision:b2AABB/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

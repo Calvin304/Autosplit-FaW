@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "Box2D.Dynamics:b2Body/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("b2Body", [PackageNamespace("Box2D.Dynamics")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "Box2D.Dynamics:b2Body"
+    popscope
+    initproperty        QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+  #include "b2Body.class.asasm"
+ end ; trait
+end ; script

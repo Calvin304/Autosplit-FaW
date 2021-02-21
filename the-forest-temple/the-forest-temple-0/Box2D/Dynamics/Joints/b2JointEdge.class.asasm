@@ -1,0 +1,46 @@
+class
+ refid "Box2D.Dynamics.Joints:b2JointEdge"
+ instance QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointEdge")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics.Joints:b2JointEdge")
+  iinit
+   refid "Box2D.Dynamics.Joints:b2JointEdge/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "joint") type QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint") end
+  trait slot QName(PackageNamespace(""), "other") type QName(PackageNamespace("Box2D.Dynamics"), "b2Body") end
+  trait slot QName(PackageNamespace(""), "next") type QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointEdge") end
+  trait slot QName(PackageNamespace(""), "prev") type QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointEdge") end
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics.Joints:b2JointEdge/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

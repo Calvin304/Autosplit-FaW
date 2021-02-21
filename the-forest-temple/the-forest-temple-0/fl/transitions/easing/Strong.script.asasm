@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "fl.transitions.easing:Strong/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Strong", [PackageNamespace("fl.transitions.easing")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "fl.transitions.easing:Strong"
+    popscope
+    initproperty        QName(PackageNamespace("fl.transitions.easing"), "Strong")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("fl.transitions.easing"), "Strong")
+  #include "Strong.class.asasm"
+ end ; trait
+end ; script

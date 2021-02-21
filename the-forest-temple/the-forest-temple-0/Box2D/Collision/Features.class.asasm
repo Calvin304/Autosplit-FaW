@@ -1,0 +1,265 @@
+class
+ refid "Box2D.Collision:Features"
+ instance QName(PackageNamespace("Box2D.Collision"), "Features")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision:Features")
+  iinit
+   refid "Box2D.Collision:Features/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait getter QName(PackageNamespace(""), "referenceEdge")
+   method
+    refid "Box2D.Collision:Features/instance/referenceEdge/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_referenceEdge")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_referenceEdge") type QName(PackageNamespace(""), "int") end
+  trait setter QName(PackageNamespace(""), "incidentVertex")
+   method
+    refid "Box2D.Collision:Features/instance/incidentVertex/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "_incidentVertex")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "_incidentVertex")
+
+      getlex              QName(PackageNamespace(""), "_m_id")
+      getlex              QName(PackageNamespace(""), "_m_id")
+      getproperty         QName(PackageNamespace(""), "_key")
+      pushdouble          4278255615
+      bitand
+      getlex              QName(PackageNamespace(""), "_incidentVertex")
+      pushbyte            16
+      lshift
+      pushint             16711680
+      bitand
+      bitor
+      setproperty         QName(PackageNamespace(""), "_key")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "flip")
+   method
+    refid "Box2D.Collision:Features/instance/flip/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_flip")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_incidentEdge") type QName(PackageNamespace(""), "int") end
+  trait getter QName(PackageNamespace(""), "incidentEdge")
+   method
+    refid "Box2D.Collision:Features/instance/incidentEdge/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_incidentEdge")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "referenceEdge")
+   method
+    refid "Box2D.Collision:Features/instance/referenceEdge/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "_referenceEdge")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "_referenceEdge")
+
+      getlex              QName(PackageNamespace(""), "_m_id")
+      getlex              QName(PackageNamespace(""), "_m_id")
+      getproperty         QName(PackageNamespace(""), "_key")
+      pushdouble          4294967040
+      bitand
+      getlex              QName(PackageNamespace(""), "_referenceEdge")
+      pushshort           255
+      bitand
+      bitor
+      setproperty         QName(PackageNamespace(""), "_key")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_flip") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "_incidentVertex") type QName(PackageNamespace(""), "int") end
+  trait setter QName(PackageNamespace(""), "flip")
+   method
+    refid "Box2D.Collision:Features/instance/flip/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "_flip")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "_flip")
+
+      getlex              QName(PackageNamespace(""), "_m_id")
+      getlex              QName(PackageNamespace(""), "_m_id")
+      getproperty         QName(PackageNamespace(""), "_key")
+      pushint             16777215
+      bitand
+      getlex              QName(PackageNamespace(""), "_flip")
+      pushbyte            24
+      lshift
+      pushdouble          4278190080
+      bitand
+      bitor
+      setproperty         QName(PackageNamespace(""), "_key")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_m_id") type QName(PackageNamespace("Box2D.Collision"), "b2ContactID") end
+  trait getter QName(PackageNamespace(""), "incidentVertex")
+   method
+    refid "Box2D.Collision:Features/instance/incidentVertex/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_incidentVertex")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "incidentEdge")
+   method
+    refid "Box2D.Collision:Features/instance/incidentEdge/setter"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "_incidentEdge")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "_incidentEdge")
+
+      getlex              QName(PackageNamespace(""), "_m_id")
+      getlex              QName(PackageNamespace(""), "_m_id")
+      getproperty         QName(PackageNamespace(""), "_key")
+      pushdouble          4294902015
+      bitand
+      getlex              QName(PackageNamespace(""), "_incidentEdge")
+      pushbyte            8
+      lshift
+      pushint             65280
+      bitand
+      bitor
+      setproperty         QName(PackageNamespace(""), "_key")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Box2D.Collision:Features/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

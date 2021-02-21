@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "Box2D.Dynamics.Joints:b2JointEdge/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("b2JointEdge", [PackageNamespace("Box2D.Dynamics.Joints")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "Box2D.Dynamics.Joints:b2JointEdge"
+    popscope
+    initproperty        QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointEdge")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointEdge")
+  #include "b2JointEdge.class.asasm"
+ end ; trait
+end ; script

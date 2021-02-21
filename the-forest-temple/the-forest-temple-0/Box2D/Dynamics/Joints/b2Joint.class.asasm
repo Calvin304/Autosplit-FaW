@@ -1,0 +1,623 @@
+class
+ refid "Box2D.Dynamics.Joints:b2Joint"
+ instance QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics.Joints:b2Joint")
+  iinit
+   refid "Box2D.Dynamics.Joints:b2Joint/instance/init"
+   param QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointDef")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PackageNamespace(""), "m_node1")
+     findpropstrict      QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointEdge")
+     constructprop       QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointEdge"), 0
+     initproperty        QName(PackageNamespace(""), "m_node1")
+
+     findproperty        QName(PackageNamespace(""), "m_node2")
+     findpropstrict      QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointEdge")
+     constructprop       QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointEdge"), 0
+     initproperty        QName(PackageNamespace(""), "m_node2")
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "m_type")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "type")
+     initproperty        QName(PackageNamespace(""), "m_type")
+
+     findproperty        QName(PackageNamespace(""), "m_prev")
+     pushnull
+     initproperty        QName(PackageNamespace(""), "m_prev")
+
+     findproperty        QName(PackageNamespace(""), "m_next")
+     pushnull
+     initproperty        QName(PackageNamespace(""), "m_next")
+
+     findproperty        QName(PackageNamespace(""), "m_body1")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "body1")
+     initproperty        QName(PackageNamespace(""), "m_body1")
+
+     findproperty        QName(PackageNamespace(""), "m_body2")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "body2")
+     initproperty        QName(PackageNamespace(""), "m_body2")
+
+     findproperty        QName(PackageNamespace(""), "m_collideConnected")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "collideConnected")
+     initproperty        QName(PackageNamespace(""), "m_collideConnected")
+
+     findproperty        QName(PackageNamespace(""), "m_islandFlag")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "m_islandFlag")
+
+     findproperty        QName(PackageNamespace(""), "m_userData")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "userData")
+     initproperty        QName(PackageNamespace(""), "m_userData")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "m_islandFlag") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "m_body1") type QName(PackageNamespace("Box2D.Dynamics"), "b2Body") end
+  trait slot QName(PackageNamespace(""), "m_prev") type QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint") end
+  trait method QName(PackageNamespace(""), "GetAnchor1")
+   method
+    refid "Box2D.Dynamics.Joints:b2Joint/instance/GetAnchor1"
+    returns QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetAnchor2")
+   method
+    refid "Box2D.Dynamics.Joints:b2Joint/instance/GetAnchor2"
+    returns QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "InitVelocityConstraints")
+   method
+    refid "Box2D.Dynamics.Joints:b2Joint/instance/InitVelocityConstraints"
+    param QName(PackageNamespace("Box2D.Dynamics"), "b2TimeStep")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_next") type QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint") end
+  trait method QName(PackageNamespace(""), "GetType")
+   method
+    refid "Box2D.Dynamics.Joints:b2Joint/instance/GetType"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_type")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetBody2")
+   method
+    refid "Box2D.Dynamics.Joints:b2Joint/instance/GetBody2"
+    returns QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_body2")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_type") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "m_collideConnected") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PackageNamespace(""), "GetNext")
+   method
+    refid "Box2D.Dynamics.Joints:b2Joint/instance/GetNext"
+    returns QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_next")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_node1") type QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointEdge") end
+  trait slot QName(PackageNamespace(""), "m_node2") type QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointEdge") end
+  trait method QName(PackageNamespace(""), "GetReactionTorque")
+   method
+    refid "Box2D.Dynamics.Joints:b2Joint/instance/GetReactionTorque"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetUserData")
+   method
+    refid "Box2D.Dynamics.Joints:b2Joint/instance/GetUserData"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_userData")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetReactionForce")
+   method
+    refid "Box2D.Dynamics.Joints:b2Joint/instance/GetReactionForce"
+    returns QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SolvePositionConstraints")
+   method
+    refid "Box2D.Dynamics.Joints:b2Joint/instance/SolvePositionConstraints"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_inv_dt") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "m_userData") end
+  trait method QName(PackageNamespace(""), "SetUserData")
+   method
+    refid "Box2D.Dynamics.Joints:b2Joint/instance/SetUserData"
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "m_userData")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "m_userData")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetBody1")
+   method
+    refid "Box2D.Dynamics.Joints:b2Joint/instance/GetBody1"
+    returns QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_body1")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SolveVelocityConstraints")
+   method
+    refid "Box2D.Dynamics.Joints:b2Joint/instance/SolveVelocityConstraints"
+    param QName(PackageNamespace("Box2D.Dynamics"), "b2TimeStep")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "InitPositionConstraints")
+   method
+    refid "Box2D.Dynamics.Joints:b2Joint/instance/InitPositionConstraints"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_body2") type QName(PackageNamespace("Box2D.Dynamics"), "b2Body") end
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics.Joints:b2Joint/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "e_unknownJoint")
+    pushbyte            0
+    initproperty        QName(PackageNamespace(""), "e_unknownJoint")
+
+    findproperty        QName(PackageNamespace(""), "e_revoluteJoint")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "e_revoluteJoint")
+
+    findproperty        QName(PackageNamespace(""), "e_prismaticJoint")
+    pushbyte            2
+    initproperty        QName(PackageNamespace(""), "e_prismaticJoint")
+
+    findproperty        QName(PackageNamespace(""), "e_distanceJoint")
+    pushbyte            3
+    initproperty        QName(PackageNamespace(""), "e_distanceJoint")
+
+    findproperty        QName(PackageNamespace(""), "e_pulleyJoint")
+    pushbyte            4
+    initproperty        QName(PackageNamespace(""), "e_pulleyJoint")
+
+    findproperty        QName(PackageNamespace(""), "e_mouseJoint")
+    pushbyte            5
+    initproperty        QName(PackageNamespace(""), "e_mouseJoint")
+
+    findproperty        QName(PackageNamespace(""), "e_gearJoint")
+    pushbyte            6
+    initproperty        QName(PackageNamespace(""), "e_gearJoint")
+
+    findproperty        QName(PackageNamespace(""), "e_inactiveLimit")
+    pushbyte            0
+    initproperty        QName(PackageNamespace(""), "e_inactiveLimit")
+
+    findproperty        QName(PackageNamespace(""), "e_atLowerLimit")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "e_atLowerLimit")
+
+    findproperty        QName(PackageNamespace(""), "e_atUpperLimit")
+    pushbyte            2
+    initproperty        QName(PackageNamespace(""), "e_atUpperLimit")
+
+    findproperty        QName(PackageNamespace(""), "e_equalLimits")
+    pushbyte            3
+    initproperty        QName(PackageNamespace(""), "e_equalLimits")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "e_unknownJoint") slotid 1 type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait const QName(PackageNamespace(""), "e_inactiveLimit") slotid 8 type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait const QName(PackageNamespace(""), "e_atUpperLimit") slotid 10 type QName(PackageNamespace(""), "int") value Integer(2) end
+ trait const QName(PackageNamespace(""), "e_atLowerLimit") slotid 9 type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait const QName(PackageNamespace(""), "e_gearJoint") slotid 7 type QName(PackageNamespace(""), "int") value Integer(6) end
+ trait const QName(PackageNamespace(""), "e_revoluteJoint") slotid 2 type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait const QName(PackageNamespace(""), "e_equalLimits") slotid 11 type QName(PackageNamespace(""), "int") value Integer(3) end
+ trait const QName(PackageNamespace(""), "e_distanceJoint") slotid 4 type QName(PackageNamespace(""), "int") value Integer(3) end
+ trait const QName(PackageNamespace(""), "e_pulleyJoint") slotid 5 type QName(PackageNamespace(""), "int") value Integer(4) end
+ trait method QName(PackageNamespace(""), "Destroy") flag FINAL dispid 4
+  method
+   refid "Box2D.Dynamics.Joints:b2Joint/class/Destroy"
+   param QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+   param null
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 1
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "Create") flag FINAL dispid 3
+  method
+   refid "Box2D.Dynamics.Joints:b2Joint/class/Create"
+   param QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointDef")
+   param null
+   returns QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+   body
+    maxstack 3
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+     setlocal3
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+     setlocal3
+
+     jump                L69
+
+L9:
+     label
+     findpropstrict      QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2DistanceJoint")
+     getlocal1
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2DistanceJointDef")
+     astypelate
+     constructprop       QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2DistanceJoint"), 1
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+     setlocal3
+
+     jump                L112
+
+L18:
+     label
+     findpropstrict      QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2MouseJoint")
+     getlocal1
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2MouseJointDef")
+     astypelate
+     constructprop       QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2MouseJoint"), 1
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+     setlocal3
+
+     jump                L112
+
+L27:
+     label
+     findpropstrict      QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2PrismaticJoint")
+     getlocal1
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2PrismaticJointDef")
+     astypelate
+     constructprop       QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2PrismaticJoint"), 1
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+     setlocal3
+
+     jump                L112
+
+L36:
+     label
+     findpropstrict      QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2RevoluteJoint")
+     getlocal1
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2RevoluteJointDef")
+     astypelate
+     constructprop       QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2RevoluteJoint"), 1
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+     setlocal3
+
+     jump                L112
+
+L45:
+     label
+     findpropstrict      QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2PulleyJoint")
+     getlocal1
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2PulleyJointDef")
+     astypelate
+     constructprop       QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2PulleyJoint"), 1
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+     setlocal3
+
+     jump                L112
+
+L54:
+     label
+     findpropstrict      QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2GearJoint")
+     getlocal1
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2GearJointDef")
+     astypelate
+     constructprop       QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2GearJoint"), 1
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+     setlocal3
+
+     jump                L112
+
+L63:
+     label
+     jump                L112
+
+     ; 0x10
+     ; 0x88
+     ; 0x00
+     ; 0x00
+L69:
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "type")
+     setlocal            4
+
+     getlex              QName(PackageNamespace(""), "e_distanceJoint")
+     getlocal            4
+     ifstrictne          L77
+
+     pushbyte            0
+     jump                L110
+
+L77:
+     getlex              QName(PackageNamespace(""), "e_mouseJoint")
+     getlocal            4
+     ifstrictne          L82
+
+     pushbyte            1
+     jump                L110
+
+L82:
+     getlex              QName(PackageNamespace(""), "e_prismaticJoint")
+     getlocal            4
+     ifstrictne          L87
+
+     pushbyte            2
+     jump                L110
+
+L87:
+     getlex              QName(PackageNamespace(""), "e_revoluteJoint")
+     getlocal            4
+     ifstrictne          L92
+
+     pushbyte            3
+     jump                L110
+
+L92:
+     getlex              QName(PackageNamespace(""), "e_pulleyJoint")
+     getlocal            4
+     ifstrictne          L97
+
+     pushbyte            4
+     jump                L110
+
+L97:
+     getlex              QName(PackageNamespace(""), "e_gearJoint")
+     getlocal            4
+     ifstrictne          L102
+
+     pushbyte            5
+     jump                L110
+
+L102:
+     jump                L109
+
+     ; 0x24
+     ; 0x06
+     ; 0x10
+     ; 0x02
+     ; 0x00
+     ; 0x00
+L109:
+     pushbyte            6
+L110:
+     kill                4
+     lookupswitch        L63, [L9, L18, L27, L36, L45, L54, L63]
+
+L112:
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait const QName(PackageNamespace(""), "e_prismaticJoint") slotid 3 type QName(PackageNamespace(""), "int") value Integer(2) end
+ trait const QName(PackageNamespace(""), "e_mouseJoint") slotid 6 type QName(PackageNamespace(""), "int") value Integer(5) end
+end ; class

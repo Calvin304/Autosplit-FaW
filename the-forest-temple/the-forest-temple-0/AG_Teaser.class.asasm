@@ -1,0 +1,297 @@
+class
+ refid "AG_Teaser"
+ instance QName(PackageNamespace(""), "AG_Teaser")
+  extends QName(PackageNamespace("flash.display"), "MovieClip")
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace(":AG_Teaser")
+  iinit
+   name ":AG_Teaser/AG_Teaser"
+   refid "AG_Teaser/instance/init"
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      Multiname("addFrameScript", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")])
+     pushbyte            0
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "frame1")
+     callpropvoid        Multiname("addFrameScript", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")]), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "smash") type QName(PackageNamespace(""), "Smash") end
+  trait slot QName(PackageNamespace(""), "timer") type QName(PackageNamespace("flash.utils"), "Timer") end
+  trait slot QName(PackageNamespace(""), "p_in") end
+  trait slot QName(PackageNamespace(""), "AGpresented_mc") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageNamespace(""), "AGskip_btn") type QName(PackageNamespace("flash.display"), "SimpleButton") end
+  trait slot QName(PackageNamespace(""), "AGclick_btn") type QName(PackageNamespace("flash.display"), "SimpleButton") end
+  trait slot QName(PackageNamespace(""), "AGlogo_mc") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait method QName(PackageInternalNs(""), "frame1")
+   method
+    name "AG_Teaser:frame1"
+    refid "AG_Teaser/instance/frame1"
+    body
+     maxstack 9
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "stop")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace(""), "Smash")
+      constructprop       QName(PackageNamespace(""), "Smash"), 0
+      setproperty         QName(PackageNamespace(""), "smash")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "AGpresented_mc")
+      pushbyte            0
+      coerce_a
+      setproperty         Multiname("alpha", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")])
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "AGclick_btn")
+      pushfalse
+      coerce_a
+      setproperty         Multiname("visible", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")])
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "AGlogo_mc")
+      pushbyte            -70
+      coerce_a
+      setproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")])
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
+      pushshort           4000
+      constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 1
+      setproperty         QName(PackageNamespace(""), "timer")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "timer")
+      getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
+      getproperty         Multiname("TIMER", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "done")
+      callpropvoid        Multiname("addEventListener", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")]), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "timer")
+      callpropvoid        Multiname("start", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")]), 0
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("fl.transitions"), "Tween")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "AGpresented_mc")
+      pushstring          "alpha"
+      getlex              QName(PackageNamespace("fl.transitions.easing"), "Strong")
+      getproperty         QName(PackageNamespace(""), "easeIn")
+      pushbyte            0
+      pushbyte            100
+      pushbyte            12
+      pushfalse
+      constructprop       QName(PackageNamespace("fl.transitions"), "Tween"), 7
+      coerce_a
+      setproperty         QName(PackageNamespace(""), "p_in")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "p_in")
+      getlex              QName(PackageNamespace("fl.transitions"), "TweenEvent")
+      getproperty         QName(PackageNamespace(""), "MOTION_FINISH")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "logo")
+      callpropvoid        Multiname("addEventListener", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")]), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "AGskip_btn")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         Multiname("CLICK", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "done")
+      callpropvoid        Multiname("addEventListener", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")]), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "AGclick_btn")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         Multiname("CLICK", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "loadAG")
+      callpropvoid        Multiname("addEventListener", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")]), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "done")
+   method
+    name "AG_Teaser:done"
+    refid "AG_Teaser/instance/done"
+    param QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      debug               1, "param1", 0, 0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "timer")
+      callpropvoid        Multiname("stop", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")]), 0
+
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")])
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      callpropvoid        QName(PackageNamespace(""), "TeaserOut"), 0
+
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")])
+      getlocal0
+      callpropvoid        Multiname("removeChild", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")]), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "loadAG")
+   method
+    name "AG_Teaser:loadAG"
+    refid "AG_Teaser/instance/loadAG"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      debug               1, "param1", 0, 0
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "logo")
+   method
+    name "AG_Teaser:logo"
+    refid "AG_Teaser/instance/logo"
+    param QName(PackageNamespace("fl.transitions"), "TweenEvent")
+    flag NEED_ACTIVATION
+    body
+     maxstack 9
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      debug               1, "param1", 0, 0
+      debug               1, "+$activation", 1, 0
+      debug               1, "logo_in", 2, 70
+      debug               1, "crunch", 3, 71
+      debug               1, "event", 4, 72
+      newactivation
+      dup
+      setlocal2
+
+      pushscope
+
+      getscopeobject      1
+      getlocal1
+      coerce              QName(PackageNamespace("fl.transitions"), "TweenEvent")
+      setslot             1
+
+      getscopeobject      1
+      pushundefined
+      coerce_a
+      setslot             2
+
+      getscopeobject      1
+      pushnull
+      coerce              QName(PackageNamespace(""), "Function")
+      setslot             3
+
+      getscopeobject      1
+      getscopeobject      1
+      getslot             1
+      coerce              QName(PackageNamespace("fl.transitions"), "TweenEvent")
+      setslot             4
+
+      getscopeobject      1
+      newfunction         "AG_Teaser/instance/logo/inline_method"
+      coerce              QName(PackageNamespace(""), "Function")
+      setslot             3
+
+      getscopeobject      1
+      findpropstrict      QName(PackageNamespace("fl.transitions"), "Tween")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "AGlogo_mc")
+      pushstring          "y"
+      getlex              QName(PackageNamespace("fl.transitions.easing"), "Strong")
+      getproperty         QName(PackageNamespace(""), "easeIn")
+      pushbyte            -75
+      pushbyte            85
+      pushbyte            12
+      pushfalse
+      constructprop       QName(PackageNamespace("fl.transitions"), "Tween"), 7
+      coerce_a
+      setslot             2
+
+      getscopeobject      1
+      getslot             2
+      getlex              QName(PackageNamespace("fl.transitions"), "TweenEvent")
+      getproperty         QName(PackageNamespace(""), "MOTION_FINISH")
+      getscopeobject      1
+      getslot             3
+      callpropvoid        Multiname("addEventListener", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")]), 2
+
+      returnvoid
+     end ; code
+     trait slot QName(PackageInternalNs(""), "param1") slotid 1 type QName(PackageNamespace("fl.transitions"), "TweenEvent") end
+     trait slot QName(PackageInternalNs(""), "logo_in") slotid 2 end
+     trait slot QName(PackageInternalNs(""), "crunch") slotid 3 type QName(PackageNamespace(""), "Function") end
+     trait slot QName(PackageInternalNs(""), "event") slotid 4 type QName(PackageNamespace("fl.transitions"), "TweenEvent") end
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "AG_Teaser/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

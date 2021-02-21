@@ -1,0 +1,3558 @@
+class
+ refid "Box2D.Dynamics.Joints:b2PrismaticJoint"
+ instance QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2PrismaticJoint")
+  extends QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics.Joints:b2PrismaticJoint")
+  iinit
+   refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/init"
+   param QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2PrismaticJointDef")
+   body
+    maxstack 2
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+     setlocal2
+
+     pushnan
+     setlocal3
+
+     pushnan
+     setlocal            4
+
+     findproperty        QName(PackageNamespace(""), "m_localAnchor1")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "m_localAnchor1")
+
+     findproperty        QName(PackageNamespace(""), "m_localAnchor2")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "m_localAnchor2")
+
+     findproperty        QName(PackageNamespace(""), "m_localXAxis1")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "m_localXAxis1")
+
+     findproperty        QName(PackageNamespace(""), "m_localYAxis1")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "m_localYAxis1")
+
+     findproperty        QName(PackageNamespace(""), "m_linearJacobian")
+     findpropstrict      QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Jacobian")
+     constructprop       QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Jacobian"), 0
+     initproperty        QName(PackageNamespace(""), "m_linearJacobian")
+
+     findproperty        QName(PackageNamespace(""), "m_motorJacobian")
+     findpropstrict      QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Jacobian")
+     constructprop       QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Jacobian"), 0
+     initproperty        QName(PackageNamespace(""), "m_motorJacobian")
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlex              QName(PackageNamespace(""), "m_localAnchor1")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "localAnchor1")
+     callpropvoid        QName(PackageNamespace(""), "SetV"), 1
+
+     getlex              QName(PackageNamespace(""), "m_localAnchor2")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "localAnchor2")
+     callpropvoid        QName(PackageNamespace(""), "SetV"), 1
+
+     getlex              QName(PackageNamespace(""), "m_localXAxis1")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "localAxis1")
+     callpropvoid        QName(PackageNamespace(""), "SetV"), 1
+
+     getlex              QName(PackageNamespace(""), "m_localYAxis1")
+     getlex              QName(PackageNamespace(""), "m_localXAxis1")
+     getproperty         QName(PackageNamespace(""), "y")
+     negate
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PackageNamespace(""), "m_localYAxis1")
+     getlex              QName(PackageNamespace(""), "m_localXAxis1")
+     getproperty         QName(PackageNamespace(""), "x")
+     setproperty         QName(PackageNamespace(""), "y")
+
+     findproperty        QName(PackageNamespace(""), "m_refAngle")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "referenceAngle")
+     initproperty        QName(PackageNamespace(""), "m_refAngle")
+
+     getlex              QName(PackageNamespace(""), "m_linearJacobian")
+     callpropvoid        QName(PackageNamespace(""), "SetZero"), 0
+
+     findproperty        QName(PackageNamespace(""), "m_linearMass")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_linearMass")
+
+     findproperty        QName(PackageNamespace(""), "m_force")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_force")
+
+     findproperty        QName(PackageNamespace(""), "m_angularMass")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_angularMass")
+
+     findproperty        QName(PackageNamespace(""), "m_torque")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_torque")
+
+     getlex              QName(PackageNamespace(""), "m_motorJacobian")
+     callpropvoid        QName(PackageNamespace(""), "SetZero"), 0
+
+     findproperty        QName(PackageNamespace(""), "m_motorMass")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_motorMass")
+
+     findproperty        QName(PackageNamespace(""), "m_motorForce")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_motorForce")
+
+     findproperty        QName(PackageNamespace(""), "m_limitForce")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_limitForce")
+
+     findproperty        QName(PackageNamespace(""), "m_limitPositionImpulse")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_limitPositionImpulse")
+
+     findproperty        QName(PackageNamespace(""), "m_lowerTranslation")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "lowerTranslation")
+     initproperty        QName(PackageNamespace(""), "m_lowerTranslation")
+
+     findproperty        QName(PackageNamespace(""), "m_upperTranslation")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "upperTranslation")
+     initproperty        QName(PackageNamespace(""), "m_upperTranslation")
+
+     findproperty        QName(PackageNamespace(""), "m_maxMotorForce")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "maxMotorForce")
+     initproperty        QName(PackageNamespace(""), "m_maxMotorForce")
+
+     findproperty        QName(PackageNamespace(""), "m_motorSpeed")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "motorSpeed")
+     initproperty        QName(PackageNamespace(""), "m_motorSpeed")
+
+     findproperty        QName(PackageNamespace(""), "m_enableLimit")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "enableLimit")
+     initproperty        QName(PackageNamespace(""), "m_enableLimit")
+
+     findproperty        QName(PackageNamespace(""), "m_enableMotor")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "enableMotor")
+     initproperty        QName(PackageNamespace(""), "m_enableMotor")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "m_limitForce") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "GetAnchor1") flag OVERRIDE
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/GetAnchor1"
+    returns QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_body1")
+      getlex              QName(PackageNamespace(""), "m_localAnchor1")
+      callproperty        QName(PackageNamespace(""), "GetWorldPoint"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetAnchor2") flag OVERRIDE
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/GetAnchor2"
+    returns QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_body2")
+      getlex              QName(PackageNamespace(""), "m_localAnchor2")
+      callproperty        QName(PackageNamespace(""), "GetWorldPoint"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "EnableMotor")
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/EnableMotor"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "m_enableMotor")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "m_enableMotor")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetUpperLimit")
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/GetUpperLimit"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_upperTranslation")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetLowerLimit")
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/GetLowerLimit"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_lowerTranslation")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_refAngle") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "m_lowerTranslation") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "m_localXAxis1") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "m_torque") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "GetJointTranslation")
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/GetJointTranslation"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 3
+     localcount 10
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal1
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            8
+
+      pushnan
+      setlocal            9
+
+      getlex              QName(PackageNamespace(""), "m_body1")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "m_body2")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal2
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "m_localAnchor1")
+      callproperty        QName(PackageNamespace(""), "GetWorldPoint"), 1
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            4
+
+      getlocal2
+      getlex              QName(PackageNamespace(""), "m_localAnchor2")
+      callproperty        QName(PackageNamespace(""), "GetWorldPoint"), 1
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      dup
+      setlocal            5
+
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            6
+
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            7
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "m_localXAxis1")
+      callproperty        QName(PackageNamespace(""), "GetWorldVector"), 1
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      dup
+      setlocal            8
+
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            6
+      multiply
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            7
+      multiply
+      add
+      convert_d
+      dup
+      setlocal            9
+
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_enableLimit") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PackageNamespace(""), "SetLimits")
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/SetLimits"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "m_lowerTranslation")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "m_lowerTranslation")
+
+      findproperty        QName(PackageNamespace(""), "m_upperTranslation")
+      getlocal2
+      initproperty        QName(PackageNamespace(""), "m_upperTranslation")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetMotorSpeed")
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/GetMotorSpeed"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_motorSpeed")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_motorForce") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "GetReactionForce") flag OVERRIDE
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/GetReactionForce"
+    returns QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal1
+
+      pushnan
+      setlocal2
+
+      pushnan
+      setlocal3
+
+      pushnan
+      setlocal            4
+
+      pushnan
+      setlocal            5
+
+      getlex              QName(PackageNamespace(""), "m_body1")
+      getproperty         QName(PackageNamespace(""), "m_xf")
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "m_localXAxis1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "m_localXAxis1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      multiply
+      convert_d
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "m_localXAxis1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "m_localXAxis1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      multiply
+      convert_d
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "m_force")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "m_localYAxis1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "m_localYAxis1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      multiply
+      convert_d
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "m_force")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "m_localYAxis1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "m_localYAxis1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      multiply
+      convert_d
+      setlocal            5
+
+      findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      getlocal2
+      multiply
+      getlex              QName(PackageNamespace(""), "m_force")
+      getlocal            4
+      multiply
+      add
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      getlocal3
+      multiply
+      getlex              QName(PackageNamespace(""), "m_force")
+      getlocal            5
+      multiply
+      add
+      constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SolvePositionConstraints") flag OVERRIDE
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/SolvePositionConstraints"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 33
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal1
+
+      pushnan
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            4
+
+      pushnan
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushnan
+      setlocal            8
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            9
+
+      pushnan
+      setlocal            10
+
+      pushnan
+      setlocal            11
+
+      pushnan
+      setlocal            12
+
+      pushnan
+      setlocal            13
+
+      pushnan
+      setlocal            14
+
+      pushnan
+      setlocal            15
+
+      pushnan
+      setlocal            16
+
+      pushnan
+      setlocal            17
+
+      pushnan
+      setlocal            18
+
+      pushnan
+      setlocal            19
+
+      pushnan
+      setlocal            20
+
+      pushnan
+      setlocal            21
+
+      pushnan
+      setlocal            22
+
+      pushnan
+      setlocal            23
+
+      pushnan
+      setlocal            24
+
+      pushnan
+      setlocal            25
+
+      pushnan
+      setlocal            26
+
+      pushnan
+      setlocal            27
+
+      pushnan
+      setlocal            28
+
+      pushnan
+      setlocal            29
+
+      pushnan
+      setlocal            30
+
+      pushnan
+      setlocal            31
+
+      pushnan
+      setlocal            32
+
+      getlex              QName(PackageNamespace(""), "m_body1")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "m_body2")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            4
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_invMass")
+      convert_d
+      setlocal            5
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_invMass")
+      convert_d
+      setlocal            6
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_invI")
+      convert_d
+      setlocal            7
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_invI")
+      convert_d
+      setlocal            8
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_xf")
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            9
+
+      getlex              QName(PackageNamespace(""), "m_localAnchor1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            11
+
+      getlex              QName(PackageNamespace(""), "m_localAnchor1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            12
+
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            11
+      multiply
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            12
+      multiply
+      add
+      convert_d
+      setlocal            10
+
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            11
+      multiply
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            12
+      multiply
+      add
+      convert_d
+      setlocal            12
+
+      getlocal            10
+      convert_d
+      setlocal            11
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_xf")
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            9
+
+      getlex              QName(PackageNamespace(""), "m_localAnchor2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            13
+
+      getlex              QName(PackageNamespace(""), "m_localAnchor2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            14
+
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            13
+      multiply
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            14
+      multiply
+      add
+      convert_d
+      setlocal            10
+
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            13
+      multiply
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            14
+      multiply
+      add
+      convert_d
+      setlocal            14
+
+      getlocal            10
+      convert_d
+      setlocal            13
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            11
+      add
+      convert_d
+      setlocal            15
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            12
+      add
+      convert_d
+      setlocal            16
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            13
+      add
+      convert_d
+      setlocal            17
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            14
+      add
+      convert_d
+      setlocal            18
+
+      getlocal            17
+      getlocal            15
+      subtract
+      convert_d
+      setlocal            19
+
+      getlocal            18
+      getlocal            16
+      subtract
+      convert_d
+      setlocal            20
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_xf")
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      dup
+      setlocal            9
+
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "m_localYAxis1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "m_localYAxis1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            21
+
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "m_localYAxis1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "m_localYAxis1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            22
+
+      getlocal            21
+      getlocal            19
+      multiply
+      getlocal            22
+      getlocal            20
+      multiply
+      add
+      convert_d
+      setlocal            23
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            23
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_maxLinearCorrection")
+      negate
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_maxLinearCorrection")
+      callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+      convert_d
+      setlocal            23
+
+      getlex              QName(PackageNamespace(""), "m_linearMass")
+      negate
+      getlocal            23
+      multiply
+      convert_d
+      setlocal            24
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            5
+      getlocal            24
+      multiply
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            5
+      getlocal            24
+      multiply
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "a")
+      getlocal            7
+      getlocal            24
+      multiply
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "angular1")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "a")
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            6
+      getlocal            24
+      multiply
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            6
+      getlocal            24
+      multiply
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "a")
+      getlocal            8
+      getlocal            24
+      multiply
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "angular2")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "a")
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            23
+      callproperty        QName(PackageNamespace(""), "b2Abs"), 1
+      convert_d
+      setlocal            25
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "a")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "a")
+      subtract
+      getlex              QName(PackageNamespace(""), "m_refAngle")
+      subtract
+      convert_d
+      setlocal            26
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            26
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_maxAngularCorrection")
+      negate
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_maxAngularCorrection")
+      callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+      convert_d
+      setlocal            26
+
+      getlex              QName(PackageNamespace(""), "m_angularMass")
+      negate
+      getlocal            26
+      multiply
+      convert_d
+      setlocal            27
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "a")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_invI")
+      getlocal            27
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "a")
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "a")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_invI")
+      getlocal            27
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "a")
+
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "SynchronizeTransform"), 0
+
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "SynchronizeTransform"), 0
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            26
+      callproperty        QName(PackageNamespace(""), "b2Abs"), 1
+      convert_d
+      setlocal            28
+
+      getlex              QName(PackageNamespace(""), "m_enableLimit")
+      convert_b
+      dup
+      iffalse             L459
+
+      pop
+      getlex              QName(PackageNamespace(""), "m_limitState")
+      getlex              QName(PackageNamespace(""), "e_inactiveLimit")
+      equals
+      not
+L459:
+      iffalse             L872
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_xf")
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            9
+
+      getlex              QName(PackageNamespace(""), "m_localAnchor1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            11
+
+      getlex              QName(PackageNamespace(""), "m_localAnchor1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            12
+
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            11
+      multiply
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            12
+      multiply
+      add
+      convert_d
+      setlocal            10
+
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            11
+      multiply
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            12
+      multiply
+      add
+      convert_d
+      setlocal            12
+
+      getlocal            10
+      convert_d
+      setlocal            11
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_xf")
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            9
+
+      getlex              QName(PackageNamespace(""), "m_localAnchor2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            13
+
+      getlex              QName(PackageNamespace(""), "m_localAnchor2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            14
+
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            13
+      multiply
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            14
+      multiply
+      add
+      convert_d
+      setlocal            10
+
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            13
+      multiply
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            14
+      multiply
+      add
+      convert_d
+      setlocal            14
+
+      getlocal            10
+      convert_d
+      setlocal            13
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            11
+      add
+      convert_d
+      setlocal            15
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            12
+      add
+      convert_d
+      setlocal            16
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            13
+      add
+      convert_d
+      setlocal            17
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            14
+      add
+      convert_d
+      setlocal            18
+
+      getlocal            17
+      getlocal            15
+      subtract
+      convert_d
+      setlocal            19
+
+      getlocal            18
+      getlocal            16
+      subtract
+      convert_d
+      setlocal            20
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_xf")
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      dup
+      setlocal            9
+
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "m_localXAxis1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "m_localXAxis1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            29
+
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "m_localXAxis1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "m_localXAxis1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            30
+
+      getlocal            29
+      getlocal            19
+      multiply
+      getlocal            30
+      getlocal            20
+      multiply
+      add
+      convert_d
+      setlocal            31
+
+      pushbyte            0
+      convert_d
+      setlocal            32
+
+      getlex              QName(PackageNamespace(""), "m_limitState")
+      getlex              QName(PackageNamespace(""), "e_equalLimits")
+      ifne                L681
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            31
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_maxLinearCorrection")
+      negate
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_maxLinearCorrection")
+      callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+      convert_d
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "m_motorMass")
+      negate
+      getlocal1
+      multiply
+      convert_d
+      setlocal            32
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            25
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            26
+      callproperty        QName(PackageNamespace(""), "b2Abs"), 1
+      callproperty        QName(PackageNamespace(""), "b2Max"), 2
+      convert_d
+      setlocal            25
+
+      jump                L778
+
+L681:
+      getlex              QName(PackageNamespace(""), "m_limitState")
+      getlex              QName(PackageNamespace(""), "e_atLowerLimit")
+      ifne                L731
+
+      getlocal            31
+      getlex              QName(PackageNamespace(""), "m_lowerTranslation")
+      subtract
+      convert_d
+      setlocal1
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            25
+      getlocal1
+      negate
+      callproperty        QName(PackageNamespace(""), "b2Max"), 2
+      convert_d
+      setlocal            25
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal1
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_linearSlop")
+      add
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_maxLinearCorrection")
+      negate
+      pushbyte            0
+      callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+      convert_d
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "m_motorMass")
+      negate
+      getlocal1
+      multiply
+      convert_d
+      setlocal            32
+
+      getlex              QName(PackageNamespace(""), "m_limitPositionImpulse")
+      convert_d
+      setlocal2
+
+      findproperty        QName(PackageNamespace(""), "m_limitPositionImpulse")
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlex              QName(PackageNamespace(""), "m_limitPositionImpulse")
+      getlocal            32
+      add
+      pushbyte            0
+      callproperty        QName(PackageNamespace(""), "b2Max"), 2
+      initproperty        QName(PackageNamespace(""), "m_limitPositionImpulse")
+
+      getlex              QName(PackageNamespace(""), "m_limitPositionImpulse")
+      getlocal2
+      subtract
+      convert_d
+      setlocal            32
+
+      jump                L778
+
+L731:
+      getlex              QName(PackageNamespace(""), "m_limitState")
+      getlex              QName(PackageNamespace(""), "e_atUpperLimit")
+      ifne                L778
+
+      getlocal            31
+      getlex              QName(PackageNamespace(""), "m_upperTranslation")
+      subtract
+      convert_d
+      setlocal1
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            25
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "b2Max"), 2
+      convert_d
+      setlocal            25
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal1
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_linearSlop")
+      subtract
+      pushbyte            0
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_maxLinearCorrection")
+      callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+      convert_d
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "m_motorMass")
+      negate
+      getlocal1
+      multiply
+      convert_d
+      setlocal            32
+
+      getlex              QName(PackageNamespace(""), "m_limitPositionImpulse")
+      convert_d
+      setlocal2
+
+      findproperty        QName(PackageNamespace(""), "m_limitPositionImpulse")
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlex              QName(PackageNamespace(""), "m_limitPositionImpulse")
+      getlocal            32
+      add
+      pushbyte            0
+      callproperty        QName(PackageNamespace(""), "b2Min"), 2
+      initproperty        QName(PackageNamespace(""), "m_limitPositionImpulse")
+
+      getlex              QName(PackageNamespace(""), "m_limitPositionImpulse")
+      getlocal2
+      subtract
+      convert_d
+      setlocal            32
+
+L778:
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            5
+      getlocal            32
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            5
+      getlocal            32
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "a")
+      getlocal            7
+      getlocal            32
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "angular1")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "a")
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            6
+      getlocal            32
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            6
+      getlocal            32
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "a")
+      getlocal            8
+      getlocal            32
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "angular2")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "a")
+
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "SynchronizeTransform"), 0
+
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "SynchronizeTransform"), 0
+
+L872:
+      getlocal            25
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_linearSlop")
+      lessequals
+      dup
+      iffalse             L883
+
+      pop
+      getlocal            28
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_angularSlop")
+      lessequals
+L883:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_force") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "GetJointSpeed")
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/GetJointSpeed"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 6
+     localcount 21
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal1
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal3
+
+      pushnan
+      setlocal            4
+
+      pushnan
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushnan
+      setlocal            8
+
+      pushnan
+      setlocal            9
+
+      pushnan
+      setlocal            10
+
+      pushnan
+      setlocal            11
+
+      pushnan
+      setlocal            12
+
+      pushnan
+      setlocal            13
+
+      pushnan
+      setlocal            14
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            15
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            16
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            17
+
+      pushnan
+      setlocal            18
+
+      pushnan
+      setlocal            19
+
+      pushnan
+      setlocal            20
+
+      getlex              QName(PackageNamespace(""), "m_body1")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "m_body2")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "m_xf")
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "m_localAnchor1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "m_localAnchor1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            5
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      multiply
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            5
+      multiply
+      add
+      convert_d
+      setlocal            6
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      multiply
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            5
+      multiply
+      add
+      convert_d
+      setlocal            5
+
+      getlocal            6
+      convert_d
+      setlocal            4
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_xf")
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "m_localAnchor2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            7
+
+      getlex              QName(PackageNamespace(""), "m_localAnchor2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            8
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            7
+      multiply
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            8
+      multiply
+      add
+      convert_d
+      setlocal            6
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            7
+      multiply
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            8
+      multiply
+      add
+      convert_d
+      setlocal            8
+
+      getlocal            6
+      convert_d
+      setlocal            7
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      add
+      convert_d
+      setlocal            9
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            5
+      add
+      convert_d
+      setlocal            10
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            7
+      add
+      convert_d
+      setlocal            11
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            8
+      add
+      convert_d
+      setlocal            12
+
+      getlocal            11
+      getlocal            9
+      subtract
+      convert_d
+      setlocal            13
+
+      getlocal            12
+      getlocal            10
+      subtract
+      convert_d
+      setlocal            14
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "m_localXAxis1")
+      callproperty        QName(PackageNamespace(""), "GetWorldVector"), 1
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            15
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            16
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            17
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      convert_d
+      setlocal            18
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      convert_d
+      setlocal            19
+
+      getlocal            13
+      getlocal            18
+      negate
+      getlocal            15
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      multiply
+      getlocal            14
+      getlocal            18
+      getlocal            15
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      multiply
+      add
+      getlocal            15
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            17
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            19
+      negate
+      getlocal            8
+      multiply
+      add
+      getlocal            16
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      getlocal            18
+      negate
+      getlocal            5
+      multiply
+      subtract
+      multiply
+      getlocal            15
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            17
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            19
+      getlocal            7
+      multiply
+      add
+      getlocal            16
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      getlocal            18
+      getlocal            4
+      multiply
+      subtract
+      multiply
+      add
+      add
+      convert_d
+      dup
+      setlocal            20
+
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SetMotorSpeed")
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/SetMotorSpeed"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "m_motorSpeed")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "m_motorSpeed")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_localYAxis1") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "m_motorMass") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "m_maxMotorForce") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "m_localAnchor1") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "m_localAnchor2") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "m_angularMass") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "InitVelocityConstraints") flag OVERRIDE
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/InitVelocityConstraints"
+    param QName(PackageNamespace("Box2D.Dynamics"), "b2TimeStep")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 29
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            4
+
+      pushnan
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushnan
+      setlocal            8
+
+      pushnan
+      setlocal            9
+
+      pushnan
+      setlocal            10
+
+      pushnan
+      setlocal            11
+
+      pushnan
+      setlocal            12
+
+      pushnan
+      setlocal            13
+
+      pushnan
+      setlocal            14
+
+      pushnan
+      setlocal            15
+
+      pushnan
+      setlocal            16
+
+      pushnan
+      setlocal            17
+
+      pushnan
+      setlocal            18
+
+      pushnan
+      setlocal            19
+
+      pushnan
+      setlocal            20
+
+      pushnan
+      setlocal            21
+
+      pushnan
+      setlocal            22
+
+      pushnan
+      setlocal            23
+
+      pushnan
+      setlocal            24
+
+      pushnan
+      setlocal            25
+
+      pushnan
+      setlocal            26
+
+      pushnan
+      setlocal            27
+
+      pushnan
+      setlocal            28
+
+      getlex              QName(PackageNamespace(""), "m_body1")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "m_body2")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal3
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_xf")
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "m_localAnchor1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            6
+
+      getlex              QName(PackageNamespace(""), "m_localAnchor1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            7
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            6
+      multiply
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            7
+      multiply
+      add
+      convert_d
+      setlocal            5
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            6
+      multiply
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            7
+      multiply
+      add
+      convert_d
+      setlocal            7
+
+      getlocal            5
+      convert_d
+      setlocal            6
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_xf")
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "m_localAnchor2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            8
+
+      getlex              QName(PackageNamespace(""), "m_localAnchor2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            9
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            8
+      multiply
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            9
+      multiply
+      add
+      convert_d
+      setlocal            5
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            8
+      multiply
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            9
+      multiply
+      add
+      convert_d
+      setlocal            9
+
+      getlocal            5
+      convert_d
+      setlocal            8
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_invMass")
+      convert_d
+      setlocal            10
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_invMass")
+      convert_d
+      setlocal            11
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_invI")
+      convert_d
+      setlocal            12
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_invI")
+      convert_d
+      setlocal            13
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_xf")
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      dup
+      setlocal            4
+
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "m_localYAxis1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "m_localYAxis1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            14
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "m_localYAxis1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "m_localYAxis1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            15
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            8
+      add
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            16
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            9
+      add
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            17
+
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getlocal            14
+      negate
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getlocal            15
+      negate
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getlocal            14
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getlocal            15
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getlocal            16
+      getlocal            15
+      multiply
+      getlocal            17
+      getlocal            14
+      multiply
+      subtract
+      negate
+      setproperty         QName(PackageNamespace(""), "angular1")
+
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getlocal            8
+      getlocal            15
+      multiply
+      getlocal            9
+      getlocal            14
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "angular2")
+
+      findproperty        QName(PackageNamespace(""), "m_linearMass")
+      getlocal            10
+      getlocal            12
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "angular1")
+      multiply
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "angular1")
+      multiply
+      add
+      getlocal            11
+      add
+      getlocal            13
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "angular2")
+      multiply
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "angular2")
+      multiply
+      add
+      initproperty        QName(PackageNamespace(""), "m_linearMass")
+
+      findproperty        QName(PackageNamespace(""), "m_linearMass")
+      pushbyte            1
+      getlex              QName(PackageNamespace(""), "m_linearMass")
+      divide
+      initproperty        QName(PackageNamespace(""), "m_linearMass")
+
+      findproperty        QName(PackageNamespace(""), "m_angularMass")
+      getlocal            12
+      getlocal            13
+      add
+      initproperty        QName(PackageNamespace(""), "m_angularMass")
+
+      getlex              QName(PackageNamespace(""), "m_angularMass")
+      getlex              QName(PackageNamespace(""), "Number")
+      getproperty         QName(PackageNamespace(""), "MIN_VALUE")
+      ifngt               L323
+
+      findproperty        QName(PackageNamespace(""), "m_angularMass")
+      pushbyte            1
+      getlex              QName(PackageNamespace(""), "m_angularMass")
+      divide
+      initproperty        QName(PackageNamespace(""), "m_angularMass")
+
+L323:
+      getlex              QName(PackageNamespace(""), "m_enableLimit")
+      convert_b
+      dup
+      iftrue              L330
+
+      pop
+      getlex              QName(PackageNamespace(""), "m_enableMotor")
+      convert_b
+L330:
+      iffalse             L496
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_xf")
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      dup
+      setlocal            4
+
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "m_localXAxis1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlex              QName(PackageNamespace(""), "m_localXAxis1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            18
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "m_localXAxis1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlex              QName(PackageNamespace(""), "m_localXAxis1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            19
+
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getlocal            18
+      negate
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getlocal            19
+      negate
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getlocal            18
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getlocal            19
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getlocal            16
+      getlocal            19
+      multiply
+      getlocal            17
+      getlocal            18
+      multiply
+      subtract
+      negate
+      setproperty         QName(PackageNamespace(""), "angular1")
+
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getlocal            8
+      getlocal            19
+      multiply
+      getlocal            9
+      getlocal            18
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "angular2")
+
+      findproperty        QName(PackageNamespace(""), "m_motorMass")
+      getlocal            10
+      getlocal            12
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "angular1")
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "angular1")
+      multiply
+      add
+      getlocal            11
+      add
+      getlocal            13
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "angular2")
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "angular2")
+      multiply
+      add
+      initproperty        QName(PackageNamespace(""), "m_motorMass")
+
+      findproperty        QName(PackageNamespace(""), "m_motorMass")
+      pushbyte            1
+      getlex              QName(PackageNamespace(""), "m_motorMass")
+      divide
+      initproperty        QName(PackageNamespace(""), "m_motorMass")
+
+      getlex              QName(PackageNamespace(""), "m_enableLimit")
+      iffalse             L496
+
+      getlocal            16
+      getlocal            6
+      subtract
+      convert_d
+      setlocal            20
+
+      getlocal            17
+      getlocal            7
+      subtract
+      convert_d
+      setlocal            21
+
+      getlocal            18
+      getlocal            20
+      multiply
+      getlocal            19
+      getlocal            21
+      multiply
+      add
+      convert_d
+      setlocal            22
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlex              QName(PackageNamespace(""), "m_upperTranslation")
+      getlex              QName(PackageNamespace(""), "m_lowerTranslation")
+      subtract
+      callproperty        QName(PackageNamespace(""), "b2Abs"), 1
+      pushbyte            2
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_linearSlop")
+      multiply
+      ifnlt               L464
+
+      findproperty        QName(PackageNamespace(""), "m_limitState")
+      getlex              QName(PackageNamespace(""), "e_equalLimits")
+      initproperty        QName(PackageNamespace(""), "m_limitState")
+
+      jump                L496
+
+L464:
+      getlocal            22
+      getlex              QName(PackageNamespace(""), "m_lowerTranslation")
+      ifnle               L477
+
+      getlex              QName(PackageNamespace(""), "m_limitState")
+      getlex              QName(PackageNamespace(""), "e_atLowerLimit")
+      ifeq                L473
+
+      findproperty        QName(PackageNamespace(""), "m_limitForce")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "m_limitForce")
+
+L473:
+      findproperty        QName(PackageNamespace(""), "m_limitState")
+      getlex              QName(PackageNamespace(""), "e_atLowerLimit")
+      initproperty        QName(PackageNamespace(""), "m_limitState")
+
+      jump                L496
+
+L477:
+      getlocal            22
+      getlex              QName(PackageNamespace(""), "m_upperTranslation")
+      ifnge               L490
+
+      getlex              QName(PackageNamespace(""), "m_limitState")
+      getlex              QName(PackageNamespace(""), "e_atUpperLimit")
+      ifeq                L486
+
+      findproperty        QName(PackageNamespace(""), "m_limitForce")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "m_limitForce")
+
+L486:
+      findproperty        QName(PackageNamespace(""), "m_limitState")
+      getlex              QName(PackageNamespace(""), "e_atUpperLimit")
+      initproperty        QName(PackageNamespace(""), "m_limitState")
+
+      jump                L496
+
+L490:
+      findproperty        QName(PackageNamespace(""), "m_limitState")
+      getlex              QName(PackageNamespace(""), "e_inactiveLimit")
+      initproperty        QName(PackageNamespace(""), "m_limitState")
+
+      findproperty        QName(PackageNamespace(""), "m_limitForce")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "m_limitForce")
+
+L496:
+      getlex              QName(PackageNamespace(""), "m_enableMotor")
+      pushfalse
+      ifne                L502
+
+      findproperty        QName(PackageNamespace(""), "m_motorForce")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "m_motorForce")
+
+L502:
+      getlex              QName(PackageNamespace(""), "m_enableLimit")
+      pushfalse
+      ifne                L508
+
+      findproperty        QName(PackageNamespace(""), "m_limitForce")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "m_limitForce")
+
+L508:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "warmStarting")
+      iffalse             L676
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "dt")
+      getlex              QName(PackageNamespace(""), "m_force")
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorForce")
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      add
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      add
+      multiply
+      convert_d
+      setlocal            23
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "dt")
+      getlex              QName(PackageNamespace(""), "m_force")
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorForce")
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      add
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      multiply
+      convert_d
+      setlocal            24
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "dt")
+      getlex              QName(PackageNamespace(""), "m_force")
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorForce")
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      add
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      add
+      multiply
+      convert_d
+      setlocal            25
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "dt")
+      getlex              QName(PackageNamespace(""), "m_force")
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorForce")
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      add
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      multiply
+      convert_d
+      setlocal            26
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "dt")
+      getlex              QName(PackageNamespace(""), "m_force")
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "angular1")
+      multiply
+      getlex              QName(PackageNamespace(""), "m_torque")
+      subtract
+      getlex              QName(PackageNamespace(""), "m_motorForce")
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      add
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "angular1")
+      multiply
+      add
+      multiply
+      convert_d
+      setlocal            27
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "dt")
+      getlex              QName(PackageNamespace(""), "m_force")
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "angular2")
+      multiply
+      getlex              QName(PackageNamespace(""), "m_torque")
+      add
+      getlex              QName(PackageNamespace(""), "m_motorForce")
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      add
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "angular2")
+      multiply
+      add
+      multiply
+      convert_d
+      setlocal            28
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            10
+      getlocal            23
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            10
+      getlocal            24
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal2
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      getlocal            12
+      getlocal            27
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "m_angularVelocity")
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            11
+      getlocal            25
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            11
+      getlocal            26
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal3
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      getlocal            13
+      getlocal            28
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "m_angularVelocity")
+
+      jump                L688
+
+L676:
+      findproperty        QName(PackageNamespace(""), "m_force")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "m_force")
+
+      findproperty        QName(PackageNamespace(""), "m_torque")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "m_torque")
+
+      findproperty        QName(PackageNamespace(""), "m_limitForce")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "m_limitForce")
+
+      findproperty        QName(PackageNamespace(""), "m_motorForce")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "m_motorForce")
+
+L688:
+      findproperty        QName(PackageNamespace(""), "m_limitPositionImpulse")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "m_limitPositionImpulse")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_limitState") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "m_linearMass") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "GetMotorForce")
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/GetMotorForce"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_motorForce")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SetMaxMotorForce")
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/SetMaxMotorForce"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "m_maxMotorForce")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "m_maxMotorForce")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_upperTranslation") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "m_motorJacobian") type QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Jacobian") end
+  trait method QName(PackageNamespace(""), "EnableLimit")
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/EnableLimit"
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "m_enableLimit")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "m_enableLimit")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_limitPositionImpulse") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "m_motorSpeed") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "GetReactionTorque") flag OVERRIDE
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/GetReactionTorque"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_torque")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_linearJacobian") type QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Jacobian") end
+  trait slot QName(PackageNamespace(""), "m_enableMotor") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PackageNamespace(""), "IsLimitEnabled")
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/IsLimitEnabled"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_enableLimit")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "IsMotorEnabled")
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/IsMotorEnabled"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_enableMotor")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SolveVelocityConstraints") flag OVERRIDE
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJoint/instance/SolveVelocityConstraints"
+    param QName(PackageNamespace("Box2D.Dynamics"), "b2TimeStep")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 20
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal3
+
+      pushnan
+      setlocal            4
+
+      pushnan
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushnan
+      setlocal            8
+
+      pushnan
+      setlocal            9
+
+      pushnan
+      setlocal            10
+
+      pushnan
+      setlocal            11
+
+      pushnan
+      setlocal            12
+
+      pushnan
+      setlocal            13
+
+      pushnan
+      setlocal            14
+
+      pushnan
+      setlocal            15
+
+      pushnan
+      setlocal            16
+
+      pushnan
+      setlocal            17
+
+      pushnan
+      setlocal            18
+
+      pushnan
+      setlocal            19
+
+      getlex              QName(PackageNamespace(""), "m_body1")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "m_body2")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal3
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_invMass")
+      convert_d
+      setlocal            4
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_invMass")
+      convert_d
+      setlocal            5
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_invI")
+      convert_d
+      setlocal            6
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_invI")
+      convert_d
+      setlocal            7
+
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      callproperty        QName(PackageNamespace(""), "Compute"), 4
+      convert_d
+      setlocal            9
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "inv_dt")
+      negate
+      getlex              QName(PackageNamespace(""), "m_linearMass")
+      multiply
+      getlocal            9
+      multiply
+      convert_d
+      setlocal            10
+
+      findproperty        QName(PackageNamespace(""), "m_force")
+      getlex              QName(PackageNamespace(""), "m_force")
+      getlocal            10
+      add
+      initproperty        QName(PackageNamespace(""), "m_force")
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "dt")
+      getlocal            10
+      multiply
+      convert_d
+      setlocal            11
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal2
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      getlocal            6
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "angular1")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "m_angularVelocity")
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            5
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            5
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal3
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      getlocal            7
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_linearJacobian")
+      getproperty         QName(PackageNamespace(""), "angular2")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "m_angularVelocity")
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      subtract
+      convert_d
+      setlocal            12
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "inv_dt")
+      negate
+      getlex              QName(PackageNamespace(""), "m_angularMass")
+      multiply
+      getlocal            12
+      multiply
+      convert_d
+      setlocal            13
+
+      findproperty        QName(PackageNamespace(""), "m_torque")
+      getlex              QName(PackageNamespace(""), "m_torque")
+      getlocal            13
+      add
+      initproperty        QName(PackageNamespace(""), "m_torque")
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "dt")
+      getlocal            13
+      multiply
+      convert_d
+      setlocal            14
+
+      getlocal2
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      getlocal            6
+      getlocal            14
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "m_angularVelocity")
+
+      getlocal3
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      getlocal            7
+      getlocal            14
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "m_angularVelocity")
+
+      getlex              QName(PackageNamespace(""), "m_enableMotor")
+      convert_b
+      dup
+      iffalse             L224
+
+      pop
+      getlex              QName(PackageNamespace(""), "m_limitState")
+      getlex              QName(PackageNamespace(""), "e_equalLimits")
+      equals
+      not
+L224:
+      iffalse             L350
+
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      callproperty        QName(PackageNamespace(""), "Compute"), 4
+      getlex              QName(PackageNamespace(""), "m_motorSpeed")
+      subtract
+      convert_d
+      setlocal            15
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "inv_dt")
+      negate
+      getlex              QName(PackageNamespace(""), "m_motorMass")
+      multiply
+      getlocal            15
+      multiply
+      convert_d
+      setlocal            16
+
+      getlex              QName(PackageNamespace(""), "m_motorForce")
+      convert_d
+      setlocal            17
+
+      findproperty        QName(PackageNamespace(""), "m_motorForce")
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlex              QName(PackageNamespace(""), "m_motorForce")
+      getlocal            16
+      add
+      getlex              QName(PackageNamespace(""), "m_maxMotorForce")
+      negate
+      getlex              QName(PackageNamespace(""), "m_maxMotorForce")
+      callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+      initproperty        QName(PackageNamespace(""), "m_motorForce")
+
+      getlex              QName(PackageNamespace(""), "m_motorForce")
+      getlocal            17
+      subtract
+      convert_d
+      setlocal            16
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "dt")
+      getlocal            16
+      multiply
+      convert_d
+      setlocal            11
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal2
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      getlocal            6
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "angular1")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "m_angularVelocity")
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            5
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            5
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal3
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      getlocal            7
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "angular2")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "m_angularVelocity")
+
+L350:
+      getlex              QName(PackageNamespace(""), "m_enableLimit")
+      convert_b
+      dup
+      iffalse             L359
+
+      pop
+      getlex              QName(PackageNamespace(""), "m_limitState")
+      getlex              QName(PackageNamespace(""), "e_inactiveLimit")
+      equals
+      not
+L359:
+      iffalse             L513
+
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      callproperty        QName(PackageNamespace(""), "Compute"), 4
+      convert_d
+      setlocal            18
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "inv_dt")
+      negate
+      getlex              QName(PackageNamespace(""), "m_motorMass")
+      multiply
+      getlocal            18
+      multiply
+      convert_d
+      setlocal            19
+
+      getlex              QName(PackageNamespace(""), "m_limitState")
+      getlex              QName(PackageNamespace(""), "e_equalLimits")
+      ifne                L390
+
+      findproperty        QName(PackageNamespace(""), "m_limitForce")
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      getlocal            19
+      add
+      initproperty        QName(PackageNamespace(""), "m_limitForce")
+
+      jump                L429
+
+L390:
+      getlex              QName(PackageNamespace(""), "m_limitState")
+      getlex              QName(PackageNamespace(""), "e_atLowerLimit")
+      ifne                L410
+
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      convert_d
+      setlocal            8
+
+      findproperty        QName(PackageNamespace(""), "m_limitForce")
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      getlocal            19
+      add
+      pushbyte            0
+      callproperty        QName(PackageNamespace(""), "b2Max"), 2
+      initproperty        QName(PackageNamespace(""), "m_limitForce")
+
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      getlocal            8
+      subtract
+      convert_d
+      setlocal            19
+
+      jump                L429
+
+L410:
+      getlex              QName(PackageNamespace(""), "m_limitState")
+      getlex              QName(PackageNamespace(""), "e_atUpperLimit")
+      ifne                L429
+
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      convert_d
+      setlocal            8
+
+      findproperty        QName(PackageNamespace(""), "m_limitForce")
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      getlocal            19
+      add
+      pushbyte            0
+      callproperty        QName(PackageNamespace(""), "b2Min"), 2
+      initproperty        QName(PackageNamespace(""), "m_limitForce")
+
+      getlex              QName(PackageNamespace(""), "m_limitForce")
+      getlocal            8
+      subtract
+      convert_d
+      setlocal            19
+
+L429:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "dt")
+      getlocal            19
+      multiply
+      convert_d
+      setlocal            11
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal2
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      getlocal            6
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "angular1")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "m_angularVelocity")
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            5
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            5
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "linear2")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal3
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      getlocal            7
+      getlocal            11
+      multiply
+      getlex              QName(PackageNamespace(""), "m_motorJacobian")
+      getproperty         QName(PackageNamespace(""), "angular2")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "m_angularVelocity")
+
+L513:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics.Joints:b2PrismaticJoint/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

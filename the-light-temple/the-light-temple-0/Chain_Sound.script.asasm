@@ -1,0 +1,37 @@
+script
+ sinit
+  refid "Chain_Sound/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.media"), "Sound")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.media"), "Sound")
+    newclass            "Chain_Sound"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace(""), "Chain_Sound")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(""), "Chain_Sound") slotid 1
+  #include "Chain_Sound.class.asasm"
+ end ; trait
+end ; script

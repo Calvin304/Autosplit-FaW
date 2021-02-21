@@ -1,0 +1,841 @@
+class
+ refid "PauseMenu"
+ instance QName(PackageNamespace(""), "PauseMenu")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace(":PauseMenu")
+  iinit
+   name ":PauseMenu/PauseMenu"
+   refid "PauseMenu/instance/init"
+   body
+    maxstack 6
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     pushbyte            90
+     convert_d
+     setproperty         QName(PackageInternalNs(""), "MaxPos")
+
+     getlocal0
+     pushshort           480
+     convert_d
+     setproperty         QName(PackageInternalNs(""), "MinPos")
+
+     getlocal0
+     pushbyte            0
+     convert_d
+     setproperty         QName(PackageInternalNs(""), "transition")
+
+     getlocal0
+     pushbyte            -9
+     convert_d
+     setproperty         QName(PackageInternalNs(""), "acc")
+
+     getlocal0
+     pushbyte            0
+     convert_d
+     setproperty         QName(PackageInternalNs(""), "v")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "btn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         Multiname("MOUSE_DOWN", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "Show_Hide")
+     callpropvoid        Multiname("addEventListener", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 2
+
+     findpropstrict      Multiname("addEventListener", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         Multiname("ENTER_FRAME", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "Update")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        Multiname("addEventListener", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 5
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "retryBtn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         Multiname("MOUSE_DOWN", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "RetryLevel")
+     callpropvoid        Multiname("addEventListener", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 2
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "endGameBtn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         Multiname("MOUSE_DOWN", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "EndGame")
+     callpropvoid        Multiname("addEventListener", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 2
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "retryBtn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         Multiname("MOUSE_OVER", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "OverSounder")
+     callpropvoid        Multiname("addEventListener", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 2
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "endGameBtn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         Multiname("MOUSE_OVER", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "OverSounder")
+     callpropvoid        Multiname("addEventListener", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 2
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.media"), "SoundTransform")
+     pushbyte            1
+     constructprop       QName(PackageNamespace("flash.media"), "SoundTransform"), 1
+     setproperty         QName(PackageInternalNs(""), "trans")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Over_Sound")
+     constructprop       QName(PackageNamespace(""), "Over_Sound"), 0
+     setproperty         QName(PackageInternalNs(""), "OverSound")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageInternalNs(""), "ps") type QName(PackageNamespace(""), "level") end
+  trait slot QName(PackageNamespace(""), "RedCount") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "btn") type QName(PackageNamespace("flash.display"), "SimpleButton") end
+  trait slot QName(PackageInternalNs(""), "MaxPos") type QName(PackageNamespace(""), "Number") value Integer(90) end
+  trait slot QName(PackageInternalNs(""), "transition") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(PackageInternalNs(""), "OverSound") type QName(PackageNamespace(""), "Over_Sound") end
+  trait slot QName(PackageInternalNs(""), "acc") type QName(PackageNamespace(""), "Number") value Integer(-9) end
+  trait slot QName(PackageInternalNs(""), "v") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(PackageInternalNs(""), "trans") type QName(PackageNamespace("flash.media"), "SoundTransform") end
+  trait slot QName(PackageNamespace(""), "retryBtn") type QName(PackageNamespace("flash.display"), "SimpleButton") end
+  trait slot QName(PackageNamespace(""), "endGameBtn") type QName(PackageNamespace("flash.display"), "SimpleButton") end
+  trait slot QName(PackageNamespace(""), "BlueCount") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "Tapper") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageInternalNs(""), "MinPos") type QName(PackageNamespace(""), "Number") value Integer(480) end
+  trait method QName(PackageInternalNs(""), "Show_Hide")
+   method
+    name "PauseMenu:Show_Hide"
+    refid "PauseMenu/instance/Show_Hide"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      debug               1, "param1", 0, 0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "BlueCount")
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      pushstring          "m_level"
+      callproperty        Multiname("getChildByName", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 1
+      getlex              QName(PackageNamespace(""), "level")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "myContactListener")
+      getproperty         QName(PackageNamespace(""), "BlueCount")
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      setproperty         Multiname("text", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "RedCount")
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      pushstring          "m_level"
+      callproperty        Multiname("getChildByName", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 1
+      getlex              QName(PackageNamespace(""), "level")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "myContactListener")
+      getproperty         QName(PackageNamespace(""), "RedCount")
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      setproperty         Multiname("text", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      pushstring          "m_level"
+      callproperty        Multiname("getChildByName", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 1
+      getlex              QName(PackageNamespace(""), "level")
+      astypelate
+      getproperty         QName(PackageNamespace(""), "ended")
+      pushfalse
+      ifne                L54
+
+      getlocal0
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MaxPos")
+      pushshort           300
+      add
+      ifngt               L50
+
+      getlocal0
+      pushbyte            1
+      convert_d
+      setproperty         QName(PackageInternalNs(""), "transition")
+
+      jump                L54
+
+L50:
+      getlocal0
+      pushbyte            -1
+      convert_d
+      setproperty         QName(PackageInternalNs(""), "transition")
+
+L54:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "OverSounder")
+   method
+    name "PauseMenu:OverSounder"
+    refid "PauseMenu/instance/OverSounder"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      debug               1, "param1", 0, 0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "OverSound")
+      pushbyte            0
+      pushbyte            1
+      callpropvoid        Multiname("play", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "EndGame")
+   method
+    name "PauseMenu:EndGame"
+    refid "PauseMenu/instance/EndGame"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      debug               1, "param1", 0, 0
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      callpropvoid        QName(PackageNamespace(""), "EndGame"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "Update")
+   method
+    name "PauseMenu:Update"
+    refid "PauseMenu/instance/Update"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      debug               1, "param1", 0, 0
+      debug               1, "_loc2_", 1, 90
+      pushundefined
+      coerce_a
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "transition")
+      pushbyte            1
+      ifne                L176
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      getproperty         Multiname("volume", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      pushdouble          0.1
+      subtract
+      pushdouble          0.2
+      ifnge               L27
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      getproperty         Multiname("volume", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      pushdouble          0.1
+      subtract
+      setproperty         Multiname("volume", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+      jump                L31
+
+L27:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      pushdouble          0.2
+      setproperty         Multiname("volume", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+L31:
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "MusicChannel")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      coerce_a
+      setproperty         Multiname("soundTransform", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+      pushbyte            0
+      coerce_a
+      setlocal2
+
+      jump                L58
+
+L44:
+      label
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "m_level")
+      getproperty         QName(PackageInternalNs(""), "windChannels")
+      getlocal2
+      getproperty         MultinameL([PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      coerce_a
+      setproperty         Multiname("soundTransform", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+      inclocal            2
+L58:
+      getlocal2
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "m_level")
+      getproperty         QName(PackageInternalNs(""), "windChannels")
+      getproperty         Multiname("length", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      iflt                L44
+
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      pushstring          "m_level"
+      callproperty        Multiname("getChildByName", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 1
+      getlex              QName(PackageNamespace(""), "level")
+      astypelate
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "pause")
+
+      getlocal0
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MaxPos")
+      pushbyte            100
+      add
+      ifngt               L95
+
+      getlocal0
+      pushbyte            0
+      getlocal0
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MaxPos")
+      subtract
+      subtract
+      pushbyte            20
+      divide
+      convert_d
+      setproperty         QName(PackageInternalNs(""), "acc")
+
+      jump                L107
+
+L95:
+      getlocal0
+      pushbyte            0
+      getlocal0
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MaxPos")
+      subtract
+      subtract
+      pushbyte            10
+      divide
+      convert_d
+      setproperty         QName(PackageInternalNs(""), "acc")
+
+L107:
+      getlocal0
+      getlocal0
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      add
+      setproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "acc")
+      add
+      convert_d
+      setproperty         QName(PackageInternalNs(""), "v")
+
+      getlocal0
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MaxPos")
+      pushbyte            100
+      add
+      ifngt               L137
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      pushdouble          0.8
+      multiply
+      convert_d
+      setproperty         QName(PackageInternalNs(""), "v")
+
+      jump                L144
+
+L137:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      pushdouble          0.6
+      multiply
+      convert_d
+      setproperty         QName(PackageInternalNs(""), "v")
+
+L144:
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MaxPos")
+      getlocal0
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      subtract
+      callproperty        Multiname("abs", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 1
+      pushdouble          0.2
+      lessthan
+      dup
+      iffalse             L162
+
+      pop
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      callproperty        Multiname("abs", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 1
+      pushdouble          0.2
+      lessthan
+L162:
+      iffalse             L176
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MaxPos")
+      coerce_a
+      setproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+      getlocal0
+      pushbyte            0
+      convert_d
+      setproperty         QName(PackageInternalNs(""), "transition")
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      pushdouble          0.2
+      setproperty         Multiname("volume", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+L176:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "transition")
+      pushbyte            -1
+      ifne                L356
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      getproperty         Multiname("volume", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      pushdouble          0.1
+      add
+      pushbyte            1
+      ifnle               L196
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      getproperty         Multiname("volume", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      pushdouble          0.1
+      add
+      setproperty         Multiname("volume", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+      jump                L201
+
+L196:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      pushbyte            1
+      coerce_a
+      setproperty         Multiname("volume", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+L201:
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "MusicChannel")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      coerce_a
+      setproperty         Multiname("soundTransform", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+      pushbyte            0
+      coerce_a
+      setlocal2
+
+      jump                L228
+
+L214:
+      label
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "m_level")
+      getproperty         QName(PackageInternalNs(""), "windChannels")
+      getlocal2
+      getproperty         MultinameL([PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      coerce_a
+      setproperty         Multiname("soundTransform", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+      inclocal            2
+L228:
+      getlocal2
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "m_level")
+      getproperty         QName(PackageInternalNs(""), "windChannels")
+      getproperty         Multiname("length", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      iflt                L214
+
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      pushstring          "m_level"
+      callproperty        Multiname("getChildByName", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 1
+      getlex              QName(PackageNamespace(""), "level")
+      astypelate
+      getproperty         QName(PackageNamespace(""), "ended")
+      pushfalse
+      ifne                L254
+
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      pushstring          "m_level"
+      callproperty        Multiname("getChildByName", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 1
+      getlex              QName(PackageNamespace(""), "level")
+      astypelate
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "pause")
+
+L254:
+      getlocal0
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MinPos")
+      pushbyte            100
+      subtract
+      ifnlt               L274
+
+      getlocal0
+      pushbyte            0
+      getlocal0
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MinPos")
+      subtract
+      subtract
+      pushbyte            20
+      divide
+      convert_d
+      setproperty         QName(PackageInternalNs(""), "acc")
+
+      jump                L286
+
+L274:
+      getlocal0
+      pushbyte            0
+      getlocal0
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MinPos")
+      subtract
+      subtract
+      pushbyte            10
+      divide
+      convert_d
+      setproperty         QName(PackageInternalNs(""), "acc")
+
+L286:
+      getlocal0
+      getlocal0
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      add
+      setproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "acc")
+      add
+      convert_d
+      setproperty         QName(PackageInternalNs(""), "v")
+
+      getlocal0
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MinPos")
+      pushbyte            100
+      subtract
+      ifnlt               L316
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      pushdouble          0.8
+      multiply
+      convert_d
+      setproperty         QName(PackageInternalNs(""), "v")
+
+      jump                L323
+
+L316:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      pushdouble          0.6
+      multiply
+      convert_d
+      setproperty         QName(PackageInternalNs(""), "v")
+
+L323:
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MinPos")
+      getlocal0
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      subtract
+      callproperty        Multiname("abs", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 1
+      pushdouble          0.2
+      lessthan
+      dup
+      iffalse             L341
+
+      pop
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      callproperty        Multiname("abs", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 1
+      pushdouble          0.2
+      lessthan
+L341:
+      iffalse             L356
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MinPos")
+      coerce_a
+      setproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+      getlocal0
+      pushbyte            0
+      convert_d
+      setproperty         QName(PackageInternalNs(""), "transition")
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      pushbyte            1
+      coerce_a
+      setproperty         Multiname("volume", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+L356:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "Tapper")
+      pushbyte            0
+      getlocal0
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      subtract
+      pushshort           240
+      add
+      setproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "Tapper")
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            1
+      getlocal0
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      pushbyte            90
+      subtract
+      pushshort           390
+      divide
+      subtract
+      callproperty        Multiname("abs", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 1
+      setproperty         Multiname("alpha", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "RetryLevel")
+   method
+    name "PauseMenu:RetryLevel"
+    refid "PauseMenu/instance/RetryLevel"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      debug               1, "param1", 0, 0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      pushbyte            1
+      coerce_a
+      setproperty         Multiname("volume", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "MusicChannel")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      coerce_a
+      setproperty         Multiname("soundTransform", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "MusicChannel")
+      callpropvoid        Multiname("stop", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 0
+
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "m_level")
+      getproperty         QName(PackageInternalNs(""), "CurrentMode")
+      pushstring          "speed"
+      ifne                L46
+
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "SpeedSound")
+      pushbyte            0
+      pushshort           999
+      callproperty        Multiname("play", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 2
+      coerce              QName(PackageNamespace("flash.media"), "SoundChannel")
+      setproperty         QName(PackageInternalNs(""), "MusicChannel")
+
+      jump                L60
+
+L46:
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "AdvSound")
+      pushbyte            0
+      pushshort           999
+      callproperty        Multiname("play", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")]), 2
+      coerce              QName(PackageNamespace("flash.media"), "SoundChannel")
+      setproperty         QName(PackageInternalNs(""), "MusicChannel")
+
+L60:
+      getlocal0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PauseMenu"), ProtectedNamespace(":PauseMenu"), StaticProtectedNs(":PauseMenu"), PrivateNamespace("PauseMenu.as$100")])
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      callpropvoid        QName(PackageNamespace(""), "RetryGame"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  name ""
+  refid "PauseMenu/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

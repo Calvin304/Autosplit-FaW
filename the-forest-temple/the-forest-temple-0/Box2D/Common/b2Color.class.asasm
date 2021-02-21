@@ -1,0 +1,273 @@
+class
+ refid "Box2D.Common:b2Color"
+ instance QName(PackageNamespace("Box2D.Common"), "b2Color")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Common:b2Color")
+  iinit
+   refid "Box2D.Common:b2Color/instance/init"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   body
+    maxstack 7
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_r")
+     pushbyte            0
+     initproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_r")
+
+     findproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_g")
+     pushbyte            0
+     initproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_g")
+
+     findproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_b")
+     pushbyte            0
+     initproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_b")
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_r")
+     findpropstrict      QName(PackageNamespace(""), "uint")
+     pushshort           255
+     getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+     getlocal1
+     pushbyte            0
+     pushbyte            1
+     callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+     multiply
+     callproperty        QName(PackageNamespace(""), "uint"), 1
+     initproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_r")
+
+     findproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_g")
+     findpropstrict      QName(PackageNamespace(""), "uint")
+     pushshort           255
+     getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+     getlocal2
+     pushbyte            0
+     pushbyte            1
+     callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+     multiply
+     callproperty        QName(PackageNamespace(""), "uint"), 1
+     initproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_g")
+
+     findproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_b")
+     findpropstrict      QName(PackageNamespace(""), "uint")
+     pushshort           255
+     getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+     getlocal3
+     pushbyte            0
+     pushbyte            1
+     callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+     multiply
+     callproperty        QName(PackageNamespace(""), "uint"), 1
+     initproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_b")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "Set")
+   method
+    refid "Box2D.Common:b2Color/instance/Set"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_r")
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      pushshort           255
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal1
+      pushbyte            0
+      pushbyte            1
+      callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+      multiply
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      initproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_r")
+
+      findproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_g")
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      pushshort           255
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal2
+      pushbyte            0
+      pushbyte            1
+      callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+      multiply
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      initproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_g")
+
+      findproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_b")
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      pushshort           255
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal3
+      pushbyte            0
+      pushbyte            1
+      callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+      multiply
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      initproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_b")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "color")
+   method
+    refid "Box2D.Common:b2Color/instance/color/getter"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_r")
+      getlex              QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_g")
+      pushbyte            8
+      lshift
+      bitor
+      getlex              QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_b")
+      pushbyte            16
+      lshift
+      bitor
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "r")
+   method
+    refid "Box2D.Common:b2Color/instance/r/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_r")
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      pushshort           255
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal1
+      pushbyte            0
+      pushbyte            1
+      callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+      multiply
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      initproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_r")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_g") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait slot QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_b") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait setter QName(PackageNamespace(""), "b")
+   method
+    refid "Box2D.Common:b2Color/instance/b/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_b")
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      pushshort           255
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal1
+      pushbyte            0
+      pushbyte            1
+      callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+      multiply
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      initproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_b")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "g")
+   method
+    refid "Box2D.Common:b2Color/instance/g/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_g")
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      pushshort           255
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal1
+      pushbyte            0
+      pushbyte            1
+      callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+      multiply
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      initproperty        QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_g")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace(null, "Box2D.Common:b2Color/instance"), "_r") type QName(PackageNamespace(""), "uint") value Integer(0) end
+ end ; instance
+ cinit
+  refid "Box2D.Common:b2Color/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

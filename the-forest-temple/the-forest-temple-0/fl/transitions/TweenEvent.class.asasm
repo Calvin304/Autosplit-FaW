@@ -1,0 +1,131 @@
+class
+ refid "fl.transitions:TweenEvent"
+ instance QName(PackageNamespace("fl.transitions"), "TweenEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("fl.transitions:TweenEvent")
+  iinit
+   refid "fl.transitions:TweenEvent/instance/init"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   flag HAS_OPTIONAL
+   optional False()
+   optional False()
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PackageNamespace(""), "time")
+     getlex              QName(PackageNamespace(""), "NaN")
+     initproperty        QName(PackageNamespace(""), "time")
+
+     findproperty        QName(PackageNamespace(""), "position")
+     getlex              QName(PackageNamespace(""), "NaN")
+     initproperty        QName(PackageNamespace(""), "position")
+
+     getlocal0
+     getlocal1
+     getlocal            4
+     getlocal            5
+     constructsuper      3
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "time")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "position")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "time") type QName(PackageNamespace(""), "Number") value Double(nan) end
+  trait slot QName(PackageNamespace(""), "position") type QName(PackageNamespace(""), "Number") value Double(nan) end
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    refid "fl.transitions:TweenEvent/instance/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("fl.transitions"), "TweenEvent")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "type")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "time")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "position")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "bubbles")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "cancelable")
+      constructprop       QName(PackageNamespace("fl.transitions"), "TweenEvent"), 5
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "fl.transitions:TweenEvent/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "MOTION_START")
+    pushstring          "motionStart"
+    initproperty        QName(PackageNamespace(""), "MOTION_START")
+
+    findproperty        QName(PackageNamespace(""), "MOTION_STOP")
+    pushstring          "motionStop"
+    initproperty        QName(PackageNamespace(""), "MOTION_STOP")
+
+    findproperty        QName(PackageNamespace(""), "MOTION_FINISH")
+    pushstring          "motionFinish"
+    initproperty        QName(PackageNamespace(""), "MOTION_FINISH")
+
+    findproperty        QName(PackageNamespace(""), "MOTION_CHANGE")
+    pushstring          "motionChange"
+    initproperty        QName(PackageNamespace(""), "MOTION_CHANGE")
+
+    findproperty        QName(PackageNamespace(""), "MOTION_RESUME")
+    pushstring          "motionResume"
+    initproperty        QName(PackageNamespace(""), "MOTION_RESUME")
+
+    findproperty        QName(PackageNamespace(""), "MOTION_LOOP")
+    pushstring          "motionLoop"
+    initproperty        QName(PackageNamespace(""), "MOTION_LOOP")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "MOTION_START") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("motionStart") end
+ trait const QName(PackageNamespace(""), "MOTION_STOP") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("motionStop") end
+ trait const QName(PackageNamespace(""), "MOTION_LOOP") slotid 6 type QName(PackageNamespace(""), "String") value Utf8("motionLoop") end
+ trait const QName(PackageNamespace(""), "MOTION_CHANGE") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("motionChange") end
+ trait const QName(PackageNamespace(""), "MOTION_FINISH") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("motionFinish") end
+ trait const QName(PackageNamespace(""), "MOTION_RESUME") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("motionResume") end
+end ; class

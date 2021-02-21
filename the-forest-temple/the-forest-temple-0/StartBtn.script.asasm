@@ -1,0 +1,45 @@
+script
+ sinit
+  refid "StartBtn/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("StartBtn", [PackageNamespace("")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "SimpleButton")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "SimpleButton")
+    newclass            "StartBtn"
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace(""), "StartBtn")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(""), "StartBtn")
+  #include "StartBtn.class.asasm"
+ end ; trait
+end ; script

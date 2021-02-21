@@ -1,0 +1,24 @@
+method
+ refid "fl.transitions:Tween/instance/init/inline_method"
+ param QName(PackageNamespace(""), "Number")
+ param QName(PackageNamespace(""), "Number")
+ param QName(PackageNamespace(""), "Number")
+ param QName(PackageNamespace(""), "Number")
+ returns QName(PackageNamespace(""), "Number")
+ body
+  maxstack 2
+  localcount 5
+  initscopedepth 5
+  maxscopedepth 5
+  code
+   getlocal3
+   getlocal1
+   multiply
+   getlocal            4
+   divide
+   getlocal2
+   add
+   returnvalue
+  end ; code
+ end ; body
+end ; method

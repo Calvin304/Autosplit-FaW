@@ -1,0 +1,46 @@
+class
+ refid "Box2D.Dynamics.Contacts:b2ContactEdge"
+ instance QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactEdge")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactEdge")
+  iinit
+   refid "Box2D.Dynamics.Contacts:b2ContactEdge/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "next") type QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactEdge") end
+  trait slot QName(PackageNamespace(""), "other") type QName(PackageNamespace("Box2D.Dynamics"), "b2Body") end
+  trait slot QName(PackageNamespace(""), "contact") type QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2Contact") end
+  trait slot QName(PackageNamespace(""), "prev") type QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactEdge") end
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics.Contacts:b2ContactEdge/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,75 @@
+class
+ refid "Box2D.Dynamics.Joints:b2MouseJointDef"
+ instance QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2MouseJointDef")
+  extends QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointDef")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics.Joints:b2MouseJointDef")
+  iinit
+   refid "Box2D.Dynamics.Joints:b2MouseJointDef/instance/init"
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PackageNamespace(""), "target")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "target")
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "type")
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+     getproperty         QName(PackageNamespace(""), "e_mouseJoint")
+     initproperty        QName(PackageNamespace(""), "type")
+
+     findproperty        QName(PackageNamespace(""), "maxForce")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "maxForce")
+
+     findproperty        QName(PackageNamespace(""), "frequencyHz")
+     pushbyte            5
+     initproperty        QName(PackageNamespace(""), "frequencyHz")
+
+     findproperty        QName(PackageNamespace(""), "dampingRatio")
+     pushdouble          0.7
+     initproperty        QName(PackageNamespace(""), "dampingRatio")
+
+     findproperty        QName(PackageNamespace(""), "timeStep")
+     pushbyte            1
+     pushbyte            60
+     divide
+     initproperty        QName(PackageNamespace(""), "timeStep")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "frequencyHz") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "dampingRatio") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "maxForce") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "target") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "timeStep") type QName(PackageNamespace(""), "Number") end
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics.Joints:b2MouseJointDef/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,67 @@
+method
+ name ""
+ refid "AG_Teaser/instance/logo/inline_method"
+ param QName(PackageNamespace("fl.transitions"), "TweenEvent")
+ body
+  maxstack 8
+  localcount 2
+  initscopedepth 11
+  maxscopedepth 11
+  code
+   debug               1, "param1", 0, 0
+   getlex              QName(PackageNamespace(""), "smash")
+   callpropvoid        Multiname("play", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")]), 0
+
+   getlex              QName(PackageNamespace(""), "AGclick_btn")
+   pushtrue
+   coerce_a
+   setproperty         Multiname("visible", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":AG_Teaser"), ProtectedNamespace(":AG_Teaser"), StaticProtectedNs(":AG_Teaser"), PrivateNamespace("AG_Teaser.as$105")])
+
+   findpropstrict      QName(PackageNamespace("fl.transitions"), "Tween")
+   getlex              QName(PackageNamespace(""), "AGlogo_mc")
+   pushstring          "y"
+   getlex              QName(PackageNamespace("fl.transitions.easing"), "Bounce")
+   getproperty         QName(PackageNamespace(""), "easeOut")
+   pushbyte            60
+   pushbyte            85
+   pushbyte            6
+   pushfalse
+   callpropvoid        QName(PackageNamespace("fl.transitions"), "Tween"), 7
+
+   findpropstrict      QName(PackageNamespace("fl.transitions"), "Tween")
+   getlex              QName(PackageNamespace(""), "AGlogo_mc")
+   pushstring          "x"
+   getlex              QName(PackageNamespace("fl.transitions.easing"), "Bounce")
+   getproperty         QName(PackageNamespace(""), "easeOut")
+   pushbyte            30
+   pushbyte            50
+   pushbyte            6
+   pushfalse
+   callpropvoid        QName(PackageNamespace("fl.transitions"), "Tween"), 7
+
+   findpropstrict      QName(PackageNamespace("fl.transitions"), "Tween")
+   getlex              QName(PackageNamespace(""), "AGpresented_mc")
+   pushstring          "y"
+   getlex              QName(PackageNamespace("fl.transitions.easing"), "Bounce")
+   getproperty         QName(PackageNamespace(""), "easeOut")
+   pushbyte            15
+   pushbyte            25
+   pushbyte            6
+   pushfalse
+   callpropvoid        QName(PackageNamespace("fl.transitions"), "Tween"), 7
+
+   findpropstrict      QName(PackageNamespace("fl.transitions"), "Tween")
+   getlex              QName(PackageNamespace(""), "AGpresented_mc")
+   pushstring          "x"
+   getlex              QName(PackageNamespace("fl.transitions.easing"), "Bounce")
+   getproperty         QName(PackageNamespace(""), "easeOut")
+   pushbyte            110
+   pushbyte            100
+   pushbyte            6
+   pushfalse
+   callpropvoid        QName(PackageNamespace("fl.transitions"), "Tween"), 7
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

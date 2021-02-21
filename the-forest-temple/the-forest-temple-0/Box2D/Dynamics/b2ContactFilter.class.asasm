@@ -1,0 +1,138 @@
+class
+ refid "Box2D.Dynamics:b2ContactFilter"
+ instance QName(PackageNamespace("Box2D.Dynamics"), "b2ContactFilter")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics:b2ContactFilter")
+  iinit
+   refid "Box2D.Dynamics:b2ContactFilter/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "ShouldCollide")
+   method
+    refid "Box2D.Dynamics:b2ContactFilter/instance/ShouldCollide"
+    param QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+    param QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2FilterData")
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2FilterData")
+      setlocal            4
+
+      pushfalse
+      setlocal            5
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "GetFilterData"), 0
+      coerce              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2FilterData")
+      setlocal3
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "GetFilterData"), 0
+      coerce              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2FilterData")
+      setlocal            4
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "groupIndex")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "groupIndex")
+      equals
+      dup
+      iffalse             L31
+
+      pop
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "groupIndex")
+      pushbyte            0
+      equals
+      not
+L31:
+      iffalse             L37
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "groupIndex")
+      pushbyte            0
+      greaterthan
+      returnvalue
+
+L37:
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "maskBits")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "categoryBits")
+      bitand
+      pushbyte            0
+      equals
+      not
+      dup
+      iffalse             L56
+
+      pop
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "categoryBits")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "maskBits")
+      bitand
+      pushbyte            0
+      equals
+      not
+L56:
+      convert_b
+      dup
+      setlocal            5
+
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics:b2ContactFilter/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "b2_defaultFilter")
+    getlocal0
+    construct           0
+    setproperty         QName(PackageNamespace(""), "b2_defaultFilter")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "b2_defaultFilter") slotid 1 type QName(PackageNamespace("Box2D.Dynamics"), "b2ContactFilter") end
+end ; class

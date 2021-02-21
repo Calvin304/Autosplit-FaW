@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "Box2D.Common.Math:b2XForm/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("b2XForm", [PackageNamespace("Box2D.Common.Math")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "Box2D.Common.Math:b2XForm"
+    popscope
+    initproperty        QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+  #include "b2XForm.class.asasm"
+ end ; trait
+end ; script

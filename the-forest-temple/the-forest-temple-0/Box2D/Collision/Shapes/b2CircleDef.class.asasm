@@ -1,0 +1,60 @@
+class
+ refid "Box2D.Collision.Shapes:b2CircleDef"
+ instance QName(PackageNamespace("Box2D.Collision.Shapes"), "b2CircleDef")
+  extends QName(PackageNamespace("Box2D.Collision.Shapes"), "b2ShapeDef")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision.Shapes:b2CircleDef")
+  iinit
+   refid "Box2D.Collision.Shapes:b2CircleDef/instance/init"
+   body
+    maxstack 4
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PackageNamespace(""), "localPosition")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     pushbyte            0
+     dup
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 2
+     initproperty        QName(PackageNamespace(""), "localPosition")
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "type")
+     getlex              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+     getproperty         QName(PackageNamespace(""), "e_circleShape")
+     initproperty        QName(PackageNamespace(""), "type")
+
+     findproperty        QName(PackageNamespace(""), "radius")
+     pushbyte            1
+     initproperty        QName(PackageNamespace(""), "radius")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "localPosition") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "radius") type QName(PackageNamespace(""), "Number") end
+ end ; instance
+ cinit
+  refid "Box2D.Collision.Shapes:b2CircleDef/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

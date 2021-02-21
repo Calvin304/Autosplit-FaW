@@ -1,0 +1,80 @@
+class
+ refid "Box2D.Dynamics.Contacts:b2NullContact"
+ instance QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2NullContact")
+  extends QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2Contact")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics.Contacts:b2NullContact")
+  iinit
+   refid "Box2D.Dynamics.Contacts:b2NullContact/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "GetManifolds") flag OVERRIDE
+   method
+    refid "Box2D.Dynamics.Contacts:b2NullContact/instance/GetManifolds"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "Evaluate") flag OVERRIDE
+   method
+    refid "Box2D.Dynamics.Contacts:b2NullContact/instance/Evaluate"
+    param QName(PackageNamespace("Box2D.Dynamics"), "b2ContactListener")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics.Contacts:b2NullContact/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

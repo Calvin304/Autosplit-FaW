@@ -1,0 +1,97 @@
+class
+ refid "Box2D.Collision.Shapes:b2FilterData"
+ instance QName(PackageNamespace("Box2D.Collision.Shapes"), "b2FilterData")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision.Shapes:b2FilterData")
+  iinit
+   refid "Box2D.Collision.Shapes:b2FilterData/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PackageNamespace(""), "categoryBits")
+     pushbyte            1
+     initproperty        QName(PackageNamespace(""), "categoryBits")
+
+     findproperty        QName(PackageNamespace(""), "maskBits")
+     pushint             65535
+     initproperty        QName(PackageNamespace(""), "maskBits")
+
+     findproperty        QName(PackageNamespace(""), "groupIndex")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "groupIndex")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "maskBits") type QName(PackageNamespace(""), "uint") value Integer(65535) end
+  trait slot QName(PackageNamespace(""), "groupIndex") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "categoryBits") type QName(PackageNamespace(""), "uint") value Integer(1) end
+  trait method QName(PackageNamespace(""), "Copy")
+   method
+    refid "Box2D.Collision.Shapes:b2FilterData/instance/Copy"
+    returns QName(PackageNamespace("Box2D.Collision.Shapes"), "b2FilterData")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2FilterData")
+      setlocal1
+
+      findpropstrict      QName(PackageNamespace("Box2D.Collision.Shapes"), "b2FilterData")
+      constructprop       QName(PackageNamespace("Box2D.Collision.Shapes"), "b2FilterData"), 0
+      coerce              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2FilterData")
+      setlocal1
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "categoryBits")
+      setproperty         QName(PackageNamespace(""), "categoryBits")
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "maskBits")
+      setproperty         QName(PackageNamespace(""), "maskBits")
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "groupIndex")
+      setproperty         QName(PackageNamespace(""), "groupIndex")
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Box2D.Collision.Shapes:b2FilterData/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

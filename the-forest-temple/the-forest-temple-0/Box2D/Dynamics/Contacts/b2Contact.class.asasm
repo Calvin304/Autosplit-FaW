@@ -1,0 +1,876 @@
+class
+ refid "Box2D.Dynamics.Contacts:b2Contact"
+ instance QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2Contact")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact")
+  iinit
+   refid "Box2D.Dynamics.Contacts:b2Contact/instance/init"
+   param QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+   param QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Null()
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PackageNamespace(""), "m_node1")
+     findpropstrict      QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactEdge")
+     constructprop       QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactEdge"), 0
+     initproperty        QName(PackageNamespace(""), "m_node1")
+
+     findproperty        QName(PackageNamespace(""), "m_node2")
+     findpropstrict      QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactEdge")
+     constructprop       QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactEdge"), 0
+     initproperty        QName(PackageNamespace(""), "m_node2")
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "m_flags")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_flags")
+
+     getlocal1
+     not
+     dup
+     iftrue              L22
+
+     pop
+     getlocal2
+     not
+L22:
+     iffalse             L30
+
+     findproperty        QName(PackageNamespace(""), "m_shape1")
+     pushnull
+     initproperty        QName(PackageNamespace(""), "m_shape1")
+
+     findproperty        QName(PackageNamespace(""), "m_shape2")
+     pushnull
+     initproperty        QName(PackageNamespace(""), "m_shape2")
+
+     returnvoid
+
+L30:
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "IsSensor"), 0
+     convert_b
+     dup
+     iftrue              L39
+
+     pop
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "IsSensor"), 0
+     convert_b
+L39:
+     iffalse             L45
+
+     findproperty        QName(PackageNamespace(""), "m_flags")
+     getlex              QName(PackageNamespace(""), "m_flags")
+     getlex              QName(PackageNamespace(""), "e_nonSolidFlag")
+     bitor
+     initproperty        QName(PackageNamespace(""), "m_flags")
+
+L45:
+     findproperty        QName(PackageNamespace(""), "m_shape1")
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "m_shape1")
+
+     findproperty        QName(PackageNamespace(""), "m_shape2")
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "m_shape2")
+
+     findproperty        QName(PackageNamespace(""), "m_manifoldCount")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_manifoldCount")
+
+     findproperty        QName(PackageNamespace(""), "m_friction")
+     getlex              QName(PackageNamespace(""), "Math")
+     getlex              QName(PackageNamespace(""), "m_shape1")
+     getproperty         QName(PackageNamespace(""), "m_friction")
+     getlex              QName(PackageNamespace(""), "m_shape2")
+     getproperty         QName(PackageNamespace(""), "m_friction")
+     multiply
+     callproperty        QName(PackageNamespace(""), "sqrt"), 1
+     initproperty        QName(PackageNamespace(""), "m_friction")
+
+     findproperty        QName(PackageNamespace(""), "m_restitution")
+     getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+     getlex              QName(PackageNamespace(""), "m_shape1")
+     getproperty         QName(PackageNamespace(""), "m_restitution")
+     getlex              QName(PackageNamespace(""), "m_shape2")
+     getproperty         QName(PackageNamespace(""), "m_restitution")
+     callproperty        QName(PackageNamespace(""), "b2Max"), 2
+     initproperty        QName(PackageNamespace(""), "m_restitution")
+
+     findproperty        QName(PackageNamespace(""), "m_prev")
+     pushnull
+     initproperty        QName(PackageNamespace(""), "m_prev")
+
+     findproperty        QName(PackageNamespace(""), "m_next")
+     pushnull
+     initproperty        QName(PackageNamespace(""), "m_next")
+
+     getlex              QName(PackageNamespace(""), "m_node1")
+     pushnull
+     setproperty         QName(PackageNamespace(""), "contact")
+
+     getlex              QName(PackageNamespace(""), "m_node1")
+     pushnull
+     setproperty         QName(PackageNamespace(""), "prev")
+
+     getlex              QName(PackageNamespace(""), "m_node1")
+     pushnull
+     setproperty         QName(PackageNamespace(""), "next")
+
+     getlex              QName(PackageNamespace(""), "m_node1")
+     pushnull
+     setproperty         QName(PackageNamespace(""), "other")
+
+     getlex              QName(PackageNamespace(""), "m_node2")
+     pushnull
+     setproperty         QName(PackageNamespace(""), "contact")
+
+     getlex              QName(PackageNamespace(""), "m_node2")
+     pushnull
+     setproperty         QName(PackageNamespace(""), "prev")
+
+     getlex              QName(PackageNamespace(""), "m_node2")
+     pushnull
+     setproperty         QName(PackageNamespace(""), "next")
+
+     getlex              QName(PackageNamespace(""), "m_node2")
+     pushnull
+     setproperty         QName(PackageNamespace(""), "other")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "m_shape1") type QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape") end
+  trait slot QName(PackageNamespace(""), "m_shape2") type QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape") end
+  trait slot QName(PackageNamespace(""), "m_prev") type QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2Contact") end
+  trait method QName(PackageNamespace(""), "GetShape1")
+   method
+    refid "Box2D.Dynamics.Contacts:b2Contact/instance/GetShape1"
+    returns QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_shape1")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "IsSolid")
+   method
+    refid "Box2D.Dynamics.Contacts:b2Contact/instance/IsSolid"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_flags")
+      getlex              QName(PackageNamespace(""), "e_nonSolidFlag")
+      bitand
+      pushbyte            0
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetNext")
+   method
+    refid "Box2D.Dynamics.Contacts:b2Contact/instance/GetNext"
+    returns QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2Contact")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_next")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_toi") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "m_next") type QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2Contact") end
+  trait method QName(PackageNamespace(""), "GetManifolds")
+   method
+    refid "Box2D.Dynamics.Contacts:b2Contact/instance/GetManifolds"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetShape2")
+   method
+    refid "Box2D.Dynamics.Contacts:b2Contact/instance/GetShape2"
+    returns QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_shape2")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetManifoldCount")
+   method
+    refid "Box2D.Dynamics.Contacts:b2Contact/instance/GetManifoldCount"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_manifoldCount")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_friction") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "m_manifoldCount") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "m_node1") type QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactEdge") end
+  trait slot QName(PackageNamespace(""), "m_node2") type QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactEdge") end
+  trait slot QName(PackageNamespace(""), "m_restitution") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "Update")
+   method
+    refid "Box2D.Dynamics.Contacts:b2Contact/instance/Update"
+    param QName(PackageNamespace("Box2D.Dynamics"), "b2ContactListener")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            5
+
+      getlex              QName(PackageNamespace(""), "m_manifoldCount")
+      convert_i
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "Evaluate")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "Evaluate"), 1
+
+      getlex              QName(PackageNamespace(""), "m_manifoldCount")
+      convert_i
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "m_shape1")
+      getproperty         QName(PackageNamespace(""), "m_body")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "m_shape2")
+      getproperty         QName(PackageNamespace(""), "m_body")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            5
+
+      getlocal3
+      pushbyte            0
+      equals
+      dup
+      iffalse             L38
+
+      pop
+      getlocal2
+      pushbyte            0
+      greaterthan
+L38:
+      iffalse             L43
+
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "WakeUp"), 0
+
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "WakeUp"), 0
+
+L43:
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "IsStatic"), 0
+      convert_b
+      dup
+      iftrue              L52
+
+      pop
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "IsBullet"), 0
+      convert_b
+L52:
+      dup
+      iftrue              L58
+
+      pop
+      getlocal            5
+      callproperty        QName(PackageNamespace(""), "IsStatic"), 0
+      convert_b
+L58:
+      dup
+      iftrue              L64
+
+      pop
+      getlocal            5
+      callproperty        QName(PackageNamespace(""), "IsBullet"), 0
+      convert_b
+L64:
+      iffalse             L72
+
+      findproperty        QName(PackageNamespace(""), "m_flags")
+      getlex              QName(PackageNamespace(""), "m_flags")
+      getlex              QName(PackageNamespace(""), "e_slowFlag")
+      bitnot
+      bitand
+      initproperty        QName(PackageNamespace(""), "m_flags")
+
+      jump                L77
+
+L72:
+      findproperty        QName(PackageNamespace(""), "m_flags")
+      getlex              QName(PackageNamespace(""), "m_flags")
+      getlex              QName(PackageNamespace(""), "e_slowFlag")
+      bitor
+      initproperty        QName(PackageNamespace(""), "m_flags")
+
+L77:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_flags") type QName(PackageNamespace(""), "uint") end
+  trait method QName(PackageNamespace(""), "Evaluate")
+   method
+    refid "Box2D.Dynamics.Contacts:b2Contact/instance/Evaluate"
+    param QName(PackageNamespace("Box2D.Dynamics"), "b2ContactListener")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics.Contacts:b2Contact/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "e_nonSolidFlag")
+    pushbyte            1
+    setproperty         QName(PackageNamespace(""), "e_nonSolidFlag")
+
+    findproperty        QName(PackageNamespace(""), "e_slowFlag")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "e_slowFlag")
+
+    findproperty        QName(PackageNamespace(""), "e_islandFlag")
+    pushbyte            4
+    setproperty         QName(PackageNamespace(""), "e_islandFlag")
+
+    findproperty        QName(PackageNamespace(""), "e_toiFlag")
+    pushbyte            8
+    setproperty         QName(PackageNamespace(""), "e_toiFlag")
+
+    findproperty        QName(PackageNamespace(""), "s_initialized")
+    pushfalse
+    setproperty         QName(PackageNamespace(""), "s_initialized")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "e_toiFlag") slotid 4 type QName(PackageNamespace(""), "uint") value Integer(8) end
+ trait slot QName(PackageNamespace(""), "e_nonSolidFlag") slotid 1 type QName(PackageNamespace(""), "uint") value Integer(1) end
+ trait slot QName(PackageNamespace(""), "e_slowFlag") slotid 2 type QName(PackageNamespace(""), "uint") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "e_islandFlag") slotid 3 type QName(PackageNamespace(""), "uint") value Integer(4) end
+ trait slot QName(PackageNamespace(""), "s_registers") slotid 5 type QName(PackageNamespace(""), "Array") end
+ trait method QName(PackageNamespace(""), "InitializeRegisters") flag FINAL dispid 4
+  method
+   refid "Box2D.Dynamics.Contacts:b2Contact/class/InitializeRegisters"
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal1
+
+     pushbyte            0
+     setlocal2
+
+     findproperty        QName(PackageNamespace(""), "s_registers")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     getlex              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+     getproperty         QName(PackageNamespace(""), "e_shapeTypeCount")
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     setproperty         QName(PackageNamespace(""), "s_registers")
+
+     pushbyte            0
+     setlocal1
+
+     jump                L40
+
+L15:
+     label
+     getlex              QName(PackageNamespace(""), "s_registers")
+     getlocal1
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     getlex              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+     getproperty         QName(PackageNamespace(""), "e_shapeTypeCount")
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+
+     pushbyte            0
+     setlocal2
+
+     jump                L35
+
+L26:
+     label
+     getlex              QName(PackageNamespace(""), "s_registers")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     getlocal2
+     findpropstrict      QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactRegister")
+     constructprop       QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactRegister"), 0
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+
+     inclocal_i          2
+L35:
+     getlocal2
+     getlex              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+     getproperty         QName(PackageNamespace(""), "e_shapeTypeCount")
+     iflt                L26
+
+     inclocal_i          1
+L40:
+     getlocal1
+     getlex              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+     getproperty         QName(PackageNamespace(""), "e_shapeTypeCount")
+     iflt                L15
+
+     findpropstrict      QName(PackageNamespace(""), "AddType")
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2CircleContact")
+     getproperty         QName(PackageNamespace(""), "Create")
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2CircleContact")
+     getproperty         QName(PackageNamespace(""), "Destroy")
+     getlex              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+     getproperty         QName(PackageNamespace(""), "e_circleShape")
+     getlex              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+     getproperty         QName(PackageNamespace(""), "e_circleShape")
+     callpropvoid        QName(PackageNamespace(""), "AddType"), 4
+
+     findpropstrict      QName(PackageNamespace(""), "AddType")
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2PolyAndCircleContact")
+     getproperty         QName(PackageNamespace(""), "Create")
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2PolyAndCircleContact")
+     getproperty         QName(PackageNamespace(""), "Destroy")
+     getlex              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+     getproperty         QName(PackageNamespace(""), "e_polygonShape")
+     getlex              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+     getproperty         QName(PackageNamespace(""), "e_circleShape")
+     callpropvoid        QName(PackageNamespace(""), "AddType"), 4
+
+     findpropstrict      QName(PackageNamespace(""), "AddType")
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2PolygonContact")
+     getproperty         QName(PackageNamespace(""), "Create")
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2PolygonContact")
+     getproperty         QName(PackageNamespace(""), "Destroy")
+     getlex              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+     getproperty         QName(PackageNamespace(""), "e_polygonShape")
+     getlex              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+     getproperty         QName(PackageNamespace(""), "e_polygonShape")
+     callpropvoid        QName(PackageNamespace(""), "AddType"), 4
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PackageNamespace(""), "s_initialized") slotid 6 type QName(PackageNamespace(""), "Boolean") value False() end
+ trait method QName(PackageNamespace(""), "Destroy") flag FINAL dispid 6
+  method
+   refid "Box2D.Dynamics.Contacts:b2Contact/class/Destroy"
+   param QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2Contact")
+   param null
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal3
+
+     pushbyte            0
+     setlocal            4
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactRegister")
+     setlocal            5
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Function")
+     setlocal            6
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "m_manifoldCount")
+     pushbyte            0
+     ifngt               L24
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "m_shape1")
+     getproperty         QName(PackageNamespace(""), "m_body")
+     callpropvoid        QName(PackageNamespace(""), "WakeUp"), 0
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "m_shape2")
+     getproperty         QName(PackageNamespace(""), "m_body")
+     callpropvoid        QName(PackageNamespace(""), "WakeUp"), 0
+
+L24:
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "m_shape1")
+     getproperty         QName(PackageNamespace(""), "m_type")
+     convert_i
+     setlocal3
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "m_shape2")
+     getproperty         QName(PackageNamespace(""), "m_type")
+     convert_i
+     setlocal            4
+
+     getlex              QName(PackageNamespace(""), "s_registers")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactRegister")
+     dup
+     setlocal            5
+
+     getproperty         QName(PackageNamespace(""), "destroyFcn")
+     coerce              QName(PackageNamespace(""), "Function")
+     dup
+     setlocal            6
+
+     getglobalscope
+     getlocal1
+     getlocal2
+     call                2
+     pop
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "AddType") flag FINAL dispid 3
+  method
+   refid "Box2D.Dynamics.Contacts:b2Contact/class/AddType"
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace(""), "s_registers")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     getlocal1
+     setproperty         Multiname("createFcn", [PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class/AddType"), PackageNamespace("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common")])
+
+     getlex              QName(PackageNamespace(""), "s_registers")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     getlocal2
+     setproperty         Multiname("destroyFcn", [PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class/AddType"), PackageNamespace("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common")])
+
+     getlex              QName(PackageNamespace(""), "s_registers")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     pushtrue
+     setproperty         Multiname("primary", [PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class/AddType"), PackageNamespace("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common")])
+
+     getlocal3
+     getlocal            4
+     ifeq                L47
+
+     getlex              QName(PackageNamespace(""), "s_registers")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     getlocal1
+     setproperty         Multiname("createFcn", [PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class/AddType"), PackageNamespace("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common")])
+
+     getlex              QName(PackageNamespace(""), "s_registers")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     getlocal2
+     setproperty         Multiname("destroyFcn", [PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class/AddType"), PackageNamespace("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common")])
+
+     getlex              QName(PackageNamespace(""), "s_registers")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     pushfalse
+     setproperty         Multiname("primary", [PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class/AddType"), PackageNamespace("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common")])
+
+L47:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "Create") flag FINAL dispid 5
+  method
+   refid "Box2D.Dynamics.Contacts:b2Contact/class/Create"
+   param QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+   param QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+   param null
+   returns QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2Contact")
+   body
+    maxstack 5
+    localcount 11
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal            4
+
+     pushbyte            0
+     setlocal            5
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactRegister")
+     setlocal            6
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Function")
+     setlocal            7
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2Contact")
+     setlocal            8
+
+     pushbyte            0
+     setlocal            9
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Collision"), "b2Manifold")
+     setlocal            10
+
+     getlex              QName(PackageNamespace(""), "s_initialized")
+     pushfalse
+     ifne                L28
+
+     findpropstrict      QName(PackageNamespace(""), "InitializeRegisters")
+     callpropvoid        QName(PackageNamespace(""), "InitializeRegisters"), 0
+
+     findproperty        QName(PackageNamespace(""), "s_initialized")
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "s_initialized")
+
+L28:
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "m_type")
+     convert_i
+     setlocal            4
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "m_type")
+     convert_i
+     setlocal            5
+
+     getlex              QName(PackageNamespace(""), "s_registers")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactRegister")
+     dup
+     setlocal            6
+
+     getproperty         QName(PackageNamespace(""), "createFcn")
+     coerce              QName(PackageNamespace(""), "Function")
+     dup
+     setlocal            7
+
+     pushnull
+     ifeq                L94
+
+     getlocal            6
+     getproperty         QName(PackageNamespace(""), "primary")
+     iffalse             L60
+
+     getlocal            7
+     getglobalscope
+     getlocal1
+     getlocal2
+     getlocal3
+     call                3
+     returnvalue
+
+L60:
+     getlocal            7
+     getglobalscope
+     getlocal2
+     getlocal1
+     getlocal3
+     call                3
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2Contact")
+     setlocal            8
+
+     pushbyte            0
+     setlocal            9
+
+     jump                L84
+
+L71:
+     label
+     getlocal            8
+     callproperty        QName(PackageNamespace(""), "GetManifolds"), 0
+     getlocal            9
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2Contact/class"), PackageNamespace(""), PackageInternalNs("Box2D.Dynamics.Contacts"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2Contact"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("Box2D.Collision"), "b2Manifold")
+     dup
+     dup
+     setlocal            10
+
+     getproperty         QName(PackageNamespace(""), "normal")
+     callproperty        QName(PackageNamespace(""), "Negative"), 0
+     setproperty         QName(PackageNamespace(""), "normal")
+
+     inclocal_i          9
+L84:
+     getlocal            9
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "m_manifoldCount")
+     iflt                L71
+
+     getlocal            8
+     returnvalue
+
+     ; 0x10
+     ; 0x02
+     ; 0x00
+     ; 0x00
+L94:
+     pushnull
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,3926 @@
+class
+ refid "Box2D.Collision:b2BroadPhase"
+ instance QName(PackageNamespace("Box2D.Collision"), "b2BroadPhase")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision:b2BroadPhase")
+  iinit
+   refid "Box2D.Collision:b2BroadPhase/instance/init"
+   param QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+   param QName(PackageNamespace("Box2D.Collision"), "b2PairCallback")
+   body
+    maxstack 5
+    localcount 8
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal3
+
+     pushnan
+     setlocal            4
+
+     pushnan
+     setlocal            5
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+     setlocal            6
+
+     pushbyte            0
+     setlocal            7
+
+     findproperty        QName(PackageNamespace(""), "m_pairManager")
+     findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2PairManager")
+     constructprop       QName(PackageNamespace("Box2D.Collision"), "b2PairManager"), 0
+     initproperty        QName(PackageNamespace(""), "m_pairManager")
+
+     findproperty        QName(PackageNamespace(""), "m_proxyPool")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxPairs")
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     initproperty        QName(PackageNamespace(""), "m_proxyPool")
+
+     findproperty        QName(PackageNamespace(""), "m_bounds")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     pushbyte            2
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxProxies")
+     multiply
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     initproperty        QName(PackageNamespace(""), "m_bounds")
+
+     findproperty        QName(PackageNamespace(""), "m_queryResults")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxProxies")
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     initproperty        QName(PackageNamespace(""), "m_queryResults")
+
+     findproperty        QName(PackageNamespace(""), "m_quantizationFactor")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "m_quantizationFactor")
+
+     getlocal0
+     constructsuper      0
+
+     getlex              QName(PackageNamespace(""), "m_pairManager")
+     getlocal0
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "Initialize"), 2
+
+     findproperty        QName(PackageNamespace(""), "m_worldAABB")
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "m_worldAABB")
+
+     findproperty        QName(PackageNamespace(""), "m_proxyCount")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_proxyCount")
+
+     pushbyte            0
+     setlocal3
+
+     jump                L62
+
+L56:
+     label
+     getlex              QName(PackageNamespace(""), "m_queryResults")
+     getlocal3
+     pushbyte            0
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+     inclocal_i          3
+L62:
+     getlocal3
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxProxies")
+     iflt                L56
+
+     findproperty        QName(PackageNamespace(""), "m_bounds")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     pushbyte            2
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     initproperty        QName(PackageNamespace(""), "m_bounds")
+
+     pushbyte            0
+     setlocal3
+
+     jump                L103
+
+L74:
+     label
+     getlex              QName(PackageNamespace(""), "m_bounds")
+     getlocal3
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     pushbyte            2
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxProxies")
+     multiply
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+     pushbyte            0
+     setlocal            7
+
+     jump                L96
+
+L87:
+     label
+     getlex              QName(PackageNamespace(""), "m_bounds")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+     getlocal            7
+     findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+     constructprop       QName(PackageNamespace("Box2D.Collision"), "b2Bound"), 0
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+     inclocal_i          7
+L96:
+     getlocal            7
+     pushbyte            2
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxProxies")
+     multiply
+     iflt                L87
+
+     inclocal_i          3
+L103:
+     getlocal3
+     pushbyte            2
+     iflt                L74
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "upperBound")
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "lowerBound")
+     getproperty         QName(PackageNamespace(""), "x")
+     subtract
+     convert_d
+     setlocal            4
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "upperBound")
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "lowerBound")
+     getproperty         QName(PackageNamespace(""), "y")
+     subtract
+     convert_d
+     setlocal            5
+
+     getlex              QName(PackageNamespace(""), "m_quantizationFactor")
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "USHRT_MAX")
+     getlocal            4
+     divide
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlex              QName(PackageNamespace(""), "m_quantizationFactor")
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "USHRT_MAX")
+     getlocal            5
+     divide
+     setproperty         QName(PackageNamespace(""), "y")
+
+     pushbyte            0
+     setlocal3
+
+     jump                L163
+
+L139:
+     label
+     findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+     constructprop       QName(PackageNamespace("Box2D.Collision"), "b2Proxy"), 0
+     coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+     setlocal            6
+
+     getlex              QName(PackageNamespace(""), "m_proxyPool")
+     getlocal3
+     getlocal            6
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+     getlocal            6
+     getlocal3
+     pushbyte            1
+     add
+     callpropvoid        QName(PackageNamespace(""), "SetNext"), 1
+
+     getlocal            6
+     pushbyte            0
+     setproperty         QName(PackageNamespace(""), "timeStamp")
+
+     getlocal            6
+     getlex              QName(PackageNamespace(""), "b2_invalid")
+     setproperty         QName(PackageNamespace(""), "overlapCount")
+
+     getlocal            6
+     pushnull
+     setproperty         QName(PackageNamespace(""), "userData")
+
+     inclocal_i          3
+L163:
+     getlocal3
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxProxies")
+     decrement
+     iflt                L139
+
+     findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+     constructprop       QName(PackageNamespace("Box2D.Collision"), "b2Proxy"), 0
+     coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+     setlocal            6
+
+     getlex              QName(PackageNamespace(""), "m_proxyPool")
+     findpropstrict      QName(PackageNamespace(""), "int")
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxProxies")
+     decrement
+     callproperty        QName(PackageNamespace(""), "int"), 1
+     getlocal            6
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+     getlocal            6
+     getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+     getproperty         QName(PackageNamespace(""), "b2_nullProxy")
+     callpropvoid        QName(PackageNamespace(""), "SetNext"), 1
+
+     getlocal            6
+     pushbyte            0
+     setproperty         QName(PackageNamespace(""), "timeStamp")
+
+     getlocal            6
+     getlex              QName(PackageNamespace(""), "b2_invalid")
+     setproperty         QName(PackageNamespace(""), "overlapCount")
+
+     getlocal            6
+     pushnull
+     setproperty         QName(PackageNamespace(""), "userData")
+
+     findproperty        QName(PackageNamespace(""), "m_freeProxy")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_freeProxy")
+
+     findproperty        QName(PackageNamespace(""), "m_timeStamp")
+     pushbyte            1
+     initproperty        QName(PackageNamespace(""), "m_timeStamp")
+
+     findproperty        QName(PackageNamespace(""), "m_queryResultCount")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_queryResultCount")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "QueryAABB")
+   method
+    refid "Box2D.Collision:b2BroadPhase/instance/QueryAABB"
+    param QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+    param null
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 8
+     localcount 13
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      pushbyte            0
+      convert_u
+      setlocal            7
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            8
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            9
+
+      pushbyte            0
+      setlocal            10
+
+      pushbyte            0
+      setlocal            11
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            12
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            5
+
+      findpropstrict      QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "ComputeBounds")
+      getlocal            4
+      getlocal            5
+      getlocal1
+      callpropvoid        QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "ComputeBounds"), 3
+
+      getlocal            6
+      newarray            1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            8
+
+      getlocal            7
+      newarray            1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            9
+
+      findpropstrict      QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "Query")
+      getlocal            8
+      getlocal            9
+      getlocal            4
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getlocal            5
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "m_bounds")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      pushbyte            2
+      getlex              QName(PackageNamespace(""), "m_proxyCount")
+      multiply
+      pushbyte            0
+      callpropvoid        QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "Query"), 7
+
+      findpropstrict      QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "Query")
+      getlocal            8
+      getlocal            9
+      getlocal            4
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getlocal            5
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace(""), "m_bounds")
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      pushbyte            2
+      getlex              QName(PackageNamespace(""), "m_proxyCount")
+      multiply
+      pushbyte            1
+      callpropvoid        QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "Query"), 7
+
+      pushbyte            0
+      setlocal            10
+
+      pushbyte            0
+      setlocal            11
+
+      jump                L102
+
+L87:
+      label
+      getlex              QName(PackageNamespace(""), "m_proxyPool")
+      getlex              QName(PackageNamespace(""), "m_queryResults")
+      getlocal            11
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            12
+
+      getlocal2
+      getlocal            11
+      getlocal            12
+      getproperty         QName(PackageNamespace(""), "userData")
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      inclocal_i          11
+      inclocal_i          10
+L102:
+      getlocal            11
+      getlex              QName(PackageNamespace(""), "m_queryResultCount")
+      lessthan
+      dup
+      iffalse             L111
+
+      pop
+      getlocal            10
+      getlocal3
+      lessthan
+L111:
+      iftrue              L87
+
+      findproperty        QName(PackageNamespace(""), "m_queryResultCount")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "m_queryResultCount")
+
+      findpropstrict      QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "IncrementTimeStamp")
+      callpropvoid        QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "IncrementTimeStamp"), 0
+
+      getlocal            10
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_quantizationFactor") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "m_worldAABB") type QName(PackageNamespace("Box2D.Collision"), "b2AABB") end
+  trait slot QName(PackageNamespace(""), "m_bounds") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "m_freeProxy") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "m_proxyCount") type QName(PackageNamespace(""), "int") end
+  trait method QName(PackageNamespace(""), "Commit")
+   method
+    refid "Box2D.Collision:b2BroadPhase/instance/Commit"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_pairManager")
+      callpropvoid        QName(PackageNamespace(""), "Commit"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_proxyPool") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "m_queryResultCount") type QName(PackageNamespace(""), "int") end
+  trait method QName(PackageNamespace(""), "GetProxy")
+   method
+    refid "Box2D.Collision:b2BroadPhase/instance/GetProxy"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "m_proxyPool")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal2
+
+      getlocal1
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      getproperty         QName(PackageNamespace(""), "b2_nullProxy")
+      equals
+      dup
+      iftrue              L21
+
+      pop
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "IsValid"), 0
+      pushfalse
+      equals
+L21:
+      iffalse             L24
+
+      pushnull
+      returnvalue
+
+L24:
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_pairManager") type QName(PackageNamespace("Box2D.Collision"), "b2PairManager") end
+  trait slot QName(PackageNamespace(""), "m_timeStamp") type QName(PackageNamespace(""), "uint") end
+  trait method QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "IncrementTimeStamp")
+   method
+    refid "Box2D.Collision:b2BroadPhase/instance/Box2D.Collision:b2BroadPhase/IncrementTimeStamp"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      getlex              QName(PackageNamespace(""), "m_timeStamp")
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "USHRT_MAX")
+      ifne                L33
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      jump                L25
+
+L13:
+      label
+      getlex              QName(PackageNamespace(""), "m_proxyPool")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      astypelate
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "timeStamp")
+
+      getlocal1
+      increment
+      convert_u
+      setlocal1
+
+L25:
+      getlocal1
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_maxProxies")
+      iflt                L13
+
+      findproperty        QName(PackageNamespace(""), "m_timeStamp")
+      pushbyte            1
+      initproperty        QName(PackageNamespace(""), "m_timeStamp")
+
+      jump                L44
+
+L33:
+      findpropstrict      QName(PackageNamespace(""), "m_timeStamp")
+      dup
+      setlocal2
+
+      getproperty         QName(PackageNamespace(""), "m_timeStamp")
+      increment
+      setlocal3
+
+      getlocal2
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "m_timeStamp")
+
+      kill                3
+      kill                2
+L44:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "Query")
+   method
+    refid "Box2D.Collision:b2BroadPhase/instance/Box2D.Collision:b2BroadPhase/Query"
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 15
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal            8
+
+      pushbyte            0
+      convert_u
+      setlocal            9
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            10
+
+      pushbyte            0
+      convert_u
+      setlocal            11
+
+      pushbyte            0
+      setlocal            12
+
+      pushbyte            0
+      setlocal            13
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            14
+
+      findpropstrict      QName(PackageNamespace(""), "BinarySearch")
+      getlocal            5
+      getlocal            6
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "BinarySearch"), 3
+      convert_u
+      setlocal            8
+
+      findpropstrict      QName(PackageNamespace(""), "BinarySearch")
+      getlocal            5
+      getlocal            6
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "BinarySearch"), 3
+      convert_u
+      setlocal            9
+
+      getlocal            8
+      convert_u
+      setlocal            11
+
+      jump                L56
+
+L39:
+      label
+      getlocal            5
+      getlocal            11
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      dup
+      setlocal            10
+
+      callproperty        QName(PackageNamespace(""), "IsLower"), 0
+      iffalse             L52
+
+      findpropstrict      QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "IncrementOverlapCount")
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      callpropvoid        QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "IncrementOverlapCount"), 1
+
+L52:
+      getlocal            11
+      increment
+      convert_u
+      setlocal            11
+
+L56:
+      getlocal            11
+      getlocal            9
+      iflt                L39
+
+      getlocal            8
+      pushbyte            0
+      ifngt               L109
+
+      getlocal            8
+      decrement
+      convert_i
+      setlocal            12
+
+      getlocal            5
+      getlocal            12
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      dup
+      setlocal            10
+
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      convert_i
+      setlocal            13
+
+      jump                L107
+
+L76:
+      label
+      getlocal            5
+      getlocal            12
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      dup
+      setlocal            10
+
+      callproperty        QName(PackageNamespace(""), "IsLower"), 0
+      iffalse             L104
+
+      getlex              QName(PackageNamespace(""), "m_proxyPool")
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            14
+
+      getlocal            8
+      getlocal            14
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      getlocal            7
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      ifnle               L104
+
+      findpropstrict      QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "IncrementOverlapCount")
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      callpropvoid        QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "IncrementOverlapCount"), 1
+
+      getlocal            13
+      decrement_i
+      setlocal            13
+
+L104:
+      getlocal            12
+      decrement_i
+      setlocal            12
+
+L107:
+      getlocal            13
+      iftrue              L76
+
+L109:
+      getlocal1
+      pushbyte            0
+      getlocal            8
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal2
+      pushbyte            0
+      getlocal            9
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "TestOverlapValidate")
+   method
+    refid "Box2D.Collision:b2BroadPhase/instance/Box2D.Collision:b2BroadPhase/TestOverlapValidate"
+    param QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+    param QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            6
+
+      pushbyte            0
+      setlocal3
+
+      jump                L69
+
+L16:
+      label
+      getlex              QName(PackageNamespace(""), "m_bounds")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Array")
+      dup
+      setlocal            4
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "lowerBounds")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            5
+
+      getlocal            4
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            6
+
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "value")
+      ifngt               L45
+
+      pushfalse
+      returnvalue
+
+L45:
+      getlocal            4
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            5
+
+      getlocal            4
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "lowerBounds")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            6
+
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "value")
+      ifnlt               L68
+
+      pushfalse
+      returnvalue
+
+L68:
+      inclocal_i          3
+L69:
+      getlocal3
+      pushbyte            2
+      iflt                L16
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "ComputeBounds")
+   method
+    refid "Box2D.Collision:b2BroadPhase/instance/Box2D.Collision:b2BroadPhase/ComputeBounds"
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            4
+
+      pushnan
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+      setlocal            4
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+      setlocal            5
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "m_worldAABB")
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      callproperty        QName(PackageNamespace(""), "b2Min"), 2
+      convert_d
+      setlocal            4
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            5
+      getlex              QName(PackageNamespace(""), "m_worldAABB")
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      callproperty        QName(PackageNamespace(""), "b2Min"), 2
+      convert_d
+      setlocal            5
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "m_worldAABB")
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      callproperty        QName(PackageNamespace(""), "b2Max"), 2
+      convert_d
+      setlocal            4
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            5
+      getlex              QName(PackageNamespace(""), "m_worldAABB")
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      callproperty        QName(PackageNamespace(""), "b2Max"), 2
+      convert_d
+      setlocal            5
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+      setlocal            6
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+      setlocal            7
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            6
+      getlex              QName(PackageNamespace(""), "m_worldAABB")
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      callproperty        QName(PackageNamespace(""), "b2Min"), 2
+      convert_d
+      setlocal            6
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            7
+      getlex              QName(PackageNamespace(""), "m_worldAABB")
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      callproperty        QName(PackageNamespace(""), "b2Min"), 2
+      convert_d
+      setlocal            7
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            6
+      getlex              QName(PackageNamespace(""), "m_worldAABB")
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      callproperty        QName(PackageNamespace(""), "b2Max"), 2
+      convert_d
+      setlocal            6
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            7
+      getlex              QName(PackageNamespace(""), "m_worldAABB")
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      callproperty        QName(PackageNamespace(""), "b2Max"), 2
+      convert_d
+      setlocal            7
+
+      getlocal1
+      pushbyte            0
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      getlex              QName(PackageNamespace(""), "m_quantizationFactor")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "m_worldAABB")
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      multiply
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "USHRT_MAX")
+      decrement
+      bitand
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal2
+      pushbyte            0
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      getlex              QName(PackageNamespace(""), "m_quantizationFactor")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            6
+      getlex              QName(PackageNamespace(""), "m_worldAABB")
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      multiply
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      pushint             65535
+      bitand
+      pushbyte            1
+      bitor
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal1
+      pushbyte            1
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      getlex              QName(PackageNamespace(""), "m_quantizationFactor")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            5
+      getlex              QName(PackageNamespace(""), "m_worldAABB")
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      multiply
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "USHRT_MAX")
+      decrement
+      bitand
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal2
+      pushbyte            1
+      findpropstrict      QName(PackageNamespace(""), "uint")
+      getlex              QName(PackageNamespace(""), "m_quantizationFactor")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            7
+      getlex              QName(PackageNamespace(""), "m_worldAABB")
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      multiply
+      callproperty        QName(PackageNamespace(""), "uint"), 1
+      pushint             65535
+      bitand
+      pushbyte            1
+      bitor
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_queryResults") type QName(PackageNamespace(""), "Array") end
+  trait method QName(PackageNamespace(""), "CreateProxy")
+   method
+    refid "Box2D.Collision:b2BroadPhase/instance/CreateProxy"
+    param QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+    param null
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 8
+     localcount 26
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            4
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            7
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            8
+
+      pushbyte            0
+      setlocal            9
+
+      pushbyte            0
+      setlocal            10
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            11
+
+      pushbyte            0
+      convert_u
+      setlocal            12
+
+      pushbyte            0
+      convert_u
+      setlocal            13
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            14
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            15
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            16
+
+      pushbyte            0
+      setlocal            17
+
+      pushbyte            0
+      setlocal            18
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            19
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            20
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            21
+
+      pushbyte            0
+      setlocal            22
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            23
+
+      getlex              QName(PackageNamespace(""), "m_freeProxy")
+      convert_u
+      setlocal            5
+
+      getlex              QName(PackageNamespace(""), "m_proxyPool")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            4
+
+      findproperty        QName(PackageNamespace(""), "m_freeProxy")
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "GetNext"), 0
+      initproperty        QName(PackageNamespace(""), "m_freeProxy")
+
+      getlocal            4
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "overlapCount")
+
+      getlocal            4
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "userData")
+
+      pushbyte            2
+      getlex              QName(PackageNamespace(""), "m_proxyCount")
+      multiply
+      convert_u
+      setlocal            6
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            7
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            8
+
+      findpropstrict      QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "ComputeBounds")
+      getlocal            7
+      getlocal            8
+      getlocal1
+      callpropvoid        QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "ComputeBounds"), 3
+
+      pushbyte            0
+      setlocal            9
+
+      jump                L448
+
+L99:
+      label
+      getlex              QName(PackageNamespace(""), "m_bounds")
+      getlocal            9
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            11
+
+      getlocal            12
+      newarray            1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            14
+
+      getlocal            13
+      newarray            1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            15
+
+      findpropstrict      QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "Query")
+      getlocal            14
+      getlocal            15
+      getlocal            7
+      getlocal            9
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getlocal            8
+      getlocal            9
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getlocal            11
+      getlocal            6
+      getlocal            9
+      callpropvoid        QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "Query"), 7
+
+      getlocal            14
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_u
+      setlocal            12
+
+      getlocal            15
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_u
+      setlocal            13
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            16
+
+      getlocal            6
+      getlocal            13
+      subtract
+      convert_i
+      setlocal            18
+
+      pushbyte            0
+      setlocal            17
+
+      jump                L181
+
+L148:
+      label
+      getlocal            16
+      getlocal            17
+      findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      constructprop       QName(PackageNamespace("Box2D.Collision"), "b2Bound"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            16
+      getlocal            17
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            19
+
+      getlocal            11
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            13
+      getlocal            17
+      add
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            20
+
+      getlocal            19
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "value")
+      setproperty         QName(PackageNamespace(""), "value")
+
+      getlocal            19
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      setproperty         QName(PackageNamespace(""), "proxyId")
+
+      getlocal            19
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      inclocal_i          17
+L181:
+      getlocal            17
+      getlocal            18
+      iflt                L148
+
+      getlocal            16
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal            18
+
+      getlocal            13
+      pushbyte            2
+      add
+      convert_i
+      setlocal            22
+
+      pushbyte            0
+      setlocal            17
+
+      jump                L224
+
+L196:
+      label
+      getlocal            16
+      getlocal            17
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            20
+
+      getlocal            11
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            22
+      getlocal            17
+      add
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      dup
+      setlocal            19
+
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "value")
+      setproperty         QName(PackageNamespace(""), "value")
+
+      getlocal            19
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      setproperty         QName(PackageNamespace(""), "proxyId")
+
+      getlocal            19
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      inclocal_i          17
+L224:
+      getlocal            17
+      getlocal            18
+      iflt                L196
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            16
+
+      getlocal            13
+      getlocal            12
+      subtract
+      convert_i
+      setlocal            18
+
+      pushbyte            0
+      setlocal            17
+
+      jump                L272
+
+L239:
+      label
+      getlocal            16
+      getlocal            17
+      findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      constructprop       QName(PackageNamespace("Box2D.Collision"), "b2Bound"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            16
+      getlocal            17
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            19
+
+      getlocal            11
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            12
+      getlocal            17
+      add
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            20
+
+      getlocal            19
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "value")
+      setproperty         QName(PackageNamespace(""), "value")
+
+      getlocal            19
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      setproperty         QName(PackageNamespace(""), "proxyId")
+
+      getlocal            19
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      inclocal_i          17
+L272:
+      getlocal            17
+      getlocal            18
+      iflt                L239
+
+      getlocal            16
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal            18
+
+      getlocal            12
+      pushbyte            1
+      add
+      convert_i
+      setlocal            22
+
+      pushbyte            0
+      setlocal            17
+
+      jump                L315
+
+L287:
+      label
+      getlocal            16
+      getlocal            17
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            20
+
+      getlocal            11
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            22
+      getlocal            17
+      add
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      dup
+      setlocal            19
+
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "value")
+      setproperty         QName(PackageNamespace(""), "value")
+
+      getlocal            19
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      setproperty         QName(PackageNamespace(""), "proxyId")
+
+      getlocal            19
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      inclocal_i          17
+L315:
+      getlocal            17
+      getlocal            18
+      iflt                L287
+
+      getlocal            13
+      increment
+      convert_u
+      setlocal            13
+
+      getlocal            11
+      getlocal            12
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            19
+
+      getlocal            11
+      getlocal            13
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            20
+
+      getlocal            19
+      getlocal            7
+      getlocal            9
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "value")
+
+      getlocal            19
+      getlocal            5
+      setproperty         QName(PackageNamespace(""), "proxyId")
+
+      getlocal            20
+      getlocal            8
+      getlocal            9
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      setproperty         QName(PackageNamespace(""), "value")
+
+      getlocal            20
+      getlocal            5
+      setproperty         QName(PackageNamespace(""), "proxyId")
+
+      getlocal            11
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            12
+      decrement
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            21
+
+      getlocal            19
+      getlocal            12
+      pushbyte            0
+      equals
+      iffalse             L364
+
+      pushbyte            0
+      convert_u
+      jump                L367
+
+L364:
+      getlocal            21
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      convert_u
+L367:
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      getlocal            11
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            13
+      decrement
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            21
+
+      getlocal            20
+      getlocal            21
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      getlocal            12
+      convert_u
+      setlocal3
+
+      jump                L405
+
+L384:
+      label
+      getlocal            11
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      dup
+      setlocal            21
+
+      dup
+      setlocal            24
+
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      increment
+      setlocal            25
+
+      getlocal            24
+      getlocal            25
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      kill                25
+      kill                24
+      getlocal3
+      increment
+      convert_u
+      setlocal3
+
+L405:
+      getlocal3
+      getlocal            13
+      iflt                L384
+
+      getlocal            12
+      convert_u
+      setlocal3
+
+      jump                L442
+
+L412:
+      label
+      getlocal            11
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            19
+
+      getlex              QName(PackageNamespace(""), "m_proxyPool")
+      getlocal            19
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            23
+
+      getlocal            19
+      callproperty        QName(PackageNamespace(""), "IsLower"), 0
+      iffalse             L433
+
+      getlocal            23
+      getproperty         QName(PackageNamespace(""), "lowerBounds")
+      getlocal            9
+      getlocal3
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      jump                L438
+
+L433:
+      getlocal            23
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      getlocal            9
+      getlocal3
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+L438:
+      getlocal3
+      increment
+      convert_u
+      setlocal3
+
+L442:
+      getlocal3
+      getlocal            6
+      pushbyte            2
+      add
+      iflt                L412
+
+      inclocal_i          9
+L448:
+      getlocal            9
+      pushbyte            2
+      iflt                L99
+
+      findpropstrict      QName(PackageNamespace(""), "m_proxyCount")
+      dup
+      setlocal            24
+
+      getproperty         QName(PackageNamespace(""), "m_proxyCount")
+      increment_i
+      setlocal            25
+
+      getlocal            24
+      getlocal            25
+      setproperty         QName(PackageNamespace(""), "m_proxyCount")
+
+      kill                25
+      kill                24
+      pushbyte            0
+      setlocal            10
+
+      jump                L473
+
+L465:
+      label
+      getlex              QName(PackageNamespace(""), "m_pairManager")
+      getlocal            5
+      getlex              QName(PackageNamespace(""), "m_queryResults")
+      getlocal            10
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "AddBufferedPair"), 2
+
+      inclocal_i          10
+L473:
+      getlocal            10
+      getlex              QName(PackageNamespace(""), "m_queryResultCount")
+      iflt                L465
+
+      getlex              QName(PackageNamespace(""), "m_pairManager")
+      callpropvoid        QName(PackageNamespace(""), "Commit"), 0
+
+      findproperty        QName(PackageNamespace(""), "m_queryResultCount")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "m_queryResultCount")
+
+      findpropstrict      QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "IncrementTimeStamp")
+      callpropvoid        QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "IncrementTimeStamp"), 0
+
+      getlocal            5
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "DestroyProxy")
+   method
+    refid "Box2D.Collision:b2BroadPhase/instance/DestroyProxy"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 22
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            4
+
+      pushbyte            0
+      setlocal            5
+
+      pushbyte            0
+      setlocal            6
+
+      pushbyte            0
+      setlocal            7
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            8
+
+      pushbyte            0
+      convert_u
+      setlocal            9
+
+      pushbyte            0
+      convert_u
+      setlocal            10
+
+      pushbyte            0
+      convert_u
+      setlocal            11
+
+      pushbyte            0
+      convert_u
+      setlocal            12
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            13
+
+      pushbyte            0
+      setlocal            14
+
+      pushbyte            0
+      setlocal            15
+
+      pushbyte            0
+      setlocal            16
+
+      pushbyte            0
+      convert_u
+      setlocal            17
+
+      pushbyte            0
+      setlocal            18
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            19
+
+      getlex              QName(PackageNamespace(""), "m_proxyPool")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            4
+
+      pushbyte            2
+      getlex              QName(PackageNamespace(""), "m_proxyCount")
+      multiply
+      convert_i
+      setlocal            5
+
+      pushbyte            0
+      setlocal            6
+
+      jump                L368
+
+L62:
+      label
+      getlex              QName(PackageNamespace(""), "m_bounds")
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            8
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "lowerBounds")
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_u
+      setlocal            9
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_u
+      setlocal            10
+
+      getlocal            8
+      getlocal            9
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "value")
+      convert_u
+      setlocal            11
+
+      getlocal            8
+      getlocal            10
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal3
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      convert_u
+      setlocal            12
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            13
+
+      getlocal            10
+      getlocal            9
+      subtract
+      decrement
+      convert_i
+      setlocal            15
+
+      pushbyte            0
+      setlocal            14
+
+      jump                L146
+
+L111:
+      label
+      getlocal            13
+      getlocal            14
+      findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      constructprop       QName(PackageNamespace("Box2D.Collision"), "b2Bound"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            13
+      getlocal            14
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal2
+
+      getlocal            8
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            9
+      pushbyte            1
+      add
+      getlocal            14
+      add
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal3
+
+      getlocal2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      setproperty         QName(PackageNamespace(""), "value")
+
+      getlocal2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      setproperty         QName(PackageNamespace(""), "proxyId")
+
+      getlocal2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      inclocal_i          14
+L146:
+      getlocal            14
+      getlocal            15
+      iflt                L111
+
+      getlocal            13
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal            15
+
+      getlocal            9
+      convert_i
+      setlocal            16
+
+      pushbyte            0
+      setlocal            14
+
+      jump                L187
+
+L159:
+      label
+      getlocal            13
+      getlocal            14
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal3
+
+      getlocal            8
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            16
+      getlocal            14
+      add
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal2
+
+      getlocal2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      setproperty         QName(PackageNamespace(""), "value")
+
+      getlocal2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      setproperty         QName(PackageNamespace(""), "proxyId")
+
+      getlocal2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      inclocal_i          14
+L187:
+      getlocal            14
+      getlocal            15
+      iflt                L159
+
+      findpropstrict      QName(PackageNamespace(""), "Array")
+      constructprop       QName(PackageNamespace(""), "Array"), 0
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            13
+
+      getlocal            5
+      getlocal            10
+      subtract
+      decrement
+      convert_i
+      setlocal            15
+
+      pushbyte            0
+      setlocal            14
+
+      jump                L238
+
+L203:
+      label
+      getlocal            13
+      getlocal            14
+      findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      constructprop       QName(PackageNamespace("Box2D.Collision"), "b2Bound"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            13
+      getlocal            14
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal2
+
+      getlocal            8
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            10
+      pushbyte            1
+      add
+      getlocal            14
+      add
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal3
+
+      getlocal2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      setproperty         QName(PackageNamespace(""), "value")
+
+      getlocal2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      setproperty         QName(PackageNamespace(""), "proxyId")
+
+      getlocal2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      inclocal_i          14
+L238:
+      getlocal            14
+      getlocal            15
+      iflt                L203
+
+      getlocal            13
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal            15
+
+      getlocal            10
+      decrement
+      convert_i
+      setlocal            16
+
+      pushbyte            0
+      setlocal            14
+
+      jump                L280
+
+L252:
+      label
+      getlocal            13
+      getlocal            14
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal3
+
+      getlocal            8
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            16
+      getlocal            14
+      add
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal2
+
+      getlocal2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "value")
+      setproperty         QName(PackageNamespace(""), "value")
+
+      getlocal2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      setproperty         QName(PackageNamespace(""), "proxyId")
+
+      getlocal2
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      inclocal_i          14
+L280:
+      getlocal            14
+      getlocal            15
+      iflt                L252
+
+      getlocal            5
+      pushbyte            2
+      subtract
+      convert_i
+      setlocal            15
+
+      getlocal            9
+      convert_u
+      setlocal            17
+
+      jump                L322
+
+L292:
+      label
+      getlocal            8
+      getlocal            17
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "m_proxyPool")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            19
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "IsLower"), 0
+      iffalse             L313
+
+      getlocal            19
+      getproperty         QName(PackageNamespace(""), "lowerBounds")
+      getlocal            6
+      getlocal            17
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      jump                L318
+
+L313:
+      getlocal            19
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      getlocal            6
+      getlocal            17
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+L318:
+      getlocal            17
+      increment
+      convert_u
+      setlocal            17
+
+L322:
+      getlocal            17
+      getlocal            15
+      iflt                L292
+
+      getlocal            10
+      decrement
+      convert_i
+      setlocal            15
+
+      getlocal            9
+      convert_i
+      setlocal            18
+
+      jump                L351
+
+L333:
+      label
+      getlocal            8
+      getlocal            18
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal2
+
+      getlocal2
+      dup
+      setlocal            20
+
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      decrement
+      setlocal            21
+
+      getlocal            20
+      getlocal            21
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      kill                21
+      kill                20
+      inclocal_i          18
+L351:
+      getlocal            18
+      getlocal            15
+      iflt                L333
+
+      findpropstrict      QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "Query")
+      pushbyte            0
+      newarray            1
+      pushbyte            0
+      newarray            1
+      getlocal            11
+      getlocal            12
+      getlocal            8
+      getlocal            5
+      pushbyte            2
+      subtract
+      getlocal            6
+      callpropvoid        QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "Query"), 7
+
+      inclocal_i          6
+L368:
+      getlocal            6
+      pushbyte            2
+      iflt                L62
+
+      pushbyte            0
+      setlocal            7
+
+      jump                L382
+
+L374:
+      label
+      getlex              QName(PackageNamespace(""), "m_pairManager")
+      getlocal1
+      getlex              QName(PackageNamespace(""), "m_queryResults")
+      getlocal            7
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "RemoveBufferedPair"), 2
+
+      inclocal_i          7
+L382:
+      getlocal            7
+      getlex              QName(PackageNamespace(""), "m_queryResultCount")
+      iflt                L374
+
+      getlex              QName(PackageNamespace(""), "m_pairManager")
+      callpropvoid        QName(PackageNamespace(""), "Commit"), 0
+
+      findproperty        QName(PackageNamespace(""), "m_queryResultCount")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "m_queryResultCount")
+
+      findpropstrict      QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "IncrementTimeStamp")
+      callpropvoid        QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "IncrementTimeStamp"), 0
+
+      getlocal            4
+      pushnull
+      setproperty         QName(PackageNamespace(""), "userData")
+
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "b2_invalid")
+      setproperty         QName(PackageNamespace(""), "overlapCount")
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "lowerBounds")
+      pushbyte            0
+      getlex              QName(PackageNamespace(""), "b2_invalid")
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "lowerBounds")
+      pushbyte            1
+      getlex              QName(PackageNamespace(""), "b2_invalid")
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      pushbyte            0
+      getlex              QName(PackageNamespace(""), "b2_invalid")
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      pushbyte            1
+      getlex              QName(PackageNamespace(""), "b2_invalid")
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            4
+      getlex              QName(PackageNamespace(""), "m_freeProxy")
+      callpropvoid        QName(PackageNamespace(""), "SetNext"), 1
+
+      findproperty        QName(PackageNamespace(""), "m_freeProxy")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "m_freeProxy")
+
+      findpropstrict      QName(PackageNamespace(""), "m_proxyCount")
+      dup
+      setlocal            20
+
+      getproperty         QName(PackageNamespace(""), "m_proxyCount")
+      decrement_i
+      setlocal            21
+
+      getlocal            20
+      getlocal            21
+      setproperty         QName(PackageNamespace(""), "m_proxyCount")
+
+      kill                21
+      kill                20
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "TestOverlap")
+   method
+    refid "Box2D.Collision:b2BroadPhase/instance/TestOverlap"
+    param QName(PackageNamespace("Box2D.Collision"), "b2BoundValues")
+    param QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            5
+
+      pushbyte            0
+      setlocal3
+
+      jump                L54
+
+L13:
+      label
+      getlex              QName(PackageNamespace(""), "m_bounds")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Array")
+      dup
+      setlocal            4
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            5
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "lowerValues")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "value")
+      ifngt               L36
+
+      pushfalse
+      returnvalue
+
+L36:
+      getlocal            4
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "lowerBounds")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            5
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "upperValues")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "value")
+      ifnlt               L53
+
+      pushfalse
+      returnvalue
+
+L53:
+      inclocal_i          3
+L54:
+      getlocal3
+      pushbyte            2
+      iflt                L13
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "Validate")
+   method
+    refid "Box2D.Collision:b2BroadPhase/instance/Validate"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 11
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      setlocal1
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal3
+
+      pushfalse
+      setlocal            4
+
+      pushbyte            0
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            6
+
+      pushbyte            0
+      convert_u
+      setlocal            7
+
+      pushbyte            0
+      convert_u
+      setlocal            8
+
+      pushbyte            0
+      convert_u
+      setlocal            9
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            10
+
+      pushbyte            0
+      setlocal            5
+
+      jump                L78
+
+L33:
+      label
+      getlex              QName(PackageNamespace(""), "m_bounds")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            6
+
+      pushbyte            2
+      getlex              QName(PackageNamespace(""), "m_proxyCount")
+      multiply
+      convert_u
+      setlocal            7
+
+      pushbyte            0
+      convert_u
+      setlocal            8
+
+      pushbyte            0
+      convert_u
+      setlocal            9
+
+      jump                L74
+
+L51:
+      label
+      getlocal            6
+      getlocal            9
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      dup
+      setlocal            10
+
+      callproperty        QName(PackageNamespace(""), "IsLower"), 0
+      pushtrue
+      ifne                L66
+
+      getlocal            8
+      increment
+      convert_u
+      setlocal            8
+
+      jump                L70
+
+L66:
+      getlocal            8
+      decrement
+      convert_u
+      setlocal            8
+
+L70:
+      getlocal            9
+      increment
+      convert_u
+      setlocal            9
+
+L74:
+      getlocal            9
+      getlocal            7
+      iflt                L51
+
+      inclocal_i          5
+L78:
+      getlocal            5
+      pushbyte            2
+      iflt                L33
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "IncrementOverlapCount")
+   method
+    refid "Box2D.Collision:b2BroadPhase/instance/Box2D.Collision:b2BroadPhase/IncrementOverlapCount"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "m_proxyPool")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "timeStamp")
+      getlex              QName(PackageNamespace(""), "m_timeStamp")
+      ifnlt               L21
+
+      getlocal2
+      getlex              QName(PackageNamespace(""), "m_timeStamp")
+      setproperty         QName(PackageNamespace(""), "timeStamp")
+
+      getlocal2
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "overlapCount")
+
+      jump                L39
+
+L21:
+      getlocal2
+      pushbyte            2
+      setproperty         QName(PackageNamespace(""), "overlapCount")
+
+      getlex              QName(PackageNamespace(""), "m_queryResults")
+      getlex              QName(PackageNamespace(""), "m_queryResultCount")
+      getlocal1
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      findpropstrict      QName(PackageNamespace(""), "m_queryResultCount")
+      dup
+      setlocal3
+
+      getproperty         QName(PackageNamespace(""), "m_queryResultCount")
+      increment_i
+      setlocal            4
+
+      getlocal3
+      getlocal            4
+      setproperty         QName(PackageNamespace(""), "m_queryResultCount")
+
+      kill                4
+      kill                3
+L39:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "InRange")
+   method
+    refid "Box2D.Collision:b2BroadPhase/instance/InRange"
+    param QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal2
+
+      pushnan
+      setlocal3
+
+      pushnan
+      setlocal            4
+
+      pushnan
+      setlocal            5
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+      setlocal2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+      setlocal3
+
+      getlocal2
+      getlex              QName(PackageNamespace(""), "m_worldAABB")
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal2
+
+      getlocal3
+      getlex              QName(PackageNamespace(""), "m_worldAABB")
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "m_worldAABB")
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "m_worldAABB")
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+      setlocal            5
+
+      getlocal            4
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            4
+
+      getlocal            5
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            5
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal2
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "b2Max"), 2
+      convert_d
+      setlocal2
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal3
+      getlocal            5
+      callproperty        QName(PackageNamespace(""), "b2Max"), 2
+      convert_d
+      setlocal3
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal2
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "b2Max"), 2
+      pushbyte            0
+      lessthan
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "MoveProxy")
+   method
+    refid "Box2D.Collision:b2BroadPhase/instance/MoveProxy"
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 27
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      pushbyte            0
+      convert_u
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            7
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            8
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            9
+
+      pushbyte            0
+      convert_u
+      setlocal            10
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            11
+
+      pushbyte            0
+      convert_u
+      setlocal            12
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            13
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2BoundValues")
+      setlocal            14
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2BoundValues")
+      setlocal            15
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            16
+
+      pushbyte            0
+      convert_u
+      setlocal            17
+
+      pushbyte            0
+      convert_u
+      setlocal            18
+
+      pushbyte            0
+      convert_u
+      setlocal            19
+
+      pushbyte            0
+      convert_u
+      setlocal            20
+
+      pushbyte            0
+      setlocal            21
+
+      pushbyte            0
+      setlocal            22
+
+      pushbyte            0
+      convert_u
+      setlocal            23
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            24
+
+      getlocal1
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      getproperty         QName(PackageNamespace(""), "b2_nullProxy")
+      equals
+      dup
+      iftrue              L76
+
+      pop
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_maxProxies")
+      getlocal1
+      lessequals
+L76:
+      iffalse             L78
+
+      returnvoid
+
+L78:
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "IsValid"), 0
+      pushfalse
+      ifne                L83
+
+      returnvoid
+
+L83:
+      pushbyte            2
+      getlex              QName(PackageNamespace(""), "m_proxyCount")
+      multiply
+      convert_u
+      setlocal            12
+
+      getlex              QName(PackageNamespace(""), "m_proxyPool")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            13
+
+      findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2BoundValues")
+      constructprop       QName(PackageNamespace("Box2D.Collision"), "b2BoundValues"), 0
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2BoundValues")
+      setlocal            14
+
+      findpropstrict      QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "ComputeBounds")
+      getlocal            14
+      getproperty         QName(PackageNamespace(""), "lowerValues")
+      getlocal            14
+      getproperty         QName(PackageNamespace(""), "upperValues")
+      getlocal2
+      callpropvoid        QName(PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), "ComputeBounds"), 3
+
+      findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2BoundValues")
+      constructprop       QName(PackageNamespace("Box2D.Collision"), "b2BoundValues"), 0
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2BoundValues")
+      setlocal            15
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      jump                L149
+
+L112:
+      label
+      getlex              QName(PackageNamespace(""), "m_bounds")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getlocal            13
+      getproperty         QName(PackageNamespace(""), "lowerBounds")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            7
+
+      getlocal            15
+      getproperty         QName(PackageNamespace(""), "lowerValues")
+      getlocal            5
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "value")
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlex              QName(PackageNamespace(""), "m_bounds")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getlocal            13
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            7
+
+      getlocal            15
+      getproperty         QName(PackageNamespace(""), "upperValues")
+      getlocal            5
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "value")
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            5
+      increment
+      convert_u
+      setlocal            5
+
+L149:
+      getlocal            5
+      pushbyte            2
+      iflt                L112
+
+      pushbyte            0
+      convert_u
+      setlocal            5
+
+      jump                L824
+
+L156:
+      label
+      getlex              QName(PackageNamespace(""), "m_bounds")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal            16
+
+      getlocal            13
+      getproperty         QName(PackageNamespace(""), "lowerBounds")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_u
+      setlocal            17
+
+      getlocal            13
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_u
+      setlocal            18
+
+      getlocal            14
+      getproperty         QName(PackageNamespace(""), "lowerValues")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_u
+      setlocal            19
+
+      getlocal            14
+      getproperty         QName(PackageNamespace(""), "upperValues")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_u
+      setlocal            20
+
+      getlocal            16
+      getlocal            17
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            7
+
+      getlocal            19
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "value")
+      subtract
+      convert_i
+      setlocal            21
+
+      getlocal            7
+      getlocal            19
+      setproperty         QName(PackageNamespace(""), "value")
+
+      getlocal            16
+      getlocal            18
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            7
+
+      getlocal            20
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "value")
+      subtract
+      convert_i
+      setlocal            22
+
+      getlocal            7
+      getlocal            20
+      setproperty         QName(PackageNamespace(""), "value")
+
+      getlocal            21
+      pushbyte            0
+      ifnlt               L365
+
+      getlocal            17
+      convert_u
+      setlocal            6
+
+      jump                L347
+
+L221:
+      label
+      getlocal            16
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            7
+
+      getlocal            16
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            6
+      decrement
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      dup
+      setlocal            8
+
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      convert_u
+      setlocal            23
+
+      getlex              QName(PackageNamespace(""), "m_proxyPool")
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            24
+
+      getlocal            8
+      dup
+      setlocal            25
+
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      increment
+      setlocal            26
+
+      getlocal            25
+      getlocal            26
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      kill                26
+      kill                25
+      getlocal            8
+      callproperty        QName(PackageNamespace(""), "IsUpper"), 0
+      pushtrue
+      ifne                L297
+
+      findpropstrict      QName(PackageNamespace(""), "TestOverlap")
+      getlocal            14
+      getlocal            24
+      callproperty        QName(PackageNamespace(""), "TestOverlap"), 2
+      iffalse             L269
+
+      getlex              QName(PackageNamespace(""), "m_pairManager")
+      getlocal1
+      getlocal            23
+      callpropvoid        QName(PackageNamespace(""), "AddBufferedPair"), 2
+
+L269:
+      getlocal            24
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_i
+      dup
+      setlocal            4
+
+      increment_i
+      setlocal            4
+
+      getlocal3
+      getlocal            5
+      getlocal            4
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            7
+      dup
+      setlocal            25
+
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      increment
+      setlocal            26
+
+      getlocal            25
+      getlocal            26
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      kill                26
+      kill                25
+      jump                L324
+
+L297:
+      getlocal            24
+      getproperty         QName(PackageNamespace(""), "lowerBounds")
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_i
+      dup
+      setlocal            4
+
+      increment_i
+      setlocal            4
+
+      getlocal3
+      getlocal            5
+      getlocal            4
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            7
+      dup
+      setlocal            25
+
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      decrement
+      setlocal            26
+
+      getlocal            25
+      getlocal            26
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      kill                26
+      kill                25
+L324:
+      getlocal            13
+      getproperty         QName(PackageNamespace(""), "lowerBounds")
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_i
+      dup
+      setlocal            4
+
+      decrement_i
+      setlocal            4
+
+      getlocal3
+      getlocal            5
+      getlocal            4
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            7
+      getlocal            8
+      callpropvoid        QName(PackageNamespace(""), "Swap"), 1
+
+      getlocal            6
+      decrement
+      convert_u
+      setlocal            6
+
+L347:
+      getlocal            6
+      pushbyte            0
+      greaterthan
+      dup
+      iffalse             L364
+
+      pop
+      getlocal            19
+      getlocal            16
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            6
+      decrement
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      astypelate
+      getproperty         QName(PackageNamespace(""), "value")
+      lessthan
+L364:
+      iftrue              L221
+
+L365:
+      getlocal            22
+      pushbyte            0
+      ifngt               L518
+
+      getlocal            18
+      convert_u
+      setlocal            6
+
+      jump                L498
+
+L372:
+      label
+      getlocal            16
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            7
+
+      getlocal            16
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            6
+      pushbyte            1
+      add
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      dup
+      setlocal            9
+
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      convert_u
+      setlocal            10
+
+      getlex              QName(PackageNamespace(""), "m_proxyPool")
+      getlocal            10
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            11
+
+      getlocal            9
+      dup
+      setlocal            25
+
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      increment
+      setlocal            26
+
+      getlocal            25
+      getlocal            26
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      kill                26
+      kill                25
+      getlocal            9
+      callproperty        QName(PackageNamespace(""), "IsLower"), 0
+      pushtrue
+      ifne                L448
+
+      findpropstrict      QName(PackageNamespace(""), "TestOverlap")
+      getlocal            14
+      getlocal            11
+      callproperty        QName(PackageNamespace(""), "TestOverlap"), 2
+      iffalse             L420
+
+      getlex              QName(PackageNamespace(""), "m_pairManager")
+      getlocal1
+      getlocal            10
+      callpropvoid        QName(PackageNamespace(""), "AddBufferedPair"), 2
+
+L420:
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "lowerBounds")
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_i
+      dup
+      setlocal            4
+
+      decrement_i
+      setlocal            4
+
+      getlocal3
+      getlocal            5
+      getlocal            4
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            7
+      dup
+      setlocal            25
+
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      increment
+      setlocal            26
+
+      getlocal            25
+      getlocal            26
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      kill                26
+      kill                25
+      jump                L475
+
+L448:
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_i
+      dup
+      setlocal            4
+
+      decrement_i
+      setlocal            4
+
+      getlocal3
+      getlocal            5
+      getlocal            4
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            7
+      dup
+      setlocal            25
+
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      decrement
+      setlocal            26
+
+      getlocal            25
+      getlocal            26
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      kill                26
+      kill                25
+L475:
+      getlocal            13
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_i
+      dup
+      setlocal            4
+
+      increment_i
+      setlocal            4
+
+      getlocal3
+      getlocal            5
+      getlocal            4
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            7
+      getlocal            9
+      callpropvoid        QName(PackageNamespace(""), "Swap"), 1
+
+      getlocal            6
+      increment
+      convert_u
+      setlocal            6
+
+L498:
+      getlocal            6
+      getlocal            12
+      decrement
+      lessthan
+      dup
+      iffalse             L517
+
+      pop
+      getlocal            16
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            6
+      pushbyte            1
+      add
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      astypelate
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal            20
+      lessequals
+L517:
+      iftrue              L372
+
+L518:
+      getlocal            21
+      pushbyte            0
+      ifngt               L670
+
+      getlocal            17
+      convert_u
+      setlocal            6
+
+      jump                L650
+
+L525:
+      label
+      getlocal            16
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            7
+
+      getlocal            16
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            6
+      pushbyte            1
+      add
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      dup
+      setlocal            9
+
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      convert_u
+      setlocal            10
+
+      getlex              QName(PackageNamespace(""), "m_proxyPool")
+      getlocal            10
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            11
+
+      getlocal            9
+      dup
+      setlocal            25
+
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      decrement
+      setlocal            26
+
+      getlocal            25
+      getlocal            26
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      kill                26
+      kill                25
+      getlocal            9
+      callproperty        QName(PackageNamespace(""), "IsUpper"), 0
+      iffalse             L600
+
+      findpropstrict      QName(PackageNamespace(""), "TestOverlap")
+      getlocal            15
+      getlocal            11
+      callproperty        QName(PackageNamespace(""), "TestOverlap"), 2
+      iffalse             L572
+
+      getlex              QName(PackageNamespace(""), "m_pairManager")
+      getlocal1
+      getlocal            10
+      callpropvoid        QName(PackageNamespace(""), "RemoveBufferedPair"), 2
+
+L572:
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_i
+      dup
+      setlocal            4
+
+      decrement_i
+      setlocal            4
+
+      getlocal3
+      getlocal            5
+      getlocal            4
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            7
+      dup
+      setlocal            25
+
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      decrement
+      setlocal            26
+
+      getlocal            25
+      getlocal            26
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      kill                26
+      kill                25
+      jump                L627
+
+L600:
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "lowerBounds")
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_i
+      dup
+      setlocal            4
+
+      decrement_i
+      setlocal            4
+
+      getlocal3
+      getlocal            5
+      getlocal            4
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            7
+      dup
+      setlocal            25
+
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      increment
+      setlocal            26
+
+      getlocal            25
+      getlocal            26
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      kill                26
+      kill                25
+L627:
+      getlocal            13
+      getproperty         QName(PackageNamespace(""), "lowerBounds")
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_i
+      dup
+      setlocal            4
+
+      increment_i
+      setlocal            4
+
+      getlocal3
+      getlocal            5
+      getlocal            4
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            7
+      getlocal            9
+      callpropvoid        QName(PackageNamespace(""), "Swap"), 1
+
+      getlocal            6
+      increment
+      convert_u
+      setlocal            6
+
+L650:
+      getlocal            6
+      getlocal            12
+      decrement
+      lessthan
+      dup
+      iffalse             L669
+
+      pop
+      getlocal            16
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            6
+      pushbyte            1
+      add
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      astypelate
+      getproperty         QName(PackageNamespace(""), "value")
+      getlocal            19
+      lessequals
+L669:
+      iftrue              L525
+
+L670:
+      getlocal            22
+      pushbyte            0
+      ifnlt               L820
+
+      getlocal            18
+      convert_u
+      setlocal            6
+
+      jump                L802
+
+L677:
+      label
+      getlocal            16
+      getlocal            6
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      setlocal            7
+
+      getlocal            16
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            6
+      decrement
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      dup
+      setlocal            8
+
+      getproperty         QName(PackageNamespace(""), "proxyId")
+      convert_u
+      setlocal            23
+
+      getlex              QName(PackageNamespace(""), "m_proxyPool")
+      getlocal            23
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Proxy")
+      setlocal            24
+
+      getlocal            8
+      dup
+      setlocal            25
+
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      decrement
+      setlocal            26
+
+      getlocal            25
+      getlocal            26
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      kill                26
+      kill                25
+      getlocal            8
+      callproperty        QName(PackageNamespace(""), "IsLower"), 0
+      pushtrue
+      ifne                L752
+
+      findpropstrict      QName(PackageNamespace(""), "TestOverlap")
+      getlocal            15
+      getlocal            24
+      callproperty        QName(PackageNamespace(""), "TestOverlap"), 2
+      iffalse             L724
+
+      getlex              QName(PackageNamespace(""), "m_pairManager")
+      getlocal1
+      getlocal            23
+      callpropvoid        QName(PackageNamespace(""), "RemoveBufferedPair"), 2
+
+L724:
+      getlocal            24
+      getproperty         QName(PackageNamespace(""), "lowerBounds")
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_i
+      dup
+      setlocal            4
+
+      increment_i
+      setlocal            4
+
+      getlocal3
+      getlocal            5
+      getlocal            4
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            7
+      dup
+      setlocal            25
+
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      decrement
+      setlocal            26
+
+      getlocal            25
+      getlocal            26
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      kill                26
+      kill                25
+      jump                L779
+
+L752:
+      getlocal            24
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_i
+      dup
+      setlocal            4
+
+      increment_i
+      setlocal            4
+
+      getlocal3
+      getlocal            5
+      getlocal            4
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            7
+      dup
+      setlocal            25
+
+      getproperty         QName(PackageNamespace(""), "stabbingCount")
+      increment
+      setlocal            26
+
+      getlocal            25
+      getlocal            26
+      setproperty         QName(PackageNamespace(""), "stabbingCount")
+
+      kill                26
+      kill                25
+L779:
+      getlocal            13
+      getproperty         QName(PackageNamespace(""), "upperBounds")
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      convert_i
+      dup
+      setlocal            4
+
+      decrement_i
+      setlocal            4
+
+      getlocal3
+      getlocal            5
+      getlocal            4
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+
+      getlocal            7
+      getlocal            8
+      callpropvoid        QName(PackageNamespace(""), "Swap"), 1
+
+      getlocal            6
+      decrement
+      convert_u
+      setlocal            6
+
+L802:
+      getlocal            6
+      pushbyte            0
+      greaterthan
+      dup
+      iffalse             L819
+
+      pop
+      getlocal            20
+      getlocal            16
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            6
+      decrement
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+      astypelate
+      getproperty         QName(PackageNamespace(""), "value")
+      lessthan
+L819:
+      iftrue              L677
+
+L820:
+      getlocal            5
+      increment
+      convert_u
+      setlocal            5
+
+L824:
+      getlocal            5
+      pushbyte            2
+      iflt                L156
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Box2D.Collision:b2BroadPhase/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "s_validate")
+    pushfalse
+    setproperty         QName(PackageNamespace(""), "s_validate")
+
+    findproperty        QName(PackageNamespace(""), "b2_invalid")
+    getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+    getproperty         QName(PackageNamespace(""), "USHRT_MAX")
+    initproperty        QName(PackageNamespace(""), "b2_invalid")
+
+    findproperty        QName(PackageNamespace(""), "b2_nullEdge")
+    getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+    getproperty         QName(PackageNamespace(""), "USHRT_MAX")
+    initproperty        QName(PackageNamespace(""), "b2_nullEdge")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "BinarySearch") flag FINAL dispid 3
+  method
+   refid "Box2D.Collision:b2BroadPhase/class/BinarySearch"
+   param QName(PackageNamespace(""), "Array")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "uint")
+   returns QName(PackageNamespace(""), "uint")
+   body
+    maxstack 2
+    localcount 8
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal            4
+
+     pushbyte            0
+     setlocal            5
+
+     pushbyte            0
+     setlocal            6
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+     setlocal            7
+
+     pushbyte            0
+     setlocal            4
+
+     getlocal2
+     decrement
+     convert_i
+     setlocal            5
+
+     jump                L54
+
+L18:
+     label
+     getlocal            4
+     getlocal            5
+     add
+     pushbyte            2
+     divide
+     convert_i
+     setlocal            6
+
+     getlocal1
+     getlocal            6
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2BroadPhase"), PackageNamespace(""), PackageInternalNs("Box2D.Collision"), ProtectedNamespace("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Box2D.Collision:b2BroadPhase"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("Box2D.Collision"), "b2Bound")
+     dup
+     setlocal            7
+
+     getproperty         QName(PackageNamespace(""), "value")
+     getlocal3
+     ifngt               L40
+
+     getlocal            6
+     decrement
+     convert_i
+     setlocal            5
+
+     jump                L54
+
+L40:
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "value")
+     getlocal3
+     ifnlt               L50
+
+     getlocal            6
+     pushbyte            1
+     add
+     convert_i
+     setlocal            4
+
+     jump                L54
+
+L50:
+     findpropstrict      QName(PackageNamespace(""), "uint")
+     getlocal            6
+     callproperty        QName(PackageNamespace(""), "uint"), 1
+     returnvalue
+
+L54:
+     getlocal            4
+     getlocal            5
+     ifle                L18
+
+     findpropstrict      QName(PackageNamespace(""), "uint")
+     getlocal            4
+     callproperty        QName(PackageNamespace(""), "uint"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PackageNamespace(""), "s_validate") slotid 1 type QName(PackageNamespace(""), "Boolean") value False() end
+ trait const QName(PackageNamespace(""), "b2_nullEdge") slotid 3 type QName(PackageNamespace(""), "uint") value Integer(65535) end
+ trait const QName(PackageNamespace(""), "b2_invalid") slotid 2 type QName(PackageNamespace(""), "uint") value Integer(65535) end
+end ; class

@@ -1,0 +1,2879 @@
+class
+ refid "Box2D.Collision.Shapes:b2PolygonShape"
+ instance QName(PackageNamespace("Box2D.Collision.Shapes"), "b2PolygonShape")
+  extends QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape")
+  iinit
+   refid "Box2D.Collision.Shapes:b2PolygonShape/instance/init"
+   param QName(PackageNamespace("Box2D.Collision.Shapes"), "b2ShapeDef")
+   body
+    maxstack 8
+    localcount 18
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2PolygonDef")
+     setlocal2
+
+     pushbyte            0
+     setlocal3
+
+     pushbyte            0
+     setlocal            4
+
+     pushbyte            0
+     setlocal            5
+
+     pushnan
+     setlocal            6
+
+     pushnan
+     setlocal            7
+
+     pushnan
+     setlocal            8
+
+     pushnan
+     setlocal            9
+
+     pushnan
+     setlocal            10
+
+     pushnan
+     setlocal            11
+
+     pushnan
+     setlocal            12
+
+     pushnan
+     setlocal            13
+
+     pushnan
+     setlocal            14
+
+     pushnan
+     setlocal            15
+
+     pushnan
+     setlocal            16
+
+     pushnan
+     setlocal            17
+
+     findproperty        QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_supportVec")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_supportVec")
+
+     findproperty        QName(PackageNamespace(""), "m_obb")
+     findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2OBB")
+     constructprop       QName(PackageNamespace("Box2D.Collision"), "b2OBB"), 0
+     initproperty        QName(PackageNamespace(""), "m_obb")
+
+     findproperty        QName(PackageNamespace(""), "m_vertices")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxPolygonVertices")
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     initproperty        QName(PackageNamespace(""), "m_vertices")
+
+     findproperty        QName(PackageNamespace(""), "m_normals")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxPolygonVertices")
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     initproperty        QName(PackageNamespace(""), "m_normals")
+
+     findproperty        QName(PackageNamespace(""), "m_coreVertices")
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxPolygonVertices")
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     initproperty        QName(PackageNamespace(""), "m_coreVertices")
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     findproperty        QName(PackageNamespace(""), "m_type")
+     getlex              QName(PackageNamespace(""), "e_polygonShape")
+     initproperty        QName(PackageNamespace(""), "m_type")
+
+     getlocal1
+     getlex              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2PolygonDef")
+     astypelate
+     coerce              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2PolygonDef")
+     setlocal2
+
+     findproperty        QName(PackageNamespace(""), "m_vertexCount")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "vertexCount")
+     initproperty        QName(PackageNamespace(""), "m_vertexCount")
+
+     getlocal3
+     convert_i
+     setlocal            4
+
+     getlocal3
+     convert_i
+     setlocal            5
+
+     pushbyte            0
+     setlocal3
+
+     jump                L95
+
+L85:
+     label
+     getlex              QName(PackageNamespace(""), "m_vertices")
+     getlocal3
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "vertices")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     callproperty        Multiname("Copy", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Collision"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object"), PackageNamespace("Box2D.Common"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#1"), PackageNamespace("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics")]), 0
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+
+     inclocal_i          3
+L95:
+     getlocal3
+     getlex              QName(PackageNamespace(""), "m_vertexCount")
+     iflt                L85
+
+     pushbyte            0
+     setlocal3
+
+     jump                L165
+
+L101:
+     label
+     getlocal3
+     convert_i
+     setlocal            4
+
+     getlocal3
+     pushbyte            1
+     add
+     getlex              QName(PackageNamespace(""), "m_vertexCount")
+     lessthan
+     iffalse             L116
+
+     getlocal3
+     pushbyte            1
+     add
+     convert_i
+     jump                L117
+
+L116:
+     pushbyte            0
+L117:
+     convert_i
+     setlocal            5
+
+     getlex              QName(PackageNamespace(""), "m_vertices")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     getproperty         Multiname("x", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Collision"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object"), PackageNamespace("Box2D.Common"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#1"), PackageNamespace("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics")])
+     getlex              QName(PackageNamespace(""), "m_vertices")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     getproperty         Multiname("x", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Collision"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object"), PackageNamespace("Box2D.Common"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#1"), PackageNamespace("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics")])
+     subtract
+     convert_d
+     setlocal            6
+
+     getlex              QName(PackageNamespace(""), "m_vertices")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     getproperty         Multiname("y", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Collision"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object"), PackageNamespace("Box2D.Common"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#1"), PackageNamespace("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics")])
+     getlex              QName(PackageNamespace(""), "m_vertices")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     getproperty         Multiname("y", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Collision"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object"), PackageNamespace("Box2D.Common"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#1"), PackageNamespace("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics")])
+     subtract
+     convert_d
+     setlocal            7
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            6
+     getlocal            6
+     multiply
+     getlocal            7
+     getlocal            7
+     multiply
+     add
+     callproperty        QName(PackageNamespace(""), "sqrt"), 1
+     convert_d
+     setlocal            8
+
+     getlex              QName(PackageNamespace(""), "m_normals")
+     getlocal3
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     getlocal            7
+     getlocal            8
+     divide
+     getlocal            6
+     negate
+     getlocal            8
+     divide
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 2
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+
+     inclocal_i          3
+L165:
+     getlocal3
+     getlex              QName(PackageNamespace(""), "m_vertexCount")
+     iflt                L101
+
+     findproperty        QName(PackageNamespace(""), "m_centroid")
+     findpropstrict      QName(PackageNamespace(""), "ComputeCentroid")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "vertices")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "vertexCount")
+     callproperty        QName(PackageNamespace(""), "ComputeCentroid"), 2
+     initproperty        QName(PackageNamespace(""), "m_centroid")
+
+     findpropstrict      QName(PackageNamespace(""), "ComputeOBB")
+     getlex              QName(PackageNamespace(""), "m_obb")
+     getlex              QName(PackageNamespace(""), "m_vertices")
+     getlex              QName(PackageNamespace(""), "m_vertexCount")
+     callpropvoid        QName(PackageNamespace(""), "ComputeOBB"), 3
+
+     pushbyte            0
+     setlocal3
+
+     jump                L309
+
+L184:
+     label
+     getlocal3
+     decrement
+     pushbyte            0
+     greaterequals
+     iffalse             L194
+
+     getlocal3
+     decrement
+     convert_i
+     jump                L197
+
+L194:
+     getlex              QName(PackageNamespace(""), "m_vertexCount")
+     decrement
+     convert_i
+L197:
+     convert_i
+     setlocal            4
+
+     getlocal3
+     convert_i
+     setlocal            5
+
+     getlex              QName(PackageNamespace(""), "m_normals")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     getproperty         Multiname("x", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Collision"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object"), PackageNamespace("Box2D.Common"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#1"), PackageNamespace("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics")])
+     convert_d
+     setlocal            9
+
+     getlex              QName(PackageNamespace(""), "m_normals")
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     getproperty         Multiname("y", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Collision"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object"), PackageNamespace("Box2D.Common"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#1"), PackageNamespace("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics")])
+     convert_d
+     setlocal            10
+
+     getlex              QName(PackageNamespace(""), "m_normals")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     getproperty         Multiname("x", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Collision"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object"), PackageNamespace("Box2D.Common"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#1"), PackageNamespace("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics")])
+     convert_d
+     setlocal            11
+
+     getlex              QName(PackageNamespace(""), "m_normals")
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     getproperty         Multiname("y", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Collision"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object"), PackageNamespace("Box2D.Common"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#1"), PackageNamespace("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics")])
+     convert_d
+     setlocal            12
+
+     getlex              QName(PackageNamespace(""), "m_vertices")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     getproperty         Multiname("x", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Collision"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object"), PackageNamespace("Box2D.Common"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#1"), PackageNamespace("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics")])
+     getlex              QName(PackageNamespace(""), "m_centroid")
+     getproperty         QName(PackageNamespace(""), "x")
+     subtract
+     convert_d
+     setlocal            13
+
+     getlex              QName(PackageNamespace(""), "m_vertices")
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     getproperty         Multiname("y", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Collision"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object"), PackageNamespace("Box2D.Common"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#1"), PackageNamespace("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics")])
+     getlex              QName(PackageNamespace(""), "m_centroid")
+     getproperty         QName(PackageNamespace(""), "y")
+     subtract
+     convert_d
+     setlocal            14
+
+     getlocal            9
+     getlocal            13
+     multiply
+     getlocal            10
+     getlocal            14
+     multiply
+     add
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_toiSlop")
+     subtract
+     convert_d
+     setlocal            15
+
+     getlocal            11
+     getlocal            13
+     multiply
+     getlocal            12
+     getlocal            14
+     multiply
+     add
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_toiSlop")
+     subtract
+     convert_d
+     setlocal            16
+
+     pushbyte            1
+     getlocal            9
+     getlocal            12
+     multiply
+     getlocal            10
+     getlocal            11
+     multiply
+     subtract
+     divide
+     convert_d
+     setlocal            17
+
+     getlex              QName(PackageNamespace(""), "m_coreVertices")
+     getlocal3
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     getlocal            17
+     getlocal            12
+     getlocal            15
+     multiply
+     getlocal            10
+     getlocal            16
+     multiply
+     subtract
+     multiply
+     getlex              QName(PackageNamespace(""), "m_centroid")
+     getproperty         QName(PackageNamespace(""), "x")
+     add
+     getlocal            17
+     getlocal            9
+     getlocal            16
+     multiply
+     getlocal            11
+     getlocal            15
+     multiply
+     subtract
+     multiply
+     getlex              QName(PackageNamespace(""), "m_centroid")
+     getproperty         QName(PackageNamespace(""), "y")
+     add
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 2
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+
+     inclocal_i          3
+L309:
+     getlocal3
+     getlex              QName(PackageNamespace(""), "m_vertexCount")
+     iflt                L184
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "m_vertices") type QName(PackageNamespace(""), "Array") end
+  trait method QName(PackageNamespace(""), "TestPoint") flag OVERRIDE
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonShape/instance/TestPoint"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 11
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            4
+
+      pushnan
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushnan
+      setlocal            8
+
+      pushbyte            0
+      setlocal            9
+
+      pushnan
+      setlocal            10
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            4
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            5
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            6
+
+      getlocal            5
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            6
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            7
+
+      getlocal            5
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            6
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            8
+
+      pushbyte            0
+      setlocal            9
+
+      jump                L109
+
+L69:
+      label
+      getlex              QName(PackageNamespace(""), "m_vertices")
+      getlocal            9
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal3
+
+      getlocal            7
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            5
+
+      getlocal            8
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            6
+
+      getlex              QName(PackageNamespace(""), "m_normals")
+      getlocal            9
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal3
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            5
+      multiply
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            6
+      multiply
+      add
+      convert_d
+      dup
+      setlocal            10
+
+      pushbyte            0
+      ifngt               L108
+
+      pushfalse
+      returnvalue
+
+L108:
+      inclocal_i          9
+L109:
+      getlocal            9
+      getlex              QName(PackageNamespace(""), "m_vertexCount")
+      iflt                L69
+
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetCoreVertices")
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonShape/instance/GetCoreVertices"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_coreVertices")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_normals") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_supportVec") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait method QName(PackageNamespace(""), "TestSegment") flag OVERRIDE
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonShape/instance/TestSegment"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    param QName(PackageNamespace("Box2D.Collision"), "b2Segment")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 22
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushnan
+      setlocal            8
+
+      pushnan
+      setlocal            9
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            10
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            11
+
+      pushnan
+      setlocal            12
+
+      pushnan
+      setlocal            13
+
+      pushnan
+      setlocal            14
+
+      pushnan
+      setlocal            15
+
+      pushnan
+      setlocal            16
+
+      pushnan
+      setlocal            17
+
+      pushbyte            0
+      setlocal            18
+
+      pushbyte            0
+      setlocal            19
+
+      pushnan
+      setlocal            20
+
+      pushnan
+      setlocal            21
+
+      pushbyte            0
+      convert_d
+      setlocal            6
+
+      getlocal            5
+      convert_d
+      setlocal            7
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "p1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            8
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "p1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            9
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            10
+
+      getlocal            8
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            9
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            12
+
+      getlocal            8
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            9
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            13
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "p2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            8
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "p2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            9
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            10
+
+      getlocal            8
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            9
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            14
+
+      getlocal            8
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            9
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            15
+
+      getlocal            14
+      getlocal            12
+      subtract
+      convert_d
+      setlocal            16
+
+      getlocal            15
+      getlocal            13
+      subtract
+      convert_d
+      setlocal            17
+
+      pushbyte            -1
+      setlocal            18
+
+      pushbyte            0
+      setlocal            19
+
+      jump                L242
+
+L153:
+      label
+      getlex              QName(PackageNamespace(""), "m_vertices")
+      getlocal            19
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      dup
+      setlocal            11
+
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            12
+      subtract
+      convert_d
+      setlocal            8
+
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            13
+      subtract
+      convert_d
+      setlocal            9
+
+      getlex              QName(PackageNamespace(""), "m_normals")
+      getlocal            19
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      dup
+      setlocal            11
+
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            8
+      multiply
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            9
+      multiply
+      add
+      convert_d
+      setlocal            20
+
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            16
+      multiply
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            17
+      multiply
+      add
+      convert_d
+      dup
+      setlocal            21
+
+      pushbyte            0
+      lessthan
+      dup
+      iffalse             L209
+
+      pop
+      getlocal            20
+      getlocal            6
+      getlocal            21
+      multiply
+      lessthan
+L209:
+      iffalse             L219
+
+      getlocal            20
+      getlocal            21
+      divide
+      convert_d
+      setlocal            6
+
+      getlocal            19
+      convert_i
+      setlocal            18
+
+      jump                L236
+
+L219:
+      getlocal            21
+      pushbyte            0
+      greaterthan
+      dup
+      iffalse             L230
+
+      pop
+      getlocal            20
+      getlocal            7
+      getlocal            21
+      multiply
+      lessthan
+L230:
+      iffalse             L236
+
+      getlocal            20
+      getlocal            21
+      divide
+      convert_d
+      setlocal            7
+
+L236:
+      getlocal            7
+      getlocal            6
+      ifnlt               L241
+
+      pushfalse
+      returnvalue
+
+L241:
+      inclocal_i          19
+L242:
+      getlocal            19
+      getlex              QName(PackageNamespace(""), "m_vertexCount")
+      iflt                L153
+
+      getlocal            18
+      pushbyte            0
+      ifnge               L293
+
+      getlocal2
+      pushbyte            0
+      getlocal            6
+      setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            10
+
+      getlex              QName(PackageNamespace(""), "m_normals")
+      getlocal            18
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            11
+
+      getlocal3
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal3
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      pushtrue
+      returnvalue
+
+L293:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetCentroid")
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonShape/instance/GetCentroid"
+    returns QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_centroid")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "ComputeMass") flag OVERRIDE
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonShape/instance/ComputeMass"
+    param QName(PackageNamespace("Box2D.Collision.Shapes"), "b2MassData")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 26
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal2
+
+      pushnan
+      setlocal3
+
+      pushnan
+      setlocal            4
+
+      pushnan
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushnan
+      setlocal            8
+
+      pushbyte            0
+      setlocal            9
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            10
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            11
+
+      pushnan
+      setlocal            12
+
+      pushnan
+      setlocal            13
+
+      pushnan
+      setlocal            14
+
+      pushnan
+      setlocal            15
+
+      pushnan
+      setlocal            16
+
+      pushnan
+      setlocal            17
+
+      pushnan
+      setlocal            18
+
+      pushnan
+      setlocal            19
+
+      pushnan
+      setlocal            20
+
+      pushnan
+      setlocal            21
+
+      pushnan
+      setlocal            22
+
+      pushnan
+      setlocal            23
+
+      pushnan
+      setlocal            24
+
+      pushnan
+      setlocal            25
+
+      pushbyte            0
+      convert_d
+      setlocal2
+
+      pushbyte            0
+      convert_d
+      setlocal3
+
+      pushbyte            0
+      convert_d
+      setlocal            4
+
+      pushbyte            0
+      convert_d
+      setlocal            5
+
+      pushbyte            0
+      convert_d
+      setlocal            6
+
+      pushbyte            0
+      convert_d
+      setlocal            7
+
+      pushbyte            1
+      pushbyte            3
+      divide
+      convert_d
+      setlocal            8
+
+      pushbyte            0
+      setlocal            9
+
+      jump                L268
+
+L78:
+      label
+      getlex              QName(PackageNamespace(""), "m_vertices")
+      getlocal            9
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            10
+
+      getlocal            9
+      pushbyte            1
+      add
+      getlex              QName(PackageNamespace(""), "m_vertexCount")
+      lessthan
+      iffalse             L99
+
+      getlex              QName(PackageNamespace(""), "m_vertices")
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal            9
+      pushbyte            1
+      add
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      jump                L103
+
+L99:
+      getlex              QName(PackageNamespace(""), "m_vertices")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+L103:
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            11
+
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            6
+      subtract
+      convert_d
+      setlocal            12
+
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            7
+      subtract
+      convert_d
+      setlocal            13
+
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            6
+      subtract
+      convert_d
+      setlocal            14
+
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            7
+      subtract
+      convert_d
+      setlocal            15
+
+      getlocal            12
+      getlocal            15
+      multiply
+      getlocal            13
+      getlocal            14
+      multiply
+      subtract
+      convert_d
+      setlocal            16
+
+      pushdouble          0.5
+      getlocal            16
+      multiply
+      convert_d
+      setlocal            17
+
+      getlocal            4
+      getlocal            17
+      add
+      convert_d
+      setlocal            4
+
+      getlocal2
+      getlocal            17
+      getlocal            8
+      multiply
+      getlocal            6
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "x")
+      add
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "x")
+      add
+      multiply
+      add
+      convert_d
+      setlocal2
+
+      getlocal3
+      getlocal            17
+      getlocal            8
+      multiply
+      getlocal            7
+      getlocal            10
+      getproperty         QName(PackageNamespace(""), "y")
+      add
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "y")
+      add
+      multiply
+      add
+      convert_d
+      setlocal3
+
+      getlocal            6
+      convert_d
+      setlocal            18
+
+      getlocal            7
+      convert_d
+      setlocal            19
+
+      getlocal            12
+      convert_d
+      setlocal            20
+
+      getlocal            13
+      convert_d
+      setlocal            21
+
+      getlocal            14
+      convert_d
+      setlocal            22
+
+      getlocal            15
+      convert_d
+      setlocal            23
+
+      getlocal            8
+      pushdouble          0.25
+      getlocal            20
+      getlocal            20
+      multiply
+      getlocal            22
+      getlocal            20
+      multiply
+      add
+      getlocal            22
+      getlocal            22
+      multiply
+      add
+      multiply
+      getlocal            18
+      getlocal            20
+      multiply
+      getlocal            18
+      getlocal            22
+      multiply
+      add
+      add
+      multiply
+      pushdouble          0.5
+      getlocal            18
+      multiply
+      getlocal            18
+      multiply
+      add
+      convert_d
+      setlocal            24
+
+      getlocal            8
+      pushdouble          0.25
+      getlocal            21
+      getlocal            21
+      multiply
+      getlocal            23
+      getlocal            21
+      multiply
+      add
+      getlocal            23
+      getlocal            23
+      multiply
+      add
+      multiply
+      getlocal            19
+      getlocal            21
+      multiply
+      getlocal            19
+      getlocal            23
+      multiply
+      add
+      add
+      multiply
+      pushdouble          0.5
+      getlocal            19
+      multiply
+      getlocal            19
+      multiply
+      add
+      convert_d
+      setlocal            25
+
+      getlocal            5
+      getlocal            16
+      getlocal            24
+      getlocal            25
+      add
+      multiply
+      add
+      convert_d
+      setlocal            5
+
+      inclocal_i          9
+L268:
+      getlocal            9
+      getlex              QName(PackageNamespace(""), "m_vertexCount")
+      iflt                L78
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "m_density")
+      getlocal            4
+      multiply
+      setproperty         QName(PackageNamespace(""), "mass")
+
+      getlocal2
+      pushbyte            1
+      getlocal            4
+      divide
+      multiply
+      convert_d
+      setlocal2
+
+      getlocal3
+      pushbyte            1
+      getlocal            4
+      divide
+      multiply
+      convert_d
+      setlocal3
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "center")
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "Set"), 2
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "m_density")
+      getlocal            5
+      multiply
+      setproperty         QName(PackageNamespace(""), "I")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "Support")
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonShape/instance/Support"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    body
+     maxstack 5
+     localcount 12
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushbyte            0
+      setlocal            8
+
+      pushnan
+      setlocal            9
+
+      pushbyte            0
+      setlocal            10
+
+      pushnan
+      setlocal            11
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            5
+
+      getlocal2
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal3
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            6
+
+      getlocal2
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal3
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            7
+
+      pushbyte            0
+      setlocal            8
+
+      getlex              QName(PackageNamespace(""), "m_coreVertices")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      dup
+      setlocal            4
+
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            6
+      multiply
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            7
+      multiply
+      add
+      convert_d
+      setlocal            9
+
+      pushbyte            1
+      setlocal            10
+
+      jump                L98
+
+L71:
+      label
+      getlex              QName(PackageNamespace(""), "m_coreVertices")
+      getlocal            10
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      dup
+      setlocal            4
+
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            6
+      multiply
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            7
+      multiply
+      add
+      convert_d
+      dup
+      setlocal            11
+
+      getlocal            9
+      ifngt               L97
+
+      getlocal            10
+      convert_i
+      setlocal            8
+
+      getlocal            11
+      convert_d
+      setlocal            9
+
+L97:
+      inclocal_i          10
+L98:
+      getlocal            10
+      getlex              QName(PackageNamespace(""), "m_vertexCount")
+      iflt                L71
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            5
+
+      getlex              QName(PackageNamespace(""), "m_coreVertices")
+      getlocal            8
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            4
+
+      getlex              QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_supportVec")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlex              QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_supportVec")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_supportVec")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetVertexCount")
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonShape/instance/GetVertexCount"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_vertexCount")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_obb") type QName(PackageNamespace("Box2D.Collision"), "b2OBB") end
+  trait method QName(PackageNamespace(""), "ComputeSweptAABB") flag OVERRIDE
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonShape/instance/ComputeSweptAABB"
+    param QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+      setlocal            5
+
+      getlex              QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_sweptAABB1")
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+      setlocal            4
+
+      getlex              QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_sweptAABB2")
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+      setlocal            5
+
+      findpropstrict      QName(PackageNamespace(""), "ComputeAABB")
+      getlocal            4
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "ComputeAABB"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "ComputeAABB")
+      getlocal            5
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "ComputeAABB"), 2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      lessthan
+      iffalse             L37
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+      jump                L41
+
+L37:
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+L41:
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      lessthan
+      iffalse             L54
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+      jump                L58
+
+L54:
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+L58:
+      callpropvoid        QName(PackageNamespace(""), "Set"), 2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      greaterthan
+      iffalse             L74
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+      jump                L78
+
+L74:
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+L78:
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      greaterthan
+      iffalse             L91
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+      jump                L95
+
+L91:
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+L95:
+      callpropvoid        QName(PackageNamespace(""), "Set"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetVertices")
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonShape/instance/GetVertices"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_vertices")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_coreVertices") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "m_centroid") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait method QName(PackageNamespace(""), "GetNormals")
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonShape/instance/GetNormals"
+    returns QName(PackageNamespace(""), "Array")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_normals")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetOBB")
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonShape/instance/GetOBB"
+    returns QName(PackageNamespace("Box2D.Collision"), "b2OBB")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "m_obb")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetFirstVertex")
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonShape/instance/GetFirstVertex"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    returns QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal1
+      getlex              QName(PackageNamespace(""), "m_coreVertices")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+      callproperty        QName(PackageNamespace(""), "b2MulX"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "Centroid")
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonShape/instance/Centroid"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    returns QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal1
+      getlex              QName(PackageNamespace(""), "m_centroid")
+      callproperty        QName(PackageNamespace(""), "b2MulX"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "UpdateSweepRadius") flag OVERRIDE
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonShape/instance/UpdateSweepRadius"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      pushnan
+      setlocal            4
+
+      pushnan
+      setlocal            5
+
+      findproperty        QName(PackageNamespace(""), "m_sweepRadius")
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "m_sweepRadius")
+
+      pushbyte            0
+      setlocal3
+
+      jump                L55
+
+L17:
+      label
+      getlex              QName(PackageNamespace(""), "m_coreVertices")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            4
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            5
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            4
+      getlocal            4
+      multiply
+      getlocal            5
+      getlocal            5
+      multiply
+      add
+      callproperty        QName(PackageNamespace(""), "sqrt"), 1
+      convert_d
+      dup
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "m_sweepRadius")
+      ifngt               L54
+
+      findproperty        QName(PackageNamespace(""), "m_sweepRadius")
+      getlocal            4
+      initproperty        QName(PackageNamespace(""), "m_sweepRadius")
+
+L54:
+      inclocal_i          3
+L55:
+      getlocal3
+      getlex              QName(PackageNamespace(""), "m_vertexCount")
+      iflt                L17
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "ComputeAABB") flag OVERRIDE
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonShape/instance/ComputeAABB"
+    param QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 11
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushnan
+      setlocal            8
+
+      pushnan
+      setlocal            9
+
+      pushnan
+      setlocal            10
+
+      getlex              QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_computeMat")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            5
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "m_obb")
+      getproperty         QName(PackageNamespace(""), "R")
+      getproperty         QName(PackageNamespace(""), "col1")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            4
+
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "col1")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "col1")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlex              QName(PackageNamespace(""), "m_obb")
+      getproperty         QName(PackageNamespace(""), "R")
+      getproperty         QName(PackageNamespace(""), "col2")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            4
+
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "col2")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "col2")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal            5
+      callpropvoid        QName(PackageNamespace(""), "Abs"), 0
+
+      getlocal            5
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            6
+
+      getlex              QName(PackageNamespace(""), "m_obb")
+      getproperty         QName(PackageNamespace(""), "extents")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            4
+
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            7
+
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      convert_d
+      setlocal            8
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal3
+
+      getlex              QName(PackageNamespace(""), "m_obb")
+      getproperty         QName(PackageNamespace(""), "center")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            4
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      add
+      convert_d
+      setlocal            9
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      add
+      convert_d
+      setlocal            10
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "lowerBound")
+      getlocal            9
+      getlocal            7
+      subtract
+      getlocal            10
+      getlocal            8
+      subtract
+      callpropvoid        QName(PackageNamespace(""), "Set"), 2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "upperBound")
+      getlocal            9
+      getlocal            7
+      add
+      getlocal            10
+      getlocal            8
+      add
+      callpropvoid        QName(PackageNamespace(""), "Set"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_vertexCount") type QName(PackageNamespace(""), "int") end
+ end ; instance
+ cinit
+  refid "Box2D.Collision.Shapes:b2PolygonShape/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_computeMat")
+    findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+    constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22"), 0
+    setproperty         QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_computeMat")
+
+    findproperty        QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_sweptAABB1")
+    findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+    constructprop       QName(PackageNamespace("Box2D.Collision"), "b2AABB"), 0
+    setproperty         QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_sweptAABB1")
+
+    findproperty        QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_sweptAABB2")
+    findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+    constructprop       QName(PackageNamespace("Box2D.Collision"), "b2AABB"), 0
+    setproperty         QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_sweptAABB2")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_computeMat") slotid 1 type QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22") end
+ trait method QName(PackageNamespace(""), "ComputeCentroid") flag FINAL dispid 3
+  method
+   refid "Box2D.Collision.Shapes:b2PolygonShape/class/ComputeCentroid"
+   param QName(PackageNamespace(""), "Array")
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+   body
+    maxstack 5
+    localcount 17
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     setlocal3
+
+     pushnan
+     setlocal            4
+
+     pushnan
+     setlocal            5
+
+     pushnan
+     setlocal            6
+
+     pushnan
+     setlocal            7
+
+     pushbyte            0
+     setlocal            8
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     setlocal            9
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     setlocal            10
+
+     pushnan
+     setlocal            11
+
+     pushnan
+     setlocal            12
+
+     pushnan
+     setlocal            13
+
+     pushnan
+     setlocal            14
+
+     pushnan
+     setlocal            15
+
+     pushnan
+     setlocal            16
+
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     setlocal3
+
+     pushbyte            0
+     convert_d
+     setlocal            4
+
+     pushbyte            0
+     convert_d
+     setlocal            5
+
+     pushbyte            0
+     convert_d
+     setlocal            6
+
+     pushbyte            1
+     pushbyte            3
+     divide
+     convert_d
+     setlocal            7
+
+     pushbyte            0
+     setlocal            8
+
+     jump                L157
+
+L54:
+     label
+     getlocal1
+     getlocal            8
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     setlocal            9
+
+     getlocal            8
+     pushbyte            1
+     add
+     getlocal2
+     lessthan
+     iffalse             L75
+
+     getlocal1
+     findpropstrict      QName(PackageNamespace(""), "int")
+     getlocal            8
+     pushbyte            1
+     add
+     callproperty        QName(PackageNamespace(""), "int"), 1
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     jump                L79
+
+L75:
+     getlocal1
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+L79:
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     setlocal            10
+
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            5
+     subtract
+     convert_d
+     setlocal            11
+
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            6
+     subtract
+     convert_d
+     setlocal            12
+
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            5
+     subtract
+     convert_d
+     setlocal            13
+
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            6
+     subtract
+     convert_d
+     setlocal            14
+
+     getlocal            11
+     getlocal            14
+     multiply
+     getlocal            12
+     getlocal            13
+     multiply
+     subtract
+     convert_d
+     setlocal            15
+
+     pushdouble          0.5
+     getlocal            15
+     multiply
+     convert_d
+     setlocal            16
+
+     getlocal            4
+     getlocal            16
+     add
+     convert_d
+     setlocal            4
+
+     getlocal3
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            16
+     getlocal            7
+     multiply
+     getlocal            5
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "x")
+     add
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "x")
+     add
+     multiply
+     add
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal3
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            16
+     getlocal            7
+     multiply
+     getlocal            6
+     getlocal            9
+     getproperty         QName(PackageNamespace(""), "y")
+     add
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "y")
+     add
+     multiply
+     add
+     setproperty         QName(PackageNamespace(""), "y")
+
+     inclocal_i          8
+L157:
+     getlocal            8
+     getlocal2
+     iflt                L54
+
+     getlocal3
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "x")
+     pushbyte            1
+     getlocal            4
+     divide
+     multiply
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal3
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "y")
+     pushbyte            1
+     getlocal            4
+     divide
+     multiply
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_sweptAABB1") slotid 2 type QName(PackageNamespace("Box2D.Collision"), "b2AABB") end
+ trait slot QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), "s_sweptAABB2") slotid 3 type QName(PackageNamespace("Box2D.Collision"), "b2AABB") end
+ trait method QName(PackageNamespace(""), "ComputeOBB") flag FINAL dispid 4
+  method
+   refid "Box2D.Collision.Shapes:b2PolygonShape/class/ComputeOBB"
+   param QName(PackageNamespace("Box2D.Collision"), "b2OBB")
+   param QName(PackageNamespace(""), "Array")
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 5
+    localcount 26
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     setlocal            4
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            5
+
+     pushnan
+     setlocal            6
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     setlocal            7
+
+     pushnan
+     setlocal            8
+
+     pushnan
+     setlocal            9
+
+     pushnan
+     setlocal            10
+
+     pushnan
+     setlocal            11
+
+     pushnan
+     setlocal            12
+
+     pushnan
+     setlocal            13
+
+     pushnan
+     setlocal            14
+
+     pushnan
+     setlocal            15
+
+     pushnan
+     setlocal            16
+
+     pushbyte            0
+     setlocal            17
+
+     pushnan
+     setlocal            18
+
+     pushnan
+     setlocal            19
+
+     pushnan
+     setlocal            20
+
+     pushnan
+     setlocal            21
+
+     pushnan
+     setlocal            22
+
+     pushnan
+     setlocal            23
+
+     pushnan
+     setlocal            24
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+     setlocal            25
+
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxPolygonVertices")
+     pushbyte            1
+     add
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            5
+
+     pushbyte            0
+     setlocal            4
+
+     jump                L68
+
+L60:
+     label
+     getlocal            5
+     getlocal            4
+     getlocal2
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+
+     inclocal_i          4
+L68:
+     getlocal            4
+     getlocal3
+     iflt                L60
+
+     getlocal            5
+     getlocal3
+     getlocal            5
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+
+     getlex              QName(PackageNamespace(""), "Number")
+     getproperty         QName(PackageNamespace(""), "MAX_VALUE")
+     convert_d
+     setlocal            6
+
+     pushbyte            1
+     setlocal            4
+
+     jump                L331
+
+L84:
+     label
+     getlocal            5
+     findpropstrict      QName(PackageNamespace(""), "int")
+     getlocal            4
+     decrement
+     callproperty        QName(PackageNamespace(""), "int"), 1
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     setlocal            7
+
+     getlocal            5
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     getproperty         Multiname("x", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Collision"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object"), PackageNamespace("Box2D.Common"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#1"), PackageNamespace("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics")])
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "x")
+     subtract
+     convert_d
+     setlocal            8
+
+     getlocal            5
+     getlocal            4
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     getproperty         Multiname("y", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Collision"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object"), PackageNamespace("Box2D.Common"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#1"), PackageNamespace("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics")])
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "y")
+     subtract
+     convert_d
+     setlocal            9
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            8
+     getlocal            8
+     multiply
+     getlocal            9
+     getlocal            9
+     multiply
+     add
+     callproperty        QName(PackageNamespace(""), "sqrt"), 1
+     convert_d
+     setlocal            10
+
+     getlocal            8
+     getlocal            10
+     divide
+     convert_d
+     setlocal            8
+
+     getlocal            9
+     getlocal            10
+     divide
+     convert_d
+     dup
+     setlocal            9
+
+     negate
+     convert_d
+     setlocal            11
+
+     getlocal            8
+     convert_d
+     setlocal            12
+
+     getlex              QName(PackageNamespace(""), "Number")
+     getproperty         QName(PackageNamespace(""), "MAX_VALUE")
+     convert_d
+     setlocal            13
+
+     getlex              QName(PackageNamespace(""), "Number")
+     getproperty         QName(PackageNamespace(""), "MAX_VALUE")
+     convert_d
+     setlocal            14
+
+     getlex              QName(PackageNamespace(""), "Number")
+     getproperty         QName(PackageNamespace(""), "MAX_VALUE")
+     negate
+     convert_d
+     setlocal            15
+
+     getlex              QName(PackageNamespace(""), "Number")
+     getproperty         QName(PackageNamespace(""), "MAX_VALUE")
+     negate
+     convert_d
+     setlocal            16
+
+     pushbyte            0
+     setlocal            17
+
+     jump                L222
+
+L160:
+     label
+     getlocal            5
+     getlocal            17
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     getproperty         Multiname("x", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Collision"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object"), PackageNamespace("Box2D.Common"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#1"), PackageNamespace("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics")])
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "x")
+     subtract
+     convert_d
+     setlocal            19
+
+     getlocal            5
+     getlocal            17
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object")])
+     getproperty         Multiname("y", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#0"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Collision"), PackageNamespace(""), PackageInternalNs("Box2D.Collision.Shapes"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonShape"), StaticProtectedNs("Box2D.Collision.Shapes:b2Shape"), StaticProtectedNs("Object"), PackageNamespace("Box2D.Common"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonShape#1"), PackageNamespace("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Dynamics")])
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "y")
+     subtract
+     convert_d
+     setlocal            20
+
+     getlocal            8
+     getlocal            19
+     multiply
+     getlocal            9
+     getlocal            20
+     multiply
+     add
+     convert_d
+     setlocal            21
+
+     getlocal            11
+     getlocal            19
+     multiply
+     getlocal            12
+     getlocal            20
+     multiply
+     add
+     convert_d
+     setlocal            22
+
+     getlocal            21
+     getlocal            13
+     ifnlt               L203
+
+     getlocal            21
+     convert_d
+     setlocal            13
+
+L203:
+     getlocal            22
+     getlocal            14
+     ifnlt               L209
+
+     getlocal            22
+     convert_d
+     setlocal            14
+
+L209:
+     getlocal            21
+     getlocal            15
+     ifngt               L215
+
+     getlocal            21
+     convert_d
+     setlocal            15
+
+L215:
+     getlocal            22
+     getlocal            16
+     ifngt               L221
+
+     getlocal            22
+     convert_d
+     setlocal            16
+
+L221:
+     inclocal_i          17
+L222:
+     getlocal            17
+     getlocal3
+     iflt                L160
+
+     getlocal            15
+     getlocal            13
+     subtract
+     getlocal            16
+     getlocal            14
+     subtract
+     multiply
+     convert_d
+     dup
+     setlocal            18
+
+     pushdouble          0.95
+     getlocal            6
+     multiply
+     ifnlt               L330
+
+     getlocal            18
+     convert_d
+     setlocal            6
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "R")
+     getproperty         QName(PackageNamespace(""), "col1")
+     getlocal            8
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "R")
+     getproperty         QName(PackageNamespace(""), "col1")
+     getlocal            9
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "R")
+     getproperty         QName(PackageNamespace(""), "col2")
+     getlocal            11
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "R")
+     getproperty         QName(PackageNamespace(""), "col2")
+     getlocal            12
+     setproperty         QName(PackageNamespace(""), "y")
+
+     pushdouble          0.5
+     getlocal            13
+     getlocal            15
+     add
+     multiply
+     convert_d
+     setlocal            23
+
+     pushdouble          0.5
+     getlocal            14
+     getlocal            16
+     add
+     multiply
+     convert_d
+     setlocal            24
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "R")
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+     setlocal            25
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "center")
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            25
+     getproperty         QName(PackageNamespace(""), "col1")
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            23
+     multiply
+     getlocal            25
+     getproperty         QName(PackageNamespace(""), "col2")
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            24
+     multiply
+     add
+     add
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "center")
+     getlocal            7
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            25
+     getproperty         QName(PackageNamespace(""), "col1")
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            23
+     multiply
+     getlocal            25
+     getproperty         QName(PackageNamespace(""), "col2")
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            24
+     multiply
+     add
+     add
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "extents")
+     pushdouble          0.5
+     getlocal            15
+     getlocal            13
+     subtract
+     multiply
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "extents")
+     pushdouble          0.5
+     getlocal            16
+     getlocal            14
+     subtract
+     multiply
+     setproperty         QName(PackageNamespace(""), "y")
+
+L330:
+     inclocal_i          4
+L331:
+     getlocal            4
+     getlocal3
+     ifle                L84
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

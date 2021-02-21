@@ -1,0 +1,161 @@
+class
+ refid "Box2D.Dynamics.Joints:b2PrismaticJointDef"
+ instance QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2PrismaticJointDef")
+  extends QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointDef")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics.Joints:b2PrismaticJointDef")
+  iinit
+   refid "Box2D.Dynamics.Joints:b2PrismaticJointDef/instance/init"
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PackageNamespace(""), "localAnchor1")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "localAnchor1")
+
+     findproperty        QName(PackageNamespace(""), "localAnchor2")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "localAnchor2")
+
+     findproperty        QName(PackageNamespace(""), "localAxis1")
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "localAxis1")
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "type")
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+     getproperty         QName(PackageNamespace(""), "e_prismaticJoint")
+     initproperty        QName(PackageNamespace(""), "type")
+
+     getlex              QName(PackageNamespace(""), "localAxis1")
+     pushbyte            1
+     pushbyte            0
+     callpropvoid        QName(PackageNamespace(""), "Set"), 2
+
+     findproperty        QName(PackageNamespace(""), "referenceAngle")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "referenceAngle")
+
+     findproperty        QName(PackageNamespace(""), "enableLimit")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "enableLimit")
+
+     findproperty        QName(PackageNamespace(""), "lowerTranslation")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "lowerTranslation")
+
+     findproperty        QName(PackageNamespace(""), "upperTranslation")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "upperTranslation")
+
+     findproperty        QName(PackageNamespace(""), "enableMotor")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "enableMotor")
+
+     findproperty        QName(PackageNamespace(""), "maxMotorForce")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "maxMotorForce")
+
+     findproperty        QName(PackageNamespace(""), "motorSpeed")
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "motorSpeed")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "localAxis1") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "referenceAngle") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "maxMotorForce") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "motorSpeed") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "upperTranslation") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "Initialize")
+   method
+    refid "Box2D.Dynamics.Joints:b2PrismaticJointDef/instance/Initialize"
+    param QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+    param QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "body1")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "body1")
+
+      findproperty        QName(PackageNamespace(""), "body2")
+      getlocal2
+      initproperty        QName(PackageNamespace(""), "body2")
+
+      findproperty        QName(PackageNamespace(""), "localAnchor1")
+      getlex              QName(PackageNamespace(""), "body1")
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "GetLocalPoint"), 1
+      initproperty        QName(PackageNamespace(""), "localAnchor1")
+
+      findproperty        QName(PackageNamespace(""), "localAnchor2")
+      getlex              QName(PackageNamespace(""), "body2")
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "GetLocalPoint"), 1
+      initproperty        QName(PackageNamespace(""), "localAnchor2")
+
+      findproperty        QName(PackageNamespace(""), "localAxis1")
+      getlex              QName(PackageNamespace(""), "body1")
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "GetLocalVector"), 1
+      initproperty        QName(PackageNamespace(""), "localAxis1")
+
+      findproperty        QName(PackageNamespace(""), "referenceAngle")
+      getlex              QName(PackageNamespace(""), "body2")
+      callproperty        QName(PackageNamespace(""), "GetAngle"), 0
+      getlex              QName(PackageNamespace(""), "body1")
+      callproperty        QName(PackageNamespace(""), "GetAngle"), 0
+      subtract
+      initproperty        QName(PackageNamespace(""), "referenceAngle")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "localAnchor1") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "localAnchor2") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "enableLimit") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "enableMotor") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "lowerTranslation") type QName(PackageNamespace(""), "Number") end
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics.Joints:b2PrismaticJointDef/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

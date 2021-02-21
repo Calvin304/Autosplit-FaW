@@ -1,0 +1,207 @@
+class
+ refid "Box2D.Common:b2Settings"
+ instance QName(PackageNamespace("Box2D.Common"), "b2Settings")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Common:b2Settings")
+  iinit
+   refid "Box2D.Common:b2Settings/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "Box2D.Common:b2Settings/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "USHRT_MAX")
+    pushint             65535
+    initproperty        QName(PackageNamespace(""), "USHRT_MAX")
+
+    findproperty        QName(PackageNamespace(""), "b2_pi")
+    getlex              QName(PackageNamespace(""), "Math")
+    getproperty         QName(PackageNamespace(""), "PI")
+    initproperty        QName(PackageNamespace(""), "b2_pi")
+
+    findproperty        QName(PackageNamespace(""), "b2_maxManifoldPoints")
+    pushbyte            2
+    initproperty        QName(PackageNamespace(""), "b2_maxManifoldPoints")
+
+    findproperty        QName(PackageNamespace(""), "b2_maxPolygonVertices")
+    pushbyte            8
+    initproperty        QName(PackageNamespace(""), "b2_maxPolygonVertices")
+
+    findproperty        QName(PackageNamespace(""), "b2_maxProxies")
+    pushshort           512
+    initproperty        QName(PackageNamespace(""), "b2_maxProxies")
+
+    findproperty        QName(PackageNamespace(""), "b2_maxPairs")
+    pushbyte            8
+    getlex              QName(PackageNamespace(""), "b2_maxProxies")
+    multiply
+    initproperty        QName(PackageNamespace(""), "b2_maxPairs")
+
+    findproperty        QName(PackageNamespace(""), "b2_linearSlop")
+    pushdouble          0.005
+    initproperty        QName(PackageNamespace(""), "b2_linearSlop")
+
+    findproperty        QName(PackageNamespace(""), "b2_angularSlop")
+    pushbyte            2
+    pushshort           180
+    divide
+    getlex              QName(PackageNamespace(""), "b2_pi")
+    multiply
+    initproperty        QName(PackageNamespace(""), "b2_angularSlop")
+
+    findproperty        QName(PackageNamespace(""), "b2_toiSlop")
+    pushbyte            8
+    getlex              QName(PackageNamespace(""), "b2_linearSlop")
+    multiply
+    initproperty        QName(PackageNamespace(""), "b2_toiSlop")
+
+    findproperty        QName(PackageNamespace(""), "b2_maxTOIContactsPerIsland")
+    pushbyte            32
+    initproperty        QName(PackageNamespace(""), "b2_maxTOIContactsPerIsland")
+
+    findproperty        QName(PackageNamespace(""), "b2_velocityThreshold")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "b2_velocityThreshold")
+
+    findproperty        QName(PackageNamespace(""), "b2_maxLinearCorrection")
+    pushdouble          0.2
+    initproperty        QName(PackageNamespace(""), "b2_maxLinearCorrection")
+
+    findproperty        QName(PackageNamespace(""), "b2_maxAngularCorrection")
+    pushbyte            8
+    pushshort           180
+    divide
+    getlex              QName(PackageNamespace(""), "b2_pi")
+    multiply
+    initproperty        QName(PackageNamespace(""), "b2_maxAngularCorrection")
+
+    findproperty        QName(PackageNamespace(""), "b2_maxLinearVelocity")
+    pushshort           200
+    initproperty        QName(PackageNamespace(""), "b2_maxLinearVelocity")
+
+    findproperty        QName(PackageNamespace(""), "b2_maxLinearVelocitySquared")
+    getlex              QName(PackageNamespace(""), "b2_maxLinearVelocity")
+    getlex              QName(PackageNamespace(""), "b2_maxLinearVelocity")
+    multiply
+    initproperty        QName(PackageNamespace(""), "b2_maxLinearVelocitySquared")
+
+    findproperty        QName(PackageNamespace(""), "b2_maxAngularVelocity")
+    pushshort           250
+    initproperty        QName(PackageNamespace(""), "b2_maxAngularVelocity")
+
+    findproperty        QName(PackageNamespace(""), "b2_maxAngularVelocitySquared")
+    getlex              QName(PackageNamespace(""), "b2_maxAngularVelocity")
+    getlex              QName(PackageNamespace(""), "b2_maxAngularVelocity")
+    multiply
+    initproperty        QName(PackageNamespace(""), "b2_maxAngularVelocitySquared")
+
+    findproperty        QName(PackageNamespace(""), "b2_contactBaumgarte")
+    pushdouble          0.2
+    initproperty        QName(PackageNamespace(""), "b2_contactBaumgarte")
+
+    findproperty        QName(PackageNamespace(""), "b2_timeToSleep")
+    pushdouble          0.5
+    initproperty        QName(PackageNamespace(""), "b2_timeToSleep")
+
+    findproperty        QName(PackageNamespace(""), "b2_linearSleepTolerance")
+    pushdouble          0.01
+    initproperty        QName(PackageNamespace(""), "b2_linearSleepTolerance")
+
+    findproperty        QName(PackageNamespace(""), "b2_angularSleepTolerance")
+    pushbyte            2
+    pushshort           180
+    divide
+    initproperty        QName(PackageNamespace(""), "b2_angularSleepTolerance")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "USHRT_MAX") slotid 1 type QName(PackageNamespace(""), "int") value Integer(65535) end
+ trait const QName(PackageNamespace(""), "b2_pi") slotid 2 type QName(PackageNamespace(""), "Number") value Double(3.141592653589793) end
+ trait const QName(PackageNamespace(""), "b2_maxManifoldPoints") slotid 3 type QName(PackageNamespace(""), "int") value Integer(2) end
+ trait const QName(PackageNamespace(""), "b2_maxPolygonVertices") slotid 4 type QName(PackageNamespace(""), "int") value Integer(8) end
+ trait const QName(PackageNamespace(""), "b2_maxProxies") slotid 5 type QName(PackageNamespace(""), "int") value Integer(512) end
+ trait const QName(PackageNamespace(""), "b2_maxPairs") slotid 6 type QName(PackageNamespace(""), "int") value Double(4096) end
+ trait const QName(PackageNamespace(""), "b2_linearSlop") slotid 7 type QName(PackageNamespace(""), "Number") value Double(0.005) end
+ trait const QName(PackageNamespace(""), "b2_angularSlop") slotid 8 type QName(PackageNamespace(""), "Number") value Double(0.03490658503988659) end
+ trait const QName(PackageNamespace(""), "b2_toiSlop") slotid 9 type QName(PackageNamespace(""), "Number") value Double(0.04) end
+ trait const QName(PackageNamespace(""), "b2_maxTOIContactsPerIsland") slotid 10 type QName(PackageNamespace(""), "int") value Integer(32) end
+ trait const QName(PackageNamespace(""), "b2_velocityThreshold") slotid 11 type QName(PackageNamespace(""), "Number") value Double(1) end
+ trait const QName(PackageNamespace(""), "b2_maxLinearCorrection") slotid 12 type QName(PackageNamespace(""), "Number") value Double(0.2) end
+ trait const QName(PackageNamespace(""), "b2_maxAngularCorrection") slotid 13 type QName(PackageNamespace(""), "Number") value Double(0.13962634015954637) end
+ trait const QName(PackageNamespace(""), "b2_maxLinearVelocity") slotid 14 type QName(PackageNamespace(""), "Number") value Double(200) end
+ trait const QName(PackageNamespace(""), "b2_maxLinearVelocitySquared") slotid 15 type QName(PackageNamespace(""), "Number") value Double(40000) end
+ trait const QName(PackageNamespace(""), "b2_maxAngularVelocity") slotid 16 type QName(PackageNamespace(""), "Number") value Double(250) end
+ trait const QName(PackageNamespace(""), "b2_maxAngularVelocitySquared") slotid 17 type QName(PackageNamespace(""), "Number") value Double(62500) end
+ trait const QName(PackageNamespace(""), "b2_contactBaumgarte") slotid 18 type QName(PackageNamespace(""), "Number") value Double(0.2) end
+ trait const QName(PackageNamespace(""), "b2_timeToSleep") slotid 19 type QName(PackageNamespace(""), "Number") value Double(0.5) end
+ trait const QName(PackageNamespace(""), "b2_linearSleepTolerance") slotid 20 type QName(PackageNamespace(""), "Number") value Double(0.01) end
+ trait const QName(PackageNamespace(""), "b2_angularSleepTolerance") slotid 21 type QName(PackageNamespace(""), "Number") value Double(0.011111111111111112) end
+ trait method QName(PackageNamespace(""), "b2Assert") flag FINAL dispid 3
+  method
+   refid "Box2D.Common:b2Settings/class/b2Assert"
+   param QName(PackageNamespace(""), "Boolean")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     setlocal2
+
+     getlocal1
+     iftrue              L18
+
+     getlocal2
+     dup
+     setlocal3
+
+     getproperty         QName(PackageNamespace(""), "x")
+     increment
+     setlocal            4
+
+     getlocal3
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "x")
+
+     kill                4
+     kill                3
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,33 @@
+script
+ sinit
+  refid "Box2D.Dynamics.Joints:b2PrismaticJoint/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("b2PrismaticJoint", [PackageNamespace("Box2D.Dynamics.Joints")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+    pushscope
+
+    getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+    newclass            "Box2D.Dynamics.Joints:b2PrismaticJoint"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2PrismaticJoint")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2PrismaticJoint")
+  #include "b2PrismaticJoint.class.asasm"
+ end ; trait
+end ; script

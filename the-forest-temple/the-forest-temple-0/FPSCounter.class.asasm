@@ -1,0 +1,207 @@
+class
+ refid "FPSCounter"
+ instance QName(PackageNamespace(""), "FPSCounter")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("FPSCounter")
+  iinit
+   refid "FPSCounter/instance/init"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "uint")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Integer(0)
+   optional Integer(16777215)
+   optional False()
+   optional Integer(0)
+   body
+    maxstack 3
+    localcount 6
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PrivateNamespace(null, "FPSCounter/instance"), "last")
+     findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+     callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+     initproperty        QName(PrivateNamespace(null, "FPSCounter/instance"), "last")
+
+     findproperty        QName(PrivateNamespace(null, "FPSCounter/instance"), "ticks")
+     pushbyte            0
+     initproperty        QName(PrivateNamespace(null, "FPSCounter/instance"), "ticks")
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "x")
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "x")
+
+     findproperty        QName(PackageNamespace(""), "y")
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "y")
+
+     findproperty        QName(PrivateNamespace(null, "FPSCounter/instance"), "tf")
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(PrivateNamespace(null, "FPSCounter/instance"), "tf")
+
+     getlex              QName(PrivateNamespace(null, "FPSCounter/instance"), "tf")
+     getlocal3
+     setproperty         QName(PackageNamespace(""), "textColor")
+
+     getlex              QName(PrivateNamespace(null, "FPSCounter/instance"), "tf")
+     pushstring          "----- fps"
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlex              QName(PrivateNamespace(null, "FPSCounter/instance"), "tf")
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "selectable")
+
+     getlex              QName(PrivateNamespace(null, "FPSCounter/instance"), "tf")
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "background")
+
+     getlex              QName(PrivateNamespace(null, "FPSCounter/instance"), "tf")
+     getlocal            5
+     setproperty         QName(PackageNamespace(""), "backgroundColor")
+
+     getlex              QName(PrivateNamespace(null, "FPSCounter/instance"), "tf")
+     getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+     getproperty         QName(PackageNamespace(""), "LEFT")
+     setproperty         QName(PackageNamespace(""), "autoSize")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlex              QName(PrivateNamespace(null, "FPSCounter/instance"), "tf")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     findproperty        QName(PackageNamespace(""), "width")
+     getlex              QName(PrivateNamespace(null, "FPSCounter/instance"), "tf")
+     getproperty         QName(PackageNamespace(""), "textWidth")
+     initproperty        QName(PackageNamespace(""), "width")
+
+     findproperty        QName(PackageNamespace(""), "height")
+     getlex              QName(PrivateNamespace(null, "FPSCounter/instance"), "tf")
+     getproperty         QName(PackageNamespace(""), "textHeight")
+     initproperty        QName(PackageNamespace(""), "height")
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+     getlex              QName(PackageNamespace(""), "tick")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace(null, "FPSCounter/instance"), "ticks") type QName(PackageNamespace(""), "uint") value Integer(0) end
+  trait slot QName(PrivateNamespace(null, "FPSCounter/instance"), "tf") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PrivateNamespace(null, "FPSCounter/instance"), "last") type QName(PackageNamespace(""), "uint") end
+  trait method QName(PackageNamespace(""), "tick")
+   method
+    refid "FPSCounter/instance/tick"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 7
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      pushbyte            0
+      convert_u
+      setlocal3
+
+      pushnan
+      setlocal            4
+
+      findpropstrict      QName(PrivateNamespace(null, "FPSCounter/instance"), "ticks")
+      dup
+      setlocal            5
+
+      getproperty         QName(PrivateNamespace(null, "FPSCounter/instance"), "ticks")
+      increment
+      setlocal            6
+
+      getlocal            5
+      getlocal            6
+      setproperty         QName(PrivateNamespace(null, "FPSCounter/instance"), "ticks")
+
+      kill                6
+      kill                5
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      convert_u
+      setlocal2
+
+      getlocal2
+      getlex              QName(PrivateNamespace(null, "FPSCounter/instance"), "last")
+      subtract
+      convert_u
+      setlocal3
+
+      getlocal3
+      pushshort           1000
+      ifnge               L53
+
+      getlex              QName(PrivateNamespace(null, "FPSCounter/instance"), "ticks")
+      getlocal3
+      divide
+      pushshort           1000
+      multiply
+      convert_d
+      setlocal            4
+
+      getlex              QName(PrivateNamespace(null, "FPSCounter/instance"), "tf")
+      getlocal            4
+      pushbyte            1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toFixed"), 1
+      pushstring          " fps"
+      add
+      setproperty         QName(PackageNamespace(""), "text")
+
+      findproperty        QName(PrivateNamespace(null, "FPSCounter/instance"), "ticks")
+      pushbyte            0
+      initproperty        QName(PrivateNamespace(null, "FPSCounter/instance"), "ticks")
+
+      findproperty        QName(PrivateNamespace(null, "FPSCounter/instance"), "last")
+      getlocal2
+      initproperty        QName(PrivateNamespace(null, "FPSCounter/instance"), "last")
+
+L53:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "FPSCounter/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class
