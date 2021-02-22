@@ -59632,7 +59632,7 @@ L734:
       getlocal0
       getproperty         QName(PackageNamespace(""), "pause")
       pushfalse
-      ifne                L5498
+      ifne                L5492
 
       getlocal0
       getproperty         QName(PackageInternalNs(""), "pers1")
@@ -61639,7 +61639,7 @@ L2367:
       ; 0x24
       ; 0x04
       ; 0x10
-      ; 0x02
+      ; 0x00
       ; 0x00
       ; 0x00
 L2374:
@@ -61913,7 +61913,7 @@ L2601:
       ; 0x24
       ; 0x04
       ; 0x10
-      ; 0x02
+      ; 0x00
       ; 0x00
       ; 0x00
 L2608:
@@ -64594,7 +64594,7 @@ L4859:
       coerce_a
       setlocal            11
 
-      jump                L5072
+      jump                L5066
 
 L4868:
       label
@@ -64684,7 +64684,7 @@ L4907:
       getproperty         MultinameL([PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       callproperty        Multiname("GetJointAngle", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
       callproperty        QName(PackageNamespace(""), "abs"), 1
-      ifeq                L5068
+      ifeq                L5062
 
       getlocal0
       getproperty         QName(PackageInternalNs(""), "myMirrorSliders")
@@ -64695,17 +64695,10 @@ L4907:
       coerce_a
       setlocal            21
 
-      findpropstrict      QName(PackageNamespace(""), "trace")
-      pushstring          "v "
-      getlocal            21
-      callproperty        Multiname("Length", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
-      add
-      callpropvoid        QName(PackageNamespace(""), "trace"), 1
-
       getlocal            21
       callproperty        Multiname("Length", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
       pushbyte            1
-      ifngt               L4978
+      ifngt               L4972
 
       getlocal0
       getproperty         QName(PackageInternalNs(""), "myMirrorSliders")
@@ -64714,9 +64707,9 @@ L4907:
       pushbyte            15
       callpropvoid        Multiname("SetMaxMotorForce", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
 
-      jump                L4984
+      jump                L4978
 
-L4978:
+L4972:
       getlocal0
       getproperty         QName(PackageInternalNs(""), "myMirrorSliders")
       getlocal            11
@@ -64724,7 +64717,7 @@ L4978:
       pushbyte            5
       callpropvoid        Multiname("SetMaxMotorForce", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
 
-L4984:
+L4978:
       getlocal0
       getproperty         QName(PackageInternalNs(""), "myMirrorSliders")
       getlocal            11
@@ -64738,15 +64731,15 @@ L4984:
       pushfalse
       equals
       dup
-      iffalse             L5002
+      iffalse             L4996
 
       pop
       getlocal            21
       callproperty        Multiname("Length", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
       pushdouble          0.2
       greaterthan
-L5002:
-      iffalse             L5020
+L4996:
+      iffalse             L5014
 
       getlocal0
       pushtrue
@@ -64768,7 +64761,7 @@ L5002:
       getproperty         QName(PackageNamespace(""), "handleSoundComplete")
       callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
 
-L5020:
+L5014:
       getlocal0
       getproperty         QName(PackageInternalNs(""), "myActuateds3")
       getlocal            11
@@ -64818,13 +64811,13 @@ L5020:
       add
       callpropvoid        Multiname("SetXForm", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
 
-L5068:
+L5062:
       getlocal            11
       increment
       coerce_a
       setlocal            11
 
-L5072:
+L5066:
       getlocal            11
       getlocal0
       getproperty         QName(PackageInternalNs(""), "myMirrorSliders")
@@ -64837,24 +64830,24 @@ L5072:
       coerce_a
       setlocal            12
 
-      jump                L5384
+      jump                L5378
 
-L5083:
+L5077:
       label
       getlocal            12
       getproperty         Multiname("m_userData", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       getlex              QName(PackageNamespace("flash.display"), "Sprite")
       istypelate
       dup
-      iffalse             L5095
+      iffalse             L5089
 
       pop
       getlocal            12
       callproperty        Multiname("IsSleeping", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
       pushfalse
       equals
-L5095:
-      iffalse             L5380
+L5089:
+      iffalse             L5374
 
       getlocal            12
       getproperty         Multiname("m_userData", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
@@ -64878,7 +64871,7 @@ L5095:
       getproperty         Multiname("m_userData", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       getproperty         Multiname("name", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       pushstring          "pers1"
-      ifeq                L5127
+      ifeq                L5121
 
       getlocal            12
       getproperty         Multiname("m_userData", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
@@ -64891,12 +64884,12 @@ L5095:
       multiply
       setproperty         Multiname("rotation", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
 
-L5127:
+L5121:
       getlocal            12
       getproperty         Multiname("m_userData", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       getproperty         Multiname("name", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       pushstring          "HangingPlatform"
-      ifne                L5161
+      ifne                L5155
 
       getlocal            12
       getproperty         Multiname("m_userData", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
@@ -64928,12 +64921,12 @@ L5127:
       add
       setproperty         Multiname("rotation", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
 
-L5161:
+L5155:
       getlocal            12
       getproperty         Multiname("m_userData", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       getproperty         Multiname("name", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       pushstring          "PulleyPlatform"
-      ifne                L5380
+      ifne                L5374
 
       getlocal            12
       getproperty         Multiname("m_userData", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
@@ -65155,15 +65148,15 @@ L5161:
       multiply
       setproperty         Multiname("rotation", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
 
-L5380:
+L5374:
       getlocal            12
       getproperty         Multiname("m_next", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       coerce_a
       setlocal            12
 
-L5384:
+L5378:
       getlocal            12
-      iftrue              L5083
+      iftrue              L5077
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "m_lworld")
@@ -65171,24 +65164,24 @@ L5384:
       coerce_a
       setlocal            12
 
-      jump                L5427
+      jump                L5421
 
-L5392:
+L5386:
       label
       getlocal            12
       getproperty         Multiname("m_userData", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       getlex              QName(PackageNamespace("flash.display"), "Sprite")
       istypelate
       dup
-      iffalse             L5404
+      iffalse             L5398
 
       pop
       getlocal            12
       getproperty         Multiname("m_userData", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       getproperty         Multiname("pointer", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       convert_b
-L5404:
-      iffalse             L5423
+L5398:
+      iffalse             L5417
 
       getlocal            12
       findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
@@ -65209,15 +65202,15 @@ L5404:
       callproperty        Multiname("GetAngle", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
       callpropvoid        Multiname("SetXForm", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
 
-L5423:
+L5417:
       getlocal            12
       getproperty         Multiname("m_next", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       coerce_a
       setlocal            12
 
-L5427:
+L5421:
       getlocal            12
-      iftrue              L5392
+      iftrue              L5386
 
       getlocal0
       getproperty         QName(PackageInternalNs(""), "LightBoard")
@@ -65230,29 +65223,29 @@ L5427:
       coerce_a
       setlocal            12
 
-      jump                L5452
+      jump                L5446
 
-L5439:
+L5433:
       label
       getlocal            12
       getproperty         Multiname("m_userData", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       getlex              QName(PackageNamespace(""), "LightBeamer")
       istypelate
-      iffalse             L5448
+      iffalse             L5442
 
       getlocal0
       getlocal            12
       callpropvoid        QName(PackageNamespace(""), "TraceBeam"), 1
 
-L5448:
+L5442:
       getlocal            12
       getproperty         Multiname("m_next", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       coerce_a
       setlocal            12
 
-L5452:
+L5446:
       getlocal            12
-      iftrue              L5439
+      iftrue              L5433
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "m_lworld")
@@ -65260,15 +65253,15 @@ L5452:
       coerce_a
       setlocal            12
 
-      jump                L5496
+      jump                L5490
 
-L5460:
+L5454:
       label
       getlocal            12
       getproperty         Multiname("m_userData", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       getlex              QName(PackageNamespace("flash.display"), "Sprite")
       istypelate
-      iffalse             L5492
+      iffalse             L5486
 
       getlocal            12
       getproperty         Multiname("m_userData", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
@@ -65299,17 +65292,17 @@ L5460:
       multiply
       setproperty         Multiname("rotation", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
 
-L5492:
+L5486:
       getlocal            12
       getproperty         Multiname("m_next", [PrivateNamespace(null, "level/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PrivateNamespace(null, "level/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), PackageNamespace("flash.geom"), ProtectedNamespace("level"), StaticProtectedNs("level"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       coerce_a
       setlocal            12
 
-L5496:
+L5490:
       getlocal            12
-      iftrue              L5460
+      iftrue              L5454
 
-L5498:
+L5492:
       returnvoid
      end ; code
     end ; body

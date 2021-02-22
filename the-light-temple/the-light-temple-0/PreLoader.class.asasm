@@ -19,11 +19,11 @@ class
      pushscope
 
      debug               1, "param1", 0, 0
-     debug               1, "_loc2_", 1, 42
-     debug               1, "_loc3_", 2, 43
-     debug               1, "_loc4_", 3, 44
-     debug               1, "_loc5_", 4, 29
-     debug               1, "_loc6_", 5, 30
+     debug               1, "_loc2_", 1, 41
+     debug               1, "_loc3_", 2, 42
+     debug               1, "_loc4_", 3, 43
+     debug               1, "_loc5_", 4, 28
+     debug               1, "_loc6_", 5, 29
      pushnull
      coerce_s
      setlocal            5
@@ -110,41 +110,6 @@ class
      coerce_a
      setlocal            4
 
-     getlocal            4
-     pushfalse
-     ifne                L101
-
-     pushstring          "3240QCF81C4F3"
-     coerce_s
-     setlocal            5
-
-     findpropstrict      QName(PackageNamespace("CPMStar"), "AdLoader")
-     getlocal            5
-     constructprop       QName(PackageNamespace("CPMStar"), "AdLoader"), 1
-     coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
-     setlocal            6
-
-     getlocal0
-     getproperty         QName(PackageInternalNs(""), "LH")
-     getproperty         Multiname("adBox", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")])
-     getlocal            6
-     callpropvoid        Multiname("addChild", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")]), 1
-
-     getlocal0
-     getproperty         QName(PackageInternalNs(""), "LH")
-     getproperty         Multiname("GameName", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")])
-     pushfalse
-     coerce_a
-     setproperty         Multiname("visible", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")])
-
-     jump                L111
-
-L101:
-     getlocal0
-     pushbyte            2
-     coerce_a
-     setproperty         QName(PackageInternalNs(""), "delaySecs")
-
      getlocal0
      getproperty         QName(PackageInternalNs(""), "LH")
      getproperty         Multiname("adBox", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")])
@@ -152,7 +117,6 @@ L101:
      coerce_a
      setproperty         Multiname("visible", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")])
 
-L111:
      getlocal0
      getlex              QName(PackageNamespace("flash.events"), "Event")
      getproperty         Multiname("ENTER_FRAME", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")])
@@ -185,8 +149,8 @@ L111:
       pushscope
 
       debug               1, "param1", 0, 0
-      debug               1, "_loc2_", 1, 62
-      debug               1, "_loc3_", 2, 64
+      debug               1, "_loc2_", 1, 50
+      debug               1, "_loc3_", 2, 52
       getlex              Multiname("stage", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")])
       getproperty         Multiname("loaderInfo", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")])
       getproperty         Multiname("bytesLoaded", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")])

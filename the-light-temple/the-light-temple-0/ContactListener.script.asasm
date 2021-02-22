@@ -1,5 +1,6 @@
 script
  sinit
+  name ""
   refid "ContactListener/init"
   body
    maxstack 2
@@ -27,7 +28,7 @@ script
    end ; code
   end ; body
  end ; method
- trait class QName(PackageNamespace(""), "ContactListener")
+ trait class QName(PackageNamespace(""), "ContactListener") slotid 1
   #include "ContactListener.class.asasm"
  end ; trait
 end ; script

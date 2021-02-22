@@ -4,8 +4,9 @@ class
   extends QName(PackageNamespace("Box2D.Dynamics"), "b2ContactListener")
   flag SEALED
   flag PROTECTEDNS
-  protectedns ProtectedNamespace("ContactListener")
+  protectedns ProtectedNamespace(":ContactListener")
   iinit
+   name ":ContactListener/ContactListener"
    refid "ContactListener/instance/init"
    body
     maxstack 2
@@ -19,27 +20,30 @@ class
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "Array")
      constructprop       QName(PackageNamespace(""), "Array"), 0
-     initproperty        QName(PackageNamespace(""), "contactStack1")
+     setproperty         QName(PackageNamespace(""), "contactStack1")
 
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "Array")
      constructprop       QName(PackageNamespace(""), "Array"), 0
-     initproperty        QName(PackageNamespace(""), "contactStack2")
+     setproperty         QName(PackageNamespace(""), "contactStack2")
 
      getlocal0
      constructsuper      0
 
      getlocal0
      pushbyte            0
-     initproperty        QName(PackageNamespace(""), "BlueCount")
+     convert_d
+     setproperty         QName(PackageNamespace(""), "BlueCount")
 
      getlocal0
      pushbyte            0
-     initproperty        QName(PackageNamespace(""), "RedCount")
+     convert_d
+     setproperty         QName(PackageNamespace(""), "RedCount")
 
      getlocal0
      pushbyte            0
-     initproperty        QName(PackageNamespace(""), "GreenCount")
+     convert_d
+     setproperty         QName(PackageNamespace(""), "GreenCount")
 
      returnvoid
     end ; code
@@ -52,10 +56,11 @@ class
   trait slot QName(PackageNamespace(""), "finish2") type QName(PackageNamespace(""), "Number") value Integer(0) end
   trait slot QName(PackageNamespace(""), "contactStack1") type QName(PackageNamespace(""), "Array") end
   trait slot QName(PackageNamespace(""), "contactStack2") type QName(PackageNamespace(""), "Array") end
-  trait slot QName(PackageNamespace(""), "deadFire") type QName(PackageNamespace(""), "Boolean") value False() end
-  trait slot QName(PackageNamespace(""), "deadWater") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PackageNamespace(""), "deadFire") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "deadWater") type QName(PackageNamespace(""), "Boolean") end
   trait method QName(PackageNamespace(""), "Add") flag OVERRIDE
    method
+    name "ContactListener:Add"
     refid "ContactListener/instance/Add"
     param QName(PackageNamespace("Box2D.Collision"), "b2ContactPoint")
     returns QName(PackageNamespace(""), "void")
@@ -68,13 +73,14 @@ class
       getlocal0
       pushscope
 
+      debug               1, "param1", 0, 0
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "FinishGirl"
       equals
       dup
-      iffalse             L15
+      iffalse             L16
 
       pop
       getlocal1
@@ -82,21 +88,22 @@ class
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "waterlegs"
       equals
-L15:
-      iffalse             L19
+L16:
+      iffalse             L21
 
       getlocal0
       pushbyte            1
-      initproperty        QName(PackageNamespace(""), "finish2")
+      convert_d
+      setproperty         QName(PackageNamespace(""), "finish2")
 
-L19:
+L21:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "FinishGirl"
       equals
       dup
-      iffalse             L32
+      iffalse             L34
 
       pop
       getlocal1
@@ -104,21 +111,22 @@ L19:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "waterlegs"
       equals
-L32:
-      iffalse             L36
+L34:
+      iffalse             L39
 
       getlocal0
       pushbyte            1
-      initproperty        QName(PackageNamespace(""), "finish2")
+      convert_d
+      setproperty         QName(PackageNamespace(""), "finish2")
 
-L36:
+L39:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "FinishBoy"
       equals
       dup
-      iffalse             L49
+      iffalse             L52
 
       pop
       getlocal1
@@ -126,43 +134,45 @@ L36:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "firelegs"
       equals
-L49:
-      iffalse             L53
+L52:
+      iffalse             L57
 
       getlocal0
       pushbyte            1
-      initproperty        QName(PackageNamespace(""), "finish1")
+      convert_d
+      setproperty         QName(PackageNamespace(""), "finish1")
 
-L53:
+L57:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "FinishBoy"
       equals
       dup
-      iffalse             L66
-
-      pop
-      getlocal1
-      getproperty         QName(PackageNamespace(""), "shape1")
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      pushstring          "firelegs"
-      equals
-L66:
       iffalse             L70
 
+      pop
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "shape1")
+      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
+      pushstring          "firelegs"
+      equals
+L70:
+      iffalse             L75
+
       getlocal0
       pushbyte            1
-      initproperty        QName(PackageNamespace(""), "finish1")
+      convert_d
+      setproperty         QName(PackageNamespace(""), "finish1")
 
-L70:
+L75:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "water"
       equals
       dup
-      iffalse             L83
+      iffalse             L88
 
       pop
       getlocal1
@@ -170,30 +180,30 @@ L70:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "firelegs"
       equals
-L83:
+L88:
       dup
-      iffalse             L90
+      iffalse             L95
 
       pop
       getlocal0
       getproperty         QName(PackageNamespace(""), "deadFire")
       pushfalse
       equals
-L90:
-      iffalse             L94
+L95:
+      iffalse             L99
 
       getlocal0
       pushtrue
-      initproperty        QName(PackageNamespace(""), "deadFire")
+      setproperty         QName(PackageNamespace(""), "deadFire")
 
-L94:
+L99:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "water"
       equals
       dup
-      iffalse             L107
+      iffalse             L112
 
       pop
       getlocal1
@@ -201,30 +211,30 @@ L94:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "firelegs"
       equals
-L107:
+L112:
       dup
-      iffalse             L114
+      iffalse             L119
 
       pop
       getlocal0
       getproperty         QName(PackageNamespace(""), "deadFire")
       pushfalse
       equals
-L114:
-      iffalse             L118
+L119:
+      iffalse             L123
 
       getlocal0
       pushtrue
-      initproperty        QName(PackageNamespace(""), "deadFire")
+      setproperty         QName(PackageNamespace(""), "deadFire")
 
-L118:
+L123:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "black"
       equals
       dup
-      iffalse             L131
+      iffalse             L136
 
       pop
       getlocal1
@@ -232,30 +242,30 @@ L118:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "firelegs"
       equals
-L131:
+L136:
       dup
-      iffalse             L138
+      iffalse             L143
 
       pop
       getlocal0
       getproperty         QName(PackageNamespace(""), "deadFire")
       pushfalse
       equals
-L138:
-      iffalse             L142
+L143:
+      iffalse             L147
 
       getlocal0
       pushtrue
-      initproperty        QName(PackageNamespace(""), "deadFire")
+      setproperty         QName(PackageNamespace(""), "deadFire")
 
-L142:
+L147:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "black"
       equals
       dup
-      iffalse             L155
+      iffalse             L160
 
       pop
       getlocal1
@@ -263,30 +273,30 @@ L142:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "firelegs"
       equals
-L155:
+L160:
       dup
-      iffalse             L162
+      iffalse             L167
 
       pop
       getlocal0
       getproperty         QName(PackageNamespace(""), "deadFire")
       pushfalse
       equals
-L162:
-      iffalse             L166
+L167:
+      iffalse             L171
 
       getlocal0
       pushtrue
-      initproperty        QName(PackageNamespace(""), "deadFire")
+      setproperty         QName(PackageNamespace(""), "deadFire")
 
-L166:
+L171:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "fire"
       equals
       dup
-      iffalse             L179
+      iffalse             L184
 
       pop
       getlocal1
@@ -294,30 +304,30 @@ L166:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "waterlegs"
       equals
-L179:
+L184:
       dup
-      iffalse             L186
+      iffalse             L191
 
       pop
       getlocal0
       getproperty         QName(PackageNamespace(""), "deadWater")
       pushfalse
       equals
-L186:
-      iffalse             L190
+L191:
+      iffalse             L195
 
       getlocal0
       pushtrue
-      initproperty        QName(PackageNamespace(""), "deadWater")
+      setproperty         QName(PackageNamespace(""), "deadWater")
 
-L190:
+L195:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "fire"
       equals
       dup
-      iffalse             L203
+      iffalse             L208
 
       pop
       getlocal1
@@ -325,30 +335,30 @@ L190:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "waterlegs"
       equals
-L203:
+L208:
       dup
-      iffalse             L210
+      iffalse             L215
 
       pop
       getlocal0
       getproperty         QName(PackageNamespace(""), "deadWater")
       pushfalse
       equals
-L210:
-      iffalse             L214
+L215:
+      iffalse             L219
 
       getlocal0
       pushtrue
-      initproperty        QName(PackageNamespace(""), "deadWater")
+      setproperty         QName(PackageNamespace(""), "deadWater")
 
-L214:
+L219:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "black"
       equals
       dup
-      iffalse             L227
+      iffalse             L232
 
       pop
       getlocal1
@@ -356,30 +366,30 @@ L214:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "waterlegs"
       equals
-L227:
+L232:
       dup
-      iffalse             L234
+      iffalse             L239
 
       pop
       getlocal0
       getproperty         QName(PackageNamespace(""), "deadWater")
       pushfalse
       equals
-L234:
-      iffalse             L238
+L239:
+      iffalse             L243
 
       getlocal0
       pushtrue
-      initproperty        QName(PackageNamespace(""), "deadWater")
+      setproperty         QName(PackageNamespace(""), "deadWater")
 
-L238:
+L243:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "black"
       equals
       dup
-      iffalse             L251
+      iffalse             L256
 
       pop
       getlocal1
@@ -387,97 +397,97 @@ L238:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "waterlegs"
       equals
-L251:
+L256:
       dup
-      iffalse             L258
+      iffalse             L263
 
       pop
       getlocal0
       getproperty         QName(PackageNamespace(""), "deadWater")
       pushfalse
       equals
-L258:
-      iffalse             L262
+L263:
+      iffalse             L267
 
       getlocal0
       pushtrue
-      initproperty        QName(PackageNamespace(""), "deadWater")
+      setproperty         QName(PackageNamespace(""), "deadWater")
 
-L262:
+L267:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "bd"
       equals
       not
       dup
-      iffalse             L281
+      iffalse             L286
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "rd"
       equals
       not
-L281:
+L286:
       dup
-      iffalse             L292
+      iffalse             L297
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "FUCK"
       equals
       not
-L292:
+L297:
       dup
-      iffalse             L303
+      iffalse             L308
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "bd"
       equals
       not
-L303:
+L308:
       dup
-      iffalse             L314
+      iffalse             L319
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "rd"
       equals
       not
-L314:
+L319:
       dup
-      iffalse             L325
+      iffalse             L330
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "FUCK"
       equals
       not
-L325:
-      iffalse             L366
+L330:
+      iffalse             L371
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
@@ -485,7 +495,7 @@ L325:
       pushstring          "firelegs"
       equals
       dup
-      iftrue              L339
+      iftrue              L344
 
       pop
       getlocal1
@@ -493,24 +503,24 @@ L325:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "firelegs"
       equals
-L339:
-      iffalse             L346
+L344:
+      iffalse             L351
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "contactStack1")
       getlocal1
       getproperty         QName(PackageNamespace(""), "normal")
       callproperty        QName(PackageNamespace(""), "Copy"), 0
-      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+      callpropvoid        Multiname("push", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
-L346:
+L351:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "waterlegs"
       equals
       dup
-      iftrue              L359
+      iftrue              L364
 
       pop
       getlocal1
@@ -518,77 +528,79 @@ L346:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "waterlegs"
       equals
-L359:
-      iffalse             L366
+L364:
+      iffalse             L371
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "contactStack2")
       getlocal1
       getproperty         QName(PackageNamespace(""), "normal")
       callproperty        QName(PackageNamespace(""), "Copy"), 0
-      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+      callpropvoid        Multiname("push", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
-L366:
+L371:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "bd"
       equals
       dup
-      iffalse             L383
+      iffalse             L388
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "pers2"
       equals
-L383:
-      iffalse             L428
+L388:
+      iffalse             L435
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("DiamondSound", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      callpropvoid        Multiname("play", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")]), 0
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("DiamondSound", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      callpropvoid        Multiname("play", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      callpropvoid        Multiname("removeChild", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")]), 1
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      callpropvoid        Multiname("removeChild", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
-      callpropvoid        QName(PackageNamespace(""), "DestroyShape"), 1
+      callpropvoid        Multiname("DestroyShape", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
       pushstring          "FUCK"
-      setproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      coerce_a
+      setproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
 
       getlocal0
       dup
       setlocal2
 
       getproperty         QName(PackageNamespace(""), "BlueCount")
+      convert_d
       increment
       setlocal3
 
@@ -598,71 +610,73 @@ L383:
 
       kill                3
       kill                2
-      findpropstrict      QName(PackageNamespace(""), "trace")
-      pushstring          "BLUE DIAMONDO"
-      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+      findpropstrict      Multiname("trace", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      pushstring          "Blue_Diamond"
+      callpropvoid        Multiname("trace", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
-L428:
+L435:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "bd"
       equals
       dup
-      iffalse             L445
+      iffalse             L452
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "pers2"
       equals
-L445:
-      iffalse             L490
+L452:
+      iffalse             L499
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("DiamondSound", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      callpropvoid        Multiname("play", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")]), 0
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("DiamondSound", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      callpropvoid        Multiname("play", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      callpropvoid        Multiname("removeChild", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")]), 1
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      callpropvoid        Multiname("removeChild", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
-      callpropvoid        QName(PackageNamespace(""), "DestroyShape"), 1
+      callpropvoid        Multiname("DestroyShape", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
       pushstring          "FUCK"
-      setproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      coerce_a
+      setproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
 
       getlocal0
       dup
       setlocal2
 
       getproperty         QName(PackageNamespace(""), "BlueCount")
+      convert_d
       increment
       setlocal3
 
@@ -672,71 +686,73 @@ L445:
 
       kill                3
       kill                2
-      findpropstrict      QName(PackageNamespace(""), "trace")
-      pushstring          "BLUE DIAMONDO"
-      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+      findpropstrict      Multiname("trace", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      pushstring          "Blue_Diamond"
+      callpropvoid        Multiname("trace", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
-L490:
+L499:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "rd"
       equals
       dup
-      iffalse             L507
+      iffalse             L516
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "pers1"
       equals
-L507:
-      iffalse             L552
+L516:
+      iffalse             L563
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("DiamondSound", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      callpropvoid        Multiname("play", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")]), 0
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("DiamondSound", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      callpropvoid        Multiname("play", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      callpropvoid        Multiname("removeChild", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")]), 1
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      callpropvoid        Multiname("removeChild", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
-      callpropvoid        QName(PackageNamespace(""), "DestroyShape"), 1
+      callpropvoid        Multiname("DestroyShape", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
       pushstring          "FUCK"
-      setproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      coerce_a
+      setproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
 
       getlocal0
       dup
       setlocal2
 
       getproperty         QName(PackageNamespace(""), "RedCount")
+      convert_d
       increment
       setlocal3
 
@@ -746,71 +762,73 @@ L507:
 
       kill                3
       kill                2
-      findpropstrict      QName(PackageNamespace(""), "trace")
-      pushstring          "RED DIAMONDO"
-      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+      findpropstrict      Multiname("trace", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      pushstring          "Red_Diamond"
+      callpropvoid        Multiname("trace", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
-L552:
+L563:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "rd"
       equals
       dup
-      iffalse             L569
+      iffalse             L580
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "pers1"
       equals
-L569:
-      iffalse             L614
+L580:
+      iffalse             L627
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("DiamondSound", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      callpropvoid        Multiname("play", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")]), 0
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("DiamondSound", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      callpropvoid        Multiname("play", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      callpropvoid        Multiname("removeChild", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")]), 1
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      callpropvoid        Multiname("removeChild", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
-      callpropvoid        QName(PackageNamespace(""), "DestroyShape"), 1
+      callpropvoid        Multiname("DestroyShape", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
       pushstring          "FUCK"
-      setproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      coerce_a
+      setproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
 
       getlocal0
       dup
       setlocal2
 
       getproperty         QName(PackageNamespace(""), "RedCount")
+      convert_d
       increment
       setlocal3
 
@@ -820,82 +838,84 @@ L569:
 
       kill                3
       kill                2
-      findpropstrict      QName(PackageNamespace(""), "trace")
-      pushstring          "RED DIAMONDO"
-      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+      findpropstrict      Multiname("trace", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      pushstring          "Red_Diamond"
+      callpropvoid        Multiname("trace", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
-L614:
+L627:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "gr"
       equals
       dup
-      iffalse             L641
+      iffalse             L654
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "pers1"
       equals
       dup
-      iftrue              L641
+      iftrue              L654
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "pers2"
       equals
-L641:
-      iffalse             L686
+L654:
+      iffalse             L701
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("DiamondSound", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      callpropvoid        Multiname("play", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")]), 0
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("DiamondSound", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      callpropvoid        Multiname("play", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      callpropvoid        Multiname("removeChild", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")]), 1
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      callpropvoid        Multiname("removeChild", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
-      callpropvoid        QName(PackageNamespace(""), "DestroyShape"), 1
+      callpropvoid        Multiname("DestroyShape", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
       pushstring          "FUCK"
-      setproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      coerce_a
+      setproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
 
       getlocal0
       dup
       setlocal2
 
       getproperty         QName(PackageNamespace(""), "GreenCount")
+      convert_d
       increment
       setlocal3
 
@@ -905,82 +925,84 @@ L641:
 
       kill                3
       kill                2
-      findpropstrict      QName(PackageNamespace(""), "trace")
-      pushstring          "SILVER DIAMONDO"
-      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+      findpropstrict      Multiname("trace", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      pushstring          "Silver_Diamond"
+      callpropvoid        Multiname("trace", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
-L686:
+L701:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "gr"
       equals
       dup
-      iffalse             L713
+      iffalse             L728
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "pers1"
       equals
       dup
-      iftrue              L713
+      iftrue              L728
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "pers2"
       equals
-L713:
-      iffalse             L758
+L728:
+      iffalse             L775
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("DiamondSound", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      callpropvoid        Multiname("play", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")]), 0
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("DiamondSound", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      callpropvoid        Multiname("play", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("parent", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      callpropvoid        Multiname("removeChild", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")]), 1
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      callpropvoid        Multiname("removeChild", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
-      callpropvoid        QName(PackageNamespace(""), "DestroyShape"), 1
+      callpropvoid        Multiname("DestroyShape", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
       pushstring          "FUCK"
-      setproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      coerce_a
+      setproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
 
       getlocal0
       dup
       setlocal2
 
       getproperty         QName(PackageNamespace(""), "GreenCount")
+      convert_d
       increment
       setlocal3
 
@@ -990,11 +1012,11 @@ L713:
 
       kill                3
       kill                2
-      findpropstrict      QName(PackageNamespace(""), "trace")
-      pushstring          "SILVER DIAMONDO"
-      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+      findpropstrict      Multiname("trace", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      pushstring          "Silver_Diamond"
+      callpropvoid        Multiname("trace", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 1
 
-L758:
+L775:
       returnvoid
      end ; code
     end ; body
@@ -1002,6 +1024,7 @@ L758:
   end ; trait
   trait method QName(PackageNamespace(""), "Persist") flag OVERRIDE
    method
+    name "ContactListener:Persist"
     refid "ContactListener/instance/Persist"
     param QName(PackageNamespace("Box2D.Collision"), "b2ContactPoint")
     returns QName(PackageNamespace(""), "void")
@@ -1014,6 +1037,9 @@ L758:
       getlocal0
       pushscope
 
+      debug               1, "param1", 0, 0
+      debug               1, "_loc2_", 1, 157
+      debug               1, "_loc3_", 2, 158
       pushundefined
       coerce_a
       setlocal2
@@ -1025,77 +1051,77 @@ L758:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "bd"
       equals
       not
       dup
-      iffalse             L27
+      iffalse             L30
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "rd"
       equals
       not
-L27:
+L30:
       dup
-      iffalse             L38
+      iffalse             L41
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "FUCK"
       equals
       not
-L38:
+L41:
       dup
-      iffalse             L49
+      iffalse             L52
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "bd"
       equals
       not
-L49:
+L52:
       dup
-      iffalse             L60
+      iffalse             L63
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "rd"
       equals
       not
-L60:
+L63:
       dup
-      iffalse             L71
+      iffalse             L74
 
       pop
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetBody"), 0
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      getproperty         Multiname("name", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      callproperty        Multiname("GetUserData", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 0
+      getproperty         Multiname("name", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       pushstring          "FUCK"
       equals
       not
-L71:
-      iffalse             L198
+L74:
+      iffalse             L195
 
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
@@ -1103,7 +1129,7 @@ L71:
       pushstring          "firelegs"
       equals
       dup
-      iftrue              L85
+      iftrue              L88
 
       pop
       getlocal1
@@ -1111,7 +1137,7 @@ L71:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "firelegs"
       equals
-L85:
+L88:
       iffalse             L135
 
       pushbyte            0
@@ -1124,49 +1150,45 @@ L85:
 
       jump                L123
 
-L93:
+L96:
       label
       getlocal0
       getproperty         QName(PackageNamespace(""), "contactStack1")
       getlocal3
-      getproperty         MultinameL([PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("x", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("x", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       getlocal1
       getproperty         QName(PackageNamespace(""), "normal")
       getproperty         QName(PackageNamespace(""), "x")
       equals
       dup
-      iffalse             L115
+      iffalse             L118
 
       pop
       getlocal0
       getproperty         QName(PackageNamespace(""), "contactStack1")
       getlocal3
-      getproperty         MultinameL([PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("y", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       getlocal1
       getproperty         QName(PackageNamespace(""), "normal")
       getproperty         QName(PackageNamespace(""), "y")
       equals
-L115:
-      iffalse             L119
+L118:
+      iffalse             L122
 
       getlocal3
       coerce_a
       setlocal2
 
-L119:
-      getlocal3
-      increment
-      coerce_a
-      setlocal3
-
+L122:
+      inclocal            3
 L123:
       getlocal3
       getlocal0
       getproperty         QName(PackageNamespace(""), "contactStack1")
-      getproperty         QName(PackageNamespace(""), "length")
-      iflt                L93
+      getproperty         Multiname("length", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      iflt                L96
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "contactStack1")
@@ -1174,7 +1196,7 @@ L123:
       getlocal1
       getproperty         QName(PackageNamespace(""), "normal")
       callproperty        QName(PackageNamespace(""), "Copy"), 0
-      setproperty         MultinameL([PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      setproperty         MultinameL([PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
 
 L135:
       getlocal1
@@ -1192,7 +1214,7 @@ L135:
       pushstring          "waterlegs"
       equals
 L148:
-      iffalse             L198
+      iffalse             L195
 
       pushbyte            0
       coerce_a
@@ -1202,15 +1224,15 @@ L148:
       coerce_a
       setlocal3
 
-      jump                L186
+      jump                L183
 
 L156:
       label
       getlocal0
       getproperty         QName(PackageNamespace(""), "contactStack2")
       getlocal3
-      getproperty         MultinameL([PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("x", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("x", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       getlocal1
       getproperty         QName(PackageNamespace(""), "normal")
       getproperty         QName(PackageNamespace(""), "x")
@@ -1222,8 +1244,8 @@ L156:
       getlocal0
       getproperty         QName(PackageNamespace(""), "contactStack2")
       getlocal3
-      getproperty         MultinameL([PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("y", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       getlocal1
       getproperty         QName(PackageNamespace(""), "normal")
       getproperty         QName(PackageNamespace(""), "y")
@@ -1236,16 +1258,12 @@ L178:
       setlocal2
 
 L182:
-      getlocal3
-      increment
-      coerce_a
-      setlocal3
-
-L186:
+      inclocal            3
+L183:
       getlocal3
       getlocal0
       getproperty         QName(PackageNamespace(""), "contactStack2")
-      getproperty         QName(PackageNamespace(""), "length")
+      getproperty         Multiname("length", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       iflt                L156
 
       getlocal0
@@ -1254,16 +1272,16 @@ L186:
       getlocal1
       getproperty         QName(PackageNamespace(""), "normal")
       callproperty        QName(PackageNamespace(""), "Copy"), 0
-      setproperty         MultinameL([PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      setproperty         MultinameL([PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
 
-L198:
+L195:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "FinishGirl"
       equals
       dup
-      iffalse             L211
+      iffalse             L208
 
       pop
       getlocal1
@@ -1271,21 +1289,22 @@ L198:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "waterlegs"
       equals
-L211:
-      iffalse             L215
+L208:
+      iffalse             L213
 
       getlocal0
       pushbyte            1
-      initproperty        QName(PackageNamespace(""), "finish2")
+      convert_d
+      setproperty         QName(PackageNamespace(""), "finish2")
 
-L215:
+L213:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "FinishGirl"
       equals
       dup
-      iffalse             L228
+      iffalse             L226
 
       pop
       getlocal1
@@ -1293,21 +1312,22 @@ L215:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "waterlegs"
       equals
-L228:
-      iffalse             L232
+L226:
+      iffalse             L231
 
       getlocal0
       pushbyte            1
-      initproperty        QName(PackageNamespace(""), "finish2")
+      convert_d
+      setproperty         QName(PackageNamespace(""), "finish2")
 
-L232:
+L231:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "FinishBoy"
       equals
       dup
-      iffalse             L245
+      iffalse             L244
 
       pop
       getlocal1
@@ -1315,12 +1335,13 @@ L232:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "firelegs"
       equals
-L245:
+L244:
       iffalse             L249
 
       getlocal0
       pushbyte            1
-      initproperty        QName(PackageNamespace(""), "finish1")
+      convert_d
+      setproperty         QName(PackageNamespace(""), "finish1")
 
 L249:
       getlocal1
@@ -1338,13 +1359,14 @@ L249:
       pushstring          "firelegs"
       equals
 L262:
-      iffalse             L266
+      iffalse             L267
 
       getlocal0
       pushbyte            1
-      initproperty        QName(PackageNamespace(""), "finish1")
+      convert_d
+      setproperty         QName(PackageNamespace(""), "finish1")
 
-L266:
+L267:
       returnvoid
      end ; code
     end ; body
@@ -1352,6 +1374,7 @@ L266:
   end ; trait
   trait method QName(PackageNamespace(""), "Remove") flag OVERRIDE
    method
+    name "ContactListener:Remove"
     refid "ContactListener/instance/Remove"
     param QName(PackageNamespace("Box2D.Collision"), "b2ContactPoint")
     returns QName(PackageNamespace(""), "void")
@@ -1364,6 +1387,9 @@ L266:
       getlocal0
       pushscope
 
+      debug               1, "param1", 0, 0
+      debug               1, "_loc2_", 1, 210
+      debug               1, "_loc3_", 2, 211
       pushundefined
       coerce_a
       setlocal2
@@ -1378,7 +1404,7 @@ L266:
       pushstring          "FinishGirl"
       equals
       dup
-      iffalse             L21
+      iffalse             L24
 
       pop
       getlocal1
@@ -1386,43 +1412,45 @@ L266:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "waterlegs"
       equals
-L21:
-      iffalse             L25
+L24:
+      iffalse             L29
 
       getlocal0
       pushbyte            0
-      initproperty        QName(PackageNamespace(""), "finish2")
+      convert_d
+      setproperty         QName(PackageNamespace(""), "finish2")
 
-L25:
+L29:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "FinishGirl"
       equals
       dup
-      iffalse             L38
-
-      pop
-      getlocal1
-      getproperty         QName(PackageNamespace(""), "shape1")
-      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
-      pushstring          "waterlegs"
-      equals
-L38:
       iffalse             L42
 
-      getlocal0
-      pushbyte            0
-      initproperty        QName(PackageNamespace(""), "finish2")
-
+      pop
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "shape1")
+      callproperty        QName(PackageNamespace(""), "GetUserData"), 0
+      pushstring          "waterlegs"
+      equals
 L42:
+      iffalse             L47
+
+      getlocal0
+      pushbyte            0
+      convert_d
+      setproperty         QName(PackageNamespace(""), "finish2")
+
+L47:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "FinishBoy"
       equals
       dup
-      iffalse             L55
+      iffalse             L60
 
       pop
       getlocal1
@@ -1430,21 +1458,22 @@ L42:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "firelegs"
       equals
-L55:
-      iffalse             L59
+L60:
+      iffalse             L65
 
       getlocal0
       pushbyte            0
-      initproperty        QName(PackageNamespace(""), "finish1")
+      convert_d
+      setproperty         QName(PackageNamespace(""), "finish1")
 
-L59:
+L65:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape2")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "FinishBoy"
       equals
       dup
-      iffalse             L72
+      iffalse             L78
 
       pop
       getlocal1
@@ -1452,21 +1481,22 @@ L59:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "firelegs"
       equals
-L72:
-      iffalse             L76
+L78:
+      iffalse             L83
 
       getlocal0
       pushbyte            0
-      initproperty        QName(PackageNamespace(""), "finish1")
+      convert_d
+      setproperty         QName(PackageNamespace(""), "finish1")
 
-L76:
+L83:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "firelegs"
       equals
       dup
-      iftrue              L89
+      iftrue              L96
 
       pop
       getlocal1
@@ -1474,8 +1504,8 @@ L76:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "firelegs"
       equals
-L89:
-      iffalse             L137
+L96:
+      iffalse             L141
 
       pushbyte            0
       coerce_a
@@ -1485,66 +1515,62 @@ L89:
       coerce_a
       setlocal3
 
-      jump                L127
+      jump                L131
 
-L97:
+L104:
       label
       getlocal0
       getproperty         QName(PackageNamespace(""), "contactStack1")
       getlocal3
-      getproperty         MultinameL([PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("x", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("x", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       getlocal1
       getproperty         QName(PackageNamespace(""), "normal")
       getproperty         QName(PackageNamespace(""), "x")
       equals
       dup
-      iffalse             L119
+      iffalse             L126
 
       pop
       getlocal0
       getproperty         QName(PackageNamespace(""), "contactStack1")
       getlocal3
-      getproperty         MultinameL([PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("y", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       getlocal1
       getproperty         QName(PackageNamespace(""), "normal")
       getproperty         QName(PackageNamespace(""), "y")
       equals
-L119:
-      iffalse             L123
+L126:
+      iffalse             L130
 
       getlocal3
       coerce_a
       setlocal2
 
-L123:
-      getlocal3
-      increment
-      coerce_a
-      setlocal3
-
-L127:
+L130:
+      inclocal            3
+L131:
       getlocal3
       getlocal0
       getproperty         QName(PackageNamespace(""), "contactStack1")
-      getproperty         QName(PackageNamespace(""), "length")
-      iflt                L97
+      getproperty         Multiname("length", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      iflt                L104
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "contactStack1")
       getlocal2
       pushbyte            1
-      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+      callpropvoid        Multiname("splice", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 2
 
-L137:
+L141:
       getlocal1
       getproperty         QName(PackageNamespace(""), "shape1")
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "waterlegs"
       equals
       dup
-      iftrue              L150
+      iftrue              L154
 
       pop
       getlocal1
@@ -1552,8 +1578,8 @@ L137:
       callproperty        QName(PackageNamespace(""), "GetUserData"), 0
       pushstring          "waterlegs"
       equals
-L150:
-      iffalse             L198
+L154:
+      iffalse             L199
 
       pushbyte            0
       coerce_a
@@ -1563,59 +1589,55 @@ L150:
       coerce_a
       setlocal3
 
-      jump                L188
+      jump                L189
 
-L158:
+L162:
       label
       getlocal0
       getproperty         QName(PackageNamespace(""), "contactStack2")
       getlocal3
-      getproperty         MultinameL([PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("x", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
+      getproperty         MultinameL([PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("x", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
       getlocal1
       getproperty         QName(PackageNamespace(""), "normal")
       getproperty         QName(PackageNamespace(""), "x")
       equals
       dup
-      iffalse             L180
-
-      pop
-      getlocal0
-      getproperty         QName(PackageNamespace(""), "contactStack2")
-      getlocal3
-      getproperty         MultinameL([PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getproperty         Multiname("y", [PrivateNamespace(null, "ContactListener/instance#0"), PackageNamespace(""), PrivateNamespace(null, "ContactListener/instance#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("ContactListener"), StaticProtectedNs("ContactListener"), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), StaticProtectedNs("Object")])
-      getlocal1
-      getproperty         QName(PackageNamespace(""), "normal")
-      getproperty         QName(PackageNamespace(""), "y")
-      equals
-L180:
       iffalse             L184
 
+      pop
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "contactStack2")
+      getlocal3
+      getproperty         MultinameL([PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getproperty         Multiname("y", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "normal")
+      getproperty         QName(PackageNamespace(""), "y")
+      equals
+L184:
+      iffalse             L188
+
       getlocal3
       coerce_a
       setlocal2
 
-L184:
-      getlocal3
-      increment
-      coerce_a
-      setlocal3
-
 L188:
+      inclocal            3
+L189:
       getlocal3
       getlocal0
       getproperty         QName(PackageNamespace(""), "contactStack2")
-      getproperty         QName(PackageNamespace(""), "length")
-      iflt                L158
+      getproperty         Multiname("length", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")])
+      iflt                L162
 
       getlocal0
       getproperty         QName(PackageNamespace(""), "contactStack2")
       getlocal2
       pushbyte            1
-      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+      callpropvoid        Multiname("splice", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("Box2D.Dynamics:b2ContactListener"), PrivateNamespace(":ContactListener"), ProtectedNamespace(":ContactListener"), StaticProtectedNs(":ContactListener"), PrivateNamespace("ContactListener.as$54")]), 2
 
-L198:
+L199:
       returnvoid
      end ; code
     end ; body
@@ -1623,6 +1645,7 @@ L198:
   end ; trait
  end ; instance
  cinit
+  name ""
   refid "ContactListener/class/init"
   body
    maxstack 1
