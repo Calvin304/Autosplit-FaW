@@ -9,8 +9,6 @@ program
  #include "Box2D/Dynamics/b2BodyDef.script.asasm"
  #include "Box2D/Collision/b2AABB.script.asasm"
  #include "Box2D/Common/b2Settings.script.asasm"
- #include "fl/transitions/easing/Strong.script.asasm"
- #include "fl/transitions/easing/Bounce.script.asasm"
  #include "Box2D/Dynamics/b2ContactListener.script.asasm"
  #include "Box2D/Collision/Shapes/b2ShapeDef.script.asasm"
  #include "Box2D/Dynamics/Joints/b2JointDef.script.asasm"
@@ -58,7 +56,6 @@ program
  #include "Box2D/Collision/b2Point.script.asasm"
  #include "Box2D/Collision/b2Collision.script.asasm"
  #include "Box2D/Collision/ClipVertex.script.asasm"
- #include "fl/transitions/TweenEvent.script.asasm"
  #include "ContactListener.script.asasm"
  #include "Box2D/Collision/Shapes/b2CircleDef.script.asasm"
  #include "Box2D/Collision/Shapes/b2PolygonDef.script.asasm"
@@ -81,7 +78,7 @@ program
  #include "Box2D/Collision/Shapes/b2PolygonShape.script.asasm"
  #include "Box2D/Collision/Shapes/b2CircleShape.script.asasm"
  #include "Box2D/Dynamics/b2ContactManager.script.asasm"
- #include "fl/transitions/Tween.script.asasm"
+
  #include "Adv_Sound.script.asasm"
  #include "Chain_Sound.script.asasm"
  #include "Diamond_Sound.script.asasm"
@@ -108,7 +105,6 @@ program
  #include "FPSCounter.script.asasm"
  #include "PreLoader.script.asasm"
  #include "script_104.script.asasm"
- #include "AG_Teaser.script.asasm"
  #include "Ball.script.asasm"
  #include "BlackBox.script.asasm"
  #include "BlackBoxTri.script.asasm"
@@ -123,7 +119,6 @@ program
  #include "FireBox.script.asasm"
  #include "FireBoxTri.script.asasm"
  #include "FireBoy.script.asasm"
- #include "FireBoyAndWaterGirl_fla/AGlogo_mc_296.script.asasm"
  #include "FireBoyAndWaterGirl_fla/BDCounter_252.script.asasm"
  #include "FireBoyAndWaterGirl_fla/Diamond1copy5_210.script.asasm"
  #include "FireBoyAndWaterGirl_fla/Diamond2_213.script.asasm"
@@ -189,7 +184,7 @@ program
  #include "WaterGirlStairs.script.asasm"
  #include "Wind.script.asasm"
  #include "WindMaker.script.asasm"
- #include "ag_intro_mc.script.asasm"
+
  #include "bug.script.asasm"
  #include "deadFire.script.asasm"
  #include "lever_base_light_1.script.asasm"
@@ -226,10 +221,8 @@ program
 
  ; ============================= Orphan methods ==============================
 
- #include "fl/transitions/Tween.instance.init/inline_method.method.asasm"
  #include "Game.instance/Recuent/inline_method.method.asasm"
  #include "Game.instance/GameOver/inline_method#0.method.asasm"
  #include "Game.instance/GameOver/inline_method#1.method.asasm"
- #include "AG_Teaser.instance/logo/inline_method.method.asasm"
 
 end ; program

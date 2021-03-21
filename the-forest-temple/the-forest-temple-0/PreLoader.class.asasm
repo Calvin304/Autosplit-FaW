@@ -183,7 +183,7 @@ class
       getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$103")])
       getlex              QName(PackageNamespace(""), "Game")
       astypelate
-      callpropvoid        QName(PackageNamespace(""), "CreateTeaser"), 0
+      callpropvoid        QName(PackageNamespace(""), "GameReady"), 0
 
       returnvoid
      end ; code
