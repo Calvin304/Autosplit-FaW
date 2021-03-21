@@ -78,7 +78,6 @@ program
  #include "Box2D/Collision/Shapes/b2PolygonShape.script.asasm"
  #include "Box2D/Collision/Shapes/b2CircleShape.script.asasm"
  #include "Box2D/Dynamics/b2ContactManager.script.asasm"
-
  #include "Adv_Sound.script.asasm"
  #include "Chain_Sound.script.asasm"
  #include "Diamond_Sound.script.asasm"
@@ -104,7 +103,6 @@ program
  #include "level.script.asasm"
  #include "FPSCounter.script.asasm"
  #include "PreLoader.script.asasm"
- #include "script_104.script.asasm"
  #include "Ball.script.asasm"
  #include "BlackBox.script.asasm"
  #include "BlackBoxTri.script.asasm"
@@ -184,7 +182,6 @@ program
  #include "WaterGirlStairs.script.asasm"
  #include "Wind.script.asasm"
  #include "WindMaker.script.asasm"
-
  #include "bug.script.asasm"
  #include "deadFire.script.asasm"
  #include "lever_base_light_1.script.asasm"

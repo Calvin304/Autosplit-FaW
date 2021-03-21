@@ -23,7 +23,6 @@ class
    end ; body
   end ; method
   trait slot QName(PackageNamespace(""), "title") type QName(PackageNamespace("flash.display"), "MovieClip") end
-  trait slot QName(PackageNamespace(""), "adBox") type QName(PackageNamespace("flash.display"), "MovieClip") end
  end ; instance
  cinit
   refid "LoaderHolder/class/init"

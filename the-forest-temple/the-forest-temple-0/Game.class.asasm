@@ -161,7 +161,7 @@ L20:
       coerce_a
       setlocal1
 
-      jump                L286
+      jump                L280
 
 L69:
       label
@@ -171,7 +171,7 @@ L69:
       getlocal1
       getproperty         MultinameL([PrivateNamespace(null, "Game/instance#0"), PackageInternalNs(""), PackageNamespace(""), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
       pushbyte            0
-      ifnge               L194
+      ifnge               L188
 
       getlex              QName(PackageInternalNs(""), "m_mainMenu")
       pushstring          "b_"
@@ -223,7 +223,7 @@ L111:
       pushbyte            1
       callpropvoid        Multiname("gotoAndStop", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
 
-      jump                L193
+      jump                L187
 
 L122:
       label
@@ -237,7 +237,7 @@ L122:
       pushbyte            2
       callpropvoid        Multiname("gotoAndStop", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
 
-      jump                L193
+      jump                L187
 
 L133:
       label
@@ -251,7 +251,7 @@ L133:
       pushbyte            3
       callpropvoid        Multiname("gotoAndStop", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
 
-      jump                L193
+      jump                L187
 
 L144:
       label
@@ -265,11 +265,11 @@ L144:
       pushbyte            4
       callpropvoid        Multiname("gotoAndStop", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
 
-      jump                L193
+      jump                L187
 
 L155:
       label
-      jump                L193
+      jump                L187
 
 L157:
       getlex              QName(PackageInternalNs(""), "The_cookie")
@@ -284,7 +284,7 @@ L157:
       ifstrictne          L168
 
       pushbyte            0
-      jump                L191
+      jump                L185
 
 L168:
       pushbyte            1
@@ -292,7 +292,7 @@ L168:
       ifstrictne          L173
 
       pushbyte            1
-      jump                L191
+      jump                L185
 
 L173:
       pushbyte            2
@@ -300,7 +300,7 @@ L173:
       ifstrictne          L178
 
       pushbyte            2
-      jump                L191
+      jump                L185
 
 L178:
       pushbyte            3
@@ -308,27 +308,21 @@ L178:
       ifstrictne          L183
 
       pushbyte            3
-      jump                L191
+      jump                L185
 
 L183:
-      jump                L190
+      jump                L184
 
-      ; 0x24
-      ; 0x04
-      ; 0x10
-      ; 0x00
-      ; 0x00
-      ; 0x00
-L190:
+L184:
       pushbyte            4
-L191:
+L185:
       kill                2
       lookupswitch        L155, [L111, L122, L133, L144, L155]
 
-L193:
-      jump                L222
+L187:
+      jump                L216
 
-L194:
+L188:
       getlex              QName(PackageInternalNs(""), "m_mainMenu")
       pushstring          "node_"
       getlocal1
@@ -360,7 +354,7 @@ L194:
       pushfalse
       setproperty         Multiname("enabled", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
 
-L222:
+L216:
       getlex              QName(PackageInternalNs(""), "m_mainMenu")
       pushstring          "node_"
       getlocal1
@@ -376,7 +370,7 @@ L222:
       getlocal1
       getproperty         MultinameL([PrivateNamespace(null, "Game/instance#0"), PackageInternalNs(""), PackageNamespace(""), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
       pushtrue
-      ifne                L248
+      ifne                L242
 
       getlex              QName(PackageInternalNs(""), "m_mainMenu")
       pushstring          "node_"
@@ -389,9 +383,9 @@ L222:
       pushtrue
       setproperty         Multiname("visible", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
 
-      jump                L258
+      jump                L252
 
-L248:
+L242:
       getlex              QName(PackageInternalNs(""), "m_mainMenu")
       pushstring          "node_"
       getlocal1
@@ -403,7 +397,7 @@ L248:
       pushfalse
       setproperty         Multiname("visible", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
 
-L258:
+L252:
       getlex              QName(PackageInternalNs(""), "m_mainMenu")
       pushstring          "node_"
       getlocal1
@@ -435,7 +429,7 @@ L258:
       coerce_a
       setlocal1
 
-L286:
+L280:
       getlocal1
       pushbyte            32
       iflt                L69
@@ -672,38 +666,6 @@ L14:
 
       getlex              QName(PackageInternalNs(""), "m_introMenu")
       getproperty         QName(PackageNamespace(""), "Buttons")
-      getproperty         Multiname("Submiter", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
-      getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
-      getlex              QName(PackageNamespace(""), "OverSounder")
-      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
-
-      getlex              QName(PackageInternalNs(""), "m_introMenu")
-      getproperty         QName(PackageNamespace(""), "Buttons")
-      getproperty         Multiname("Submiter", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
-      getproperty         QName(PackageNamespace(""), "CLICK")
-      getlex              QName(PackageNamespace(""), "LoadHiscore")
-      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
-
-      getlex              QName(PackageInternalNs(""), "m_introMenu")
-      getproperty         QName(PackageNamespace(""), "Buttons")
-      getproperty         Multiname("Morer", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
-      getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
-      getlex              QName(PackageNamespace(""), "OverSounder")
-      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
-
-      getlex              QName(PackageInternalNs(""), "m_introMenu")
-      getproperty         QName(PackageNamespace(""), "Buttons")
-      getproperty         Multiname("Morer", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
-      getproperty         QName(PackageNamespace(""), "CLICK")
-      getlex              QName(PackageNamespace(""), "MoreGames")
-      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
-
-      getlex              QName(PackageInternalNs(""), "m_introMenu")
-      getproperty         QName(PackageNamespace(""), "Buttons")
       getproperty         Multiname("Crediter", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
       getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
       getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
@@ -718,480 +680,13 @@ L14:
       getlex              QName(PackageNamespace(""), "LoadCredits")
       callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
 
-      getlex              QName(PackageInternalNs(""), "m_introMenu")
-      getproperty         QName(PackageNamespace(""), "ArmorLogo")
-      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
-      getproperty         QName(PackageNamespace(""), "CLICK")
-      getlex              QName(PackageNamespace(""), "MoreGames")
-      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
-
-      getlex              QName(PackageInternalNs(""), "m_introMenu")
-      getproperty         QName(PackageNamespace(""), "ArmorLogo")
-      pushtrue
-      setproperty         QName(PackageNamespace(""), "buttonMode")
-
-      getlex              QName(PackageInternalNs(""), "m_introMenu")
-      getproperty         QName(PackageNamespace(""), "ArmorLogo")
-      pushtrue
-      setproperty         QName(PackageNamespace(""), "useHandCursor")
-
       returnvoid
      end ; code
     end ; body
    end ; method
   end ; trait
   trait slot QName(PackageInternalNs(""), "AdvSound") type QName(PackageNamespace(""), "Adv_Sound") end
-  trait method QName(PackageNamespace(""), "loadComplete")
-   method
-    refid "Game/instance/loadComplete"
-    param QName(PackageNamespace("flash.events"), "Event")
-    returns QName(PackageNamespace(""), "void")
-    body
-     maxstack 2
-     localcount 2
-     initscopedepth 10
-     maxscopedepth 11
-     code
-      getlocal0
-      pushscope
-
-      findproperty        QName(PackageInternalNs(""), "agi")
-      getlocal1
-      getproperty         QName(PackageNamespace(""), "currentTarget")
-      getproperty         Multiname("content", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      initproperty        QName(PackageInternalNs(""), "agi")
-
-      getlocal0
-      getlex              QName(PackageInternalNs(""), "agi")
-      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
-
-      returnvoid
-     end ; code
-    end ; body
-   end ; method
-  end ; trait
   trait slot QName(PackageInternalNs(""), "m_mainMenu") type QName(PackageNamespace(""), "MainMenu") end
-  trait method QName(PackageNamespace(""), "LoadHiscore")
-   method
-    refid "Game/instance/LoadHiscore"
-    param QName(PackageNamespace("flash.events"), "MouseEvent")
-    body
-     maxstack 6
-     localcount 8
-     initscopedepth 10
-     maxscopedepth 11
-     code
-      getlocal0
-      pushscope
-
-      pushnull
-      coerce_s
-      setlocal2
-
-      pushnull
-      coerce              QName(PackageNamespace("flash.net"), "URLRequest")
-      setlocal3
-
-      pushnull
-      coerce              QName(PackageNamespace("flash.display"), "Loader")
-      setlocal            4
-
-      pushundefined
-      coerce_a
-      setlocal            5
-
-      pushundefined
-      coerce_a
-      setlocal            6
-
-      pushundefined
-      coerce_a
-      setlocal            7
-
-      pushstring          "http://agi.armorgames.com/assets/agi/AGI.swf"
-      setlocal2
-
-      getlex              QName(PackageNamespace("flash.system"), "Security")
-      getlocal2
-      callpropvoid        QName(PackageNamespace(""), "allowDomain"), 1
-
-      getlex              QName(PackageNamespace("flash.system"), "Security")
-      getlocal2
-      callpropvoid        QName(PackageNamespace(""), "allowInsecureDomain"), 1
-
-      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
-      getlocal2
-      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
-      coerce              QName(PackageNamespace("flash.net"), "URLRequest")
-      setlocal3
-
-      findpropstrict      QName(PackageNamespace("flash.display"), "Loader")
-      constructprop       QName(PackageNamespace("flash.display"), "Loader"), 0
-      coerce              QName(PackageNamespace("flash.display"), "Loader")
-      dup
-      setlocal            4
-
-      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
-      getlex              QName(PackageNamespace("flash.events"), "Event")
-      getproperty         QName(PackageNamespace(""), "COMPLETE")
-      getlex              QName(PackageNamespace(""), "loadComplete")
-      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
-
-      getlocal            4
-      getlocal3
-      callpropvoid        QName(PackageNamespace(""), "load"), 1
-
-      pushbyte            0
-      coerce_a
-      setlocal            5
-
-      findproperty        QName(PackageInternalNs(""), "score")
-      pushbyte            0
-      initproperty        QName(PackageInternalNs(""), "score")
-
-      pushbyte            0
-      coerce_a
-      setlocal            6
-
-      jump                L103
-
-L56:
-      label
-      findproperty        QName(PackageInternalNs(""), "score")
-      getlex              QName(PackageInternalNs(""), "score")
-      getlex              QName(PackageNamespace(""), "Math")
-      getlex              QName(PackageInternalNs(""), "The_cookie")
-      getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("stats", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlocal            6
-      getproperty         MultinameL([PrivateNamespace(null, "Game/instance#0"), PackageInternalNs(""), PackageNamespace(""), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
-      pushshort           360
-      multiply
-      pushbyte            0
-      callproperty        QName(PackageNamespace(""), "max"), 2
-      add
-      initproperty        QName(PackageInternalNs(""), "score")
-
-      getlex              QName(PackageInternalNs(""), "The_cookie")
-      getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("times", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlocal            6
-      getproperty         MultinameL([PrivateNamespace(null, "Game/instance#0"), PackageInternalNs(""), PackageNamespace(""), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
-      pushbyte            0
-      ifeq                L96
-
-      findproperty        QName(PackageInternalNs(""), "score")
-      getlex              QName(PackageInternalNs(""), "score")
-      getlex              QName(PackageNamespace(""), "Math")
-      getlex              QName(PackageInternalNs(""), "TimeTable")
-      getlocal            6
-      getproperty         MultinameL([PrivateNamespace(null, "Game/instance#0"), PackageInternalNs(""), PackageNamespace(""), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
-      getlex              QName(PackageInternalNs(""), "The_cookie")
-      getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("times", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlocal            6
-      getproperty         MultinameL([PrivateNamespace(null, "Game/instance#0"), PackageInternalNs(""), PackageNamespace(""), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
-      subtract
-      pushbyte            12
-      multiply
-      pushbyte            0
-      callproperty        QName(PackageNamespace(""), "max"), 2
-      add
-      initproperty        QName(PackageInternalNs(""), "score")
-
-L96:
-      findpropstrict      QName(PackageNamespace(""), "trace")
-      getlex              QName(PackageInternalNs(""), "score")
-      callpropvoid        QName(PackageNamespace(""), "trace"), 1
-
-      getlocal            6
-      increment
-      coerce_a
-      setlocal            6
-
-L103:
-      getlocal            6
-      pushbyte            32
-      iflt                L56
-
-      getlex              QName(PackageInternalNs(""), "score")
-      coerce_a
-      setlocal            5
-
-      findpropstrict      QName(PackageNamespace(""), "trace")
-      getlocal            5
-      callpropvoid        QName(PackageNamespace(""), "trace"), 1
-
-      findproperty        QName(PackageInternalNs(""), "h")
-      findpropstrict      QName(PackageNamespace(""), "Hiscore")
-      constructprop       QName(PackageNamespace(""), "Hiscore"), 0
-      initproperty        QName(PackageInternalNs(""), "h")
-
-      getlex              QName(PackageInternalNs(""), "h")
-      getproperty         Multiname("ViewHS", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
-      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
-      getlex              QName(PackageNamespace(""), "ViewHiscores")
-      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
-
-      getlex              QName(PackageInternalNs(""), "h")
-      getproperty         Multiname("points_txt", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlocal            5
-      setproperty         Multiname("text", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-
-      pushtrue
-      coerce_a
-      setlocal            7
-
-      pushbyte            0
-      coerce_a
-      setlocal            6
-
-      jump                L148
-
-L133:
-      label
-      getlex              QName(PackageInternalNs(""), "The_cookie")
-      getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("stats", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlocal            6
-      getproperty         MultinameL([PrivateNamespace(null, "Game/instance#0"), PackageInternalNs(""), PackageNamespace(""), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
-      pushbyte            0
-      ifnle               L144
-
-      pushfalse
-      coerce_a
-      setlocal            7
-
-L144:
-      getlocal            6
-      increment
-      coerce_a
-      setlocal            6
-
-L148:
-      getlocal            6
-      pushbyte            32
-      iflt                L133
-
-      getlocal            7
-      convert_b
-      dup
-      iffalse             L161
-
-      pop
-      getlex              QName(PackageInternalNs(""), "The_cookie")
-      getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("submited", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      pushfalse
-      equals
-L161:
-      iffalse             L209
-
-      getlex              QName(PackageInternalNs(""), "h")
-      getproperty         Multiname("NoHS", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      pushfalse
-      setproperty         Multiname("visible", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-
-      getlex              QName(PackageInternalNs(""), "h")
-      getproperty         Multiname("Reset", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      pushfalse
-      setproperty         Multiname("visible", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-
-      findproperty        QName(PackageInternalNs(""), "hisc")
-      getlex              QName(PackageInternalNs(""), "h")
-      getproperty         Multiname("HS", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      initproperty        QName(PackageInternalNs(""), "hisc")
-
-      getlex              QName(PackageNamespace(""), "stage")
-      getlex              QName(PackageInternalNs(""), "hisc")
-      getproperty         Multiname("name_txt", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      setproperty         QName(PackageNamespace(""), "focus")
-
-      getlex              QName(PackageInternalNs(""), "hisc")
-      getproperty         Multiname("name_txt_2", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      pushfalse
-      setproperty         Multiname("mouseEnabled", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-
-      getlex              QName(PackageInternalNs(""), "hisc")
-      getproperty         Multiname("name_txt", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      pushbyte            0
-      getlex              QName(PackageInternalNs(""), "hisc")
-      getproperty         Multiname("name_txt", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getproperty         Multiname("text", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getproperty         Multiname("length", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      callpropvoid        Multiname("setSelection", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
-
-      getlex              QName(PackageInternalNs(""), "hisc")
-      getproperty         Multiname("name_txt", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlex              QName(PackageNamespace("flash.events"), "Event")
-      getproperty         QName(PackageNamespace(""), "CHANGE")
-      getlex              QName(PackageNamespace(""), "InputChanged")
-      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
-
-      getlex              QName(PackageInternalNs(""), "hisc")
-      getproperty         Multiname("SubmitBTN", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
-      getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
-      getlex              QName(PackageNamespace(""), "OverSounder")
-      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
-
-      getlex              QName(PackageInternalNs(""), "hisc")
-      getproperty         Multiname("SubmitBTN", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
-      getproperty         QName(PackageNamespace(""), "CLICK")
-      getlex              QName(PackageNamespace(""), "SendHiscore")
-      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
-
-      jump                L235
-
-L209:
-      getlocal            7
-      iffalse             L227
-
-      getlex              QName(PackageInternalNs(""), "h")
-      getproperty         Multiname("NoHS", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      pushfalse
-      setproperty         Multiname("visible", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-
-      getlex              QName(PackageInternalNs(""), "h")
-      getproperty         Multiname("HS", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      pushfalse
-      setproperty         Multiname("visible", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-
-      getlex              QName(PackageInternalNs(""), "h")
-      getproperty         Multiname("Reset", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getproperty         Multiname("ResetBtn", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
-      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
-      getlex              QName(PackageNamespace(""), "ClearData")
-      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
-
-      jump                L235
-
-L227:
-      getlex              QName(PackageInternalNs(""), "h")
-      getproperty         Multiname("HS", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      pushfalse
-      setproperty         Multiname("visible", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-
-      getlex              QName(PackageInternalNs(""), "h")
-      getproperty         Multiname("Reset", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      pushfalse
-      setproperty         Multiname("visible", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-
-L235:
-      getlex              QName(PackageInternalNs(""), "h")
-      getproperty         Multiname("BackBTN", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
-      getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
-      getlex              QName(PackageNamespace(""), "OverSounder")
-      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
-
-      getlex              QName(PackageInternalNs(""), "h")
-      getproperty         Multiname("BackBTN", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
-      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
-      getlex              QName(PackageNamespace(""), "BackHiscore")
-      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
-
-      findpropstrict      QName(PackageNamespace(""), "addChild")
-      getlex              QName(PackageInternalNs(""), "h")
-      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
-
-      returnvoid
-     end ; code
-    end ; body
-   end ; method
-  end ; trait
-  trait method QName(PackageInternalNs(""), "closeHandler2")
-   method
-    refid "Game/instance/closeHandler2"
-    returns QName(PackageNamespace(""), "void")
-    body
-     maxstack 1
-     localcount 1
-     initscopedepth 10
-     maxscopedepth 11
-     code
-      getlocal0
-      pushscope
-
-      returnvoid
-     end ; code
-    end ; body
-   end ; method
-  end ; trait
-  trait method QName(PackageNamespace(""), "MoreGames")
-   method
-    refid "Game/instance/MoreGames"
-    param QName(PackageNamespace("flash.events"), "MouseEvent")
-    body
-     maxstack 3
-     localcount 3
-     initscopedepth 10
-     maxscopedepth 11
-     code
-      getlocal0
-      pushscope
-
-      pushnull
-      coerce              QName(PackageNamespace("flash.net"), "URLRequest")
-      setlocal2
-
-      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
-      pushstring          "http://www.armorgames.com"
-      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
-      coerce              QName(PackageNamespace("flash.net"), "URLRequest")
-      setlocal2
-
-      findpropstrict      QName(PackageNamespace("flash.net"), "navigateToURL")
-      getlocal2
-      pushstring          "_blank"
-      callpropvoid        QName(PackageNamespace("flash.net"), "navigateToURL"), 2
-
-      returnvoid
-     end ; code
-    end ; body
-   end ; method
-  end ; trait
-  trait method QName(PackageNamespace(""), "ViewHiscores")
-   method
-    refid "Game/instance/ViewHiscores"
-    param QName(PackageNamespace("flash.events"), "MouseEvent")
-    body
-     maxstack 3
-     localcount 2
-     initscopedepth 10
-     maxscopedepth 11
-     code
-      getlocal0
-      pushscope
-
-      getlex              QName(PackageInternalNs(""), "agi")
-      pushnull
-      ifeq                L16
-
-      getlex              QName(PackageInternalNs(""), "agi")
-      getlex              QName(PrivateNamespace(null, "Game/instance#0"), "devKey")
-      getlex              QName(PrivateNamespace(null, "Game/instance#0"), "gameKey")
-      callpropvoid        Multiname("init", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
-
-      getlex              QName(PackageInternalNs(""), "agi")
-      pushstring          "onClose"
-      getlex              QName(PackageInternalNs(""), "closeHandler2")
-      newobject           1
-      callpropvoid        Multiname("initAGUI", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
-
-      getlex              QName(PackageInternalNs(""), "agi")
-      callpropvoid        Multiname("showScoreboardList", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 0
-
-L16:
-      returnvoid
-     end ; code
-    end ; body
-   end ; method
-  end ; trait
   trait method QName(PackageNamespace(""), "UnLoadCredits")
    method
     refid "Game/instance/UnLoadCredits"
@@ -1418,7 +913,6 @@ L102:
    end ; method
   end ; trait
   trait slot QName(PackageInternalNs(""), "m_transition") type QName(PackageNamespace(""), "Trans") end
-  trait slot QName(PackageInternalNs(""), "h") end
   trait method QName(PackageInternalNs(""), "StartGameBtn")
    method
     refid "Game/instance/StartGameBtn"
@@ -1513,7 +1007,7 @@ L63:
       pushbyte            1
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L68:
       label
@@ -1521,7 +1015,7 @@ L68:
       pushbyte            2
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L73:
       label
@@ -1529,7 +1023,7 @@ L73:
       pushbyte            3
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L78:
       label
@@ -1537,7 +1031,7 @@ L78:
       pushbyte            4
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L83:
       label
@@ -1545,7 +1039,7 @@ L83:
       pushbyte            5
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L88:
       label
@@ -1553,7 +1047,7 @@ L88:
       pushbyte            6
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L93:
       label
@@ -1561,7 +1055,7 @@ L93:
       pushbyte            7
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L98:
       label
@@ -1569,7 +1063,7 @@ L98:
       pushbyte            8
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L103:
       label
@@ -1577,7 +1071,7 @@ L103:
       pushbyte            9
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L108:
       label
@@ -1585,7 +1079,7 @@ L108:
       pushbyte            10
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L113:
       label
@@ -1593,7 +1087,7 @@ L113:
       pushbyte            11
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L118:
       label
@@ -1601,7 +1095,7 @@ L118:
       pushbyte            12
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L123:
       label
@@ -1609,7 +1103,7 @@ L123:
       pushbyte            13
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L128:
       label
@@ -1617,7 +1111,7 @@ L128:
       pushbyte            14
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L133:
       label
@@ -1625,7 +1119,7 @@ L133:
       pushbyte            15
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L138:
       label
@@ -1633,7 +1127,7 @@ L138:
       pushbyte            16
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L143:
       label
@@ -1641,7 +1135,7 @@ L143:
       pushbyte            17
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L148:
       label
@@ -1649,7 +1143,7 @@ L148:
       pushbyte            18
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L153:
       label
@@ -1657,7 +1151,7 @@ L153:
       pushbyte            19
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L158:
       label
@@ -1665,7 +1159,7 @@ L158:
       pushbyte            20
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L163:
       label
@@ -1673,7 +1167,7 @@ L163:
       pushbyte            21
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L168:
       label
@@ -1681,7 +1175,7 @@ L168:
       pushbyte            22
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L173:
       label
@@ -1689,7 +1183,7 @@ L173:
       pushbyte            23
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L178:
       label
@@ -1697,7 +1191,7 @@ L178:
       pushbyte            24
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L183:
       label
@@ -1705,7 +1199,7 @@ L183:
       pushbyte            25
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L188:
       label
@@ -1713,7 +1207,7 @@ L188:
       pushbyte            26
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L193:
       label
@@ -1721,7 +1215,7 @@ L193:
       pushbyte            27
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L198:
       label
@@ -1729,7 +1223,7 @@ L198:
       pushbyte            28
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L203:
       label
@@ -1737,7 +1231,7 @@ L203:
       pushbyte            29
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L208:
       label
@@ -1745,7 +1239,7 @@ L208:
       pushbyte            30
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L213:
       label
@@ -1753,7 +1247,7 @@ L213:
       pushbyte            31
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L218:
       label
@@ -1761,11 +1255,11 @@ L218:
       pushbyte            32
       initproperty        QName(PackageInternalNs(""), "cur_node")
 
-      jump                L401
+      jump                L395
 
 L223:
       label
-      jump                L401
+      jump                L395
 
 L225:
       getlocal2
@@ -1780,7 +1274,7 @@ L225:
       ifstrictne          L236
 
       pushbyte            0
-      jump                L399
+      jump                L393
 
 L236:
       pushstring          "1_2"
@@ -1788,7 +1282,7 @@ L236:
       ifstrictne          L241
 
       pushbyte            1
-      jump                L399
+      jump                L393
 
 L241:
       pushstring          "3_1"
@@ -1796,7 +1290,7 @@ L241:
       ifstrictne          L246
 
       pushbyte            2
-      jump                L399
+      jump                L393
 
 L246:
       pushstring          "1_3"
@@ -1804,7 +1298,7 @@ L246:
       ifstrictne          L251
 
       pushbyte            3
-      jump                L399
+      jump                L393
 
 L251:
       pushstring          "1_4"
@@ -1812,7 +1306,7 @@ L251:
       ifstrictne          L256
 
       pushbyte            4
-      jump                L399
+      jump                L393
 
 L256:
       pushstring          "3_2"
@@ -1820,7 +1314,7 @@ L256:
       ifstrictne          L261
 
       pushbyte            5
-      jump                L399
+      jump                L393
 
 L261:
       pushstring          "2_1"
@@ -1828,7 +1322,7 @@ L261:
       ifstrictne          L266
 
       pushbyte            6
-      jump                L399
+      jump                L393
 
 L266:
       pushstring          "1_5"
@@ -1836,7 +1330,7 @@ L266:
       ifstrictne          L271
 
       pushbyte            7
-      jump                L399
+      jump                L393
 
 L271:
       pushstring          "1_6"
@@ -1844,7 +1338,7 @@ L271:
       ifstrictne          L276
 
       pushbyte            8
-      jump                L399
+      jump                L393
 
 L276:
       pushstring          "1_7"
@@ -1852,7 +1346,7 @@ L276:
       ifstrictne          L281
 
       pushbyte            9
-      jump                L399
+      jump                L393
 
 L281:
       pushstring          "2_2"
@@ -1860,7 +1354,7 @@ L281:
       ifstrictne          L286
 
       pushbyte            10
-      jump                L399
+      jump                L393
 
 L286:
       pushstring          "3_3"
@@ -1868,7 +1362,7 @@ L286:
       ifstrictne          L291
 
       pushbyte            11
-      jump                L399
+      jump                L393
 
 L291:
       pushstring          "2_3"
@@ -1876,7 +1370,7 @@ L291:
       ifstrictne          L296
 
       pushbyte            12
-      jump                L399
+      jump                L393
 
 L296:
       pushstring          "3_5"
@@ -1884,7 +1378,7 @@ L296:
       ifstrictne          L301
 
       pushbyte            13
-      jump                L399
+      jump                L393
 
 L301:
       pushstring          "1_13"
@@ -1892,7 +1386,7 @@ L301:
       ifstrictne          L306
 
       pushbyte            14
-      jump                L399
+      jump                L393
 
 L306:
       pushstring          "3_6"
@@ -1900,7 +1394,7 @@ L306:
       ifstrictne          L311
 
       pushbyte            15
-      jump                L399
+      jump                L393
 
 L311:
       pushstring          "2_4"
@@ -1908,7 +1402,7 @@ L311:
       ifstrictne          L316
 
       pushbyte            16
-      jump                L399
+      jump                L393
 
 L316:
       pushstring          "1_14"
@@ -1916,7 +1410,7 @@ L316:
       ifstrictne          L321
 
       pushbyte            17
-      jump                L399
+      jump                L393
 
 L321:
       pushstring          "1_16"
@@ -1924,7 +1418,7 @@ L321:
       ifstrictne          L326
 
       pushbyte            18
-      jump                L399
+      jump                L393
 
 L326:
       pushstring          "2_5"
@@ -1932,7 +1426,7 @@ L326:
       ifstrictne          L331
 
       pushbyte            19
-      jump                L399
+      jump                L393
 
 L331:
       pushstring          "1_15"
@@ -1940,7 +1434,7 @@ L331:
       ifstrictne          L336
 
       pushbyte            20
-      jump                L399
+      jump                L393
 
 L336:
       pushstring          "1_17"
@@ -1948,7 +1442,7 @@ L336:
       ifstrictne          L341
 
       pushbyte            21
-      jump                L399
+      jump                L393
 
 L341:
       pushstring          "2_6"
@@ -1956,7 +1450,7 @@ L341:
       ifstrictne          L346
 
       pushbyte            22
-      jump                L399
+      jump                L393
 
 L346:
       pushstring          "1_10"
@@ -1964,7 +1458,7 @@ L346:
       ifstrictne          L351
 
       pushbyte            23
-      jump                L399
+      jump                L393
 
 L351:
       pushstring          "1_11"
@@ -1972,7 +1466,7 @@ L351:
       ifstrictne          L356
 
       pushbyte            24
-      jump                L399
+      jump                L393
 
 L356:
       pushstring          "3_4"
@@ -1980,7 +1474,7 @@ L356:
       ifstrictne          L361
 
       pushbyte            25
-      jump                L399
+      jump                L393
 
 L361:
       pushstring          "2_7"
@@ -1988,7 +1482,7 @@ L361:
       ifstrictne          L366
 
       pushbyte            26
-      jump                L399
+      jump                L393
 
 L366:
       pushstring          "1_12"
@@ -1996,7 +1490,7 @@ L366:
       ifstrictne          L371
 
       pushbyte            27
-      jump                L399
+      jump                L393
 
 L371:
       pushstring          "2_8"
@@ -2004,7 +1498,7 @@ L371:
       ifstrictne          L376
 
       pushbyte            28
-      jump                L399
+      jump                L393
 
 L376:
       pushstring          "1_8"
@@ -2012,7 +1506,7 @@ L376:
       ifstrictne          L381
 
       pushbyte            29
-      jump                L399
+      jump                L393
 
 L381:
       pushstring          "1_9"
@@ -2020,7 +1514,7 @@ L381:
       ifstrictne          L386
 
       pushbyte            30
-      jump                L399
+      jump                L393
 
 L386:
       pushstring          "2_9"
@@ -2028,24 +1522,18 @@ L386:
       ifstrictne          L391
 
       pushbyte            31
-      jump                L399
+      jump                L393
 
 L391:
-      jump                L398
+      jump                L392
 
-      ; 0x24
-      ; 0x20
-      ; 0x10
-      ; 0x00
-      ; 0x00
-      ; 0x00
-L398:
+L392:
       pushbyte            32
-L399:
+L393:
       kill                4
       lookupswitch        L223, [L63, L68, L73, L78, L83, L88, L93, L98, L103, L108, L113, L118, L123, L128, L133, L138, L143, L148, L153, L158, L163, L168, L173, L178, L183, L188, L193, L198, L203, L208, L213, L218, L223]
 
-L401:
+L395:
       findproperty        QName(PackageInternalNs(""), "cur_type")
       getlocal2
       initproperty        QName(PackageInternalNs(""), "cur_type")
@@ -3067,9 +2555,9 @@ L15:
       getlex              QName(PackageInternalNs(""), "m_level")
       getproperty         QName(PackageNamespace(""), "pause")
       pushfalse
-      ifne                L103
+      ifne                L93
 
-      jump                L56
+      jump                L52
 
 L20:
       label
@@ -3077,7 +2565,7 @@ L20:
       pushtrue
       setproperty         QName(PackageInternalNs(""), "u_pressed")
 
-      jump                L102
+      jump                L92
 
 L25:
       label
@@ -3085,7 +2573,7 @@ L25:
       pushtrue
       setproperty         QName(PackageInternalNs(""), "r_pressed")
 
-      jump                L102
+      jump                L92
 
 L30:
       label
@@ -3093,7 +2581,7 @@ L30:
       pushtrue
       setproperty         QName(PackageInternalNs(""), "l_pressed")
 
-      jump                L102
+      jump                L92
 
 L35:
       label
@@ -3101,7 +2589,7 @@ L35:
       pushtrue
       setproperty         QName(PackageInternalNs(""), "l_pressed2")
 
-      jump                L102
+      jump                L92
 
 L40:
       label
@@ -3109,7 +2597,7 @@ L40:
       pushtrue
       setproperty         QName(PackageInternalNs(""), "r_pressed2")
 
-      jump                L102
+      jump                L92
 
 L45:
       label
@@ -3117,17 +2605,13 @@ L45:
       pushtrue
       setproperty         QName(PackageInternalNs(""), "u_pressed2")
 
-      jump                L102
+      jump                L92
 
 L50:
       label
-      jump                L102
+      jump                L92
 
-      ; 0x10
-      ; 0x87
-      ; 0x00
-      ; 0x00
-L56:
+L52:
       getlocal1
       getproperty         QName(PackageNamespace(""), "keyCode")
       setlocal2
@@ -3135,72 +2619,66 @@ L56:
       getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
       getproperty         QName(PackageNamespace(""), "UP")
       getlocal2
-      ifstrictne          L65
+      ifstrictne          L61
 
       pushbyte            0
-      jump                L100
+      jump                L90
 
-L65:
+L61:
       getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
       getproperty         QName(PackageNamespace(""), "RIGHT")
       getlocal2
-      ifstrictne          L71
+      ifstrictne          L67
 
       pushbyte            1
-      jump                L100
+      jump                L90
 
-L71:
+L67:
       getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
       getproperty         QName(PackageNamespace(""), "LEFT")
       getlocal2
-      ifstrictne          L77
+      ifstrictne          L73
 
       pushbyte            2
-      jump                L100
+      jump                L90
 
-L77:
+L73:
       pushbyte            65
       getlocal2
-      ifstrictne          L82
+      ifstrictne          L78
 
       pushbyte            3
-      jump                L100
+      jump                L90
 
-L82:
+L78:
       pushbyte            68
       getlocal2
-      ifstrictne          L87
+      ifstrictne          L83
 
       pushbyte            4
-      jump                L100
+      jump                L90
 
-L87:
+L83:
       pushbyte            87
       getlocal2
-      ifstrictne          L92
+      ifstrictne          L88
 
       pushbyte            5
-      jump                L100
+      jump                L90
 
-L92:
-      jump                L99
+L88:
+      jump                L89
 
-      ; 0x24
-      ; 0x06
-      ; 0x10
-      ; 0x02
-      ; 0x00
-      ; 0x00
-L99:
+L89:
       pushbyte            6
-L100:
+L90:
       kill                2
       lookupswitch        L50, [L20, L25, L30, L35, L40, L45, L50]
 
-L102:
-      jump                L121
+L92:
+      jump                L111
 
-L103:
+L93:
       getlex              QName(PackageInternalNs(""), "m_level")
       pushfalse
       setproperty         QName(PackageInternalNs(""), "u_pressed")
@@ -3225,7 +2703,7 @@ L103:
       pushfalse
       setproperty         QName(PackageInternalNs(""), "u_pressed2")
 
-L121:
+L111:
       returnvoid
      end ; code
     end ; body
@@ -3603,7 +3081,7 @@ L295:
       setproperty         Multiname("visible", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
 
 L302:
-      jump                L503
+      jump                L497
 
 L303:
       getscopeobject      1
@@ -3778,7 +3256,7 @@ L446:
       pushtrue
       setproperty         Multiname("visible", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
 
-      jump                L503
+      jump                L497
 
 L455:
       label
@@ -3790,7 +3268,7 @@ L455:
       pushtrue
       setproperty         Multiname("visible", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
 
-      jump                L503
+      jump                L497
 
 L464:
       label
@@ -3802,11 +3280,11 @@ L464:
       pushtrue
       setproperty         Multiname("visible", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
 
-      jump                L503
+      jump                L497
 
 L473:
       label
-      jump                L503
+      jump                L497
 
 L475:
       getscopeobject      1
@@ -3818,7 +3296,7 @@ L475:
       ifstrictne          L483
 
       pushbyte            0
-      jump                L501
+      jump                L495
 
 L483:
       pushbyte            1
@@ -3826,7 +3304,7 @@ L483:
       ifstrictne          L488
 
       pushbyte            1
-      jump                L501
+      jump                L495
 
 L488:
       pushbyte            2
@@ -3834,32 +3312,26 @@ L488:
       ifstrictne          L493
 
       pushbyte            2
-      jump                L501
+      jump                L495
 
 L493:
-      jump                L500
+      jump                L494
 
-      ; 0x24
-      ; 0x03
-      ; 0x10
-      ; 0x00
-      ; 0x00
-      ; 0x00
-L500:
+L494:
       pushbyte            3
-L501:
+L495:
       kill                2
       lookupswitch        L473, [L446, L455, L464, L473]
 
-L503:
+L497:
       getscopeobject      1
       pushbyte            0
       coerce_a
       setslot             3
 
-      jump                L549
+      jump                L543
 
-L508:
+L502:
       label
       getlex              QName(PackageInternalNs(""), "Adjacencies")
       getlex              QName(PackageInternalNs(""), "cur_node")
@@ -3871,7 +3343,7 @@ L508:
       pushbyte            1
       equals
       dup
-      iffalse             L529
+      iffalse             L523
 
       pop
       getlex              QName(PackageInternalNs(""), "The_cookie")
@@ -3882,8 +3354,8 @@ L508:
       getproperty         MultinameL([PrivateNamespace(null, "Game/instance#0"), PackageInternalNs(""), PackageNamespace(""), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
       pushbyte            -1
       equals
-L529:
-      iffalse             L542
+L523:
+      iffalse             L536
 
       getlex              QName(PackageInternalNs(""), "NewsArray")
       getscopeobject      1
@@ -3899,7 +3371,7 @@ L529:
       pushbyte            0
       setproperty         MultinameL([PrivateNamespace(null, "Game/instance#0"), PackageInternalNs(""), PackageNamespace(""), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
 
-L542:
+L536:
       getscopeobject      1
       getslot             3
       increment
@@ -3908,11 +3380,11 @@ L542:
       swap
       setslot             3
 
-L549:
+L543:
       getscopeobject      1
       getslot             3
       pushbyte            32
-      iflt                L508
+      iflt                L502
 
       findpropstrict      QName(PackageNamespace(""), "trace")
       pushstring          "Level_End"
@@ -3941,7 +3413,7 @@ L549:
       getlocal0
       pushscope
 
-      jump                L39
+      jump                L35
 
 L3:
       label
@@ -3949,7 +3421,7 @@ L3:
       pushfalse
       setproperty         QName(PackageInternalNs(""), "u_pressed")
 
-      jump                L85
+      jump                L75
 
 L8:
       label
@@ -3957,7 +3429,7 @@ L8:
       pushfalse
       setproperty         QName(PackageInternalNs(""), "r_pressed")
 
-      jump                L85
+      jump                L75
 
 L13:
       label
@@ -3965,7 +3437,7 @@ L13:
       pushfalse
       setproperty         QName(PackageInternalNs(""), "l_pressed")
 
-      jump                L85
+      jump                L75
 
 L18:
       label
@@ -3973,7 +3445,7 @@ L18:
       pushfalse
       setproperty         QName(PackageInternalNs(""), "l_pressed2")
 
-      jump                L85
+      jump                L75
 
 L23:
       label
@@ -3981,7 +3453,7 @@ L23:
       pushfalse
       setproperty         QName(PackageInternalNs(""), "r_pressed2")
 
-      jump                L85
+      jump                L75
 
 L28:
       label
@@ -3989,17 +3461,13 @@ L28:
       pushfalse
       setproperty         QName(PackageInternalNs(""), "u_pressed2")
 
-      jump                L85
+      jump                L75
 
 L33:
       label
-      jump                L85
+      jump                L75
 
-      ; 0x10
-      ; 0x87
-      ; 0x00
-      ; 0x00
-L39:
+L35:
       getlocal1
       getproperty         QName(PackageNamespace(""), "keyCode")
       setlocal2
@@ -4007,69 +3475,63 @@ L39:
       getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
       getproperty         QName(PackageNamespace(""), "UP")
       getlocal2
-      ifstrictne          L48
+      ifstrictne          L44
 
       pushbyte            0
-      jump                L83
+      jump                L73
 
-L48:
+L44:
       getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
       getproperty         QName(PackageNamespace(""), "RIGHT")
       getlocal2
-      ifstrictne          L54
+      ifstrictne          L50
 
       pushbyte            1
-      jump                L83
+      jump                L73
 
-L54:
+L50:
       getlex              QName(PackageNamespace("flash.ui"), "Keyboard")
       getproperty         QName(PackageNamespace(""), "LEFT")
       getlocal2
-      ifstrictne          L60
+      ifstrictne          L56
 
       pushbyte            2
-      jump                L83
+      jump                L73
 
-L60:
+L56:
       pushbyte            65
       getlocal2
-      ifstrictne          L65
+      ifstrictne          L61
 
       pushbyte            3
-      jump                L83
+      jump                L73
 
-L65:
+L61:
       pushbyte            68
       getlocal2
-      ifstrictne          L70
+      ifstrictne          L66
 
       pushbyte            4
-      jump                L83
+      jump                L73
 
-L70:
+L66:
       pushbyte            87
       getlocal2
-      ifstrictne          L75
+      ifstrictne          L71
 
       pushbyte            5
-      jump                L83
+      jump                L73
 
-L75:
-      jump                L82
+L71:
+      jump                L72
 
-      ; 0x24
-      ; 0x06
-      ; 0x10
-      ; 0x02
-      ; 0x00
-      ; 0x00
-L82:
+L72:
       pushbyte            6
-L83:
+L73:
       kill                2
       lookupswitch        L33, [L3, L8, L13, L18, L23, L28, L33]
 
-L85:
+L75:
       returnvoid
      end ; code
     end ; body
@@ -4177,35 +3639,11 @@ L25:
   trait slot QName(PackageInternalNs(""), "instr") type QName(PackageNamespace(""), "Instructions") end
   trait slot QName(PackageInternalNs(""), "m_timer") type QName(PackageNamespace(""), "Watch") end
   trait slot QName(PackageInternalNs(""), "currentsize") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
-  trait slot QName(PackageInternalNs(""), "agi") end
   trait slot QName(PrivateNamespace(null, "Game/instance#0"), "gameKey") type QName(PackageNamespace(""), "String") value Utf8("forest-temple") end
-  trait slot QName(PackageInternalNs(""), "hisc") end
   trait slot QName(PackageInternalNs(""), "m_pauseMenu") type QName(PackageNamespace(""), "PauseMenu") end
   trait slot QName(PackageInternalNs(""), "NewsArray") type QName(PackageNamespace(""), "Array") end
   trait slot QName(PackageInternalNs(""), "m_muter") type QName(PackageNamespace(""), "Muter") end
   trait slot QName(PackageInternalNs(""), "SpeedSound") type QName(PackageNamespace(""), "Speed_Sound") end
-  trait method QName(PackageNamespace(""), "BackHiscore")
-   method
-    refid "Game/instance/BackHiscore"
-    param QName(PackageNamespace("flash.events"), "MouseEvent")
-    body
-     maxstack 2
-     localcount 2
-     initscopedepth 10
-     maxscopedepth 11
-     code
-      getlocal0
-      pushscope
-
-      findpropstrict      QName(PackageNamespace(""), "removeChild")
-      getlex              QName(PackageInternalNs(""), "h")
-      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
-
-      returnvoid
-     end ; code
-    end ; body
-   end ; method
-  end ; trait
   trait slot QName(PackageInternalNs(""), "m_level") type QName(PackageNamespace(""), "level") end
   trait slot QName(PackageInternalNs(""), "MusicChannel") type QName(PackageNamespace("flash.media"), "SoundChannel") end
   trait slot QName(PackageInternalNs(""), "vzoom") value Integer(0) end
@@ -4554,145 +3992,6 @@ L51:
       getlex              QName(PackageNamespace(""), "stage")
       getlocal0
       setproperty         QName(PackageNamespace(""), "focus")
-
-      returnvoid
-     end ; code
-    end ; body
-   end ; method
-  end ; trait
-  trait method QName(PackageNamespace(""), "SendHiscore")
-   method
-    refid "Game/instance/SendHiscore"
-    param QName(PackageNamespace("flash.events"), "MouseEvent")
-    body
-     maxstack 3
-     localcount 2
-     initscopedepth 10
-     maxscopedepth 11
-     code
-      getlocal0
-      pushscope
-
-      getlex              QName(PackageInternalNs(""), "agi")
-      pushnull
-      ifeq                L20
-
-      getlex              QName(PackageInternalNs(""), "agi")
-      getlex              QName(PrivateNamespace(null, "Game/instance#0"), "devKey")
-      getlex              QName(PrivateNamespace(null, "Game/instance#0"), "gameKey")
-      callpropvoid        Multiname("init", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
-
-      getlex              QName(PackageInternalNs(""), "agi")
-      pushstring          "onClose"
-      getlex              QName(PackageInternalNs(""), "closeHandler")
-      newobject           1
-      callpropvoid        Multiname("initAGUI", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
-
-      getlex              QName(PackageInternalNs(""), "agi")
-      getlex              QName(PackageInternalNs(""), "score")
-      getlex              QName(PackageInternalNs(""), "hisc")
-      getproperty         Multiname("name_txt", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getproperty         Multiname("text", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      callpropvoid        Multiname("showScoreboardSubmit", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
-
-L20:
-      returnvoid
-     end ; code
-    end ; body
-   end ; method
-  end ; trait
-  trait method QName(PackageNamespace(""), "ClearData")
-   method
-    refid "Game/instance/ClearData"
-    param QName(PackageNamespace("flash.events"), "MouseEvent")
-    body
-     maxstack 3
-     localcount 3
-     initscopedepth 10
-     maxscopedepth 11
-     code
-      getlocal0
-      pushscope
-
-      pushundefined
-      coerce_a
-      setlocal2
-
-      getlex              QName(PackageInternalNs(""), "The_cookie")
-      getproperty         QName(PackageNamespace(""), "data")
-      pushfalse
-      setproperty         Multiname("submited", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-
-      getlex              QName(PackageInternalNs(""), "The_cookie")
-      getproperty         QName(PackageNamespace(""), "data")
-      findpropstrict      QName(PackageNamespace(""), "Array")
-      pushbyte            32
-      constructprop       QName(PackageNamespace(""), "Array"), 1
-      setproperty         Multiname("stats", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-
-      getlex              QName(PackageInternalNs(""), "The_cookie")
-      getproperty         QName(PackageNamespace(""), "data")
-      findpropstrict      QName(PackageNamespace(""), "Array")
-      pushbyte            32
-      constructprop       QName(PackageNamespace(""), "Array"), 1
-      setproperty         Multiname("times", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-
-      getlex              QName(PackageInternalNs(""), "The_cookie")
-      getproperty         QName(PackageNamespace(""), "data")
-      findpropstrict      QName(PackageNamespace(""), "Array")
-      pushbyte            32
-      constructprop       QName(PackageNamespace(""), "Array"), 1
-      setproperty         Multiname("timesString", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-
-      pushbyte            0
-      coerce_a
-      setlocal2
-
-      jump                L54
-
-L31:
-      label
-      getlex              QName(PackageInternalNs(""), "The_cookie")
-      getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("stats", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlocal2
-      pushbyte            -1
-      setproperty         MultinameL([PrivateNamespace(null, "Game/instance#0"), PackageInternalNs(""), PackageNamespace(""), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
-
-      getlex              QName(PackageInternalNs(""), "The_cookie")
-      getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("times", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlocal2
-      pushbyte            0
-      setproperty         MultinameL([PrivateNamespace(null, "Game/instance#0"), PackageInternalNs(""), PackageNamespace(""), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
-
-      getlex              QName(PackageInternalNs(""), "The_cookie")
-      getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("timesString", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      getlocal2
-      pushstring          ""
-      setproperty         MultinameL([PrivateNamespace(null, "Game/instance#0"), PackageInternalNs(""), PackageNamespace(""), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
-
-      getlocal2
-      increment
-      coerce_a
-      setlocal2
-
-L54:
-      getlocal2
-      pushbyte            32
-      iflt                L31
-
-      getlex              QName(PackageInternalNs(""), "The_cookie")
-      getproperty         QName(PackageNamespace(""), "data")
-      getproperty         Multiname("stats", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace("flash.ui"), PackageInternalNs(""), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace(null, "Game/instance#1"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
-      pushbyte            0
-      dup
-      setproperty         MultinameL([PrivateNamespace(null, "Game/instance#0"), PackageInternalNs(""), PackageNamespace(""), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object"), Namespace("flash.display:IBitmapDrawable"), Namespace("flash.events:IEventDispatcher")])
-
-      findpropstrict      QName(PackageNamespace(""), "removeChild")
-      getlex              QName(PackageInternalNs(""), "h")
-      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
 
       returnvoid
      end ; code
