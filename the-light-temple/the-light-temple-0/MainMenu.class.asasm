@@ -40,7 +40,6 @@ class
   trait slot QName(PackageNamespace(""), "b_1_4") type QName(PackageNamespace("flash.display"), "SimpleButton") end
   trait slot QName(PackageNamespace(""), "b_2_1") type QName(PackageNamespace("flash.display"), "SimpleButton") end
   trait slot QName(PackageNamespace(""), "node_9") type QName(PackageNamespace("flash.display"), "MovieClip") end
-  trait slot QName(PackageNamespace(""), "WalkThroughBtn") type QName(PackageNamespace("flash.display"), "SimpleButton") end
   trait slot QName(PackageNamespace(""), "b_3_3") type QName(PackageNamespace("flash.display"), "SimpleButton") end
   trait slot QName(PackageNamespace(""), "b_1_13") type QName(PackageNamespace("flash.display"), "SimpleButton") end
   trait slot QName(PackageNamespace(""), "b_1_5") type QName(PackageNamespace("flash.display"), "SimpleButton") end

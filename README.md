@@ -1,15 +1,12 @@
 # Autosplit-FaW
+autosplitting for the flash versions of the Fireboy and Watergirl franchise
 
-## setup:
-
-1. download flashplayer_31_sa_debug.exe aka "Flash Player projector content debugger" from https://www.adobe.com/support/flashplayer/debug_downloads.html for your system archetecture
-	windows x64 download: [flashplayer_32_sa_debug.exe](https://fpdownload.macromedia.com/pub/flashplayer/updaters/32/flashplayer_32_sa_debug.exe)
-2. place inclueded mm.cfg in %USERPROFILE%\mm.cfg
-3. edit livesplit layout -> add -> control -> scriptable auto splitter, double click on scriptable auto splitter and set the script path to the included Autosplit-FaW.asl
-4. run the-forest-temple.swf in flashplayer_32_sa_debug.exe
+## game support:
+currently only faw 1 and 2 are supported (feel free to find the pointer paths and submit a pull request)
 
 ## debug:
-0. make sure the name of the flash player exe matches at least one of the states in Autosplit-FaW.asl
-1. check %APPDATA%\Macromedia\Flash Player\Logs\flashlog.txt after starting the game, 
-	if it doesnt contain "1.- file:///C|/path/to/swf/the%2Dforest%2Dtemple.swf -so- false" then check/redo steps 1-2
-2. download https://docs.microsoft.com/en-us/sysinternals/downloads/debugview and watch for livesplit errors, you may need to contact Calvin304#2397 on discord for support
+1. make sure your splits have "Game Name" set correctly, then reload the autospliter.
+2. make sure you're using the swfs from this repository.
+3. make sure you're using flash player projector (NOT DEBUGGER) 32.0.0.465
+
+if these steps havent worked, file an issue with as much detail as can be provided

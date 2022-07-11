@@ -106,7 +106,6 @@ program
  #include "level.script.asasm"
  #include "FPSCounter.script.asasm"
  #include "PreLoader.script.asasm"
- #include "CPMStar/AdLoader.script.asasm"
  #include "BackGround.script.asasm"
  #include "Ball.script.asasm"
  #include "BlackBox.script.asasm"
@@ -172,7 +171,6 @@ program
  #include "RopeTriangle.script.asasm"
  #include "RotMirror.script.asasm"
  #include "RotMirrorInfinite.script.asasm"
- #include "SK_Teaser.script.asasm"
  #include "SilverDiamond.script.asasm"
  #include "SliderHole.script.asasm"
  #include "SliderLever.script.asasm"
@@ -185,7 +183,6 @@ program
  #include "WaterGirl.script.asasm"
  #include "Wind.script.asasm"
  #include "WindMaker.script.asasm"
- #include "ag_intro_mc.script.asasm"
  #include "bug.script.asasm"
  #include "deadFire.script.asasm"
  #include "lever_base_light_1.script.asasm"
@@ -239,6 +236,11 @@ program
 
  ; ============================= Orphan methods ==============================
 
+ #include "orphan_method_0.method.asasm"
+ #include "orphan_method_1.method.asasm"
+ #include "orphan_method_2.method.asasm"
+ #include "orphan_method_3.method.asasm"
+ #include "orphan_method_4.method.asasm"
  #include "Game.instance/Recuent/inline_method.method.asasm"
  #include "Game.instance/GameOver/inline_method#0.method.asasm"
  #include "Game.instance/GameOver/inline_method#1.method.asasm"
