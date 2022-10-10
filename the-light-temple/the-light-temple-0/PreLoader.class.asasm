@@ -33,18 +33,7 @@ class
      setlocal            6
 
      getlocal0
-     findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
-     pushbyte            100
-     pushshort           1000
-     constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 2
-     setproperty         QName(PackageInternalNs(""), "myTimer")
-
-     getlocal0
      constructsuper      0
-
-     getlocal0
-     getproperty         QName(PackageInternalNs(""), "myTimer")
-     callpropvoid        Multiname("start", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")]), 0
 
      getlocal0
      findpropstrict      QName(PackageNamespace(""), "LoaderHolder")
@@ -96,20 +85,6 @@ class
      coerce_s
      setlocal2
 
-     getlocal1
-     getproperty         Multiname("loaderInfo", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")])
-     getproperty         Multiname("loaderURL", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")])
-     coerce_s
-     setlocal3
-
-     getlocal3
-     getlocal2
-     callproperty        Multiname("lastIndexOf", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")]), 1
-     pushbyte            0
-     greaterthan
-     coerce_a
-     setlocal            4
-
      getlocal0
      getproperty         QName(PackageInternalNs(""), "LH")
      getproperty         Multiname("adBox", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")])
@@ -132,7 +107,6 @@ class
   trait slot QName(PackageInternalNs(""), "loaderMC") type QName(PackageNamespace(""), "LoaderMC") end
   trait slot QName(PackageInternalNs(""), "s") end
   trait slot QName(PackageInternalNs(""), "LH") end
-  trait slot QName(PackageInternalNs(""), "myTimer") type QName(PackageNamespace("flash.utils"), "Timer") end
   trait slot QName(PackageInternalNs(""), "delaySecs") value Integer(0) end
   trait method QName(PackageNamespace(""), "loadProgress")
    method
@@ -169,31 +143,17 @@ class
       coerce              QName(PackageNamespace(""), "Number")
       setlocal2
 
-      getlex              QName(PackageNamespace(""), "Math")
-      getlocal2
-      pushbyte            100
-      getlocal0
-      getproperty         QName(PackageInternalNs(""), "myTimer")
-      getproperty         Multiname("currentCount", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")])
-      multiply
-      getlocal0
-      getproperty         QName(PackageInternalNs(""), "delaySecs")
-      divide
-      callproperty        Multiname("min", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")]), 2
-      coerce_a
-      setlocal3
-
       getlocal0
       getproperty         QName(PackageInternalNs(""), "loaderMC")
       getproperty         QName(PackageNamespace(""), "LoaderBar")
-      getlocal3
+      getlocal2
       pushbyte            100
       divide
       setproperty         Multiname("scaleX", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")])
 
-      getlocal3
+      getlocal2
       pushbyte            100
-      ifnge               L52
+      ifnge               L39
 
       getlocal0
       callpropvoid        QName(PackageNamespace(""), "loadComplete"), 0
@@ -205,7 +165,7 @@ class
       getproperty         QName(PackageNamespace(""), "loadProgress")
       callpropvoid        Multiname("removeEventListener", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")]), 2
 
-L52:
+L39:
       returnvoid
      end ; code
     end ; body
@@ -298,7 +258,7 @@ L52:
       getproperty         Multiname("parent", [PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageInternalNs(""), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PrivateNamespace(":PreLoader"), ProtectedNamespace(":PreLoader"), StaticProtectedNs(":PreLoader"), PrivateNamespace("PreLoader.as$102")])
       getlex              QName(PackageNamespace(""), "Game")
       astypelate
-      callpropvoid        QName(PackageNamespace(""), "CreateTeaser"), 0
+      callpropvoid        QName(PackageNamespace(""), "GameReady"), 0
 
       returnvoid
      end ; code

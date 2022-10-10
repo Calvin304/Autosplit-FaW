@@ -1,31 +1,67 @@
-state("flashplayer_31_sa_debug") {}
-state("flashplayer_32_sa_debug") {}
+
+state("flashplayer_32_sa", "Fireboy and Watergirl 1 - The Forest Temple") {
+    //game at [[[[["flashplayer_32_sa.exe"+0x00D18438] + 0xFC] + 0x1F0] + 0x38] + 0x9C]
+    //double cur_node : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0xF0;
+
+    //the following are actually pointers but we only care about when they get overwriten
+    uint m_intromenu : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0x88;
+    uint m_transition : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0x7C;
+     
+    //the following are actually bool with 31 bits of padding 
+    uint ended : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0xC0, 0x70; 
+    uint deadFire : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0xC0, 0xF4, 0x14;
+    uint deadWater : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0xC0, 0xF4, 0x10;
+}
+
+state("flashplayer_32_sa", "Fireboy and Watergirl 2 - The Light Temple") {
+    //game at [[[[["flashplayer_32_sa.exe"+0x00D18438] + 0xFC] + 0x1F0] + 0x38] + 0x9C]
+    //double cur_node : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0x120;
+
+    //the following are actually pointers but we only care about when they get overwriten
+    uint m_intromenu : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0xA0;
+    uint m_transition : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0xA8;
+     
+    //the following are actually bool with 31 bits of padding 
+    uint ended : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0x88, 0x60; 
+    uint deadFire : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0x88, 0xD4, 0x10;
+    uint deadWater : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0x88, 0xDD4, 0x14;
+
+}
+
+//state("flashplayer_32_sa", "Fireboy and Watergirl 3 - The Ice Temple") {}
+//state("flashplayer_32_sa", "Fireboy and Watergirl 4 - The Crystal Temple") {}
 
 init {
-    string appDataFolder = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-    string logPath = Path.Combine(appDataFolder, "Macromedia\\Flash Player\\Logs\\flashlog.txt");
-    
-    try { // Wipe the log file to clear out messages from last time
-        FileStream fs = new FileStream(logPath, FileMode.Open, FileAccess.Write, FileShare.ReadWrite);
-        fs.SetLength(0);
-        fs.Close();
-    } catch {} // May fail if file doesn't exist.
-    vars.reader = new StreamReader(new FileStream(logPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)); 
+    version = timer.Run.GameName;
+    vars.intro_latest = false;
 }
 
 update {
-    vars.line = vars.reader.ReadLine();
-    if (vars.line == null) return false; // If no line was read, don't run any other blocks.
+    /* if (current.cur_node != old.cur_node) {
+        print("node:" + current.cur_node);
+    } */
+    if (current.m_intromenu != old.m_intromenu) {
+        vars.intro_latest = true;
+    }
+
+    
+    //print(vars.intro_latest.ToString());
 }
 
 start {
-    return vars.line == "Main_Menu";
+    if (vars.intro_latest && current.m_transition != old.m_transition) {
+        vars.intro_latest = false;
+        return true;
+    }
 }
 
 split {
-    return vars.line == "Level_End";
+    return current.ended == 1 && old.ended == 0 && current.deadFire == 0 && current.deadWater == 0;
 }
 
 reset {
-    return vars.line.StartsWith("1.- file:");
+
+    return current.m_intromenu != old.m_intromenu;
+
+    
 }

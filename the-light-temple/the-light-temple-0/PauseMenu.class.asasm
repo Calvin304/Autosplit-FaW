@@ -86,7 +86,6 @@ class
    end ; body
   end ; method
   trait slot QName(PackageNamespace(""), "endGameBtn") type QName(PackageNamespace("flash.display"), "SimpleButton") end
-  trait slot QName(PackageNamespace(""), "WalkThroughBtn") type QName(PackageNamespace("flash.display"), "SimpleButton") end
   trait slot QName(PackageNamespace(""), "RedCount") type QName(PackageNamespace("flash.text"), "TextField") end
   trait slot QName(PackageNamespace(""), "Tapper") type QName(PackageNamespace("flash.display"), "MovieClip") end
   trait slot QName(PackageNamespace(""), "btn") type QName(PackageNamespace("flash.display"), "SimpleButton") end
