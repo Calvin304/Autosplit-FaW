@@ -1,0 +1,497 @@
+class
+ refid "Box2D.Collision:b2TimeOfImpact"
+ instance QName(PackageNamespace("Box2D.Collision"), "b2TimeOfImpact")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision:b2TimeOfImpact")
+  iinit
+   refid "Box2D.Collision:b2TimeOfImpact/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "Box2D.Collision:b2TimeOfImpact/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "s_p1")
+    findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+    setproperty         QName(PackageNamespace(""), "s_p1")
+
+    findproperty        QName(PackageNamespace(""), "s_p2")
+    findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+    setproperty         QName(PackageNamespace(""), "s_p2")
+
+    findproperty        QName(PackageNamespace(""), "s_xf1")
+    findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2XForm"), 0
+    setproperty         QName(PackageNamespace(""), "s_xf1")
+
+    findproperty        QName(PackageNamespace(""), "s_xf2")
+    findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2XForm"), 0
+    setproperty         QName(PackageNamespace(""), "s_xf2")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "s_p1") slotid 1 type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+ trait slot QName(PackageNamespace(""), "s_p2") slotid 2 type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+ trait slot QName(PackageNamespace(""), "s_xf1") slotid 3 type QName(PackageNamespace("Box2D.Common.Math"), "b2XForm") end
+ trait slot QName(PackageNamespace(""), "s_xf2") slotid 4 type QName(PackageNamespace("Box2D.Common.Math"), "b2XForm") end
+ trait method QName(PackageNamespace(""), "TimeOfImpact") flag FINAL dispid 3
+  method
+   refid "Box2D.Collision:b2TimeOfImpact/class/TimeOfImpact"
+   param QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+   param QName(PackageNamespace("Box2D.Common.Math"), "b2Sweep")
+   param QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+   param QName(PackageNamespace("Box2D.Common.Math"), "b2Sweep")
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 7
+    localcount 32
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnan
+     setlocal            5
+
+     pushnan
+     setlocal            6
+
+     pushnan
+     setlocal            25
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+     setlocal            26
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+     setlocal            27
+
+     pushnan
+     setlocal            28
+
+     pushnan
+     setlocal            29
+
+     pushnan
+     setlocal            30
+
+     pushnan
+     setlocal            31
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "m_sweepRadius")
+     convert_d
+     setlocal            7
+
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "m_sweepRadius")
+     convert_d
+     setlocal            8
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "t0")
+     convert_d
+     setlocal            9
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "c")
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "c0")
+     getproperty         QName(PackageNamespace(""), "x")
+     subtract
+     convert_d
+     setlocal            10
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "c")
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "c0")
+     getproperty         QName(PackageNamespace(""), "y")
+     subtract
+     convert_d
+     setlocal            11
+
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "c")
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "c0")
+     getproperty         QName(PackageNamespace(""), "x")
+     subtract
+     convert_d
+     setlocal            12
+
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "c")
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "c0")
+     getproperty         QName(PackageNamespace(""), "y")
+     subtract
+     convert_d
+     setlocal            13
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "a")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "a0")
+     subtract
+     convert_d
+     setlocal            14
+
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "a")
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "a0")
+     subtract
+     convert_d
+     setlocal            15
+
+     pushdouble          0
+     convert_d
+     setlocal            16
+
+     getlex              QName(PackageNamespace(""), "s_p1")
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     setlocal            17
+
+     getlex              QName(PackageNamespace(""), "s_p2")
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     setlocal            18
+
+     pushbyte            20
+     setlocal            19
+
+     pushbyte            0
+     setlocal            20
+
+     pushdouble          0
+     convert_d
+     setlocal            21
+
+     pushdouble          0
+     convert_d
+     setlocal            22
+
+     pushdouble          0
+     convert_d
+     setlocal            23
+
+     pushdouble          0
+     convert_d
+     setlocal            24
+
+     jump                L323
+
+L110:
+     label
+     pushbyte            1
+     getlocal            16
+     subtract
+     getlocal            9
+     multiply
+     getlocal            16
+     add
+     convert_d
+     setlocal            25
+
+     getlex              QName(PackageNamespace(""), "s_xf1")
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+     setlocal            26
+
+     getlex              QName(PackageNamespace(""), "s_xf2")
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+     setlocal            27
+
+     getlocal2
+     getlocal            26
+     getlocal            25
+     callpropvoid        QName(PackageNamespace(""), "GetXForm"), 2
+
+     getlocal            4
+     getlocal            27
+     getlocal            25
+     callpropvoid        QName(PackageNamespace(""), "GetXForm"), 2
+
+     getlex              QName(PackageNamespace("Box2D.Collision"), "b2Distance")
+     getlocal            17
+     getlocal            18
+     getlocal1
+     getlocal            26
+     getlocal3
+     getlocal            27
+     callproperty        QName(PackageNamespace(""), "Distance"), 6
+     convert_d
+     setlocal            23
+
+     getlocal            20
+     pushbyte            0
+     ifne                L185
+
+     getlocal            23
+     pushbyte            2
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_toiSlop")
+     multiply
+     ifngt               L160
+
+     pushdouble          1.5
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_toiSlop")
+     multiply
+     convert_d
+     setlocal            24
+
+     jump                L185
+
+L160:
+     pushdouble          0.05
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_toiSlop")
+     multiply
+     convert_d
+     setlocal            5
+
+     getlocal            23
+     pushdouble          0.5
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_toiSlop")
+     multiply
+     subtract
+     convert_d
+     setlocal            6
+
+     getlocal            5
+     getlocal            6
+     greaterthan
+     iffalse             L181
+
+     getlocal            5
+     convert_d
+     jump                L183
+
+L181:
+     getlocal            6
+     convert_d
+L183:
+     convert_d
+     setlocal            24
+
+L185:
+     getlocal            23
+     getlocal            24
+     subtract
+     pushdouble          0.05
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_toiSlop")
+     multiply
+     lessthan
+     dup
+     iftrue              L199
+
+     pop
+     getlocal            20
+     getlocal            19
+     equals
+L199:
+     iffalse             L201
+
+     jump                L324
+
+L201:
+     getlocal            18
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            17
+     getproperty         QName(PackageNamespace(""), "x")
+     subtract
+     convert_d
+     setlocal            21
+
+     getlocal            18
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            17
+     getproperty         QName(PackageNamespace(""), "y")
+     subtract
+     convert_d
+     setlocal            22
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal            21
+     getlocal            21
+     multiply
+     getlocal            22
+     getlocal            22
+     multiply
+     add
+     callproperty        QName(PackageNamespace(""), "sqrt"), 1
+     convert_d
+     setlocal            28
+
+     getlocal            21
+     getlocal            28
+     divide
+     convert_d
+     setlocal            21
+
+     getlocal            22
+     getlocal            28
+     divide
+     convert_d
+     setlocal            22
+
+     getlocal            21
+     getlocal            10
+     getlocal            12
+     subtract
+     multiply
+     getlocal            22
+     getlocal            11
+     getlocal            13
+     subtract
+     multiply
+     add
+     getlocal            14
+     pushbyte            0
+     lessthan
+     iffalse             L255
+
+     getlocal            14
+     negate
+     coerce_a
+     jump                L257
+
+L255:
+     getlocal            14
+     coerce_a
+L257:
+     getlocal            7
+     multiply
+     add
+     getlocal            15
+     pushbyte            0
+     lessthan
+     iffalse             L268
+
+     getlocal            15
+     negate
+     coerce_a
+     jump                L270
+
+L268:
+     getlocal            15
+     coerce_a
+L270:
+     getlocal            8
+     multiply
+     add
+     convert_d
+     dup
+     setlocal            29
+
+     pushbyte            0
+     ifne                L282
+
+     pushbyte            1
+     convert_d
+     setlocal            16
+
+     jump                L324
+
+L282:
+     getlocal            23
+     getlocal            24
+     subtract
+     getlocal            29
+     divide
+     convert_d
+     setlocal            30
+
+     getlocal            16
+     getlocal            30
+     add
+     convert_d
+     dup
+     setlocal            31
+
+     pushdouble          0
+     lessthan
+     dup
+     iftrue              L303
+
+     pop
+     pushbyte            1
+     getlocal            31
+     lessthan
+L303:
+     iffalse             L308
+
+     pushbyte            1
+     convert_d
+     setlocal            16
+
+     jump                L324
+
+L308:
+     getlocal            31
+     pushbyte            1
+     pushbyte            100
+     getlex              QName(PackageNamespace(""), "Number")
+     getproperty         QName(PackageNamespace(""), "MIN_VALUE")
+     multiply
+     add
+     getlocal            16
+     multiply
+     ifnlt               L319
+
+     jump                L324
+
+L319:
+     getlocal            31
+     convert_d
+     setlocal            16
+
+     inclocal_i          20
+L323:
+     jump                L110
+
+L324:
+     getlocal            16
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

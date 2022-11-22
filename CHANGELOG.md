@@ -1,4 +1,7 @@
 
+# 11/21/22
+added support for faw 3 ice
+
 
 ## pointer edition:
 

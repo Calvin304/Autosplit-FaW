@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "de.polygonal.math:PM_PRNG/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("PM_PRNG", [PackageNamespace("de.polygonal.math")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "de.polygonal.math:PM_PRNG"
+    popscope
+    initproperty        QName(PackageNamespace("de.polygonal.math"), "PM_PRNG")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("de.polygonal.math"), "PM_PRNG")
+  #include "PM_PRNG.class.asasm"
+ end ; trait
+end ; script

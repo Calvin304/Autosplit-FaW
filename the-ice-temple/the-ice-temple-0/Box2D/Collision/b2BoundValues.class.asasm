@@ -1,0 +1,56 @@
+class
+ refid "Box2D.Collision:b2BoundValues"
+ instance QName(PackageNamespace("Box2D.Collision"), "b2BoundValues")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision:b2BoundValues")
+  iinit
+   refid "Box2D.Collision:b2BoundValues/instance/init"
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     pushbyte            0
+     dup
+     newarray            2
+     initproperty        QName(PackageNamespace(""), "lowerValues")
+
+     getlocal0
+     pushbyte            0
+     dup
+     newarray            2
+     initproperty        QName(PackageNamespace(""), "upperValues")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "lowerValues") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "upperValues") type QName(PackageNamespace(""), "Array") end
+ end ; instance
+ cinit
+  refid "Box2D.Collision:b2BoundValues/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

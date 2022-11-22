@@ -1,0 +1,33 @@
+script
+ sinit
+  refid "Box2D.Dynamics.Joints:b2PulleyJoint/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("b2PulleyJoint", [PackageNamespace("Box2D.Dynamics.Joints")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+    pushscope
+
+    getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+    newclass            "Box2D.Dynamics.Joints:b2PulleyJoint"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2PulleyJoint")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2PulleyJoint")
+  #include "b2PulleyJoint.class.asasm"
+ end ; trait
+end ; script

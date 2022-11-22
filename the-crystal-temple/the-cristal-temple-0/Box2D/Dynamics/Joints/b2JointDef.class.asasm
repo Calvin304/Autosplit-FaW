@@ -1,0 +1,68 @@
+class
+ refid "Box2D.Dynamics.Joints:b2JointDef"
+ instance QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointDef")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics.Joints:b2JointDef")
+  iinit
+   refid "Box2D.Dynamics.Joints:b2JointDef/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+     getproperty         QName(PackageNamespace(""), "e_unknownJoint")
+     initproperty        QName(PackageNamespace(""), "type")
+
+     getlocal0
+     pushnull
+     initproperty        QName(PackageNamespace(""), "userData")
+
+     getlocal0
+     pushnull
+     initproperty        QName(PackageNamespace(""), "body1")
+
+     getlocal0
+     pushnull
+     initproperty        QName(PackageNamespace(""), "body2")
+
+     getlocal0
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "collideConnected")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "type") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "userData") end
+  trait slot QName(PackageNamespace(""), "body1") type QName(PackageNamespace("Box2D.Dynamics"), "b2Body") end
+  trait slot QName(PackageNamespace(""), "body2") type QName(PackageNamespace("Box2D.Dynamics"), "b2Body") end
+  trait slot QName(PackageNamespace(""), "collideConnected") type QName(PackageNamespace(""), "Boolean") end
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics.Joints:b2JointDef/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

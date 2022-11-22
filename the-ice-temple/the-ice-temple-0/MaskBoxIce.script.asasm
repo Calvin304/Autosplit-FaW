@@ -1,0 +1,53 @@
+script
+ sinit
+  refid "MaskBoxIce/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("MaskBoxIce", [PackageNamespace("")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "Sprite")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "MovieClip")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "MovieClip")
+    newclass            "MaskBoxIce"
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace(""), "MaskBoxIce")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(""), "MaskBoxIce")
+  #include "MaskBoxIce.class.asasm"
+ end ; trait
+end ; script

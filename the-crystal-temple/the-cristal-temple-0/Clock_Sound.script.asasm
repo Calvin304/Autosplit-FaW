@@ -1,0 +1,37 @@
+script
+ sinit
+  refid "Clock_Sound/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Clock_Sound", [PackageNamespace("")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.media"), "Sound")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.media"), "Sound")
+    newclass            "Clock_Sound"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace(""), "Clock_Sound")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(""), "Clock_Sound")
+  #include "Clock_Sound.class.asasm"
+ end ; trait
+end ; script

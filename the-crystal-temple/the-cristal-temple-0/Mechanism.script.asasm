@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "Mechanism/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Mechanism", [PackageNamespace("")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "Mechanism"
+    popscope
+    initproperty        QName(PackageNamespace(""), "Mechanism")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(""), "Mechanism")
+  #include "Mechanism.class.asasm"
+ end ; trait
+end ; script

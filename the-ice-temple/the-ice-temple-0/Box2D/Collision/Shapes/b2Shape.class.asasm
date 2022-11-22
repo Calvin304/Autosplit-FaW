@@ -1,0 +1,804 @@
+class
+ refid "Box2D.Collision.Shapes:b2Shape"
+ instance QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision.Shapes:b2Shape")
+  iinit
+   refid "Box2D.Collision.Shapes:b2Shape/instance/init"
+   param QName(PackageNamespace("Box2D.Collision.Shapes"), "b2ShapeDef")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "userData")
+     initproperty        QName(PackageNamespace(""), "m_userData")
+
+     getlocal0
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "friction")
+     initproperty        QName(PackageNamespace(""), "m_friction")
+
+     getlocal0
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "restitution")
+     initproperty        QName(PackageNamespace(""), "m_restitution")
+
+     getlocal0
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "density")
+     initproperty        QName(PackageNamespace(""), "m_density")
+
+     getlocal0
+     pushnull
+     initproperty        QName(PackageNamespace(""), "m_body")
+
+     getlocal0
+     pushdouble          0
+     initproperty        QName(PackageNamespace(""), "m_sweepRadius")
+
+     getlocal0
+     pushnull
+     initproperty        QName(PackageNamespace(""), "m_next")
+
+     getlocal0
+     getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+     getproperty         QName(PackageNamespace(""), "b2_nullProxy")
+     initproperty        QName(PackageNamespace(""), "m_proxyId")
+
+     getlocal0
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "filter")
+     callproperty        QName(PackageNamespace(""), "Copy"), 0
+     initproperty        QName(PackageNamespace(""), "m_filter")
+
+     getlocal0
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "isSensor")
+     initproperty        QName(PackageNamespace(""), "m_isSensor")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "GetType")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/GetType"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_type")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "IsSensor")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/IsSensor"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_isSensor")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SetFilterData")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/SetFilterData"
+    param QName(PackageNamespace("Box2D.Collision.Shapes"), "b2FilterData")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "Copy"), 0
+      initproperty        QName(PackageNamespace(""), "m_filter")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetFilterData")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/GetFilterData"
+    returns QName(PackageNamespace("Box2D.Collision.Shapes"), "b2FilterData")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_filter")
+      callproperty        QName(PackageNamespace(""), "Copy"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetBody")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/GetBody"
+    returns QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_body")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetNext")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/GetNext"
+    returns QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_next")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetUserData")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/GetUserData"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_userData")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SetUserData")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/SetUserData"
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "m_userData")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "TestPoint")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/TestPoint"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "TestSegment")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/TestSegment"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    param QName(PackageNamespace("Box2D.Collision"), "b2Segment")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 1
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "ComputeAABB")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/ComputeAABB"
+    param QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "ComputeSweptAABB")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/ComputeSweptAABB"
+    param QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "ComputeMass")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/ComputeMass"
+    param QName(PackageNamespace("Box2D.Collision.Shapes"), "b2MassData")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetSweepRadius")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/GetSweepRadius"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sweepRadius")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetFriction")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/GetFriction"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_friction")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetRestitution")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/GetRestitution"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_restitution")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "CreateProxy")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/CreateProxy"
+    param QName(PackageNamespace("Box2D.Collision"), "b2BroadPhase")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2Shape"), "s_proxyAABB")
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+      setlocal3
+
+      getlocal0
+      getlocal3
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "ComputeAABB"), 2
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "InRange"), 1
+      convert_b
+      dup
+      setlocal            4
+
+      iffalse             L23
+
+      getlocal0
+      getlocal1
+      getlocal3
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "CreateProxy"), 2
+      initproperty        QName(PackageNamespace(""), "m_proxyId")
+
+      jump                L27
+
+L23:
+      getlocal0
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      getproperty         QName(PackageNamespace(""), "b2_nullProxy")
+      initproperty        QName(PackageNamespace(""), "m_proxyId")
+
+L27:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "DestroyProxy")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/DestroyProxy"
+    param QName(PackageNamespace("Box2D.Collision"), "b2BroadPhase")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_proxyId")
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      getproperty         QName(PackageNamespace(""), "b2_nullProxy")
+      ifeq                L15
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_proxyId")
+      callpropvoid        QName(PackageNamespace(""), "DestroyProxy"), 1
+
+      getlocal0
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      getproperty         QName(PackageNamespace(""), "b2_nullProxy")
+      initproperty        QName(PackageNamespace(""), "m_proxyId")
+
+L15:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "Synchronize")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/Synchronize"
+    param QName(PackageNamespace("Box2D.Collision"), "b2BroadPhase")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_proxyId")
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      getproperty         QName(PackageNamespace(""), "b2_nullProxy")
+      ifne                L9
+
+      pushfalse
+      returnvalue
+
+L9:
+      getlex              QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2Shape"), "s_syncAABB")
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+      setlocal            4
+
+      getlocal0
+      getlocal            4
+      getlocal2
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "ComputeSweptAABB"), 3
+
+      getlocal1
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "InRange"), 1
+      iffalse             L28
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_proxyId")
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "MoveProxy"), 2
+
+      pushtrue
+      returnvalue
+
+L28:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "RefilterProxy")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/RefilterProxy"
+    param QName(PackageNamespace("Box2D.Collision"), "b2BroadPhase")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_proxyId")
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      getproperty         QName(PackageNamespace(""), "b2_nullProxy")
+      ifne                L8
+
+      returnvoid
+
+L8:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_proxyId")
+      callpropvoid        QName(PackageNamespace(""), "DestroyProxy"), 1
+
+      getlex              QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2Shape"), "s_resetAABB")
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+      setlocal3
+
+      getlocal0
+      getlocal3
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "ComputeAABB"), 2
+
+      getlocal1
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "InRange"), 1
+      convert_b
+      dup
+      setlocal            4
+
+      iffalse             L33
+
+      getlocal0
+      getlocal1
+      getlocal3
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "CreateProxy"), 2
+      initproperty        QName(PackageNamespace(""), "m_proxyId")
+
+      jump                L37
+
+L33:
+      getlocal0
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+      getproperty         QName(PackageNamespace(""), "b2_nullProxy")
+      initproperty        QName(PackageNamespace(""), "m_proxyId")
+
+L37:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "UpdateSweepRadius")
+   method
+    refid "Box2D.Collision.Shapes:b2Shape/instance/UpdateSweepRadius"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_type") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "m_next") type QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape") end
+  trait slot QName(PackageNamespace(""), "m_body") type QName(PackageNamespace("Box2D.Dynamics"), "b2Body") end
+  trait slot QName(PackageNamespace(""), "m_sweepRadius") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "m_density") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "m_friction") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "m_restitution") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "m_proxyId") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "m_filter") type QName(PackageNamespace("Box2D.Collision.Shapes"), "b2FilterData") end
+  trait slot QName(PackageNamespace(""), "m_isSensor") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "m_userData") end
+ end ; instance
+ cinit
+  refid "Box2D.Collision.Shapes:b2Shape/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2Shape"), "s_proxyAABB")
+    findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+    constructprop       QName(PackageNamespace("Box2D.Collision"), "b2AABB"), 0
+    setproperty         QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2Shape"), "s_proxyAABB")
+
+    findproperty        QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2Shape"), "s_syncAABB")
+    findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+    constructprop       QName(PackageNamespace("Box2D.Collision"), "b2AABB"), 0
+    setproperty         QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2Shape"), "s_syncAABB")
+
+    findproperty        QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2Shape"), "s_resetAABB")
+    findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2AABB")
+    constructprop       QName(PackageNamespace("Box2D.Collision"), "b2AABB"), 0
+    setproperty         QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2Shape"), "s_resetAABB")
+
+    findproperty        QName(PackageNamespace(""), "e_unknownShape")
+    pushbyte            -1
+    initproperty        QName(PackageNamespace(""), "e_unknownShape")
+
+    findproperty        QName(PackageNamespace(""), "e_circleShape")
+    pushbyte            0
+    initproperty        QName(PackageNamespace(""), "e_circleShape")
+
+    findproperty        QName(PackageNamespace(""), "e_polygonShape")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "e_polygonShape")
+
+    findproperty        QName(PackageNamespace(""), "e_shapeTypeCount")
+    pushbyte            2
+    initproperty        QName(PackageNamespace(""), "e_shapeTypeCount")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "Create") flag FINAL dispid 3
+  method
+   refid "Box2D.Collision.Shapes:b2Shape/class/Create"
+   param QName(PackageNamespace("Box2D.Collision.Shapes"), "b2ShapeDef")
+   param null
+   returns QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+   body
+    maxstack 2
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     jump                L20
+
+L3:
+     label
+     findpropstrict      QName(PackageNamespace("Box2D.Collision.Shapes"), "b2CircleShape")
+     getlocal1
+     constructprop       QName(PackageNamespace("Box2D.Collision.Shapes"), "b2CircleShape"), 1
+     returnvalue
+
+L8:
+     label
+     findpropstrict      QName(PackageNamespace("Box2D.Collision.Shapes"), "b2PolygonShape")
+     getlocal1
+     constructprop       QName(PackageNamespace("Box2D.Collision.Shapes"), "b2PolygonShape"), 1
+     returnvalue
+
+L13:
+     label
+     pushnull
+     returnvalue
+
+     ; 0x10
+     ; 0x3F
+     ; 0x00
+     ; 0x00
+L20:
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "type")
+     setlocal3
+
+     getlex              QName(PackageNamespace(""), "e_circleShape")
+     getlocal3
+     ifstrictne          L28
+
+     pushbyte            0
+     jump                L41
+
+L28:
+     getlex              QName(PackageNamespace(""), "e_polygonShape")
+     getlocal3
+     ifstrictne          L33
+
+     pushbyte            1
+     jump                L41
+
+L33:
+     jump                L40
+
+     ; 0x24
+     ; 0x02
+     ; 0x10
+     ; 0x02
+     ; 0x00
+     ; 0x00
+L40:
+     pushbyte            2
+L41:
+     kill                3
+     lookupswitch        L13, [L3, L8, L13]
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "Destroy") flag FINAL dispid 4
+  method
+   refid "Box2D.Collision.Shapes:b2Shape/class/Destroy"
+   param QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+   param null
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 1
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2Shape"), "s_proxyAABB") slotid 1 type QName(PackageNamespace("Box2D.Collision"), "b2AABB") end
+ trait slot QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2Shape"), "s_syncAABB") slotid 2 type QName(PackageNamespace("Box2D.Collision"), "b2AABB") end
+ trait slot QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2Shape"), "s_resetAABB") slotid 3 type QName(PackageNamespace("Box2D.Collision"), "b2AABB") end
+ trait const QName(PackageNamespace(""), "e_unknownShape") slotid 4 type QName(PackageNamespace(""), "int") value Integer(-1) end
+ trait const QName(PackageNamespace(""), "e_circleShape") slotid 5 type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait const QName(PackageNamespace(""), "e_polygonShape") slotid 6 type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait const QName(PackageNamespace(""), "e_shapeTypeCount") slotid 7 type QName(PackageNamespace(""), "int") value Integer(2) end
+end ; class

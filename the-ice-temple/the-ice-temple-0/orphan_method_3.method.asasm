@@ -1,0 +1,37 @@
+method
+ refid "orphan_method_3"
+ body
+  maxstack 3
+  localcount 1
+  initscopedepth 10
+  maxscopedepth 11
+  code
+   getlocal0
+   pushscope
+
+   getlocal0
+   getproperty         QName(PackageInternalNs(""), "Teaser")
+   iffalse             L17
+
+   getlocal0
+   getproperty         QName(PackageInternalNs(""), "Teaser")
+   getproperty         Multiname("LinkBtn", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("flash.ui"), PrivateNamespace(null, "Game/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+   getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+   getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+   getlocal0
+   getproperty         QName(PackageNamespace(""), "TeaserClick")
+   callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("flash.ui"), PrivateNamespace(null, "Game/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
+
+   getlocal0
+   getlocal0
+   getproperty         QName(PackageInternalNs(""), "Teaser")
+   callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L17:
+   getlocal0
+   callpropvoid        QName(PackageNamespace(""), "GameReady"), 0
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

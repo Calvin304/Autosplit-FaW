@@ -1,0 +1,182 @@
+class
+ refid "Box2D.Collision:b2Manifold"
+ instance QName(PackageNamespace("Box2D.Collision"), "b2Manifold")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision:b2Manifold")
+  iinit
+   refid "Box2D.Collision:b2Manifold/instance/init"
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxManifoldPoints")
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     initproperty        QName(PackageNamespace(""), "points")
+
+     pushbyte            0
+     setlocal1
+
+     jump                L21
+
+L13:
+     label
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "points")
+     getlocal1
+     findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2ManifoldPoint")
+     constructprop       QName(PackageNamespace("Box2D.Collision"), "b2ManifoldPoint"), 0
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2Manifold/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2Manifold/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2Manifold"), StaticProtectedNs("Box2D.Collision:b2Manifold"), StaticProtectedNs("Object")])
+
+     inclocal_i          1
+L21:
+     getlocal1
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxManifoldPoints")
+     iflt                L13
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "normal")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "Reset")
+   method
+    refid "Box2D.Collision:b2Manifold/instance/Reset"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal1
+
+      jump                L14
+
+L5:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "points")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2Manifold/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2Manifold/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2Manifold"), StaticProtectedNs("Box2D.Collision:b2Manifold"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2ManifoldPoint")
+      astypelate
+      callpropvoid        QName(PackageNamespace(""), "Reset"), 0
+
+      inclocal_i          1
+L14:
+      getlocal1
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_maxManifoldPoints")
+      iflt                L5
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "normal")
+      callpropvoid        QName(PackageNamespace(""), "SetZero"), 0
+
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "pointCount")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "Set")
+   method
+    refid "Box2D.Collision:b2Manifold/instance/Set"
+    param QName(PackageNamespace("Box2D.Collision"), "b2Manifold")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "pointCount")
+      initproperty        QName(PackageNamespace(""), "pointCount")
+
+      pushbyte            0
+      setlocal2
+
+      jump                L22
+
+L9:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "points")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2Manifold/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2Manifold/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2Manifold"), StaticProtectedNs("Box2D.Collision:b2Manifold"), StaticProtectedNs("Object")])
+      getlex              QName(PackageNamespace("Box2D.Collision"), "b2ManifoldPoint")
+      astypelate
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "points")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision:b2Manifold/instance#0"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Collision:b2Manifold/instance#1"), PackageInternalNs("Box2D.Collision"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common.Math"), ProtectedNamespace("Box2D.Collision:b2Manifold"), StaticProtectedNs("Box2D.Collision:b2Manifold"), StaticProtectedNs("Object")])
+      callpropvoid        QName(PackageNamespace(""), "Set"), 1
+
+      inclocal_i          2
+L22:
+      getlocal2
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_maxManifoldPoints")
+      iflt                L9
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "normal")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "normal")
+      callpropvoid        QName(PackageNamespace(""), "SetV"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "points") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "normal") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "pointCount") type QName(PackageNamespace(""), "int") value Integer(0) end
+ end ; instance
+ cinit
+  refid "Box2D.Collision:b2Manifold/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

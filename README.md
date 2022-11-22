@@ -7,7 +7,7 @@ autosplitting for the flash versions of the Fireboy and Watergirl franchise
 3. run the-forest-temple.swf in flashplayer_32_sa.exe
 
 ## game support:
-currently only faw 1 and 2 are supported (feel free to find the pointer paths and submit a pull request)
+currently only faw 1, 2 and 3 are supported (feel free to find the pointer paths and submit a pull request)
 
 
 ## debug:

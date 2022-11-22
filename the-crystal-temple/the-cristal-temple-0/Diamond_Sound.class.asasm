@@ -1,0 +1,41 @@
+class
+ refid "Diamond_Sound"
+ instance QName(PackageNamespace(""), "Diamond_Sound")
+  extends QName(PackageNamespace("flash.media"), "Sound")
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Diamond_Sound")
+  iinit
+   refid "Diamond_Sound/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "Diamond_Sound/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

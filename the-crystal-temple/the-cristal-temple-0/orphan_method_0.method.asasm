@@ -1,0 +1,99 @@
+method
+ refid "orphan_method_0"
+ body
+  maxstack 3
+  localcount 5
+  initscopedepth 10
+  maxscopedepth 11
+  code
+   getlocal0
+   pushscope
+
+   getlex              QName(PackageNamespace(""), "loaderInfo")
+   getproperty         QName(PackageNamespace(""), "url")
+   pushstring          "file://"
+   callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+   pushbyte            0
+   ifnge               L10
+
+   pushtrue
+   returnvalue
+
+L10:
+   pushstring          "armorgames.com"
+   pushstring          "osloalbet.com"
+   newarray            2
+   coerce_a
+   setlocal1
+
+   findpropstrict      QName(PackageNamespace(""), "trace")
+   pushstring          "currentURL "
+   getlocal0
+   getproperty         QName(PackageNamespace(""), "loaderInfo")
+   getproperty         QName(PackageNamespace(""), "loaderURL")
+   add
+   callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+   getlocal0
+   getproperty         QName(PackageNamespace(""), "loaderInfo")
+   getproperty         QName(PackageNamespace(""), "loaderURL")
+   pushstring          "/"
+   callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+   pushbyte            2
+   getproperty         MultinameL([PrivateNamespace(null, "Game/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("flash.ui"), PrivateNamespace(null, "Game/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   coerce_a
+   setlocal2
+
+   findpropstrict      QName(PackageNamespace(""), "trace")
+   pushstring          "currentDomain "
+   getlocal2
+   add
+   callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+   pushfalse
+   coerce_a
+   setlocal3
+
+   pushbyte            0
+   coerce_a
+   setlocal            4
+
+   jump                L58
+
+L43:
+   label
+   getlocal2
+   getlocal1
+   getlocal            4
+   getproperty         MultinameL([PrivateNamespace(null, "Game/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("flash.ui"), PrivateNamespace(null, "Game/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   callproperty        Multiname("lastIndexOf", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("flash.ui"), PrivateNamespace(null, "Game/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+   pushbyte            0
+   ifnge               L54
+
+   pushtrue
+   coerce_a
+   setlocal3
+
+L54:
+   getlocal            4
+   increment
+   coerce_a
+   setlocal            4
+
+L58:
+   getlocal            4
+   getlocal1
+   getproperty         Multiname("length", [PrivateNamespace(null, "Game/instance#0"), PackageNamespace(""), PackageInternalNs(""), PackageNamespace("flash.ui"), PrivateNamespace(null, "Game/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.text"), PackageNamespace("Box2D"), PackageNamespace("Box2D.Dynamics"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics.Joints"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Game"), StaticProtectedNs("Game"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+   iflt                L43
+
+   findpropstrict      QName(PackageNamespace(""), "trace")
+   pushstring          "LOCATION IS VALID: "
+   getlocal3
+   add
+   callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+   getlocal3
+   returnvalue
+  end ; code
+ end ; body
+end ; method

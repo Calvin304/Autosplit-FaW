@@ -1,0 +1,83 @@
+class
+ refid "Box2D.Dynamics.Contacts:b2ContactConstraint"
+ instance QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraint")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactConstraint")
+  iinit
+   refid "Box2D.Dynamics.Contacts:b2ContactConstraint/instance/init"
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "normal")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxManifoldPoints")
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     initproperty        QName(PackageNamespace(""), "points")
+
+     pushbyte            0
+     setlocal1
+
+     jump                L25
+
+L17:
+     label
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "points")
+     getlocal1
+     findpropstrict      QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraintPoint")
+     constructprop       QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraintPoint"), 0
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactConstraint/instance/init#0"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Dynamics.Contacts"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactConstraint/instance/init#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Dynamics"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactConstraint"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactConstraint"), StaticProtectedNs("Object")])
+
+     inclocal_i          1
+L25:
+     getlocal1
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxManifoldPoints")
+     iflt                L17
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "points") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "normal") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "manifold") type QName(PackageNamespace("Box2D.Collision"), "b2Manifold") end
+  trait slot QName(PackageNamespace(""), "body1") type QName(PackageNamespace("Box2D.Dynamics"), "b2Body") end
+  trait slot QName(PackageNamespace(""), "body2") type QName(PackageNamespace("Box2D.Dynamics"), "b2Body") end
+  trait slot QName(PackageNamespace(""), "friction") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "restitution") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "pointCount") type QName(PackageNamespace(""), "int") end
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics.Contacts:b2ContactConstraint/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

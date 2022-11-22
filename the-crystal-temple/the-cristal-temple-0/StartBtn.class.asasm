@@ -1,0 +1,41 @@
+class
+ refid "StartBtn"
+ instance QName(PackageNamespace(""), "StartBtn")
+  extends QName(PackageNamespace("flash.display"), "SimpleButton")
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("StartBtn")
+  iinit
+   refid "StartBtn/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 8
+    maxscopedepth 9
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "StartBtn/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 7
+   maxscopedepth 8
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

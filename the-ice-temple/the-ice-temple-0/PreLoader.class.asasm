@@ -1,0 +1,249 @@
+class
+ refid "PreLoader"
+ instance QName(PackageNamespace(""), "PreLoader")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("PreLoader")
+  iinit
+   refid "PreLoader/instance/init"
+   param null
+   body
+    maxstack 4
+    localcount 2
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "LoaderHolder")
+     constructprop       QName(PackageNamespace(""), "LoaderHolder"), 0
+     initproperty        QName(PackageInternalNs(""), "LH")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "LH")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "LoaderMC")
+     constructprop       QName(PackageNamespace(""), "LoaderMC"), 0
+     initproperty        QName(PackageInternalNs(""), "loaderMC")
+
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "loaderMC")
+     pushshort           323
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "LH")
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "loaderMC")
+     callpropvoid        Multiname("addChild", [PrivateNamespace(null, "PreLoader/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "PreLoader/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("CPMStar"), ProtectedNamespace("PreLoader"), StaticProtectedNs("PreLoader"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
+
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "loaderMC")
+     pushshort           431
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "loaderMC")
+     getproperty         QName(PackageNamespace(""), "LoaderBar")
+     pushbyte            0
+     setproperty         QName(PackageNamespace(""), "scaleX")
+
+     getlocal0
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "tabChildren")
+
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "LH")
+     getproperty         Multiname("adBox", [PrivateNamespace(null, "PreLoader/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "PreLoader/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("CPMStar"), ProtectedNamespace("PreLoader"), StaticProtectedNs("PreLoader"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+     pushfalse
+     setproperty         Multiname("visible", [PrivateNamespace(null, "PreLoader/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "PreLoader/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("CPMStar"), ProtectedNamespace("PreLoader"), StaticProtectedNs("PreLoader"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+     getlocal0
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "loadProgress")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageInternalNs(""), "loader") type QName(PackageNamespace("flash.display"), "Loader") end
+  trait slot QName(PackageInternalNs(""), "loaderMC") type QName(PackageNamespace(""), "LoaderMC") end
+  trait slot QName(PackageInternalNs(""), "s") end
+  trait slot QName(PackageInternalNs(""), "LH") end
+  trait method QName(PackageNamespace(""), "loadProgress")
+   method
+    refid "PreLoader/instance/loadProgress"
+    param QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "loaderInfo")
+      getproperty         QName(PackageNamespace(""), "bytesLoaded")
+      getlex              QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "loaderInfo")
+      getproperty         QName(PackageNamespace(""), "bytesTotal")
+      divide
+      convert_d
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal2
+      pushbyte            100
+      multiply
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      convert_d
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "loaderMC")
+      getproperty         QName(PackageNamespace(""), "LoaderBar")
+      getlocal2
+      pushbyte            100
+      divide
+      setproperty         QName(PackageNamespace(""), "scaleX")
+
+      getlocal2
+      pushbyte            100
+      ifnge               L36
+
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "loadComplete"), 0
+
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "loadProgress")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+L36:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "loadComplete")
+   method
+    refid "PreLoader/instance/loadComplete"
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace(""), "StartBtn")
+      constructprop       QName(PackageNamespace(""), "StartBtn"), 0
+      initproperty        QName(PackageInternalNs(""), "s")
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "s")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "loaderMC")
+      getproperty         QName(PackageNamespace(""), "x")
+      setproperty         Multiname("x", [PrivateNamespace(null, "PreLoader/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "PreLoader/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("CPMStar"), ProtectedNamespace("PreLoader"), StaticProtectedNs("PreLoader"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "s")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "loaderMC")
+      getproperty         QName(PackageNamespace(""), "y")
+      setproperty         Multiname("y", [PrivateNamespace(null, "PreLoader/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "PreLoader/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("CPMStar"), ProtectedNamespace("PreLoader"), StaticProtectedNs("PreLoader"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "s")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "StartDown")
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "PreLoader/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "PreLoader/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("CPMStar"), ProtectedNamespace("PreLoader"), StaticProtectedNs("PreLoader"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 2
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "LH")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "loaderMC")
+      callpropvoid        Multiname("removeChild", [PrivateNamespace(null, "PreLoader/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "PreLoader/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("CPMStar"), ProtectedNamespace("PreLoader"), StaticProtectedNs("PreLoader"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "LH")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "s")
+      callpropvoid        Multiname("addChild", [PrivateNamespace(null, "PreLoader/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "PreLoader/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.events"), PackageNamespace("flash.ui"), PackageNamespace("CPMStar"), ProtectedNamespace("PreLoader"), StaticProtectedNs("PreLoader"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")]), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "StartDown")
+   method
+    refid "PreLoader/instance/StartDown"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "stage")
+      pushbyte            25
+      setproperty         QName(PackageNamespace(""), "frameRate")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "LH")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      callpropvoid        QName(PackageNamespace(""), "GameReady"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "PreLoader/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,819 @@
+class
+ refid "Stats"
+ instance QName(PackageNamespace(""), "Stats")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Stats")
+  iinit
+   refid "Stats/instance/init"
+   param QName(PackageNamespace(""), "Object")
+   returns QName(PackageNamespace(""), "void")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 11
+    localcount 2
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     pushstring          "bg"
+     pushbyte            51
+     pushstring          "fps"
+     pushint             16776960
+     pushstring          "ms"
+     pushint             65280
+     pushstring          "mem"
+     pushint             65535
+     pushstring          "memmax"
+     pushint             16711792
+     newobject           5
+     initproperty        QName(ProtectedNamespace("Stats"), "theme")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     iffalse             L64
+
+     getlocal1
+     getproperty         Multiname("bg", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushnull
+     ifeq                L28
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "theme")
+     getlocal1
+     getproperty         Multiname("bg", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         Multiname("bg", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L28:
+     getlocal1
+     getproperty         Multiname("fps", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushnull
+     ifeq                L37
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "theme")
+     getlocal1
+     getproperty         Multiname("fps", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         Multiname("fps", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L37:
+     getlocal1
+     getproperty         Multiname("ms", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushnull
+     ifeq                L46
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "theme")
+     getlocal1
+     getproperty         Multiname("ms", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         Multiname("ms", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L46:
+     getlocal1
+     getproperty         Multiname("mem", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushnull
+     ifeq                L55
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "theme")
+     getlocal1
+     getproperty         Multiname("mem", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         Multiname("mem", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L55:
+     getlocal1
+     getproperty         Multiname("memmax", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     pushnull
+     ifeq                L64
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "theme")
+     getlocal1
+     getproperty         Multiname("memmax", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     setproperty         Multiname("memmax", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L64:
+     getlocal0
+     pushbyte            0
+     initproperty        QName(ProtectedNamespace("Stats"), "mem_max")
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "XML")
+     pushstring          "<xml><fps>FPS:</fps><ms>MS:</ms><mem>MEM:</mem><memMax>MAX:</memMax></xml>"
+     construct           1
+     initproperty        QName(ProtectedNamespace("Stats"), "xml")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.text"), "StyleSheet")
+     constructprop       QName(PackageNamespace("flash.text"), "StyleSheet"), 0
+     initproperty        QName(ProtectedNamespace("Stats"), "style")
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "style")
+     pushstring          "xml"
+     pushstring          "fontSize"
+     pushstring          "9px"
+     pushstring          "fontFamily"
+     pushstring          "_sans"
+     pushstring          "leading"
+     pushstring          "-2px"
+     newobject           3
+     callpropvoid        QName(PackageNamespace(""), "setStyle"), 2
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "style")
+     pushstring          "fps"
+     pushstring          "color"
+     getlocal0
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "theme")
+     getproperty         Multiname("fps", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callproperty        QName(PrivateNamespace(null, "Stats/instance#0"), "hex2css"), 1
+     newobject           1
+     callpropvoid        QName(PackageNamespace(""), "setStyle"), 2
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "style")
+     pushstring          "ms"
+     pushstring          "color"
+     getlocal0
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "theme")
+     getproperty         Multiname("ms", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callproperty        QName(PrivateNamespace(null, "Stats/instance#0"), "hex2css"), 1
+     newobject           1
+     callpropvoid        QName(PackageNamespace(""), "setStyle"), 2
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "style")
+     pushstring          "mem"
+     pushstring          "color"
+     getlocal0
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "theme")
+     getproperty         Multiname("mem", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callproperty        QName(PrivateNamespace(null, "Stats/instance#0"), "hex2css"), 1
+     newobject           1
+     callpropvoid        QName(PackageNamespace(""), "setStyle"), 2
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "style")
+     pushstring          "memMax"
+     pushstring          "color"
+     getlocal0
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "theme")
+     getproperty         Multiname("memmax", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callproperty        QName(PrivateNamespace(null, "Stats/instance#0"), "hex2css"), 1
+     newobject           1
+     callpropvoid        QName(PackageNamespace(""), "setStyle"), 2
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     initproperty        QName(ProtectedNamespace("Stats"), "text")
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "text")
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "WIDTH")
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "text")
+     pushbyte            50
+     setproperty         QName(PackageNamespace(""), "height")
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "text")
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "style")
+     setproperty         QName(PackageNamespace(""), "styleSheet")
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "text")
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "condenseWhite")
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "text")
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "selectable")
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "text")
+     pushfalse
+     setproperty         QName(PackageNamespace(""), "mouseEnabled")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+     constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 0
+     initproperty        QName(ProtectedNamespace("Stats"), "graph")
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "graph")
+     pushbyte            50
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Rectangle")
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "WIDTH")
+     decrement
+     pushbyte            0
+     pushbyte            1
+     getlocal0
+     getproperty         QName(ProtectedNamespace("Stats"), "HEIGHT")
+     pushbyte            50
+     subtract
+     constructprop       QName(PackageNamespace("flash.geom"), "Rectangle"), 4
+     initproperty        QName(ProtectedNamespace("Stats"), "rectangle")
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "ADDED_TO_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "Stats/instance#0"), "init")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "REMOVED_FROM_STAGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace(null, "Stats/instance#0"), "destroy")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(ProtectedNamespace("Stats"), "WIDTH") type QName(PackageNamespace(""), "uint") value Integer(70) end
+  trait const QName(ProtectedNamespace("Stats"), "HEIGHT") type QName(PackageNamespace(""), "uint") value Integer(100) end
+  trait slot QName(ProtectedNamespace("Stats"), "xml") type QName(PackageNamespace(""), "XML") end
+  trait slot QName(ProtectedNamespace("Stats"), "text") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(ProtectedNamespace("Stats"), "style") type QName(PackageNamespace("flash.text"), "StyleSheet") end
+  trait slot QName(ProtectedNamespace("Stats"), "timer") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(ProtectedNamespace("Stats"), "fps") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(ProtectedNamespace("Stats"), "ms") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(ProtectedNamespace("Stats"), "ms_prev") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(ProtectedNamespace("Stats"), "mem") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(ProtectedNamespace("Stats"), "mem_max") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(ProtectedNamespace("Stats"), "graph") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait slot QName(ProtectedNamespace("Stats"), "rectangle") type QName(PackageNamespace("flash.geom"), "Rectangle") end
+  trait slot QName(ProtectedNamespace("Stats"), "fps_graph") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(ProtectedNamespace("Stats"), "mem_graph") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(ProtectedNamespace("Stats"), "mem_max_graph") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "m_fps") end
+  trait slot QName(ProtectedNamespace("Stats"), "theme") type QName(PackageNamespace(""), "Object") end
+  trait method QName(PrivateNamespace(null, "Stats/instance#0"), "init")
+   method
+    refid "Stats/instance/Stats/instance/init"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "theme")
+      getproperty         Multiname("bg", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 1
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "WIDTH")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "HEIGHT")
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "text")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "WIDTH")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "HEIGHT")
+      pushbyte            50
+      subtract
+      pushfalse
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "theme")
+      getproperty         Multiname("bg", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      constructprop       QName(PackageNamespace("flash.display"), "BitmapData"), 4
+      setproperty         QName(PackageNamespace(""), "bitmapData")
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Stats/instance#0"), "onClick")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "addEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Stats/instance#0"), "update")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Stats/instance#0"), "destroy")
+   method
+    refid "Stats/instance/Stats/instance/destroy"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      jump                L9
+
+L5:
+      label
+      findpropstrict      QName(PackageNamespace(""), "removeChildAt")
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "removeChildAt"), 1
+
+L9:
+      getlex              QName(PackageNamespace(""), "numChildren")
+      pushbyte            0
+      ifgt                L5
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "bitmapData")
+      callpropvoid        QName(PackageNamespace(""), "dispose"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "CLICK")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Stats/instance#0"), "onClick")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      findpropstrict      QName(PackageNamespace(""), "removeEventListener")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PrivateNamespace(null, "Stats/instance#0"), "update")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Stats/instance#0"), "update")
+   method
+    refid "Stats/instance/Stats/instance/update"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      initproperty        QName(ProtectedNamespace("Stats"), "timer")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "timer")
+      pushshort           1000
+      subtract
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "ms_prev")
+      ifngt               L213
+
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "timer")
+      initproperty        QName(ProtectedNamespace("Stats"), "ms_prev")
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getlex              QName(PackageNamespace("flash.system"), "System")
+      getproperty         QName(PackageNamespace(""), "totalMemory")
+      pushdouble          9.54000000000000099e-07
+      multiply
+      pushbyte            3
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toFixed"), 1
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      initproperty        QName(ProtectedNamespace("Stats"), "mem")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "mem_max")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "mem")
+      greaterthan
+      iffalse             L38
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "mem_max")
+      convert_d
+      jump                L41
+
+L38:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "mem")
+      convert_d
+L41:
+      initproperty        QName(ProtectedNamespace("Stats"), "mem_max")
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "height")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "fps")
+      getlex              QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "frameRate")
+      divide
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "height")
+      multiply
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      initproperty        QName(ProtectedNamespace("Stats"), "fps_graph")
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "height")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "mem")
+      pushshort           5000
+      multiply
+      callproperty        QName(PackageNamespace(""), "sqrt"), 1
+      callproperty        QName(PackageNamespace(""), "sqrt"), 1
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      pushbyte            2
+      subtract
+      initproperty        QName(ProtectedNamespace("Stats"), "mem_graph")
+
+      getlocal0
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "height")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "mem_max")
+      pushshort           5000
+      multiply
+      callproperty        QName(PackageNamespace(""), "sqrt"), 1
+      callproperty        QName(PackageNamespace(""), "sqrt"), 1
+      callproperty        QName(PackageNamespace(""), "min"), 2
+      pushbyte            2
+      subtract
+      initproperty        QName(ProtectedNamespace("Stats"), "mem_max_graph")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "bitmapData")
+      pushbyte            -1
+      pushbyte            0
+      callpropvoid        QName(PackageNamespace(""), "scroll"), 2
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "bitmapData")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "rectangle")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "theme")
+      getproperty         Multiname("bg", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        QName(PackageNamespace(""), "fillRect"), 2
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "bitmapData")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "width")
+      decrement
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "height")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "fps_graph")
+      subtract
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "theme")
+      getproperty         Multiname("fps", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        QName(PackageNamespace(""), "setPixel"), 3
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "bitmapData")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "width")
+      decrement
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "height")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "timer")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "ms")
+      subtract
+      pushbyte            1
+      rshift
+      subtract
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "theme")
+      getproperty         Multiname("ms", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        QName(PackageNamespace(""), "setPixel"), 3
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "bitmapData")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "width")
+      decrement
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "height")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "mem_graph")
+      subtract
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "theme")
+      getproperty         Multiname("mem", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        QName(PackageNamespace(""), "setPixel"), 3
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "bitmapData")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "width")
+      decrement
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "graph")
+      getproperty         QName(PackageNamespace(""), "height")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "mem_max_graph")
+      subtract
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "theme")
+      getproperty         Multiname("memmax", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callpropvoid        QName(PackageNamespace(""), "setPixel"), 3
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "xml")
+      pushstring          "FPS: "
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "fps")
+      add
+      pushstring          " / "
+      add
+      getlex              QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "frameRate")
+      add
+      setproperty         Multiname("fps", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "xml")
+      pushstring          "MEM: "
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "mem")
+      add
+      setproperty         Multiname("mem", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "xml")
+      pushstring          "MAX: "
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "mem_max")
+      add
+      setproperty         Multiname("memMax", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "fps")
+      initproperty        QName(PackageNamespace(""), "m_fps")
+
+      getlocal0
+      pushbyte            0
+      initproperty        QName(ProtectedNamespace("Stats"), "fps")
+
+L213:
+      getlocal0
+      dup
+      setlocal2
+
+      getproperty         QName(ProtectedNamespace("Stats"), "fps")
+      increment
+      setlocal3
+
+      getlocal2
+      getlocal3
+      setproperty         QName(ProtectedNamespace("Stats"), "fps")
+
+      kill                3
+      kill                2
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "xml")
+      pushstring          "MS: "
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "timer")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "ms")
+      subtract
+      add
+      setproperty         Multiname("ms", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal0
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "timer")
+      initproperty        QName(ProtectedNamespace("Stats"), "ms")
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "text")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "xml")
+      setproperty         QName(PackageNamespace(""), "htmlText")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Stats/instance#0"), "onClick")
+   method
+    refid "Stats/instance/Stats/instance/onClick"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "mouseY")
+      getlex              QName(PackageNamespace(""), "height")
+      divide
+      pushdouble          0.5
+      greaterthan
+      iffalse             L20
+
+      getlex              QName(PackageNamespace(""), "stage")
+      dup
+      setlocal2
+
+      getproperty         QName(PackageNamespace(""), "frameRate")
+      decrement
+      setlocal3
+
+      getlocal2
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "frameRate")
+
+      kill                3
+      kill                2
+      jump                L31
+
+L20:
+      getlex              QName(PackageNamespace(""), "stage")
+      dup
+      setlocal2
+
+      getproperty         QName(PackageNamespace(""), "frameRate")
+      increment
+      setlocal3
+
+      getlocal2
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "frameRate")
+
+      kill                3
+      kill                2
+L31:
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "xml")
+      pushstring          "FPS: "
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "fps")
+      add
+      pushstring          " / "
+      add
+      getlex              QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "frameRate")
+      add
+      setproperty         Multiname("fps", [PrivateNamespace(null, "Stats/instance#0"), ProtectedNamespace("Stats"), PrivateNamespace(null, "Stats/instance#1"), PackageNamespace(""), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("Stats"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "text")
+      getlocal0
+      getproperty         QName(ProtectedNamespace("Stats"), "xml")
+      setproperty         QName(PackageNamespace(""), "htmlText")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "Stats/instance#0"), "hex2css")
+   method
+    refid "Stats/instance/Stats/instance/hex2css"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "#"
+      getlocal1
+      pushbyte            16
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Stats/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

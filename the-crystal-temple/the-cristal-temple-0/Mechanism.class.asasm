@@ -1,0 +1,2865 @@
+class
+ refid "Mechanism"
+ instance QName(PackageNamespace(""), "Mechanism")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Mechanism")
+  iinit
+   refid "Mechanism/instance/init"
+   param QName(PackageNamespace(""), "Number")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageInternalNs(""), "_index")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PackageInternalNs(""), "Sensors")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PackageInternalNs(""), "Actuators")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PackageInternalNs(""), "eventSounds")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PackageInternalNs(""), "longSounds")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PackageInternalNs(""), "longSoundFlags")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PackageInternalNs(""), "allDevices")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PackageInternalNs(""), "mySoundChannels")
+
+     getlocal0
+     pushfalse
+     initproperty        QName(PackageInternalNs(""), "inputActive")
+
+     getlocal0
+     pushfalse
+     initproperty        QName(PackageInternalNs(""), "outputActive")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageInternalNs(""), "Sensors") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageInternalNs(""), "Actuators") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageInternalNs(""), "_index") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageInternalNs(""), "inputActive") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageInternalNs(""), "outputActive") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageInternalNs(""), "timedActive") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageInternalNs(""), "_value") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(PackageInternalNs(""), "master") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PackageInternalNs(""), "LEVER_SOUND") value Utf8("LeverSound") end
+  trait slot QName(PackageInternalNs(""), "PUSHER_SOUND") value Utf8("PusherSound") end
+  trait slot QName(PackageInternalNs(""), "LIGHT_PUSHER_SOUND") value Utf8("LPusherSound") end
+  trait slot QName(PackageInternalNs(""), "PLATFORM_SOUND") value Utf8("PlatformSound") end
+  trait slot QName(PackageInternalNs(""), "WIND_SOUND") value Utf8("WindSound") end
+  trait slot QName(PackageInternalNs(""), "INFINITE_SOUND") value Utf8("ClickSound") end
+  trait slot QName(PackageInternalNs(""), "PORTAL_LOOP_SOUND") value Utf8("PortalLoopSound") end
+  trait slot QName(PackageInternalNs(""), "PORTAL_OPEN_SOUND") value Utf8("PortalOpenSound") end
+  trait slot QName(PackageInternalNs(""), "PORTAL_CLOSED_SOUND") value Utf8("PortalCloseSound") end
+  trait slot QName(PackageInternalNs(""), "TIME_SOUND") value Utf8("ClockSound") end
+  trait slot QName(PackageInternalNs(""), "NULL_SOUND") value Utf8("") end
+  trait slot QName(PackageInternalNs(""), "eventSounds") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageInternalNs(""), "longSounds") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageInternalNs(""), "mySoundChannels") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageInternalNs(""), "longSoundFlags") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageInternalNs(""), "allDevices") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageInternalNs(""), "clickPlaying") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PackageInternalNs(""), "hasSlider") value False() end
+  trait slot QName(PackageInternalNs(""), "soundTimer") type QName(PackageNamespace("flash.utils"), "Timer") end
+  trait slot QName(PackageInternalNs(""), "soundAllowedThisFrame") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait method QName(PackageNamespace(""), "addDevice")
+   method
+    refid "Mechanism/instance/addDevice"
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("type", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushstring          "pusher"
+      equals
+      dup
+      iftrue              L13
+
+      pop
+      getlocal1
+      getproperty         Multiname("type", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushstring          "timedPusher"
+      equals
+L13:
+      dup
+      iftrue              L20
+
+      pop
+      getlocal1
+      getproperty         Multiname("type", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushstring          "lever"
+      equals
+L20:
+      dup
+      iftrue              L27
+
+      pop
+      getlocal1
+      getproperty         Multiname("type", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushstring          "mirrorSlider"
+      equals
+L27:
+      dup
+      iftrue              L34
+
+      pop
+      getlocal1
+      getproperty         Multiname("type", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushstring          "lightPusher"
+      equals
+L34:
+      iffalse             L40
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "Sensors")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      jump                L44
+
+L40:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "Actuators")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L44:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "NULL_SOUND")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "NULL_SOUND")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSoundFlags")
+      pushfalse
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      pushnull
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal1
+      getlocal0
+      setproperty         Multiname("myMechanism", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      jump                L202
+
+L70:
+      label
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "PUSHER_SOUND")
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      jump                L260
+
+L81:
+      label
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "LEVER_SOUND")
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      findpropstrict      QName(PackageNamespace("flash.media"), "SoundChannel")
+      constructprop       QName(PackageNamespace("flash.media"), "SoundChannel"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "TIME_SOUND")
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      jump                L260
+
+L110:
+      label
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "LEVER_SOUND")
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      jump                L260
+
+L121:
+      label
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "LIGHT_PUSHER_SOUND")
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      jump                L260
+
+L132:
+      label
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "PLATFORM_SOUND")
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      findpropstrict      QName(PackageNamespace("flash.media"), "SoundChannel")
+      constructprop       QName(PackageNamespace("flash.media"), "SoundChannel"), 0
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      jump                L260
+
+L152:
+      label
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "PLATFORM_SOUND")
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      jump                L260
+
+L163:
+      label
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "INFINITE_SOUND")
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      jump                L260
+
+L174:
+      label
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "WIND_SOUND")
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      jump                L260
+
+L185:
+      label
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "PORTAL_LOOP_SOUND")
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      jump                L260
+
+L196:
+      label
+      jump                L260
+
+      ; 0x10
+      ; 0xB4
+      ; 0x00
+      ; 0x00
+L202:
+      getlocal1
+      getproperty         Multiname("type", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      setlocal2
+
+      pushstring          "pusher"
+      getlocal2
+      ifstrictne          L210
+
+      pushbyte            0
+      jump                L258
+
+L210:
+      pushstring          "timedPusher"
+      getlocal2
+      ifstrictne          L215
+
+      pushbyte            1
+      jump                L258
+
+L215:
+      pushstring          "lever"
+      getlocal2
+      ifstrictne          L220
+
+      pushbyte            2
+      jump                L258
+
+L220:
+      pushstring          "lightPusher"
+      getlocal2
+      ifstrictne          L225
+
+      pushbyte            3
+      jump                L258
+
+L225:
+      pushstring          "slidePlatform"
+      getlocal2
+      ifstrictne          L230
+
+      pushbyte            4
+      jump                L258
+
+L230:
+      pushstring          "rotMirror"
+      getlocal2
+      ifstrictne          L235
+
+      pushbyte            5
+      jump                L258
+
+L235:
+      pushstring          "mirrorSlider"
+      getlocal2
+      ifstrictne          L240
+
+      pushbyte            6
+      jump                L258
+
+L240:
+      pushstring          "wind"
+      getlocal2
+      ifstrictne          L245
+
+      pushbyte            7
+      jump                L258
+
+L245:
+      pushstring          "portal"
+      getlocal2
+      ifstrictne          L250
+
+      pushbyte            8
+      jump                L258
+
+L250:
+      jump                L257
+
+      ; 0x24
+      ; 0x09
+      ; 0x10
+      ; 0x02
+      ; 0x00
+      ; 0x00
+L257:
+      pushbyte            9
+L258:
+      kill                2
+      lookupswitch        L196, [L70, L81, L110, L121, L132, L152, L163, L174, L185, L196]
+
+L260:
+      getlocal1
+      getproperty         Multiname("type", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushstring          "slidePlatform"
+      ifne                L294
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "hasSlider")
+      iffalse             L288
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "HAS SLIDER ALREADY"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "NULL_SOUND")
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      pushnull
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      jump                L291
+
+L288:
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "DOes NOT ÇHAS SLIDER"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+L291:
+      getlocal0
+      pushtrue
+      initproperty        QName(PackageInternalNs(""), "hasSlider")
+
+L294:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "checkState")
+   method
+    refid "Mechanism/instance/checkState"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      coerce_a
+      setlocal1
+
+      pushbyte            0
+      coerce_a
+      setlocal2
+
+      jump                L24
+
+L9:
+      label
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "Sensors")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      callproperty        QName(PackageNamespace(""), "checkSensorState"), 1
+      iffalse             L20
+
+      pushtrue
+      coerce_a
+      setlocal1
+
+L20:
+      getlocal2
+      increment
+      coerce_a
+      setlocal2
+
+L24:
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "Sensors")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L9
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "_index")
+      pushbyte            -1
+      ifne                L36
+
+      pushtrue
+      coerce_a
+      setlocal1
+
+L36:
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setState"), 1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "checkSensorState")
+   method
+    refid "Mechanism/instance/checkSensorState"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      jump                L40
+
+L3:
+      label
+      getlocal0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "checkPusher"), 1
+      returnvalue
+
+L8:
+      label
+      getlocal0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "checkTimedPusher"), 1
+      returnvalue
+
+L13:
+      label
+      getlocal0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "checkLever"), 1
+      returnvalue
+
+L18:
+      label
+      getlocal0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "checkLightPusher"), 1
+      returnvalue
+
+L23:
+      label
+      getlocal0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "checkMirrorSlider"), 1
+      returnvalue
+
+L28:
+      label
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "NOT SENSOR TYPE "
+      getlocal1
+      getproperty         Multiname("type", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      jump                L78
+
+      ; 0x10
+      ; 0x70
+      ; 0x00
+      ; 0x00
+L40:
+      getlocal1
+      getproperty         Multiname("type", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      setlocal2
+
+      pushstring          "pusher"
+      getlocal2
+      ifstrictne          L48
+
+      pushbyte            0
+      jump                L76
+
+L48:
+      pushstring          "timedPusher"
+      getlocal2
+      ifstrictne          L53
+
+      pushbyte            1
+      jump                L76
+
+L53:
+      pushstring          "lever"
+      getlocal2
+      ifstrictne          L58
+
+      pushbyte            2
+      jump                L76
+
+L58:
+      pushstring          "lightPusher"
+      getlocal2
+      ifstrictne          L63
+
+      pushbyte            3
+      jump                L76
+
+L63:
+      pushstring          "mirrorSlider"
+      getlocal2
+      ifstrictne          L68
+
+      pushbyte            4
+      jump                L76
+
+L68:
+      jump                L75
+
+      ; 0x24
+      ; 0x05
+      ; 0x10
+      ; 0x02
+      ; 0x00
+      ; 0x00
+L75:
+      pushbyte            5
+L76:
+      kill                2
+      lookupswitch        L28, [L3, L8, L13, L18, L23, L28]
+
+L78:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setState")
+   method
+    refid "Mechanism/instance/setState"
+    param QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal3
+
+      pushundefined
+      coerce_a
+      setlocal            4
+
+      pushfalse
+      coerce_a
+      setlocal2
+
+      getlocal1
+      convert_b
+      dup
+      iffalse             L19
+
+      pop
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "inputActive")
+      not
+L19:
+      iffalse             L30
+
+      getlocal0
+      pushtrue
+      initproperty        QName(PackageInternalNs(""), "inputActive")
+
+      getlocal0
+      pushtrue
+      initproperty        QName(PackageInternalNs(""), "outputActive")
+
+      pushtrue
+      coerce_a
+      setlocal2
+
+      jump                L69
+
+L30:
+      getlocal1
+      not
+      dup
+      iffalse             L38
+
+      pop
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "inputActive")
+      convert_b
+L38:
+      dup
+      iftrue              L56
+
+      pop
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "timedActive")
+      not
+      dup
+      iffalse             L50
+
+      pop
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "inputActive")
+      not
+L50:
+      dup
+      iffalse             L56
+
+      pop
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "outputActive")
+      convert_b
+L56:
+      iffalse             L69
+
+      getlocal0
+      pushfalse
+      initproperty        QName(PackageInternalNs(""), "inputActive")
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "timedActive")
+      iftrue              L66
+
+      getlocal0
+      pushfalse
+      initproperty        QName(PackageInternalNs(""), "outputActive")
+
+L66:
+      pushtrue
+      coerce_a
+      setlocal2
+
+L69:
+      getlocal2
+      iffalse             L144
+
+      pushbyte            0
+      coerce_a
+      setlocal3
+
+      jump                L86
+
+L75:
+      label
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "Actuators")
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      callpropvoid        QName(PackageNamespace(""), "setActuatorState"), 1
+
+      getlocal3
+      increment
+      coerce_a
+      setlocal3
+
+L86:
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "Actuators")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L75
+
+      pushbyte            0
+      coerce_a
+      setlocal            4
+
+      jump                L139
+
+L95:
+      label
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSoundFlags")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      iffalse             L117
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "STARTNG LONG SOUND "
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      add
+      pushstring          " AT "
+      add
+      getlocal            4
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlocal0
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "startSound"), 1
+
+      jump                L135
+
+L117:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "TIME_SOUND")
+      equals
+      not
+      dup
+      iftrue              L131
+
+      pop
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "timedActive")
+      not
+L131:
+      iffalse             L135
+
+      getlocal0
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "stopSound"), 1
+
+L135:
+      getlocal            4
+      increment
+      coerce_a
+      setlocal            4
+
+L139:
+      getlocal            4
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSoundFlags")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L95
+
+L144:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setActuatorState")
+   method
+    refid "Mechanism/instance/setActuatorState"
+    param QName(PackageNamespace(""), "Object")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      jump                L45
+
+L3:
+      label
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setSliderPlatform"), 1
+
+      jump                L88
+
+L8:
+      label
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setRotatingObject"), 1
+
+      jump                L88
+
+L13:
+      label
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setInfiniteMirror"), 1
+
+      jump                L88
+
+L18:
+      label
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setWind"), 1
+
+      jump                L88
+
+L23:
+      label
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setPortal"), 1
+
+      jump                L88
+
+L28:
+      label
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "setLightBeamer"), 1
+
+      jump                L88
+
+L33:
+      label
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "NOT ACTUATOR TYPE "
+      getlocal1
+      getproperty         Multiname("type", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      jump                L88
+
+      ; 0x10
+      ; 0x81
+      ; 0x00
+      ; 0x00
+L45:
+      getlocal1
+      getproperty         Multiname("type", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      setlocal2
+
+      pushstring          "slidePlatform"
+      getlocal2
+      ifstrictne          L53
+
+      pushbyte            0
+      jump                L86
+
+L53:
+      pushstring          "rotMirror"
+      getlocal2
+      ifstrictne          L58
+
+      pushbyte            1
+      jump                L86
+
+L58:
+      pushstring          "infiniteMirror"
+      getlocal2
+      ifstrictne          L63
+
+      pushbyte            2
+      jump                L86
+
+L63:
+      pushstring          "wind"
+      getlocal2
+      ifstrictne          L68
+
+      pushbyte            3
+      jump                L86
+
+L68:
+      pushstring          "portal"
+      getlocal2
+      ifstrictne          L73
+
+      pushbyte            4
+      jump                L86
+
+L73:
+      pushstring          "lightBeamer"
+      getlocal2
+      ifstrictne          L78
+
+      pushbyte            5
+      jump                L86
+
+L78:
+      jump                L85
+
+      ; 0x24
+      ; 0x06
+      ; 0x10
+      ; 0x02
+      ; 0x00
+      ; 0x00
+L85:
+      pushbyte            6
+L86:
+      kill                2
+      lookupswitch        L33, [L3, L8, L13, L18, L23, L28, L33]
+
+L88:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "playSound")
+   method
+    refid "Mechanism/instance/playSound"
+    param QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "MECHANISM: Play Sound "
+      getlocal1
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "soundTimer")
+      iftrue              L16
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.utils"), "Timer")
+      pushshort           200
+      pushbyte            0
+      constructprop       QName(PackageNamespace("flash.utils"), "Timer"), 2
+      initproperty        QName(PackageInternalNs(""), "soundTimer")
+
+L16:
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "soundTimer")
+      getproperty         QName(PackageNamespace(""), "running")
+      pushstring          " "
+      add
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "soundTimer")
+      getproperty         QName(PackageNamespace(""), "currentCount")
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "soundTimer")
+      getproperty         QName(PackageNamespace(""), "running")
+      not
+      dup
+      iftrue              L39
+
+      pop
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "soundTimer")
+      getproperty         QName(PackageNamespace(""), "currentCount")
+      pushbyte            0
+      greaterthan
+L39:
+      iffalse             L57
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "SOUND TIMeR ALLOWS"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "soundTimer")
+      callpropvoid        QName(PackageNamespace(""), "reset"), 0
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "soundTimer")
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+      getlocal0
+      pushtrue
+      initproperty        QName(PackageInternalNs(""), "soundAllowedThisFrame")
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "master")
+      getlocal1
+      callpropvoid        Multiname("playSound", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      jump                L83
+
+L57:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "soundAllowedThisFrame")
+      convert_b
+      dup
+      iffalse             L74
+
+      pop
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "PORTAL_CLOSED_SOUND")
+      equals
+      dup
+      iftrue              L74
+
+      pop
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "PORTAL_OPEN_SOUND")
+      equals
+L74:
+      iffalse             L80
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "master")
+      getlocal1
+      callpropvoid        Multiname("playSound", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      jump                L83
+
+L80:
+      getlocal0
+      pushfalse
+      initproperty        QName(PackageInternalNs(""), "soundAllowedThisFrame")
+
+L83:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "startSound")
+   method
+    refid "Mechanism/instance/startSound"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    optional Integer(0)
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      dup
+      setlocal            4
+
+      iffalse             L18
+
+      getlocal            4
+      callpropvoid        Multiname("stop", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+
+L18:
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "STARTing SOUND "
+      getlocal3
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "NULL_SOUND")
+      ifeq                L49
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "master")
+      getlocal            4
+      getlocal3
+      getlocal2
+      callproperty        Multiname("startSound", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 3
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal3
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "PORTAL_LOOP_SOUND")
+      ifne                L49
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      findpropstrict      QName(PackageNamespace("flash.media"), "SoundTransform")
+      pushbyte            0
+      constructprop       QName(PackageNamespace("flash.media"), "SoundTransform"), 1
+      setproperty         Multiname("soundTransform", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+L49:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "stopSound")
+   method
+    refid "Mechanism/instance/stopSound"
+    param QName(PackageNamespace(""), "int")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSounds")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      setlocal3
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "STOPing SOUND "
+      getlocal2
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlocal2
+      convert_b
+      dup
+      iffalse             L26
+
+      pop
+      getlocal3
+      convert_b
+L26:
+      iffalse             L34
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "STOPing SOUND for real"
+      getlocal2
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlocal3
+      callpropvoid        Multiname("stop", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+
+L34:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "checkPusher")
+   method
+    refid "Mechanism/instance/checkPusher"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("oldObject", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      setlocal2
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetPosition", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("y", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("originy", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      subtract
+      pushdouble          0.25
+      ifngt               L44
+
+      getlocal2
+      pushbyte            1
+      callpropvoid        Multiname("SetMotorSpeed", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal2
+      pushdouble          0.1
+      callpropvoid        Multiname("SetMaxMotorForce", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal1
+      getproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      iftrue              L35
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      callpropvoid        QName(PackageNamespace(""), "playSound"), 1
+
+L35:
+      getlocal1
+      pushtrue
+      setproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      pushtrue
+      returnvalue
+
+      ; 0x10
+      ; 0x4E
+      ; 0x00
+      ; 0x00
+L44:
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("IsSleeping", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      pushfalse
+      ifne                L77
+
+      getlocal2
+      pushbyte            2
+      callpropvoid        Multiname("SetMotorSpeed", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal2
+      pushbyte            1
+      callpropvoid        Multiname("SetMaxMotorForce", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal1
+      getproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      iffalse             L67
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      callpropvoid        QName(PackageNamespace(""), "playSound"), 1
+
+L67:
+      getlocal1
+      pushfalse
+      setproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      pushbyte            1
+      setproperty         Multiname("clicker", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      pushfalse
+      returnvalue
+
+L77:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "checkTimedPusher")
+   method
+    refid "Mechanism/instance/checkTimedPusher"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("oldObject", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      setlocal2
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("base", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getproperty         Multiname("msk", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("Time", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("delayTime", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      divide
+      setproperty         Multiname("scaleX", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("Time", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushbyte            0
+      ifngt               L40
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      dup
+      setlocal3
+
+      getproperty         Multiname("Time", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      decrement
+      setlocal            4
+
+      getlocal3
+      getlocal            4
+      setproperty         Multiname("Time", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      kill                4
+      kill                3
+L40:
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetPosition", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("y", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("originy", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      subtract
+      pushdouble          0.25
+      ifngt               L110
+
+      getlocal2
+      pushbyte            1
+      callpropvoid        Multiname("SetMotorSpeed", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal2
+      pushdouble          0.1
+      callpropvoid        Multiname("SetMaxMotorForce", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      pushbyte            -1
+      setproperty         Multiname("clicker", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal1
+      getproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      iftrue              L74
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      callpropvoid        QName(PackageNamespace(""), "playSound"), 1
+
+L74:
+      getlocal1
+      pushtrue
+      setproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("delayTime", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      setproperty         Multiname("Time", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      iffalse             L101
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      callpropvoid        Multiname("stop", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+
+L101:
+      getlocal0
+      pushfalse
+      initproperty        QName(PackageInternalNs(""), "timedActive")
+
+      pushtrue
+      returnvalue
+
+      ; 0x10
+      ; 0xD0
+      ; 0x00
+      ; 0x00
+L110:
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("Time", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushbyte            0
+      ifngt               L180
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("Time", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("delayTime", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      decrement
+      ifne                L156
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      iffalse             L142
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      callpropvoid        Multiname("stop", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+
+L142:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("delayTime", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushshort           1000
+      multiply
+      pushbyte            25
+      divide
+      callpropvoid        QName(PackageNamespace(""), "startSound"), 2
+
+L156:
+      getlocal1
+      getproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      iffalse             L168
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      callpropvoid        QName(PackageNamespace(""), "playSound"), 1
+
+L168:
+      getlocal1
+      pushfalse
+      setproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal0
+      pushtrue
+      initproperty        QName(PackageInternalNs(""), "timedActive")
+
+      pushfalse
+      returnvalue
+
+      ; 0x10
+      ; 0x44
+      ; 0x00
+      ; 0x00
+L180:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "timedActive")
+      pushtrue
+      ifne                L193
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      callpropvoid        QName(PackageNamespace(""), "playSound"), 1
+
+L193:
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("IsSleeping", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      pushfalse
+      ifne                L209
+
+      getlocal2
+      pushbyte            2
+      callpropvoid        Multiname("SetMotorSpeed", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal2
+      pushbyte            1
+      callpropvoid        Multiname("SetMaxMotorForce", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      pushbyte            1
+      setproperty         Multiname("clicker", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+L209:
+      getlocal0
+      pushfalse
+      initproperty        QName(PackageInternalNs(""), "timedActive")
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "checkLever")
+   method
+    refid "Mechanism/instance/checkLever"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("oldObject", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      setlocal2
+
+      getlocal2
+      callproperty        Multiname("GetJointAngle", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      pushbyte            0
+      ifngt               L14
+
+      getlocal2
+      pushbyte            3
+      callpropvoid        Multiname("SetMotorSpeed", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      jump                L17
+
+L14:
+      getlocal2
+      pushbyte            -3
+      callpropvoid        Multiname("SetMotorSpeed", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+L17:
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("onis", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushstring          "r"
+      equals
+      dup
+      iffalse             L30
+
+      pop
+      getlocal2
+      callproperty        Multiname("GetJointAngle", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      pushbyte            0
+      lessthan
+L30:
+      dup
+      iftrue              L46
+
+      pop
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("onis", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushstring          "l"
+      equals
+      dup
+      iffalse             L46
+
+      pop
+      getlocal2
+      callproperty        Multiname("GetJointAngle", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      pushbyte            0
+      greaterthan
+L46:
+      iffalse             L75
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      pushstring          "light"
+      callproperty        Multiname("getChildByName", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+      pushbyte            2
+      callpropvoid        Multiname("gotoAndStop", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal1
+      getproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      iftrue              L66
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      callpropvoid        QName(PackageNamespace(""), "playSound"), 1
+
+L66:
+      getlocal1
+      pushtrue
+      setproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      pushtrue
+      returnvalue
+
+      ; 0x10
+      ; 0x31
+      ; 0x00
+      ; 0x00
+L75:
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      pushstring          "light"
+      callproperty        Multiname("getChildByName", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+      pushbyte            1
+      callpropvoid        Multiname("gotoAndStop", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal1
+      getproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      iffalse             L94
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      callpropvoid        QName(PackageNamespace(""), "playSound"), 1
+
+L94:
+      getlocal1
+      pushfalse
+      setproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "checkLightPusher")
+   method
+    refid "Mechanism/instance/checkLightPusher"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("oldObject", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      setlocal2
+
+      pushfalse
+      coerce_a
+      setlocal3
+
+      getlocal2
+      getproperty         Multiname("activated", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushtrue
+      ifne                L36
+
+      getlocal2
+      getproperty         Multiname("light", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushtrue
+      setproperty         Multiname("visible", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      pushtrue
+      coerce_a
+      setlocal3
+
+      getlocal1
+      getproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      iftrue              L32
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      callpropvoid        QName(PackageNamespace(""), "playSound"), 1
+
+L32:
+      getlocal1
+      pushtrue
+      setproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      jump                L46
+
+L36:
+      getlocal1
+      pushfalse
+      setproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal2
+      getproperty         Multiname("light", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      pushfalse
+      coerce_a
+      setlocal3
+
+L46:
+      getlocal2
+      pushfalse
+      setproperty         Multiname("activated", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "checkMirrorSlider")
+   method
+    refid "Mechanism/instance/checkMirrorSlider"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("oldObject", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      setlocal2
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetPosition", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("y", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("originy", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      ifeq                L29
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetPosition", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("x", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("originy", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 2
+      pushbyte            0
+      callpropvoid        Multiname("SetXForm", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 2
+
+L29:
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetLinearVelocity", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      coerce_a
+      setlocal3
+
+      getlocal3
+      callproperty        Multiname("Length", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      pushbyte            1
+      ifngt               L42
+
+      getlocal2
+      pushbyte            15
+      callpropvoid        Multiname("SetMaxMotorForce", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      jump                L45
+
+L42:
+      getlocal2
+      pushbyte            5
+      callpropvoid        Multiname("SetMaxMotorForce", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+L45:
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getlocal3
+      callpropvoid        Multiname("SetLinearVelocity", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetPosition", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("x", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("originx", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      subtract
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("length", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      divide
+      getlex              QName(PackageNamespace(""), "Math")
+      getproperty         QName(PackageNamespace(""), "PI")
+      multiply
+      pushbyte            2
+      divide
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("shift", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      add
+      coerce_a
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "_value")
+      getlocal            4
+      ifeq                L114
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "CLICKLPALTYIN"
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "clickPlaying")
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "clickPlaying")
+      pushbyte            0
+      ifnle               L107
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "eventSounds")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      callpropvoid        QName(PackageNamespace(""), "playSound"), 1
+
+      getlocal0
+      pushbyte            3
+      initproperty        QName(PackageInternalNs(""), "clickPlaying")
+
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "waitForClick")
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 2
+
+L107:
+      getlocal0
+      getlocal            4
+      initproperty        QName(PackageInternalNs(""), "_value")
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "inputActive")
+      not
+      returnvalue
+
+L114:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "inputActive")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "waitForClick")
+   method
+    refid "Mechanism/instance/waitForClick"
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      dup
+      setlocal2
+
+      getproperty         QName(PackageInternalNs(""), "clickPlaying")
+      decrement_i
+      setlocal3
+
+      getlocal2
+      getlocal3
+      setproperty         QName(PackageInternalNs(""), "clickPlaying")
+
+      kill                3
+      kill                2
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "clickPlaying")
+      pushbyte            0
+      ifnle               L24
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "waitForClick")
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 2
+
+L24:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "checkToEndSliderSound")
+   method
+    refid "Mechanism/instance/checkToEndSliderSound"
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "slider running"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getproperty         Multiname("oldObject", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetLinearVelocity", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("x", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushbyte            2
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetLinearVelocity", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("y", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      add
+      bitxor
+      pushbyte            2
+      bitxor
+      callproperty        QName(PackageNamespace(""), "sqrt"), 1
+      pushbyte            0
+      ifne                L41
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      callpropvoid        QName(PackageNamespace(""), "stopSound"), 1
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "checkToEndSliderSound")
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 2
+
+L41:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "checkToEndRotateSound")
+   method
+    refid "Mechanism/instance/checkToEndRotateSound"
+    param null
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getproperty         Multiname("oldObject", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "rotater running "
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlocal2
+      callproperty        Multiname("GetJointAngle", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getlocal2
+      callproperty        Multiname("GetLowerLimit", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      lessequals
+      dup
+      iftrue              L23
+
+      pop
+      getlocal2
+      callproperty        Multiname("GetJointAngle", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getlocal2
+      callproperty        Multiname("GetUpperLimit", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      greaterequals
+L23:
+      iffalse             L38
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      callpropvoid        QName(PackageNamespace(""), "stopSound"), 1
+
+      getlocal1
+      getproperty         Multiname("target", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "checkToEndRotateSound")
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 2
+
+L38:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setSliderPlatform")
+   method
+    refid "Mechanism/instance/setSliderPlatform"
+    param QName(PackageNamespace(""), "Object")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("oldObject", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "outputActive")
+      iffalse             L31
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("bar", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushstring          "light"
+      callproperty        Multiname("getChildByName", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+      pushtrue
+      setproperty         Multiname("visible", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal2
+      pushbyte            -2
+      callpropvoid        Multiname("SetMotorSpeed", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      pushbyte            -1
+      pushbyte            0
+      constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 2
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetWorldCenter", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callpropvoid        Multiname("ApplyForce", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 2
+
+      jump                L52
+
+L31:
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("bar", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushstring          "light"
+      callproperty        Multiname("getChildByName", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal2
+      pushbyte            2
+      callpropvoid        Multiname("SetMotorSpeed", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      pushbyte            1
+      pushbyte            0
+      constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 2
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetWorldCenter", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callpropvoid        Multiname("ApplyForce", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 2
+
+L52:
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "---------SLIDER STARTED ---------------"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSoundFlags")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      callproperty        Multiname("hasEventListener", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+      iffalse             L80
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      callpropvoid        QName(PackageNamespace(""), "stopSound"), 1
+
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "checkToEndSliderSound")
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 2
+
+L80:
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "checkToEndSliderSound")
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setRotatingObject")
+   method
+    refid "Mechanism/instance/setRotatingObject"
+    param QName(PackageNamespace(""), "Object")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("oldObject", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "outputActive")
+      iffalse             L25
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("bar", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushstring          "light"
+      callproperty        Multiname("getChildByName", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+      pushbyte            2
+      callpropvoid        Multiname("gotoAndStop", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal2
+      pushbyte            2
+      callpropvoid        Multiname("SetMotorSpeed", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      pushbyte            1
+      callpropvoid        Multiname("ApplyTorque", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      jump                L40
+
+L25:
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getproperty         Multiname("bar", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushstring          "light"
+      callproperty        Multiname("getChildByName", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+      pushbyte            1
+      callpropvoid        Multiname("gotoAndStop", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal2
+      pushbyte            -2
+      callpropvoid        Multiname("SetMotorSpeed", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      pushbyte            -1
+      callpropvoid        Multiname("ApplyTorque", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+
+L40:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSoundFlags")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      callproperty        Multiname("hasEventListener", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 1
+      iffalse             L65
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      callpropvoid        QName(PackageNamespace(""), "stopSound"), 1
+
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "checkToEndRotateSound")
+      callpropvoid        Multiname("removeEventListener", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 2
+
+L65:
+      getlocal1
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "checkToEndRotateSound")
+      callpropvoid        Multiname("addEventListener", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setInfiniteMirror")
+   method
+    refid "Mechanism/instance/setInfiniteMirror"
+    param QName(PackageNamespace(""), "Object")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("oldObject", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      setlocal2
+
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getlocal2
+      callproperty        Multiname("GetUserData", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      callproperty        Multiname("GetPosition", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "_value")
+      callpropvoid        Multiname("SetXForm", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")]), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setWind")
+   method
+    refid "Mechanism/instance/setWind"
+    param QName(PackageNamespace(""), "Object")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("oldObject", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "outputActive")
+      iffalse             L21
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSoundFlags")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal2
+      pushtrue
+      setproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      jump                L32
+
+L21:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSoundFlags")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushfalse
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal2
+      pushfalse
+      setproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+L32:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setPortal")
+   method
+    refid "Mechanism/instance/setPortal"
+    param QName(PackageNamespace(""), "Object")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("oldObject", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "outputActive")
+      iffalse             L37
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "_index")
+      pushbyte            -1
+      equals
+      not
+      dup
+      iffalse             L20
+
+      pop
+      getlocal2
+      getproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      not
+L20:
+      iffalse             L25
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "PORTAL_OPEN_SOUND")
+      callpropvoid        QName(PackageNamespace(""), "playSound"), 1
+
+L25:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSoundFlags")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal2
+      pushtrue
+      setproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      jump                L64
+
+L37:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "_index")
+      pushbyte            -1
+      equals
+      not
+      dup
+      iffalse             L48
+
+      pop
+      getlocal2
+      getproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      convert_b
+L48:
+      iffalse             L53
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "PORTAL_CLOSED_SOUND")
+      callpropvoid        QName(PackageNamespace(""), "playSound"), 1
+
+L53:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSoundFlags")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushfalse
+      setproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal2
+      pushfalse
+      setproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+L64:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "killSounds")
+   method
+    refid "Mechanism/instance/killSounds"
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      coerce_a
+      setlocal1
+
+      jump                L14
+
+L6:
+      label
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "stopSound"), 1
+
+      getlocal1
+      increment
+      coerce_a
+      setlocal1
+
+L14:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "longSoundFlags")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L6
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setPortalVolume")
+   method
+    refid "Mechanism/instance/setPortalVolume"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      iffalse             L45
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getproperty         Multiname("soundTransform", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getproperty         Multiname("volume", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      getlocal1
+      ifeq                L45
+
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            0
+      getlocal1
+      pushdouble          1.5
+      multiply
+      pushdouble          0.5
+      subtract
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      coerce_a
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "mySoundChannels")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "allDevices")
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getproperty         MultinameL([PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      findpropstrict      QName(PackageNamespace("flash.media"), "SoundTransform")
+      getlocal3
+      constructprop       QName(PackageNamespace("flash.media"), "SoundTransform"), 1
+      setproperty         Multiname("soundTransform", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+L45:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setLightBeamer")
+   method
+    refid "Mechanism/instance/setLightBeamer"
+    param QName(PackageNamespace(""), "Object")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         Multiname("oldObject", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      coerce_a
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "outputActive")
+      iffalse             L17
+
+      getlocal2
+      pushtrue
+      setproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal2
+      getproperty         Multiname("glower", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushtrue
+      setproperty         Multiname("visible", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      jump                L24
+
+L17:
+      getlocal2
+      pushfalse
+      setproperty         Multiname("on", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+      getlocal2
+      getproperty         Multiname("glower", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+      pushfalse
+      setproperty         Multiname("visible", [PrivateNamespace(null, "Mechanism/instance#0"), PackageInternalNs(""), PackageNamespace(""), PrivateNamespace(null, "Mechanism/instance#1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Mechanism"), StaticProtectedNs("Mechanism")])
+
+L24:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Mechanism/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

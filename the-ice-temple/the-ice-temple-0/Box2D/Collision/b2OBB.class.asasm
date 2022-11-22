@@ -1,0 +1,60 @@
+class
+ refid "Box2D.Collision:b2OBB"
+ instance QName(PackageNamespace("Box2D.Collision"), "b2OBB")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision:b2OBB")
+  iinit
+   refid "Box2D.Collision:b2OBB/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22"), 0
+     initproperty        QName(PackageNamespace(""), "R")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "center")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "extents")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "R") type QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22") end
+  trait slot QName(PackageNamespace(""), "center") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "extents") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+ end ; instance
+ cinit
+  refid "Box2D.Collision:b2OBB/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

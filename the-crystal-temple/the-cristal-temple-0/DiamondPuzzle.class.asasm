@@ -1,0 +1,139 @@
+class
+ refid "DiamondPuzzle"
+ instance QName(PackageNamespace(""), "DiamondPuzzle")
+  extends QName(PackageNamespace("flash.display"), "MovieClip")
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("DiamondPuzzle")
+  iinit
+   refid "DiamondPuzzle/instance/init"
+   body
+    maxstack 9
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "addFrameScript")
+     pushbyte            0
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "frame1")
+     pushbyte            1
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "frame2")
+     pushbyte            2
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "frame3")
+     pushbyte            3
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "frame4")
+     callpropvoid        QName(PackageNamespace(""), "addFrameScript"), 8
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "Now") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageNamespace(""), "Glower") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageNamespace(""), "Time") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait method QName(PackageInternalNs(""), "frame1")
+   method
+    refid "DiamondPuzzle/instance/frame1"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "stop")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "frame2")
+   method
+    refid "DiamondPuzzle/instance/frame2"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "stop")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "frame3")
+   method
+    refid "DiamondPuzzle/instance/frame3"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "stop")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "frame4")
+   method
+    refid "DiamondPuzzle/instance/frame4"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "stop")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "DiamondPuzzle/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

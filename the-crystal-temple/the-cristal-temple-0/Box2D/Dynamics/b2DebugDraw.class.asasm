@@ -1,0 +1,767 @@
+class
+ refid "Box2D.Dynamics:b2DebugDraw"
+ instance QName(PackageNamespace("Box2D.Dynamics"), "b2DebugDraw")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics:b2DebugDraw")
+  iinit
+   refid "Box2D.Dynamics:b2DebugDraw/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_drawFlags")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "SetFlags")
+   method
+    refid "Box2D.Dynamics:b2DebugDraw/instance/SetFlags"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "m_drawFlags")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetFlags")
+   method
+    refid "Box2D.Dynamics:b2DebugDraw/instance/GetFlags"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawFlags")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "AppendFlags")
+   method
+    refid "Box2D.Dynamics:b2DebugDraw/instance/AppendFlags"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawFlags")
+      getlocal1
+      bitor
+      initproperty        QName(PackageNamespace(""), "m_drawFlags")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "ClearFlags")
+   method
+    refid "Box2D.Dynamics:b2DebugDraw/instance/ClearFlags"
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawFlags")
+      getlocal1
+      bitnot
+      bitand
+      initproperty        QName(PackageNamespace(""), "m_drawFlags")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "DrawPolygon")
+   method
+    refid "Box2D.Dynamics:b2DebugDraw/instance/DrawPolygon"
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace("Box2D.Common"), "b2Color")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_lineThickness")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "color")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_alpha")
+      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getproperty         Multiname("x", [PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getproperty         Multiname("y", [PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      pushbyte            1
+      setlocal            4
+
+      jump                L53
+
+L33:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getproperty         Multiname("x", [PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal1
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getproperty         Multiname("y", [PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      inclocal_i          4
+L53:
+      getlocal            4
+      getlocal2
+      iflt                L33
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getproperty         Multiname("x", [PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getproperty         Multiname("y", [PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "DrawSolidPolygon")
+   method
+    refid "Box2D.Dynamics:b2DebugDraw/instance/DrawSolidPolygon"
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace("Box2D.Common"), "b2Color")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_lineThickness")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "color")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_alpha")
+      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getproperty         Multiname("x", [PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getproperty         Multiname("y", [PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "color")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_fillAlpha")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+      pushbyte            1
+      setlocal            4
+
+      jump                L61
+
+L41:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getproperty         Multiname("x", [PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal1
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getproperty         Multiname("y", [PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      inclocal_i          4
+L61:
+      getlocal            4
+      getlocal2
+      iflt                L41
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getproperty         Multiname("x", [PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getproperty         Multiname("y", [PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#0"), PackageNamespace(""), PrivateNamespace(null, "Box2D.Dynamics:b2DebugDraw/instance#1"), PackageNamespace("Box2D.Dynamics"), PackageInternalNs("Box2D.Dynamics"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Collision"), PackageNamespace("Box2D.Collision.Shapes"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics:b2DebugDraw"), StaticProtectedNs("Box2D.Dynamics:b2DebugDraw")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "DrawCircle")
+   method
+    refid "Box2D.Dynamics:b2DebugDraw/instance/DrawCircle"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace("Box2D.Common"), "b2Color")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_lineThickness")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "color")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_alpha")
+      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "drawCircle"), 3
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "DrawSolidCircle")
+   method
+    refid "Box2D.Dynamics:b2DebugDraw/instance/DrawSolidCircle"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    param QName(PackageNamespace("Box2D.Common"), "b2Color")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_lineThickness")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "color")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_alpha")
+      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "color")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_fillAlpha")
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "drawCircle"), 3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal2
+      multiply
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal2
+      multiply
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "DrawSegment")
+   method
+    refid "Box2D.Dynamics:b2DebugDraw/instance/DrawSegment"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    param QName(PackageNamespace("Box2D.Common"), "b2Color")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_lineThickness")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "color")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_alpha")
+      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "DrawXForm")
+   method
+    refid "Box2D.Dynamics:b2DebugDraw/instance/DrawXForm"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2XForm")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_lineThickness")
+      pushint             16711680
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_alpha")
+      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_xformScale")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "R")
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_xformScale")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "R")
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_lineThickness")
+      pushint             65280
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_alpha")
+      callpropvoid        QName(PackageNamespace(""), "lineStyle"), 3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_sprite")
+      getproperty         QName(PackageNamespace(""), "graphics")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_xformScale")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "R")
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "position")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_xformScale")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "R")
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_drawScale")
+      multiply
+      callpropvoid        QName(PackageNamespace(""), "lineTo"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_drawFlags") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "m_sprite") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PackageNamespace(""), "m_drawScale") type QName(PackageNamespace(""), "Number") value Double(1) end
+  trait slot QName(PackageNamespace(""), "m_lineThickness") type QName(PackageNamespace(""), "Number") value Double(1) end
+  trait slot QName(PackageNamespace(""), "m_alpha") type QName(PackageNamespace(""), "Number") value Double(1) end
+  trait slot QName(PackageNamespace(""), "m_fillAlpha") type QName(PackageNamespace(""), "Number") value Double(1) end
+  trait slot QName(PackageNamespace(""), "m_xformScale") type QName(PackageNamespace(""), "Number") value Double(1) end
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics:b2DebugDraw/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "e_shapeBit")
+    pushbyte            1
+    setproperty         QName(PackageNamespace(""), "e_shapeBit")
+
+    findproperty        QName(PackageNamespace(""), "e_jointBit")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "e_jointBit")
+
+    findproperty        QName(PackageNamespace(""), "e_coreShapeBit")
+    pushbyte            4
+    setproperty         QName(PackageNamespace(""), "e_coreShapeBit")
+
+    findproperty        QName(PackageNamespace(""), "e_aabbBit")
+    pushbyte            8
+    setproperty         QName(PackageNamespace(""), "e_aabbBit")
+
+    findproperty        QName(PackageNamespace(""), "e_obbBit")
+    pushbyte            16
+    setproperty         QName(PackageNamespace(""), "e_obbBit")
+
+    findproperty        QName(PackageNamespace(""), "e_pairBit")
+    pushbyte            32
+    setproperty         QName(PackageNamespace(""), "e_pairBit")
+
+    findproperty        QName(PackageNamespace(""), "e_centerOfMassBit")
+    pushbyte            64
+    setproperty         QName(PackageNamespace(""), "e_centerOfMassBit")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "e_shapeBit") slotid 1 type QName(PackageNamespace(""), "uint") value Integer(1) end
+ trait slot QName(PackageNamespace(""), "e_jointBit") slotid 2 type QName(PackageNamespace(""), "uint") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "e_coreShapeBit") slotid 3 type QName(PackageNamespace(""), "uint") value Integer(4) end
+ trait slot QName(PackageNamespace(""), "e_aabbBit") slotid 4 type QName(PackageNamespace(""), "uint") value Integer(8) end
+ trait slot QName(PackageNamespace(""), "e_obbBit") slotid 5 type QName(PackageNamespace(""), "uint") value Integer(16) end
+ trait slot QName(PackageNamespace(""), "e_pairBit") slotid 6 type QName(PackageNamespace(""), "uint") value Integer(32) end
+ trait slot QName(PackageNamespace(""), "e_centerOfMassBit") slotid 7 type QName(PackageNamespace(""), "uint") value Integer(64) end
+end ; class

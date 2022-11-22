@@ -1,0 +1,54 @@
+class
+ refid "Box2D.Collision:ClipVertex"
+ instance QName(PackageNamespace("Box2D.Collision"), "ClipVertex")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision:ClipVertex")
+  iinit
+   refid "Box2D.Collision:ClipVertex/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "v")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("Box2D.Collision"), "b2ContactID")
+     constructprop       QName(PackageNamespace("Box2D.Collision"), "b2ContactID"), 0
+     initproperty        QName(PackageNamespace(""), "id")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "v") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "id") type QName(PackageNamespace("Box2D.Collision"), "b2ContactID") end
+ end ; instance
+ cinit
+  refid "Box2D.Collision:ClipVertex/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

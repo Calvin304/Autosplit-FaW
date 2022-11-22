@@ -1,0 +1,19 @@
+method
+ refid "Game/instance/GameOver/inline_method#1"
+ body
+  maxstack 2
+  localcount 1
+  initscopedepth 11
+  maxscopedepth 11
+  code
+   findpropstrict      QName(PackageNamespace(""), "RetryGame")
+   callpropvoid        QName(PackageNamespace(""), "RetryGame"), 0
+
+   findpropstrict      QName(PackageNamespace(""), "removeChild")
+   getlex              QName(PackageInternalNs(""), "GameOverBoard")
+   callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

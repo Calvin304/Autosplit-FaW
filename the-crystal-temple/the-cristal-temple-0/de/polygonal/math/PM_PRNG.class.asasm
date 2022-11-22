@@ -1,0 +1,191 @@
+class
+ refid "de.polygonal.math:PM_PRNG"
+ instance QName(PackageNamespace("de.polygonal.math"), "PM_PRNG")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("de.polygonal.math:PM_PRNG")
+  iinit
+   refid "de.polygonal.math:PM_PRNG/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     pushbyte            1
+     initproperty        QName(PackageNamespace(""), "seed")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "seed") type QName(PackageNamespace(""), "uint") end
+  trait method QName(PackageNamespace(""), "nextInt")
+   method
+    refid "de.polygonal.math:PM_PRNG/instance/nextInt"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callproperty        QName(PrivateNamespace(null, "de.polygonal.math:PM_PRNG/instance"), "gen"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextDouble")
+   method
+    refid "de.polygonal.math:PM_PRNG/instance/nextDouble"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callproperty        QName(PrivateNamespace(null, "de.polygonal.math:PM_PRNG/instance"), "gen"), 0
+      pushint             2147483647
+      divide
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextIntRange")
+   method
+    refid "de.polygonal.math:PM_PRNG/instance/nextIntRange"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      pushdouble          0.4999
+      subtract
+      convert_d
+      setlocal1
+
+      getlocal2
+      pushdouble          0.4999
+      add
+      convert_d
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal1
+      getlocal2
+      getlocal1
+      subtract
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "nextDouble"), 0
+      multiply
+      add
+      callproperty        QName(PackageNamespace(""), "round"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "nextDoubleRange")
+   method
+    refid "de.polygonal.math:PM_PRNG/instance/nextDoubleRange"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal2
+      getlocal1
+      subtract
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "nextDouble"), 0
+      multiply
+      add
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace(null, "de.polygonal.math:PM_PRNG/instance"), "gen")
+   method
+    refid "de.polygonal.math:PM_PRNG/instance/de.polygonal.math:PM_PRNG/instance/gen"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "seed")
+      pushshort           16807
+      multiply
+      pushint             2147483647
+      modulo
+      dup
+      setlocal1
+
+      initproperty        QName(PackageNamespace(""), "seed")
+
+      getlocal1
+      kill                1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "de.polygonal.math:PM_PRNG/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

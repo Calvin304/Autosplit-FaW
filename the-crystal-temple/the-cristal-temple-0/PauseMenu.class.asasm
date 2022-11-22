@@ -1,0 +1,943 @@
+class
+ refid "PauseMenu"
+ instance QName(PackageNamespace(""), "PauseMenu")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("PauseMenu")
+  iinit
+   refid "PauseMenu/instance/init"
+   body
+    maxstack 6
+    localcount 1
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "btn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "Show_Hide")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "ResumeBtn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "Show_Hide")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "Update")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 5
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "retryBtn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "RetryLevel")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "endGameBtn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "EndGame")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "playMoreBtn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "moreGames")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "retryBtn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "OverSounder")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "ResumeBtn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "OverSounder")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "endGameBtn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "OverSounder")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "playMoreBtn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "OverSounder")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "retryBtn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "ClickSounder")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "ResumeBtn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "ClickSounder")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "endGameBtn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "ClickSounder")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "playMoreBtn")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "ClickSounder")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.media"), "SoundTransform")
+     pushbyte            1
+     constructprop       QName(PackageNamespace("flash.media"), "SoundTransform"), 1
+     initproperty        QName(PackageInternalNs(""), "trans")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Over_Sound")
+     constructprop       QName(PackageNamespace(""), "Over_Sound"), 0
+     initproperty        QName(PackageInternalNs(""), "OverSound")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Pusher_Sound")
+     constructprop       QName(PackageNamespace(""), "Pusher_Sound"), 0
+     initproperty        QName(PackageInternalNs(""), "ClickSound")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "ResumeBtn") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageNamespace(""), "endGameBtn") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageNamespace(""), "playMoreBtn") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageNamespace(""), "RedCount") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "Tapper") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageNamespace(""), "btn") type QName(PackageNamespace("flash.display"), "SimpleButton") end
+  trait slot QName(PackageNamespace(""), "BlueCount") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "retryBtn") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageInternalNs(""), "MaxPos") type QName(PackageNamespace(""), "Number") value Integer(90) end
+  trait slot QName(PackageInternalNs(""), "MinPos") type QName(PackageNamespace(""), "Number") value Integer(480) end
+  trait slot QName(PackageInternalNs(""), "transition") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(PackageInternalNs(""), "acc") type QName(PackageNamespace(""), "Number") value Integer(-9) end
+  trait slot QName(PackageInternalNs(""), "v") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(PackageInternalNs(""), "ps") type QName(PackageNamespace(""), "level") end
+  trait slot QName(PackageInternalNs(""), "trans") type QName(PackageNamespace("flash.media"), "SoundTransform") end
+  trait slot QName(PackageInternalNs(""), "OverSound") type QName(PackageNamespace(""), "Over_Sound") end
+  trait slot QName(PackageInternalNs(""), "ClickSound") type QName(PackageNamespace(""), "Pusher_Sound") end
+  trait method QName(PackageNamespace(""), "OverSounder")
+   method
+    refid "PauseMenu/instance/OverSounder"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "OverSound")
+      pushbyte            0
+      pushbyte            1
+      callpropvoid        QName(PackageNamespace(""), "play"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "ClickSounder")
+   method
+    refid "PauseMenu/instance/ClickSounder"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "ClickSound")
+      pushbyte            0
+      pushbyte            1
+      callpropvoid        QName(PackageNamespace(""), "play"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "moreGames")
+   method
+    refid "PauseMenu/instance/moreGames"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "MoreGames"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "EndGame")
+   method
+    refid "PauseMenu/instance/EndGame"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "a"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      callpropvoid        QName(PackageNamespace(""), "EndGame"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "b"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "RetryLevel")
+   method
+    refid "PauseMenu/instance/RetryLevel"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "a"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "volume")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "MusicChannel")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      setproperty         QName(PackageNamespace(""), "soundTransform")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "MusicChannel")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "m_level")
+      getproperty         QName(PackageInternalNs(""), "CurrentMode")
+      pushstring          "speed"
+      ifne                L45
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "SpeedSound")
+      pushbyte            0
+      pushshort           999
+      callproperty        QName(PackageNamespace(""), "play"), 2
+      setproperty         QName(PackageInternalNs(""), "MusicChannel")
+
+      jump                L80
+
+L45:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "m_level")
+      getproperty         QName(PackageInternalNs(""), "CurrentMode")
+      pushstring          "dark"
+      ifne                L67
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "DarkSound")
+      pushbyte            0
+      pushshort           999
+      callproperty        QName(PackageNamespace(""), "play"), 2
+      setproperty         QName(PackageInternalNs(""), "MusicChannel")
+
+      jump                L80
+
+L67:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "AdvSound")
+      pushbyte            0
+      pushshort           999
+      callproperty        QName(PackageNamespace(""), "play"), 2
+      setproperty         QName(PackageInternalNs(""), "MusicChannel")
+
+L80:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      callpropvoid        QName(PackageNamespace(""), "RetryGame"), 0
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "b"
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "Show_Hide")
+   method
+    refid "PauseMenu/instance/Show_Hide"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "BlueCount")
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      pushstring          "m_level"
+      callproperty        QName(PackageNamespace(""), "getChildByName"), 1
+      getlex              QName(PackageNamespace(""), "level")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "myContactListener")
+      getproperty         QName(PackageNamespace(""), "BlueCount")
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "RedCount")
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      pushstring          "m_level"
+      callproperty        QName(PackageNamespace(""), "getChildByName"), 1
+      getlex              QName(PackageNamespace(""), "level")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "myContactListener")
+      getproperty         QName(PackageNamespace(""), "RedCount")
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      pushstring          "m_level"
+      callproperty        QName(PackageNamespace(""), "getChildByName"), 1
+      getlex              QName(PackageNamespace(""), "level")
+      astypelate
+      getproperty         QName(PackageNamespace(""), "ended")
+      pushfalse
+      ifne                L51
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MaxPos")
+      pushshort           300
+      add
+      ifngt               L48
+
+      getlocal0
+      pushbyte            1
+      initproperty        QName(PackageInternalNs(""), "transition")
+
+      jump                L51
+
+L48:
+      getlocal0
+      pushbyte            -1
+      initproperty        QName(PackageInternalNs(""), "transition")
+
+L51:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "Update")
+   method
+    refid "PauseMenu/instance/Update"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      pushundefined
+      coerce_a
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "transition")
+      pushbyte            1
+      ifne                L166
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      getproperty         QName(PackageNamespace(""), "volume")
+      pushdouble          0.1
+      subtract
+      pushdouble          0.2
+      ifnge               L25
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      getproperty         QName(PackageNamespace(""), "volume")
+      pushdouble          0.1
+      subtract
+      setproperty         QName(PackageNamespace(""), "volume")
+
+      jump                L29
+
+L25:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      pushdouble          0.2
+      setproperty         QName(PackageNamespace(""), "volume")
+
+L29:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "MusicChannel")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      setproperty         QName(PackageNamespace(""), "soundTransform")
+
+      pushbyte            0
+      coerce_a
+      setlocal2
+
+      jump                L57
+
+L41:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "m_level")
+      getproperty         QName(PackageInternalNs(""), "windChannels")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "PauseMenu/instance/Update#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs(""), PrivateNamespace(null, "PauseMenu/instance/Update#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.ui"), ProtectedNamespace("PauseMenu"), StaticProtectedNs("PauseMenu"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      setproperty         Multiname("soundTransform", [PrivateNamespace(null, "PauseMenu/instance/Update#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs(""), PrivateNamespace(null, "PauseMenu/instance/Update#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.ui"), ProtectedNamespace("PauseMenu"), StaticProtectedNs("PauseMenu"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal2
+      increment
+      coerce_a
+      setlocal2
+
+L57:
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "m_level")
+      getproperty         QName(PackageInternalNs(""), "windChannels")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L41
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      pushstring          "m_level"
+      callproperty        QName(PackageNamespace(""), "getChildByName"), 1
+      getlex              QName(PackageNamespace(""), "level")
+      astypelate
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "pause")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MaxPos")
+      pushbyte            100
+      add
+      ifngt               L92
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MaxPos")
+      subtract
+      negate
+      pushbyte            20
+      divide
+      initproperty        QName(PackageInternalNs(""), "acc")
+
+      jump                L102
+
+L92:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MaxPos")
+      subtract
+      negate
+      pushbyte            10
+      divide
+      initproperty        QName(PackageInternalNs(""), "acc")
+
+L102:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "acc")
+      add
+      initproperty        QName(PackageInternalNs(""), "v")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MaxPos")
+      pushbyte            100
+      add
+      ifngt               L130
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      pushdouble          0.8
+      multiply
+      initproperty        QName(PackageInternalNs(""), "v")
+
+      jump                L136
+
+L130:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      pushdouble          0.6
+      multiply
+      initproperty        QName(PackageInternalNs(""), "v")
+
+L136:
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MaxPos")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      callproperty        QName(PackageNamespace(""), "abs"), 1
+      pushdouble          0.2
+      lessthan
+      dup
+      iffalse             L154
+
+      pop
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      callproperty        QName(PackageNamespace(""), "abs"), 1
+      pushdouble          0.2
+      lessthan
+L154:
+      iffalse             L166
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MaxPos")
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PackageInternalNs(""), "transition")
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      pushdouble          0.2
+      setproperty         QName(PackageNamespace(""), "volume")
+
+L166:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "transition")
+      pushbyte            -1
+      ifne                L336
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      getproperty         QName(PackageNamespace(""), "volume")
+      pushdouble          0.1
+      add
+      pushbyte            1
+      ifnle               L186
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      getproperty         QName(PackageNamespace(""), "volume")
+      pushdouble          0.1
+      add
+      setproperty         QName(PackageNamespace(""), "volume")
+
+      jump                L190
+
+L186:
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "volume")
+
+L190:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "MusicChannel")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      setproperty         QName(PackageNamespace(""), "soundTransform")
+
+      pushbyte            0
+      coerce_a
+      setlocal2
+
+      jump                L218
+
+L202:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "m_level")
+      getproperty         QName(PackageInternalNs(""), "windChannels")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace(null, "PauseMenu/instance/Update#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs(""), PrivateNamespace(null, "PauseMenu/instance/Update#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.ui"), ProtectedNamespace("PauseMenu"), StaticProtectedNs("PauseMenu"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      setproperty         Multiname("soundTransform", [PrivateNamespace(null, "PauseMenu/instance/Update#0"), PackageNamespace(""), PackageNamespace("flash.events"), PackageInternalNs(""), PrivateNamespace(null, "PauseMenu/instance/Update#1"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("flash.ui"), ProtectedNamespace("PauseMenu"), StaticProtectedNs("PauseMenu"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal2
+      increment
+      coerce_a
+      setlocal2
+
+L218:
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      getlex              QName(PackageNamespace(""), "Game")
+      astypelate
+      getproperty         QName(PackageInternalNs(""), "m_level")
+      getproperty         QName(PackageInternalNs(""), "windChannels")
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L202
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      pushstring          "m_level"
+      callproperty        QName(PackageNamespace(""), "getChildByName"), 1
+      getlex              QName(PackageNamespace(""), "level")
+      astypelate
+      getproperty         QName(PackageNamespace(""), "ended")
+      pushfalse
+      ifne                L244
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parent")
+      pushstring          "m_level"
+      callproperty        QName(PackageNamespace(""), "getChildByName"), 1
+      getlex              QName(PackageNamespace(""), "level")
+      astypelate
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "pause")
+
+L244:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MinPos")
+      pushbyte            100
+      subtract
+      ifnlt               L262
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MinPos")
+      subtract
+      negate
+      pushbyte            20
+      divide
+      initproperty        QName(PackageInternalNs(""), "acc")
+
+      jump                L272
+
+L262:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MinPos")
+      subtract
+      negate
+      pushbyte            10
+      divide
+      initproperty        QName(PackageInternalNs(""), "acc")
+
+L272:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "acc")
+      add
+      initproperty        QName(PackageInternalNs(""), "v")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MinPos")
+      pushbyte            100
+      subtract
+      ifnlt               L300
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      pushdouble          0.8
+      multiply
+      initproperty        QName(PackageInternalNs(""), "v")
+
+      jump                L306
+
+L300:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      pushdouble          0.6
+      multiply
+      initproperty        QName(PackageInternalNs(""), "v")
+
+L306:
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MinPos")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      callproperty        QName(PackageNamespace(""), "abs"), 1
+      pushdouble          0.2
+      lessthan
+      dup
+      iffalse             L324
+
+      pop
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "v")
+      callproperty        QName(PackageNamespace(""), "abs"), 1
+      pushdouble          0.2
+      lessthan
+L324:
+      iffalse             L336
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "MinPos")
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PackageInternalNs(""), "transition")
+
+      getlocal0
+      getproperty         QName(PackageInternalNs(""), "trans")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "volume")
+
+L336:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "Tapper")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y")
+      negate
+      pushshort           240
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "Tapper")
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y")
+      pushbyte            90
+      subtract
+      pushshort           390
+      divide
+      subtract
+      callproperty        QName(PackageNamespace(""), "abs"), 1
+      setproperty         QName(PackageNamespace(""), "alpha")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "PauseMenu/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

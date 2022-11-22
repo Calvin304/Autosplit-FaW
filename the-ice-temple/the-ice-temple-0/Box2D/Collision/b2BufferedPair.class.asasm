@@ -1,0 +1,44 @@
+class
+ refid "Box2D.Collision:b2BufferedPair"
+ instance QName(PackageNamespace("Box2D.Collision"), "b2BufferedPair")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision:b2BufferedPair")
+  iinit
+   refid "Box2D.Collision:b2BufferedPair/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "proxyId1") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "proxyId2") type QName(PackageNamespace(""), "uint") end
+ end ; instance
+ cinit
+  refid "Box2D.Collision:b2BufferedPair/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,67 @@
+class
+ refid "DiamondSpeedFlat"
+ instance QName(PackageNamespace(""), "DiamondSpeedFlat")
+  extends QName(PackageNamespace("flash.display"), "MovieClip")
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("DiamondSpeedFlat")
+  iinit
+   refid "DiamondSpeedFlat/instance/init"
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "addFrameScript")
+     pushbyte            0
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "frame1")
+     callpropvoid        QName(PackageNamespace(""), "addFrameScript"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageInternalNs(""), "frame1")
+   method
+    refid "DiamondSpeedFlat/instance/frame1"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "stop")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "DiamondSpeedFlat/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

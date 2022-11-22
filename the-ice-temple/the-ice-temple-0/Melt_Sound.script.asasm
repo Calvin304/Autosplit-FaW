@@ -1,0 +1,37 @@
+script
+ sinit
+  refid "Melt_Sound/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Melt_Sound", [PackageNamespace("")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.media"), "Sound")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.media"), "Sound")
+    newclass            "Melt_Sound"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace(""), "Melt_Sound")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(""), "Melt_Sound")
+  #include "Melt_Sound.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,62 @@
+class
+ refid "Box2D.Dynamics.Joints:b2GearJointDef"
+ instance QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2GearJointDef")
+  extends QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointDef")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics.Joints:b2GearJointDef")
+  iinit
+   refid "Box2D.Dynamics.Joints:b2GearJointDef/instance/init"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "type")
+     getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint")
+     getproperty         QName(PackageNamespace(""), "e_gearJoint")
+     initproperty        QName(PackageNamespace(""), "type")
+
+     getlocal0
+     pushnull
+     initproperty        QName(PackageNamespace(""), "joint1")
+
+     getlocal0
+     pushnull
+     initproperty        QName(PackageNamespace(""), "joint2")
+
+     getlocal0
+     pushbyte            1
+     initproperty        QName(PackageNamespace(""), "ratio")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "joint1") type QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint") end
+  trait slot QName(PackageNamespace(""), "joint2") type QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2Joint") end
+  trait slot QName(PackageNamespace(""), "ratio") type QName(PackageNamespace(""), "Number") end
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics.Joints:b2GearJointDef/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

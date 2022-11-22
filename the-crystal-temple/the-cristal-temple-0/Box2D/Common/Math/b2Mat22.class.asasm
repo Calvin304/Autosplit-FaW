@@ -1,0 +1,646 @@
+class
+ refid "Box2D.Common.Math:b2Mat22"
+ instance QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Common.Math:b2Mat22")
+  iinit
+   refid "Box2D.Common.Math:b2Mat22/instance/init"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+   param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Null()
+   optional Null()
+   body
+    maxstack 2
+    localcount 6
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushnan
+     setlocal            4
+
+     pushnan
+     setlocal            5
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "col1")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     initproperty        QName(PackageNamespace(""), "col2")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     pushnull
+     equals
+     not
+     dup
+     iffalse             L27
+
+     pop
+     getlocal3
+     pushnull
+     equals
+     not
+L27:
+     iffalse             L37
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "col1")
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "SetV"), 1
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "col2")
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "SetV"), 1
+
+     jump                L64
+
+L37:
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "cos"), 1
+     convert_d
+     setlocal            4
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "sin"), 1
+     convert_d
+     setlocal            5
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "col1")
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "col2")
+     getlocal            5
+     negate
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "col1")
+     getlocal            5
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "col2")
+     getlocal            4
+     setproperty         QName(PackageNamespace(""), "y")
+
+L64:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "Set")
+   method
+    refid "Box2D.Common.Math:b2Mat22/instance/Set"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "cos"), 1
+      convert_d
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "sin"), 1
+      convert_d
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      getlocal3
+      negate
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      getlocal3
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SetVV")
+   method
+    refid "Box2D.Common.Math:b2Mat22/instance/SetVV"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "SetV"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "SetV"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "Copy")
+   method
+    refid "Box2D.Common.Math:b2Mat22/instance/Copy"
+    returns QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      pushbyte            0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SetM")
+   method
+    refid "Box2D.Common.Math:b2Mat22/instance/SetM"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col1")
+      callpropvoid        QName(PackageNamespace(""), "SetV"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col2")
+      callpropvoid        QName(PackageNamespace(""), "SetV"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "AddM")
+   method
+    refid "Box2D.Common.Math:b2Mat22/instance/AddM"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SetIdentity")
+   method
+    refid "Box2D.Common.Math:b2Mat22/instance/SetIdentity"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      pushdouble          0
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      pushdouble          0
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SetZero")
+   method
+    refid "Box2D.Common.Math:b2Mat22/instance/SetZero"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      pushdouble          0
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      pushdouble          0
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      pushdouble          0
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      pushdouble          0
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "GetAngle")
+   method
+    refid "Box2D.Common.Math:b2Mat22/instance/GetAngle"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      callproperty        QName(PackageNamespace(""), "atan2"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "Invert")
+   method
+    refid "Box2D.Common.Math:b2Mat22/instance/Invert"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+    returns QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+    body
+     maxstack 3
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal2
+
+      pushnan
+      setlocal            4
+
+      pushnan
+      setlocal            6
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+      setlocal            5
+
+      getlocal2
+      getlocal            5
+      multiply
+      getlocal3
+      getlocal            4
+      multiply
+      subtract
+      convert_d
+      setlocal            6
+
+      pushbyte            1
+      getlocal            6
+      divide
+      convert_d
+      setlocal            6
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col1")
+      getlocal            6
+      getlocal            5
+      multiply
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col2")
+      getlocal            6
+      negate
+      getlocal3
+      multiply
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col1")
+      getlocal            6
+      negate
+      getlocal            4
+      multiply
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "col2")
+      getlocal            6
+      getlocal2
+      multiply
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "Solve")
+   method
+    refid "Box2D.Common.Math:b2Mat22/instance/Solve"
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    body
+     maxstack 5
+     localcount 9
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+      setlocal            5
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+      setlocal            6
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+      setlocal            7
+
+      getlocal            4
+      getlocal            7
+      multiply
+      getlocal            5
+      getlocal            6
+      multiply
+      subtract
+      convert_d
+      setlocal            8
+
+      pushbyte            1
+      getlocal            8
+      divide
+      convert_d
+      setlocal            8
+
+      getlocal1
+      getlocal            8
+      getlocal            7
+      getlocal2
+      multiply
+      getlocal            5
+      getlocal3
+      multiply
+      subtract
+      multiply
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal1
+      getlocal            8
+      getlocal            4
+      getlocal3
+      multiply
+      getlocal            6
+      getlocal2
+      multiply
+      subtract
+      multiply
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "Abs")
+   method
+    refid "Box2D.Common.Math:b2Mat22/instance/Abs"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col1")
+      callpropvoid        QName(PackageNamespace(""), "Abs"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "col2")
+      callpropvoid        QName(PackageNamespace(""), "Abs"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "col1") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+  trait slot QName(PackageNamespace(""), "col2") type QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2") end
+ end ; instance
+ cinit
+  refid "Box2D.Common.Math:b2Mat22/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

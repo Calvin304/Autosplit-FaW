@@ -1,0 +1,302 @@
+class
+ refid "Box2D.Collision.Shapes:b2PolygonDef"
+ instance QName(PackageNamespace("Box2D.Collision.Shapes"), "b2PolygonDef")
+  extends QName(PackageNamespace("Box2D.Collision.Shapes"), "b2ShapeDef")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef")
+  iinit
+   refid "Box2D.Collision.Shapes:b2PolygonDef/instance/init"
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxPolygonVertices")
+     constructprop       QName(PackageNamespace(""), "Array"), 1
+     initproperty        QName(PackageNamespace(""), "vertices")
+
+     getlocal0
+     constructsuper      0
+
+     findproperty        QName(PackageNamespace(""), "type")
+     getlex              QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+     getproperty         QName(PackageNamespace(""), "e_polygonShape")
+     initproperty        QName(PackageNamespace(""), "type")
+
+     getlocal0
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "vertexCount")
+
+     pushbyte            0
+     setlocal1
+
+     jump                L28
+
+L20:
+     label
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "vertices")
+     getlocal1
+     findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2"), 0
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")])
+
+     inclocal_i          1
+L28:
+     getlocal1
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_maxPolygonVertices")
+     iflt                L20
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "SetAsBox")
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonDef/instance/SetAsBox"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushbyte            4
+      initproperty        QName(PackageNamespace(""), "vertexCount")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vertices")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")])
+      getlocal1
+      negate
+      getlocal2
+      negate
+      callpropvoid        Multiname("Set", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")]), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vertices")
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")])
+      getlocal1
+      getlocal2
+      negate
+      callpropvoid        Multiname("Set", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")]), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vertices")
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")])
+      getlocal1
+      getlocal2
+      callpropvoid        Multiname("Set", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")]), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vertices")
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")])
+      getlocal1
+      negate
+      getlocal2
+      callpropvoid        Multiname("Set", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")]), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SetAsOrientedBox")
+   method
+    refid "Box2D.Collision.Shapes:b2PolygonDef/instance/SetAsOrientedBox"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional Double(0)
+    body
+     maxstack 5
+     localcount 8
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            6
+
+      pushbyte            0
+      setlocal            7
+
+      getlocal0
+      pushbyte            4
+      initproperty        QName(PackageNamespace(""), "vertexCount")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vertices")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")])
+      getlocal1
+      negate
+      getlocal2
+      negate
+      callpropvoid        Multiname("Set", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")]), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vertices")
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")])
+      getlocal1
+      getlocal2
+      negate
+      callpropvoid        Multiname("Set", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")]), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vertices")
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")])
+      getlocal1
+      getlocal2
+      callpropvoid        Multiname("Set", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")]), 2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vertices")
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")])
+      getlocal1
+      negate
+      getlocal2
+      callpropvoid        Multiname("Set", [PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")]), 2
+
+      getlocal3
+      iffalse             L110
+
+      getlocal3
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            5
+
+      getlex              QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), "s_mat")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      dup
+      setlocal            6
+
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "Set"), 1
+
+      pushbyte            0
+      setlocal            7
+
+      jump                L106
+
+L59:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vertices")
+      getlocal            7
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), PackageNamespace("Box2D.Common.Math"), PackageNamespace(""), PackageNamespace("Box2D.Common"), PackageNamespace("Box2D.Collision.Shapes"), PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef/instance"), PackageInternalNs("Box2D.Collision.Shapes"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2PolygonDef"), StaticProtectedNs("Box2D.Collision.Shapes:b2ShapeDef")])
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal3
+
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      add
+      convert_d
+      setlocal1
+
+      getlocal3
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal3
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "x")
+
+      inclocal_i          7
+L106:
+      getlocal            7
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "vertexCount")
+      iflt                L59
+
+L110:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "vertices") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "vertexCount") type QName(PackageNamespace(""), "int") end
+ end ; instance
+ cinit
+  refid "Box2D.Collision.Shapes:b2PolygonDef/class/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), "s_mat")
+    findpropstrict      QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+    constructprop       QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22"), 0
+    setproperty         QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), "s_mat")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace(null, "Box2D.Collision.Shapes:b2PolygonDef"), "s_mat") slotid 1 type QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22") end
+end ; class

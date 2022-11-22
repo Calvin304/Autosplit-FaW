@@ -1,0 +1,56 @@
+method
+ refid "orphan_method_1"
+ param QName(PackageNamespace("flash.events"), "Event")
+ returns QName(PackageNamespace(""), "void")
+ body
+  maxstack 5
+  localcount 2
+  initscopedepth 10
+  maxscopedepth 11
+  code
+   getlocal0
+   pushscope
+
+   getlex              QName(PackageNamespace(""), "stage")
+   pushfalse
+   setproperty         QName(PackageNamespace(""), "stageFocusRect")
+
+   getlex              QName(PackageNamespace(""), "stage")
+   pushbyte            25
+   setproperty         QName(PackageNamespace(""), "frameRate")
+
+   getlex              QName(PackageNamespace("com.miniclip"), "MiniclipGameManager")
+   getlex              QName(PackageNamespace("com.miniclip.events"), "GameManagerEvent")
+   getproperty         QName(PackageNamespace(""), "GAME_READY")
+   getlocal0
+   getproperty         QName(PackageInternalNs(""), "handleGameManagerReady")
+   callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "removeEventListener"), 2
+
+   getlex              QName(PackageNamespace("com.miniclip"), "MiniclipGameManager")
+   getproperty         QName(Namespace("com.miniclip.gamemanager:GameManager"), "services")
+   callproperty        QName(Namespace("com.miniclip.gamemanager:GameServices"), "validateLocation"), 0
+   iffalse             L21
+
+   getlocal0
+   callpropvoid        QName(PackageNamespace(""), "GameReady"), 0
+
+   jump                L32
+
+L21:
+   getlocal0
+   getlocal0
+   getproperty         QName(PackageNamespace(""), "x")
+   pushint             100000
+   getlex              QName(PackageNamespace(""), "Math")
+   callproperty        QName(PackageNamespace(""), "random"), 0
+   pushshort           10234
+   multiply
+   add
+   add
+   setproperty         QName(PackageNamespace(""), "x")
+
+L32:
+   returnvoid
+  end ; code
+ end ; body
+end ; method

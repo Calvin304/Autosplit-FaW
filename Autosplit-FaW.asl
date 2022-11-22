@@ -25,10 +25,22 @@ state("flashplayer_32_sa", "Fireboy and Watergirl 2 - The Light Temple") {
     uint ended : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0x88, 0x60; 
     uint deadFire : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0x88, 0xD4, 0x10;
     uint deadWater : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0x88, 0xDD4, 0x14;
-
 }
 
-//state("flashplayer_32_sa", "Fireboy and Watergirl 3 - The Ice Temple") {}
+state("flashplayer_32_sa", "Fireboy and Watergirl 3 - The Ice Temple") {
+    //game at [[[[["flashplayer_32_sa.exe"+0x00D18438] + 0xFC] + 0x1F0] + 0x38] + 0x9C]
+    //double cur_node : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, /* unknown */;
+
+    //the following are actually pointers but we only care about when they get overwriten
+    uint m_intromenu : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0x90;
+    uint m_transition : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0x98;
+     
+    //the following are actually bool with 31 bits of padding 
+    uint ended : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0x78, 0x60; 
+    uint deadFire : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0x78, 0xE8, 0x10;
+    uint deadWater : "flashplayer_32_sa.exe", 0x00D18438, 0xFC, 0x1F0, 0x38, 0x9C, 0x78, 0xE8, 0x14;
+}
+
 //state("flashplayer_32_sa", "Fireboy and Watergirl 4 - The Crystal Temple") {}
 
 init {
@@ -60,8 +72,5 @@ split {
 }
 
 reset {
-
     return current.m_intromenu != old.m_intromenu;
-
-    
 }

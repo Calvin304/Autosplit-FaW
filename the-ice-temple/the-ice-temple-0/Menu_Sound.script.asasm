@@ -1,0 +1,37 @@
+script
+ sinit
+  refid "Menu_Sound/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Menu_Sound", [PackageNamespace("")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.media"), "Sound")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.media"), "Sound")
+    newclass            "Menu_Sound"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace(""), "Menu_Sound")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(""), "Menu_Sound")
+  #include "Menu_Sound.class.asasm"
+ end ; trait
+end ; script

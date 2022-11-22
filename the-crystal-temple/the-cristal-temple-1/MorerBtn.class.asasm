@@ -1,0 +1,203 @@
+class
+ refid "MorerBtn"
+ instance QName(PackageNamespace(""), "MorerBtn")
+  extends QName(PackageNamespace("flash.display"), "MovieClip")
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("MorerBtn")
+  iinit
+   refid "MorerBtn/instance/init"
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "addFrameScript")
+     pushbyte            0
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "frame1")
+     callpropvoid        QName(PackageNamespace(""), "addFrameScript"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "txt") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "txt2") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait method QName(PackageNamespace(""), "mouseDownHandler")
+   method
+    refid "MorerBtn/instance/mouseDownHandler"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushdouble          0.95
+      setproperty         QName(PackageNamespace(""), "scaleX")
+
+      getlocal0
+      pushdouble          0.95
+      setproperty         QName(PackageNamespace(""), "scaleY")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "mouseUpHandler")
+   method
+    refid "MorerBtn/instance/mouseUpHandler"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "scaleX")
+
+      getlocal0
+      pushbyte            1
+      setproperty         QName(PackageNamespace(""), "scaleY")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "mouseOverHandler")
+   method
+    refid "MorerBtn/instance/mouseOverHandler"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "txt2")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "mouseOutHandler")
+   method
+    refid "MorerBtn/instance/mouseOutHandler"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "txt2")
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "visible")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "frame1")
+   method
+    refid "MorerBtn/instance/frame1"
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "txt2")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "txt")
+      getproperty         QName(PackageNamespace(""), "text")
+      setproperty         QName(PackageNamespace(""), "text")
+
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_DOWN")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "mouseDownHandler")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_UP")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "mouseUpHandler")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_OVER")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "mouseOverHandler")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlocal0
+      getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+      getproperty         QName(PackageNamespace(""), "MOUSE_OUT")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "mouseOutHandler")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "MorerBtn/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

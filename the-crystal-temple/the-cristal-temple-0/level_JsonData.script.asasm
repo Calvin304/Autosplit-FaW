@@ -1,0 +1,37 @@
+script
+ sinit
+  refid "level_JsonData/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("level_JsonData", [PackageNamespace("")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.utils"), "ByteArray")
+    pushscope
+
+    getlex              QName(PackageNamespace("mx.core"), "ByteArrayAsset")
+    pushscope
+
+    getlex              QName(PackageNamespace("mx.core"), "ByteArrayAsset")
+    newclass            "level_JsonData"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace(""), "level_JsonData")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(""), "level_JsonData")
+  #include "level_JsonData.class.asasm"
+ end ; trait
+end ; script

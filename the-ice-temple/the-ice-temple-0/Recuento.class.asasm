@@ -1,0 +1,279 @@
+class
+ refid "Recuento"
+ instance QName(PackageNamespace(""), "Recuento")
+  extends QName(PackageNamespace("flash.display"), "MovieClip")
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Recuento")
+  iinit
+   refid "Recuento/instance/init"
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "addFrameScript")
+     pushbyte            0
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "frame1")
+     callpropvoid        QName(PackageNamespace(""), "addFrameScript"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "Rboard") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageNamespace(""), "Tapper") type QName(PackageNamespace("flash.display"), "MovieClip") end
+  trait slot QName(PackageNamespace(""), "v") end
+  trait slot QName(PackageNamespace(""), "acc") end
+  trait method QName(PackageNamespace(""), "StartEase")
+   method
+    refid "Recuento/instance/StartEase"
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "v")
+
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "acc")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "Tapper")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "alpha")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "Rboard")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "Ease")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "Ease")
+   method
+    refid "Recuento/instance/Ease"
+    param QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      pushdouble          235.7
+      coerce_a
+      setlocal2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getproperty         Multiname("y", [PrivateNamespace(null, "Recuento/instance/Ease#0"), PackageNamespace(""), PackageNamespace("flash.events"), PrivateNamespace(null, "Recuento/instance/Ease#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("adobe.utils"), PackageNamespace("flash.accessibility"), PackageNamespace("flash.desktop"), PackageNamespace("flash.display"), PackageNamespace("flash.errors"), PackageNamespace("flash.external"), PackageNamespace("flash.filters"), PackageNamespace("flash.geom"), PackageNamespace("flash.globalization"), PackageNamespace("flash.media"), PackageNamespace("flash.net"), PackageNamespace("flash.net.drm"), PackageNamespace("flash.printing"), PackageNamespace("flash.profiler"), PackageNamespace("flash.sampler"), PackageNamespace("flash.sensors"), PackageNamespace("flash.system"), PackageNamespace("flash.text"), PackageNamespace("flash.text.ime"), PackageNamespace("flash.text.engine"), PackageNamespace("flash.ui"), PackageNamespace("flash.utils"), PackageNamespace("flash.xml"), ProtectedNamespace("Recuento"), StaticProtectedNs("Recuento"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal2
+      pushbyte            100
+      subtract
+      ifnlt               L23
+
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getproperty         Multiname("y", [PrivateNamespace(null, "Recuento/instance/Ease#0"), PackageNamespace(""), PackageNamespace("flash.events"), PrivateNamespace(null, "Recuento/instance/Ease#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("adobe.utils"), PackageNamespace("flash.accessibility"), PackageNamespace("flash.desktop"), PackageNamespace("flash.display"), PackageNamespace("flash.errors"), PackageNamespace("flash.external"), PackageNamespace("flash.filters"), PackageNamespace("flash.geom"), PackageNamespace("flash.globalization"), PackageNamespace("flash.media"), PackageNamespace("flash.net"), PackageNamespace("flash.net.drm"), PackageNamespace("flash.printing"), PackageNamespace("flash.profiler"), PackageNamespace("flash.sampler"), PackageNamespace("flash.sensors"), PackageNamespace("flash.system"), PackageNamespace("flash.text"), PackageNamespace("flash.text.ime"), PackageNamespace("flash.text.engine"), PackageNamespace("flash.ui"), PackageNamespace("flash.utils"), PackageNamespace("flash.xml"), ProtectedNamespace("Recuento"), StaticProtectedNs("Recuento"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal2
+      subtract
+      negate
+      pushbyte            20
+      divide
+      initproperty        QName(PackageNamespace(""), "acc")
+
+      jump                L33
+
+L23:
+      getlocal0
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getproperty         Multiname("y", [PrivateNamespace(null, "Recuento/instance/Ease#0"), PackageNamespace(""), PackageNamespace("flash.events"), PrivateNamespace(null, "Recuento/instance/Ease#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("adobe.utils"), PackageNamespace("flash.accessibility"), PackageNamespace("flash.desktop"), PackageNamespace("flash.display"), PackageNamespace("flash.errors"), PackageNamespace("flash.external"), PackageNamespace("flash.filters"), PackageNamespace("flash.geom"), PackageNamespace("flash.globalization"), PackageNamespace("flash.media"), PackageNamespace("flash.net"), PackageNamespace("flash.net.drm"), PackageNamespace("flash.printing"), PackageNamespace("flash.profiler"), PackageNamespace("flash.sampler"), PackageNamespace("flash.sensors"), PackageNamespace("flash.system"), PackageNamespace("flash.text"), PackageNamespace("flash.text.ime"), PackageNamespace("flash.text.engine"), PackageNamespace("flash.ui"), PackageNamespace("flash.utils"), PackageNamespace("flash.xml"), ProtectedNamespace("Recuento"), StaticProtectedNs("Recuento"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal2
+      subtract
+      negate
+      pushbyte            10
+      divide
+      initproperty        QName(PackageNamespace(""), "acc")
+
+L33:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getproperty         Multiname("y", [PrivateNamespace(null, "Recuento/instance/Ease#0"), PackageNamespace(""), PackageNamespace("flash.events"), PrivateNamespace(null, "Recuento/instance/Ease#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("adobe.utils"), PackageNamespace("flash.accessibility"), PackageNamespace("flash.desktop"), PackageNamespace("flash.display"), PackageNamespace("flash.errors"), PackageNamespace("flash.external"), PackageNamespace("flash.filters"), PackageNamespace("flash.geom"), PackageNamespace("flash.globalization"), PackageNamespace("flash.media"), PackageNamespace("flash.net"), PackageNamespace("flash.net.drm"), PackageNamespace("flash.printing"), PackageNamespace("flash.profiler"), PackageNamespace("flash.sampler"), PackageNamespace("flash.sensors"), PackageNamespace("flash.system"), PackageNamespace("flash.text"), PackageNamespace("flash.text.ime"), PackageNamespace("flash.text.engine"), PackageNamespace("flash.ui"), PackageNamespace("flash.utils"), PackageNamespace("flash.xml"), ProtectedNamespace("Recuento"), StaticProtectedNs("Recuento"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "v")
+      add
+      setproperty         Multiname("y", [PrivateNamespace(null, "Recuento/instance/Ease#0"), PackageNamespace(""), PackageNamespace("flash.events"), PrivateNamespace(null, "Recuento/instance/Ease#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("adobe.utils"), PackageNamespace("flash.accessibility"), PackageNamespace("flash.desktop"), PackageNamespace("flash.display"), PackageNamespace("flash.errors"), PackageNamespace("flash.external"), PackageNamespace("flash.filters"), PackageNamespace("flash.geom"), PackageNamespace("flash.globalization"), PackageNamespace("flash.media"), PackageNamespace("flash.net"), PackageNamespace("flash.net.drm"), PackageNamespace("flash.printing"), PackageNamespace("flash.profiler"), PackageNamespace("flash.sampler"), PackageNamespace("flash.sensors"), PackageNamespace("flash.system"), PackageNamespace("flash.text"), PackageNamespace("flash.text.ime"), PackageNamespace("flash.text.engine"), PackageNamespace("flash.ui"), PackageNamespace("flash.utils"), PackageNamespace("flash.xml"), ProtectedNamespace("Recuento"), StaticProtectedNs("Recuento"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "v")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "acc")
+      add
+      initproperty        QName(PackageNamespace(""), "v")
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getproperty         Multiname("y", [PrivateNamespace(null, "Recuento/instance/Ease#0"), PackageNamespace(""), PackageNamespace("flash.events"), PrivateNamespace(null, "Recuento/instance/Ease#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("adobe.utils"), PackageNamespace("flash.accessibility"), PackageNamespace("flash.desktop"), PackageNamespace("flash.display"), PackageNamespace("flash.errors"), PackageNamespace("flash.external"), PackageNamespace("flash.filters"), PackageNamespace("flash.geom"), PackageNamespace("flash.globalization"), PackageNamespace("flash.media"), PackageNamespace("flash.net"), PackageNamespace("flash.net.drm"), PackageNamespace("flash.printing"), PackageNamespace("flash.profiler"), PackageNamespace("flash.sampler"), PackageNamespace("flash.sensors"), PackageNamespace("flash.system"), PackageNamespace("flash.text"), PackageNamespace("flash.text.ime"), PackageNamespace("flash.text.engine"), PackageNamespace("flash.ui"), PackageNamespace("flash.utils"), PackageNamespace("flash.xml"), ProtectedNamespace("Recuento"), StaticProtectedNs("Recuento"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      getlocal2
+      pushbyte            100
+      subtract
+      ifnlt               L63
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "v")
+      pushdouble          0.8
+      multiply
+      initproperty        QName(PackageNamespace(""), "v")
+
+      jump                L69
+
+L63:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "v")
+      pushdouble          0.6
+      multiply
+      initproperty        QName(PackageNamespace(""), "v")
+
+L69:
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getproperty         Multiname("y", [PrivateNamespace(null, "Recuento/instance/Ease#0"), PackageNamespace(""), PackageNamespace("flash.events"), PrivateNamespace(null, "Recuento/instance/Ease#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("adobe.utils"), PackageNamespace("flash.accessibility"), PackageNamespace("flash.desktop"), PackageNamespace("flash.display"), PackageNamespace("flash.errors"), PackageNamespace("flash.external"), PackageNamespace("flash.filters"), PackageNamespace("flash.geom"), PackageNamespace("flash.globalization"), PackageNamespace("flash.media"), PackageNamespace("flash.net"), PackageNamespace("flash.net.drm"), PackageNamespace("flash.printing"), PackageNamespace("flash.profiler"), PackageNamespace("flash.sampler"), PackageNamespace("flash.sensors"), PackageNamespace("flash.system"), PackageNamespace("flash.text"), PackageNamespace("flash.text.ime"), PackageNamespace("flash.text.engine"), PackageNamespace("flash.ui"), PackageNamespace("flash.utils"), PackageNamespace("flash.xml"), ProtectedNamespace("Recuento"), StaticProtectedNs("Recuento"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      subtract
+      callproperty        QName(PackageNamespace(""), "abs"), 1
+      pushdouble          0.2
+      lessthan
+      dup
+      iffalse             L87
+
+      pop
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "v")
+      callproperty        QName(PackageNamespace(""), "abs"), 1
+      pushdouble          0.2
+      lessthan
+L87:
+      iffalse             L99
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlocal2
+      setproperty         Multiname("y", [PrivateNamespace(null, "Recuento/instance/Ease#0"), PackageNamespace(""), PackageNamespace("flash.events"), PrivateNamespace(null, "Recuento/instance/Ease#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("adobe.utils"), PackageNamespace("flash.accessibility"), PackageNamespace("flash.desktop"), PackageNamespace("flash.display"), PackageNamespace("flash.errors"), PackageNamespace("flash.external"), PackageNamespace("flash.filters"), PackageNamespace("flash.geom"), PackageNamespace("flash.globalization"), PackageNamespace("flash.media"), PackageNamespace("flash.net"), PackageNamespace("flash.net.drm"), PackageNamespace("flash.printing"), PackageNamespace("flash.profiler"), PackageNamespace("flash.sampler"), PackageNamespace("flash.sensors"), PackageNamespace("flash.system"), PackageNamespace("flash.text"), PackageNamespace("flash.text.ime"), PackageNamespace("flash.text.engine"), PackageNamespace("flash.ui"), PackageNamespace("flash.utils"), PackageNamespace("flash.xml"), ProtectedNamespace("Recuento"), StaticProtectedNs("Recuento"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "Rboard")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "Ease")
+      callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+L99:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "Tapper")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getproperty         Multiname("y", [PrivateNamespace(null, "Recuento/instance/Ease#0"), PackageNamespace(""), PackageNamespace("flash.events"), PrivateNamespace(null, "Recuento/instance/Ease#1"), PackageInternalNs(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("adobe.utils"), PackageNamespace("flash.accessibility"), PackageNamespace("flash.desktop"), PackageNamespace("flash.display"), PackageNamespace("flash.errors"), PackageNamespace("flash.external"), PackageNamespace("flash.filters"), PackageNamespace("flash.geom"), PackageNamespace("flash.globalization"), PackageNamespace("flash.media"), PackageNamespace("flash.net"), PackageNamespace("flash.net.drm"), PackageNamespace("flash.printing"), PackageNamespace("flash.profiler"), PackageNamespace("flash.sampler"), PackageNamespace("flash.sensors"), PackageNamespace("flash.system"), PackageNamespace("flash.text"), PackageNamespace("flash.text.ime"), PackageNamespace("flash.text.engine"), PackageNamespace("flash.ui"), PackageNamespace("flash.utils"), PackageNamespace("flash.xml"), ProtectedNamespace("Recuento"), StaticProtectedNs("Recuento"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), StaticProtectedNs("Object")])
+      pushshort           164
+      add
+      pushshort           390
+      divide
+      callproperty        QName(PackageNamespace(""), "abs"), 1
+      setproperty         QName(PackageNamespace(""), "alpha")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "frame1")
+   method
+    refid "Recuento/instance/frame1"
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "stop")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "Rboard")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "ENTER_FRAME")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "Ease")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "v")
+
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "acc")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "Tapper")
+      pushbyte            0
+      setproperty         QName(PackageNamespace(""), "alpha")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "Recuento/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

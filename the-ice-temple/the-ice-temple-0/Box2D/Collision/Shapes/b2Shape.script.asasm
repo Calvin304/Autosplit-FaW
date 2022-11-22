@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "Box2D.Collision.Shapes:b2Shape/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("b2Shape", [PackageNamespace("Box2D.Collision.Shapes")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "Box2D.Collision.Shapes:b2Shape"
+    popscope
+    initproperty        QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("Box2D.Collision.Shapes"), "b2Shape")
+  #include "b2Shape.class.asasm"
+ end ; trait
+end ; script

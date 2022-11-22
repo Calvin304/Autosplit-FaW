@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "Box2D.Collision:ClipVertex/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("ClipVertex", [PackageNamespace("Box2D.Collision")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "Box2D.Collision:ClipVertex"
+    popscope
+    initproperty        QName(PackageNamespace("Box2D.Collision"), "ClipVertex")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("Box2D.Collision"), "ClipVertex")
+  #include "ClipVertex.class.asasm"
+ end ; trait
+end ; script

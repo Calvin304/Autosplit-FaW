@@ -1,0 +1,33 @@
+script
+ sinit
+  refid "Box2D.Dynamics.Joints:b2DistanceJointDef/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("b2DistanceJointDef", [PackageNamespace("Box2D.Dynamics.Joints")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointDef")
+    pushscope
+
+    getlex              QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2JointDef")
+    newclass            "Box2D.Dynamics.Joints:b2DistanceJointDef"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2DistanceJointDef")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("Box2D.Dynamics.Joints"), "b2DistanceJointDef")
+  #include "b2DistanceJointDef.class.asasm"
+ end ; trait
+end ; script

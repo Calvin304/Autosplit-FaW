@@ -1,0 +1,285 @@
+class
+ refid "Box2D.Collision:b2Pair"
+ instance QName(PackageNamespace("Box2D.Collision"), "b2Pair")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Collision:b2Pair")
+  iinit
+   refid "Box2D.Collision:b2Pair/instance/init"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "SetBuffered")
+   method
+    refid "Box2D.Collision:b2Pair/instance/SetBuffered"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "status")
+      getlex              QName(PackageNamespace(""), "e_pairBuffered")
+      bitor
+      initproperty        QName(PackageNamespace(""), "status")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "ClearBuffered")
+   method
+    refid "Box2D.Collision:b2Pair/instance/ClearBuffered"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "status")
+      getlex              QName(PackageNamespace(""), "e_pairBuffered")
+      bitnot
+      bitand
+      initproperty        QName(PackageNamespace(""), "status")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "IsBuffered")
+   method
+    refid "Box2D.Collision:b2Pair/instance/IsBuffered"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "status")
+      getlex              QName(PackageNamespace(""), "e_pairBuffered")
+      bitand
+      getlex              QName(PackageNamespace(""), "e_pairBuffered")
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SetRemoved")
+   method
+    refid "Box2D.Collision:b2Pair/instance/SetRemoved"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "status")
+      getlex              QName(PackageNamespace(""), "e_pairRemoved")
+      bitor
+      initproperty        QName(PackageNamespace(""), "status")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "ClearRemoved")
+   method
+    refid "Box2D.Collision:b2Pair/instance/ClearRemoved"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "status")
+      getlex              QName(PackageNamespace(""), "e_pairRemoved")
+      bitnot
+      bitand
+      initproperty        QName(PackageNamespace(""), "status")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "IsRemoved")
+   method
+    refid "Box2D.Collision:b2Pair/instance/IsRemoved"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "status")
+      getlex              QName(PackageNamespace(""), "e_pairRemoved")
+      bitand
+      getlex              QName(PackageNamespace(""), "e_pairRemoved")
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SetFinal")
+   method
+    refid "Box2D.Collision:b2Pair/instance/SetFinal"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "status")
+      getlex              QName(PackageNamespace(""), "e_pairFinal")
+      bitor
+      initproperty        QName(PackageNamespace(""), "status")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "IsFinal")
+   method
+    refid "Box2D.Collision:b2Pair/instance/IsFinal"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "status")
+      getlex              QName(PackageNamespace(""), "e_pairFinal")
+      bitand
+      getlex              QName(PackageNamespace(""), "e_pairFinal")
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "userData") value Null() end
+  trait slot QName(PackageNamespace(""), "proxyId1") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "proxyId2") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "next") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "status") type QName(PackageNamespace(""), "uint") end
+ end ; instance
+ cinit
+  refid "Box2D.Collision:b2Pair/class/init"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "b2_nullPair")
+    getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+    getproperty         QName(PackageNamespace(""), "USHRT_MAX")
+    setproperty         QName(PackageNamespace(""), "b2_nullPair")
+
+    findproperty        QName(PackageNamespace(""), "b2_nullProxy")
+    getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+    getproperty         QName(PackageNamespace(""), "USHRT_MAX")
+    setproperty         QName(PackageNamespace(""), "b2_nullProxy")
+
+    findproperty        QName(PackageNamespace(""), "b2_tableCapacity")
+    getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+    getproperty         QName(PackageNamespace(""), "b2_maxPairs")
+    setproperty         QName(PackageNamespace(""), "b2_tableCapacity")
+
+    findproperty        QName(PackageNamespace(""), "b2_tableMask")
+    getlex              QName(PackageNamespace(""), "b2_tableCapacity")
+    decrement
+    setproperty         QName(PackageNamespace(""), "b2_tableMask")
+
+    findproperty        QName(PackageNamespace(""), "e_pairBuffered")
+    pushbyte            1
+    setproperty         QName(PackageNamespace(""), "e_pairBuffered")
+
+    findproperty        QName(PackageNamespace(""), "e_pairRemoved")
+    pushbyte            2
+    setproperty         QName(PackageNamespace(""), "e_pairRemoved")
+
+    findproperty        QName(PackageNamespace(""), "e_pairFinal")
+    pushbyte            4
+    setproperty         QName(PackageNamespace(""), "e_pairFinal")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "b2_nullPair") slotid 1 type QName(PackageNamespace(""), "uint") value Integer(65535) end
+ trait slot QName(PackageNamespace(""), "b2_nullProxy") slotid 2 type QName(PackageNamespace(""), "uint") value Integer(65535) end
+ trait slot QName(PackageNamespace(""), "b2_tableCapacity") slotid 3 type QName(PackageNamespace(""), "int") value Double(4096) end
+ trait slot QName(PackageNamespace(""), "b2_tableMask") slotid 4 type QName(PackageNamespace(""), "int") end
+ trait slot QName(PackageNamespace(""), "e_pairBuffered") slotid 5 type QName(PackageNamespace(""), "uint") value Integer(1) end
+ trait slot QName(PackageNamespace(""), "e_pairRemoved") slotid 6 type QName(PackageNamespace(""), "uint") value Integer(2) end
+ trait slot QName(PackageNamespace(""), "e_pairFinal") slotid 7 type QName(PackageNamespace(""), "uint") value Integer(4) end
+end ; class

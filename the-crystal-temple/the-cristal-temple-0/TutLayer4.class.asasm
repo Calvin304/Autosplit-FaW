@@ -1,0 +1,343 @@
+class
+ refid "TutLayer4"
+ instance QName(PackageNamespace(""), "TutLayer4")
+  extends QName(PackageNamespace("flash.display"), "MovieClip")
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("TutLayer4")
+  iinit
+   refid "TutLayer4/instance/init"
+   body
+    maxstack 11
+    localcount 1
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "addFrameScript")
+     pushbyte            0
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "frame1")
+     pushbyte            1
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "frame2")
+     pushbyte            2
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "frame3")
+     pushbyte            3
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "frame4")
+     pushbyte            4
+     getlocal0
+     getproperty         QName(PackageInternalNs(""), "frame5")
+     callpropvoid        QName(PackageNamespace(""), "addFrameScript"), 10
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "tut_4_1") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "tut_4_2") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "tut_4_3") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "tut_4_4") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "tut_4_5") type QName(PackageNamespace("flash.text"), "TextField") end
+  trait slot QName(PackageNamespace(""), "tfb") type QName(PackageNamespace("flash.text"), "TextFormat") end
+  trait slot QName(PackageNamespace(""), "tfw") type QName(PackageNamespace("flash.text"), "TextFormat") end
+  trait slot QName(PackageNamespace(""), "WHITE") end
+  trait slot QName(PackageNamespace(""), "BLACK") end
+  trait slot QName(PackageNamespace(""), "fst") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageInternalNs(""), "frame1")
+   method
+    refid "TutLayer4/instance/frame1"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "stop")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "frame2")
+   method
+    refid "TutLayer4/instance/frame2"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "stop")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "frame3")
+   method
+    refid "TutLayer4/instance/frame3"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "stop")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "frame4")
+   method
+    refid "TutLayer4/instance/frame4"
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "stop")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageInternalNs(""), "frame5")
+   method
+    refid "TutLayer4/instance/frame5"
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+      pushnull
+      pushnull
+      pushint             3355443
+      constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 3
+      initproperty        QName(PackageNamespace(""), "tfb")
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+      pushnull
+      pushnull
+      pushint             16777215
+      constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 3
+      initproperty        QName(PackageNamespace(""), "tfw")
+
+      getlocal0
+      pushstring          "white"
+      initproperty        QName(PackageNamespace(""), "WHITE")
+
+      getlocal0
+      pushstring          "black"
+      initproperty        QName(PackageNamespace(""), "BLACK")
+
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      pushstring          "woooords: "
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "BLACK")
+      add
+      pushstring          " "
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "WHITE")
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+      getlocal0
+      pushbyte            0
+      initproperty        QName(PackageNamespace(""), "fst")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tut_4_5")
+      getproperty         QName(PackageNamespace(""), "text")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "BLACK")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "BLACK")
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      initproperty        QName(PackageNamespace(""), "fst")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tut_4_5")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tfb")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tut_4_5")
+      getproperty         QName(PackageNamespace(""), "text")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "BLACK")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tut_4_5")
+      getproperty         QName(PackageNamespace(""), "text")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "BLACK")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "BLACK")
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tut_4_5")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tfb")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tut_4_5")
+      getproperty         QName(PackageNamespace(""), "text")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "BLACK")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "fst")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tut_4_5")
+      getproperty         QName(PackageNamespace(""), "text")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "BLACK")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "fst")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 2
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "BLACK")
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 3
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tut_4_5")
+      getproperty         QName(PackageNamespace(""), "text")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "WHITE")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "WHITE")
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      initproperty        QName(PackageNamespace(""), "fst")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tut_4_5")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tfw")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tut_4_5")
+      getproperty         QName(PackageNamespace(""), "text")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "WHITE")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tut_4_5")
+      getproperty         QName(PackageNamespace(""), "text")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "WHITE")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "WHITE")
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tut_4_5")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tfw")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tut_4_5")
+      getproperty         QName(PackageNamespace(""), "text")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "WHITE")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "fst")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tut_4_5")
+      getproperty         QName(PackageNamespace(""), "text")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "WHITE")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "fst")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 2
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "WHITE")
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      getproperty         QName(PackageNamespace(""), "length")
+      add
+      callpropvoid        QName(PackageNamespace(""), "setTextFormat"), 3
+
+      findpropstrict      QName(PackageNamespace(""), "stop")
+      callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "TutLayer4/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

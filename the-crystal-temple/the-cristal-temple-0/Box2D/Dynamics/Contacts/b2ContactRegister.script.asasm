@@ -1,0 +1,29 @@
+script
+ sinit
+  refid "Box2D.Dynamics.Contacts:b2ContactRegister/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("b2ContactRegister", [PackageNamespace("Box2D.Dynamics.Contacts")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "Box2D.Dynamics.Contacts:b2ContactRegister"
+    popscope
+    initproperty        QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactRegister")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactRegister")
+  #include "b2ContactRegister.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,33 @@
+script
+ sinit
+  refid "Box2D.Dynamics.Contacts:b2PolyAndCircleContact/init"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("b2PolyAndCircleContact", [PackageNamespace("Box2D.Dynamics.Contacts")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2Contact")
+    pushscope
+
+    getlex              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2Contact")
+    newclass            "Box2D.Dynamics.Contacts:b2PolyAndCircleContact"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2PolyAndCircleContact")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2PolyAndCircleContact")
+  #include "b2PolyAndCircleContact.class.asasm"
+ end ; trait
+end ; script

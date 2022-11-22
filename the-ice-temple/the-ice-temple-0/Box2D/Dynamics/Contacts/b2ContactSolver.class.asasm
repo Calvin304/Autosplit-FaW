@@ -1,0 +1,2425 @@
+class
+ refid "Box2D.Dynamics.Contacts:b2ContactSolver"
+ instance QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactSolver")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver")
+  iinit
+   refid "Box2D.Dynamics.Contacts:b2ContactSolver/instance/init"
+   param QName(PackageNamespace("Box2D.Dynamics"), "b2TimeStep")
+   param QName(PackageNamespace(""), "Array")
+   param QName(PackageNamespace(""), "int")
+   param null
+   body
+    maxstack 6
+    localcount 48
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2Contact")
+     setlocal            5
+
+     pushbyte            0
+     setlocal            6
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+     setlocal            7
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+     setlocal            8
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+     setlocal            10
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+     setlocal            11
+
+     pushbyte            0
+     setlocal            12
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            13
+
+     pushnan
+     setlocal            14
+
+     pushnan
+     setlocal            15
+
+     pushnan
+     setlocal            16
+
+     pushnan
+     setlocal            17
+
+     pushnan
+     setlocal            18
+
+     pushnan
+     setlocal            19
+
+     pushnan
+     setlocal            20
+
+     pushnan
+     setlocal            21
+
+     pushbyte            0
+     setlocal            22
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Collision"), "b2Manifold")
+     setlocal            23
+
+     pushnan
+     setlocal            24
+
+     pushnan
+     setlocal            25
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraint")
+     setlocal            26
+
+     pushbyte            0
+     convert_u
+     setlocal            27
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Collision"), "b2ManifoldPoint")
+     setlocal            28
+
+     pushnull
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraintPoint")
+     setlocal            29
+
+     pushnan
+     setlocal            30
+
+     pushnan
+     setlocal            31
+
+     pushnan
+     setlocal            32
+
+     pushnan
+     setlocal            33
+
+     pushnan
+     setlocal            34
+
+     pushnan
+     setlocal            35
+
+     pushnan
+     setlocal            36
+
+     pushnan
+     setlocal            37
+
+     pushnan
+     setlocal            38
+
+     pushnan
+     setlocal            39
+
+     pushnan
+     setlocal            40
+
+     pushnan
+     setlocal            41
+
+     pushnan
+     setlocal            42
+
+     pushnan
+     setlocal            43
+
+     pushnan
+     setlocal            44
+
+     pushnan
+     setlocal            45
+
+     pushnan
+     setlocal            46
+
+     pushnan
+     setlocal            47
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("Box2D.Dynamics"), "b2TimeStep")
+     constructprop       QName(PackageNamespace("Box2D.Dynamics"), "b2TimeStep"), 0
+     initproperty        QName(PackageNamespace(""), "m_step")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Array")
+     constructprop       QName(PackageNamespace(""), "Array"), 0
+     initproperty        QName(PackageNamespace(""), "m_constraints")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "m_step")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "dt")
+     setproperty         QName(PackageNamespace(""), "dt")
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "m_step")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "inv_dt")
+     setproperty         QName(PackageNamespace(""), "inv_dt")
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "m_step")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "maxIterations")
+     setproperty         QName(PackageNamespace(""), "maxIterations")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "m_allocator")
+
+     getlocal0
+     pushbyte            0
+     initproperty        QName(PackageNamespace(""), "m_constraintCount")
+
+     pushbyte            0
+     setlocal            6
+
+     jump                L145
+
+L131:
+     label
+     getlocal2
+     getlocal            6
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2Contact")
+     setlocal            5
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "m_constraintCount")
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "m_manifoldCount")
+     add
+     initproperty        QName(PackageNamespace(""), "m_constraintCount")
+
+     inclocal_i          6
+L145:
+     getlocal            6
+     getlocal3
+     iflt                L131
+
+     pushbyte            0
+     setlocal            6
+
+     jump                L159
+
+L151:
+     label
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "m_constraints")
+     getlocal            6
+     findpropstrict      QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraint")
+     constructprop       QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraint"), 0
+     setproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+
+     inclocal_i          6
+L159:
+     getlocal            6
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "m_constraintCount")
+     iflt                L151
+
+     pushbyte            0
+     setlocal            9
+
+     pushbyte            0
+     setlocal            6
+
+     jump                L695
+
+L168:
+     label
+     getlocal2
+     getlocal            6
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2Contact")
+     dup
+     setlocal            5
+
+     getproperty         QName(PackageNamespace(""), "m_shape1")
+     getproperty         QName(PackageNamespace(""), "m_body")
+     coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+     setlocal            10
+
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "m_shape2")
+     getproperty         QName(PackageNamespace(""), "m_body")
+     coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+     setlocal            11
+
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "m_manifoldCount")
+     convert_i
+     setlocal            12
+
+     getlocal            5
+     callproperty        QName(PackageNamespace(""), "GetManifolds"), 0
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            13
+
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "m_friction")
+     convert_d
+     setlocal            14
+
+     getlocal            5
+     getproperty         QName(PackageNamespace(""), "m_restitution")
+     convert_d
+     setlocal            15
+
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+     getproperty         QName(PackageNamespace(""), "x")
+     convert_d
+     setlocal            16
+
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+     getproperty         QName(PackageNamespace(""), "y")
+     convert_d
+     setlocal            17
+
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+     getproperty         QName(PackageNamespace(""), "x")
+     convert_d
+     setlocal            18
+
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+     getproperty         QName(PackageNamespace(""), "y")
+     convert_d
+     setlocal            19
+
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+     convert_d
+     setlocal            20
+
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+     convert_d
+     setlocal            21
+
+     pushbyte            0
+     setlocal            22
+
+     jump                L691
+
+L231:
+     label
+     getlocal            13
+     getlocal            22
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("Box2D.Collision"), "b2Manifold")
+     dup
+     setlocal            23
+
+     getproperty         QName(PackageNamespace(""), "normal")
+     getproperty         QName(PackageNamespace(""), "x")
+     convert_d
+     setlocal            24
+
+     getlocal            23
+     getproperty         QName(PackageNamespace(""), "normal")
+     getproperty         QName(PackageNamespace(""), "y")
+     convert_d
+     setlocal            25
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "m_constraints")
+     getlocal            9
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraint")
+     dup
+     setlocal            26
+
+     getlocal            10
+     setproperty         QName(PackageNamespace(""), "body1")
+
+     getlocal            26
+     getlocal            11
+     setproperty         QName(PackageNamespace(""), "body2")
+
+     getlocal            26
+     getlocal            23
+     setproperty         QName(PackageNamespace(""), "manifold")
+
+     getlocal            26
+     getproperty         QName(PackageNamespace(""), "normal")
+     getlocal            24
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal            26
+     getproperty         QName(PackageNamespace(""), "normal")
+     getlocal            25
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal            26
+     getlocal            23
+     getproperty         QName(PackageNamespace(""), "pointCount")
+     setproperty         QName(PackageNamespace(""), "pointCount")
+
+     getlocal            26
+     getlocal            14
+     setproperty         QName(PackageNamespace(""), "friction")
+
+     getlocal            26
+     getlocal            15
+     setproperty         QName(PackageNamespace(""), "restitution")
+
+     pushbyte            0
+     convert_u
+     setlocal            27
+
+     jump                L685
+
+L284:
+     label
+     getlocal            23
+     getproperty         QName(PackageNamespace(""), "points")
+     getlocal            27
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("Box2D.Collision"), "b2ManifoldPoint")
+     setlocal            28
+
+     getlocal            26
+     getproperty         QName(PackageNamespace(""), "points")
+     getlocal            27
+     getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+     coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraintPoint")
+     dup
+     setlocal            29
+
+     getlocal            28
+     getproperty         QName(PackageNamespace(""), "normalImpulse")
+     setproperty         QName(PackageNamespace(""), "normalImpulse")
+
+     getlocal            29
+     getlocal            28
+     getproperty         QName(PackageNamespace(""), "tangentImpulse")
+     setproperty         QName(PackageNamespace(""), "tangentImpulse")
+
+     getlocal            29
+     getlocal            28
+     getproperty         QName(PackageNamespace(""), "separation")
+     setproperty         QName(PackageNamespace(""), "separation")
+
+     getlocal            29
+     pushdouble          0
+     setproperty         QName(PackageNamespace(""), "positionImpulse")
+
+     getlocal            29
+     getproperty         QName(PackageNamespace(""), "localAnchor1")
+     getlocal            28
+     getproperty         QName(PackageNamespace(""), "localPoint1")
+     callpropvoid        QName(PackageNamespace(""), "SetV"), 1
+
+     getlocal            29
+     getproperty         QName(PackageNamespace(""), "localAnchor2")
+     getlocal            28
+     getproperty         QName(PackageNamespace(""), "localPoint2")
+     callpropvoid        QName(PackageNamespace(""), "SetV"), 1
+
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "m_xf")
+     getproperty         QName(PackageNamespace(""), "R")
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+     setlocal            8
+
+     getlocal            28
+     getproperty         QName(PackageNamespace(""), "localPoint1")
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "m_sweep")
+     getproperty         QName(PackageNamespace(""), "localCenter")
+     getproperty         QName(PackageNamespace(""), "x")
+     subtract
+     convert_d
+     setlocal            32
+
+     getlocal            28
+     getproperty         QName(PackageNamespace(""), "localPoint1")
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "m_sweep")
+     getproperty         QName(PackageNamespace(""), "localCenter")
+     getproperty         QName(PackageNamespace(""), "y")
+     subtract
+     convert_d
+     setlocal            33
+
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "col1")
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            32
+     multiply
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "col2")
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            33
+     multiply
+     add
+     convert_d
+     setlocal            30
+
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "col1")
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            32
+     multiply
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "col2")
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            33
+     multiply
+     add
+     convert_d
+     setlocal            33
+
+     getlocal            30
+     convert_d
+     setlocal            32
+
+     getlocal            29
+     getproperty         QName(PackageNamespace(""), "r1")
+     getlocal            32
+     getlocal            33
+     callpropvoid        QName(PackageNamespace(""), "Set"), 2
+
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "m_xf")
+     getproperty         QName(PackageNamespace(""), "R")
+     coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+     setlocal            8
+
+     getlocal            28
+     getproperty         QName(PackageNamespace(""), "localPoint2")
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "m_sweep")
+     getproperty         QName(PackageNamespace(""), "localCenter")
+     getproperty         QName(PackageNamespace(""), "x")
+     subtract
+     convert_d
+     setlocal            34
+
+     getlocal            28
+     getproperty         QName(PackageNamespace(""), "localPoint2")
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "m_sweep")
+     getproperty         QName(PackageNamespace(""), "localCenter")
+     getproperty         QName(PackageNamespace(""), "y")
+     subtract
+     convert_d
+     setlocal            35
+
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "col1")
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            34
+     multiply
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "col2")
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            35
+     multiply
+     add
+     convert_d
+     setlocal            30
+
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "col1")
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            34
+     multiply
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "col2")
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            35
+     multiply
+     add
+     convert_d
+     setlocal            35
+
+     getlocal            30
+     convert_d
+     setlocal            34
+
+     getlocal            29
+     getproperty         QName(PackageNamespace(""), "r2")
+     getlocal            34
+     getlocal            35
+     callpropvoid        QName(PackageNamespace(""), "Set"), 2
+
+     getlocal            32
+     getlocal            32
+     multiply
+     getlocal            33
+     getlocal            33
+     multiply
+     add
+     convert_d
+     setlocal            36
+
+     getlocal            34
+     getlocal            34
+     multiply
+     getlocal            35
+     getlocal            35
+     multiply
+     add
+     convert_d
+     setlocal            37
+
+     getlocal            32
+     getlocal            24
+     multiply
+     getlocal            33
+     getlocal            25
+     multiply
+     add
+     convert_d
+     setlocal            38
+
+     getlocal            34
+     getlocal            24
+     multiply
+     getlocal            35
+     getlocal            25
+     multiply
+     add
+     convert_d
+     setlocal            39
+
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "m_invMass")
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "m_invMass")
+     add
+     convert_d
+     dup
+     setlocal            40
+
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "m_invI")
+     getlocal            36
+     getlocal            38
+     getlocal            38
+     multiply
+     subtract
+     multiply
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "m_invI")
+     getlocal            37
+     getlocal            39
+     getlocal            39
+     multiply
+     subtract
+     multiply
+     add
+     add
+     convert_d
+     setlocal            40
+
+     getlocal            29
+     pushbyte            1
+     getlocal            40
+     divide
+     setproperty         QName(PackageNamespace(""), "normalMass")
+
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "m_mass")
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "m_invMass")
+     multiply
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "m_mass")
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "m_invMass")
+     multiply
+     add
+     convert_d
+     dup
+     setlocal            41
+
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "m_mass")
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "m_invI")
+     multiply
+     getlocal            36
+     getlocal            38
+     getlocal            38
+     multiply
+     subtract
+     multiply
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "m_mass")
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "m_invI")
+     multiply
+     getlocal            37
+     getlocal            39
+     getlocal            39
+     multiply
+     subtract
+     multiply
+     add
+     add
+     convert_d
+     setlocal            41
+
+     getlocal            29
+     pushbyte            1
+     getlocal            41
+     divide
+     setproperty         QName(PackageNamespace(""), "equalizedMass")
+
+     getlocal            25
+     convert_d
+     setlocal            42
+
+     getlocal            24
+     negate
+     convert_d
+     setlocal            43
+
+     getlocal            32
+     getlocal            42
+     multiply
+     getlocal            33
+     getlocal            43
+     multiply
+     add
+     convert_d
+     setlocal            44
+
+     getlocal            34
+     getlocal            42
+     multiply
+     getlocal            35
+     getlocal            43
+     multiply
+     add
+     convert_d
+     setlocal            45
+
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "m_invMass")
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "m_invMass")
+     add
+     convert_d
+     dup
+     setlocal            46
+
+     getlocal            10
+     getproperty         QName(PackageNamespace(""), "m_invI")
+     getlocal            36
+     getlocal            44
+     getlocal            44
+     multiply
+     subtract
+     multiply
+     getlocal            11
+     getproperty         QName(PackageNamespace(""), "m_invI")
+     getlocal            37
+     getlocal            45
+     getlocal            45
+     multiply
+     subtract
+     multiply
+     add
+     add
+     convert_d
+     setlocal            46
+
+     getlocal            29
+     pushbyte            1
+     getlocal            46
+     divide
+     setproperty         QName(PackageNamespace(""), "tangentMass")
+
+     getlocal            29
+     pushdouble          0
+     setproperty         QName(PackageNamespace(""), "velocityBias")
+
+     getlocal            29
+     getproperty         QName(PackageNamespace(""), "separation")
+     pushdouble          0
+     ifngt               L625
+
+     getlocal            29
+     pushbyte            -60
+     getlocal            29
+     getproperty         QName(PackageNamespace(""), "separation")
+     multiply
+     setproperty         QName(PackageNamespace(""), "velocityBias")
+
+L625:
+     getlocal            18
+     getlocal            21
+     negate
+     getlocal            35
+     multiply
+     add
+     getlocal            16
+     subtract
+     getlocal            20
+     negate
+     getlocal            33
+     multiply
+     subtract
+     convert_d
+     setlocal            30
+
+     getlocal            19
+     getlocal            21
+     getlocal            34
+     multiply
+     add
+     getlocal            17
+     subtract
+     getlocal            20
+     getlocal            32
+     multiply
+     subtract
+     convert_d
+     setlocal            31
+
+     getlocal            26
+     getproperty         QName(PackageNamespace(""), "normal")
+     getproperty         QName(PackageNamespace(""), "x")
+     getlocal            30
+     multiply
+     getlocal            26
+     getproperty         QName(PackageNamespace(""), "normal")
+     getproperty         QName(PackageNamespace(""), "y")
+     getlocal            31
+     multiply
+     add
+     convert_d
+     dup
+     setlocal            47
+
+     getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+     getproperty         QName(PackageNamespace(""), "b2_velocityThreshold")
+     negate
+     ifnlt               L681
+
+     getlocal            29
+     getlocal            29
+     getproperty         QName(PackageNamespace(""), "velocityBias")
+     getlocal            26
+     getproperty         QName(PackageNamespace(""), "restitution")
+     negate
+     getlocal            47
+     multiply
+     add
+     setproperty         QName(PackageNamespace(""), "velocityBias")
+
+L681:
+     getlocal            27
+     increment
+     convert_u
+     setlocal            27
+
+L685:
+     getlocal            27
+     getlocal            26
+     getproperty         QName(PackageNamespace(""), "pointCount")
+     iflt                L284
+
+     inclocal_i          9
+     inclocal_i          22
+L691:
+     getlocal            22
+     getlocal            12
+     iflt                L231
+
+     inclocal_i          6
+L695:
+     getlocal            6
+     getlocal3
+     iflt                L168
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "InitVelocityConstraints")
+   method
+    refid "Box2D.Dynamics.Contacts:b2ContactSolver/instance/InitVelocityConstraints"
+    param QName(PackageNamespace("Box2D.Dynamics"), "b2TimeStep")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 24
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraint")
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            7
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            8
+
+      pushnan
+      setlocal            9
+
+      pushnan
+      setlocal            10
+
+      pushnan
+      setlocal            11
+
+      pushnan
+      setlocal            12
+
+      pushnan
+      setlocal            13
+
+      pushnan
+      setlocal            14
+
+      pushnan
+      setlocal            15
+
+      pushnan
+      setlocal            16
+
+      pushnan
+      setlocal            17
+
+      pushbyte            0
+      setlocal            18
+
+      pushbyte            0
+      setlocal            19
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraintPoint")
+      setlocal            20
+
+      pushnan
+      setlocal            21
+
+      pushnan
+      setlocal            22
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraintPoint")
+      setlocal            23
+
+      pushbyte            0
+      setlocal            5
+
+      jump                L262
+
+L55:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_constraints")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraint")
+      dup
+      setlocal            6
+
+      getproperty         QName(PackageNamespace(""), "body1")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            7
+
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "body2")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            8
+
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "m_invMass")
+      convert_d
+      setlocal            9
+
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "m_invI")
+      convert_d
+      setlocal            10
+
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "m_invMass")
+      convert_d
+      setlocal            11
+
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "m_invI")
+      convert_d
+      setlocal            12
+
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "normal")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+      setlocal            13
+
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "normal")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+      dup
+      setlocal            14
+
+      convert_d
+      setlocal            15
+
+      getlocal            13
+      negate
+      convert_d
+      setlocal            16
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "warmStarting")
+      iffalse             L237
+
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "pointCount")
+      convert_i
+      setlocal            19
+
+      pushbyte            0
+      setlocal            18
+
+      jump                L233
+
+L113:
+      label
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "points")
+      getlocal            18
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraintPoint")
+      dup
+      dup
+      setlocal            20
+
+      getproperty         QName(PackageNamespace(""), "normalImpulse")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "dtRatio")
+      multiply
+      setproperty         QName(PackageNamespace(""), "normalImpulse")
+
+      getlocal            20
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "tangentImpulse")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "dtRatio")
+      multiply
+      setproperty         QName(PackageNamespace(""), "tangentImpulse")
+
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "normalImpulse")
+      getlocal            13
+      multiply
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "tangentImpulse")
+      getlocal            15
+      multiply
+      add
+      convert_d
+      setlocal            21
+
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "normalImpulse")
+      getlocal            14
+      multiply
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "tangentImpulse")
+      getlocal            16
+      multiply
+      add
+      convert_d
+      setlocal            22
+
+      getlocal            7
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      getlocal            10
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "r1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            22
+      multiply
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "r1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            21
+      multiply
+      subtract
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "m_angularVelocity")
+
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            9
+      getlocal            21
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            9
+      getlocal            22
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal            8
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      getlocal            12
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "r2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            22
+      multiply
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "r2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            21
+      multiply
+      subtract
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "m_angularVelocity")
+
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            11
+      getlocal            21
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            11
+      getlocal            22
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      inclocal_i          18
+L233:
+      getlocal            18
+      getlocal            19
+      iflt                L113
+
+      jump                L261
+
+L237:
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "pointCount")
+      convert_i
+      setlocal            19
+
+      pushbyte            0
+      setlocal            18
+
+      jump                L258
+
+L244:
+      label
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "points")
+      getlocal            18
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraintPoint")
+      dup
+      setlocal            23
+
+      pushdouble          0
+      setproperty         QName(PackageNamespace(""), "normalImpulse")
+
+      getlocal            23
+      pushdouble          0
+      setproperty         QName(PackageNamespace(""), "tangentImpulse")
+
+      inclocal_i          18
+L258:
+      getlocal            18
+      getlocal            19
+      iflt                L244
+
+L261:
+      inclocal_i          5
+L262:
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_constraintCount")
+      iflt                L55
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SolveVelocityConstraints")
+   method
+    refid "Box2D.Dynamics.Contacts:b2ContactSolver/instance/SolveVelocityConstraints"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 39
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal1
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraintPoint")
+      setlocal2
+
+      pushnan
+      setlocal3
+
+      pushnan
+      setlocal            4
+
+      pushnan
+      setlocal            5
+
+      pushnan
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushnan
+      setlocal            8
+
+      pushnan
+      setlocal            9
+
+      pushnan
+      setlocal            10
+
+      pushnan
+      setlocal            11
+
+      pushnan
+      setlocal            12
+
+      pushnan
+      setlocal            13
+
+      pushnan
+      setlocal            14
+
+      pushnan
+      setlocal            15
+
+      pushnan
+      setlocal            16
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal            17
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            18
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraint")
+      setlocal            20
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            21
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            22
+
+      pushnan
+      setlocal            23
+
+      pushnan
+      setlocal            24
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            25
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            26
+
+      pushnan
+      setlocal            27
+
+      pushnan
+      setlocal            28
+
+      pushnan
+      setlocal            29
+
+      pushnan
+      setlocal            30
+
+      pushnan
+      setlocal            31
+
+      pushnan
+      setlocal            32
+
+      pushnan
+      setlocal            33
+
+      pushnan
+      setlocal            34
+
+      pushnan
+      setlocal            35
+
+      pushnan
+      setlocal            36
+
+      pushbyte            0
+      setlocal            37
+
+      pushnan
+      setlocal            38
+
+      pushbyte            0
+      setlocal            19
+
+      jump                L383
+
+L87:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_constraints")
+      getlocal            19
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraint")
+      dup
+      setlocal            20
+
+      getproperty         QName(PackageNamespace(""), "body1")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            21
+
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "body2")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            22
+
+      getlocal            21
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      convert_d
+      setlocal            23
+
+      getlocal            22
+      getproperty         QName(PackageNamespace(""), "m_angularVelocity")
+      convert_d
+      setlocal            24
+
+      getlocal            21
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            25
+
+      getlocal            22
+      getproperty         QName(PackageNamespace(""), "m_linearVelocity")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            26
+
+      getlocal            21
+      getproperty         QName(PackageNamespace(""), "m_invMass")
+      convert_d
+      setlocal            27
+
+      getlocal            21
+      getproperty         QName(PackageNamespace(""), "m_invI")
+      convert_d
+      setlocal            28
+
+      getlocal            22
+      getproperty         QName(PackageNamespace(""), "m_invMass")
+      convert_d
+      setlocal            29
+
+      getlocal            22
+      getproperty         QName(PackageNamespace(""), "m_invI")
+      convert_d
+      setlocal            30
+
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "normal")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+      setlocal            31
+
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "normal")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+      dup
+      setlocal            32
+
+      convert_d
+      setlocal            33
+
+      getlocal            31
+      negate
+      convert_d
+      setlocal            34
+
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "friction")
+      convert_d
+      setlocal            35
+
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "pointCount")
+      convert_i
+      setlocal            37
+
+      pushbyte            0
+      setlocal1
+
+      jump                L373
+
+L162:
+      label
+      getlocal            20
+      getproperty         QName(PackageNamespace(""), "points")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraintPoint")
+      setlocal2
+
+      getlocal            26
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            24
+      negate
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "r2")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      add
+      getlocal            25
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      getlocal            23
+      negate
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "r1")
+      getproperty         QName(PackageNamespace(""), "y")
+      multiply
+      subtract
+      convert_d
+      setlocal            7
+
+      getlocal            26
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            24
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "r2")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      add
+      getlocal            25
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      getlocal            23
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "r1")
+      getproperty         QName(PackageNamespace(""), "x")
+      multiply
+      subtract
+      convert_d
+      setlocal            8
+
+      getlocal            7
+      getlocal            31
+      multiply
+      getlocal            8
+      getlocal            32
+      multiply
+      add
+      convert_d
+      setlocal            9
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "normalMass")
+      negate
+      getlocal            9
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "velocityBias")
+      subtract
+      multiply
+      convert_d
+      setlocal            11
+
+      getlocal            7
+      getlocal            33
+      multiply
+      getlocal            8
+      getlocal            34
+      multiply
+      add
+      convert_d
+      setlocal            10
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tangentMass")
+      getlocal            10
+      negate
+      multiply
+      convert_d
+      setlocal            12
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "normalImpulse")
+      getlocal            11
+      add
+      pushdouble          0
+      callproperty        QName(PackageNamespace(""), "b2Max"), 2
+      convert_d
+      dup
+      setlocal            13
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "normalImpulse")
+      subtract
+      convert_d
+      setlocal            11
+
+      getlocal            35
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "normalImpulse")
+      multiply
+      convert_d
+      setlocal            38
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tangentImpulse")
+      getlocal            12
+      add
+      getlocal            38
+      negate
+      getlocal            38
+      callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+      convert_d
+      dup
+      setlocal            14
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tangentImpulse")
+      subtract
+      convert_d
+      setlocal            12
+
+      getlocal            11
+      getlocal            31
+      multiply
+      getlocal            12
+      getlocal            33
+      multiply
+      add
+      convert_d
+      setlocal            15
+
+      getlocal            11
+      getlocal            32
+      multiply
+      getlocal            12
+      getlocal            34
+      multiply
+      add
+      convert_d
+      setlocal            16
+
+      getlocal            25
+      getlocal            25
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            27
+      getlocal            15
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            25
+      getlocal            25
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            27
+      getlocal            16
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal            23
+      getlocal            28
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "r1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            16
+      multiply
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "r1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            15
+      multiply
+      subtract
+      multiply
+      subtract
+      convert_d
+      setlocal            23
+
+      getlocal            26
+      getlocal            26
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            29
+      getlocal            15
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            26
+      getlocal            26
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            29
+      getlocal            16
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal            24
+      getlocal            30
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "r2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            16
+      multiply
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "r2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            15
+      multiply
+      subtract
+      multiply
+      add
+      convert_d
+      setlocal            24
+
+      getlocal2
+      getlocal            13
+      setproperty         QName(PackageNamespace(""), "normalImpulse")
+
+      getlocal2
+      getlocal            14
+      setproperty         QName(PackageNamespace(""), "tangentImpulse")
+
+      inclocal_i          1
+L373:
+      getlocal1
+      getlocal            37
+      iflt                L162
+
+      getlocal            21
+      getlocal            23
+      setproperty         QName(PackageNamespace(""), "m_angularVelocity")
+
+      getlocal            22
+      getlocal            24
+      setproperty         QName(PackageNamespace(""), "m_angularVelocity")
+
+      inclocal_i          19
+L383:
+      getlocal            19
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_constraintCount")
+      iflt                L87
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "FinalizeVelocityConstraints")
+   method
+    refid "Box2D.Dynamics.Contacts:b2ContactSolver/instance/FinalizeVelocityConstraints"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraint")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Manifold")
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2ManifoldPoint")
+      setlocal            5
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraintPoint")
+      setlocal            6
+
+      pushbyte            0
+      setlocal1
+
+      jump                L60
+
+L19:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_constraints")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraint")
+      setlocal2
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "manifold")
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2Manifold")
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      jump                L55
+
+L33:
+      label
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "points")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Collision"), "b2ManifoldPoint")
+      setlocal            5
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "points")
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraintPoint")
+      setlocal            6
+
+      getlocal            5
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "normalImpulse")
+      setproperty         QName(PackageNamespace(""), "normalImpulse")
+
+      getlocal            5
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "tangentImpulse")
+      setproperty         QName(PackageNamespace(""), "tangentImpulse")
+
+      inclocal_i          4
+L55:
+      getlocal            4
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "pointCount")
+      iflt                L33
+
+      inclocal_i          1
+L60:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_constraintCount")
+      iflt                L19
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "SolvePositionConstraints")
+   method
+    refid "Box2D.Dynamics.Contacts:b2ContactSolver/instance/SolvePositionConstraints"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 5
+     localcount 39
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal3
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            4
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraint")
+      setlocal            6
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            7
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            8
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            9
+
+      pushnan
+      setlocal            10
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            11
+
+      pushnan
+      setlocal            12
+
+      pushnan
+      setlocal            13
+
+      pushnan
+      setlocal            14
+
+      pushnan
+      setlocal            15
+
+      pushnan
+      setlocal            16
+
+      pushnan
+      setlocal            17
+
+      pushnan
+      setlocal            18
+
+      pushbyte            0
+      setlocal            19
+
+      pushbyte            0
+      setlocal            20
+
+      pushnull
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraintPoint")
+      setlocal            21
+
+      pushnan
+      setlocal            22
+
+      pushnan
+      setlocal            23
+
+      pushnan
+      setlocal            24
+
+      pushnan
+      setlocal            25
+
+      pushnan
+      setlocal            26
+
+      pushnan
+      setlocal            27
+
+      pushnan
+      setlocal            28
+
+      pushnan
+      setlocal            29
+
+      pushnan
+      setlocal            30
+
+      pushnan
+      setlocal            31
+
+      pushnan
+      setlocal            32
+
+      pushnan
+      setlocal            33
+
+      pushnan
+      setlocal            34
+
+      pushnan
+      setlocal            35
+
+      pushnan
+      setlocal            36
+
+      pushnan
+      setlocal            37
+
+      pushnan
+      setlocal            38
+
+      pushdouble          0
+      convert_d
+      setlocal2
+
+      pushbyte            0
+      setlocal            5
+
+      jump                L459
+
+L86:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_constraints")
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraint")
+      dup
+      setlocal            6
+
+      getproperty         QName(PackageNamespace(""), "body1")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            7
+
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "body2")
+      coerce              QName(PackageNamespace("Box2D.Dynamics"), "b2Body")
+      setlocal            8
+
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            9
+
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "a")
+      convert_d
+      setlocal            10
+
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "c")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            11
+
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "a")
+      convert_d
+      setlocal            12
+
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "m_mass")
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "m_invMass")
+      multiply
+      convert_d
+      setlocal            13
+
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "m_mass")
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "m_invI")
+      multiply
+      convert_d
+      setlocal            14
+
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "m_mass")
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "m_invMass")
+      multiply
+      convert_d
+      setlocal            15
+
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "m_mass")
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "m_invI")
+      multiply
+      convert_d
+      setlocal            16
+
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "normal")
+      getproperty         QName(PackageNamespace(""), "x")
+      convert_d
+      setlocal            17
+
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "normal")
+      getproperty         QName(PackageNamespace(""), "y")
+      convert_d
+      setlocal            18
+
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "pointCount")
+      convert_i
+      setlocal            19
+
+      pushbyte            0
+      setlocal            20
+
+      jump                L455
+
+L166:
+      label
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "points")
+      getlocal            20
+      getproperty         MultinameL([PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#0"), PackageNamespace("Box2D.Dynamics.Contacts"), PackageNamespace("Box2D.Common.Math"), PackageNamespace("Box2D.Dynamics"), PackageNamespace(""), PackageNamespace("Box2D.Collision"), PrivateNamespace(null, "Box2D.Dynamics.Contacts:b2ContactSolver/instance#1"), PackageInternalNs("Box2D.Dynamics.Contacts"), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("Box2D.Common"), ProtectedNamespace("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Box2D.Dynamics.Contacts:b2ContactSolver"), StaticProtectedNs("Object")])
+      coerce              QName(PackageNamespace("Box2D.Dynamics.Contacts"), "b2ContactConstraintPoint")
+      setlocal            21
+
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "m_xf")
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal3
+
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            4
+
+      getlocal            21
+      getproperty         QName(PackageNamespace(""), "localAnchor1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            22
+
+      getlocal            21
+      getproperty         QName(PackageNamespace(""), "localAnchor1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            23
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            22
+      multiply
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            23
+      multiply
+      add
+      convert_d
+      setlocal            26
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            22
+      multiply
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            23
+      multiply
+      add
+      convert_d
+      setlocal            23
+
+      getlocal            26
+      convert_d
+      setlocal            22
+
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "m_xf")
+      getproperty         QName(PackageNamespace(""), "R")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Mat22")
+      setlocal3
+
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getproperty         QName(PackageNamespace(""), "localCenter")
+      coerce              QName(PackageNamespace("Box2D.Common.Math"), "b2Vec2")
+      setlocal            4
+
+      getlocal            21
+      getproperty         QName(PackageNamespace(""), "localAnchor2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "x")
+      subtract
+      convert_d
+      setlocal            24
+
+      getlocal            21
+      getproperty         QName(PackageNamespace(""), "localAnchor2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "y")
+      subtract
+      convert_d
+      setlocal            25
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            24
+      multiply
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            25
+      multiply
+      add
+      convert_d
+      setlocal            26
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col1")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            24
+      multiply
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "col2")
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            25
+      multiply
+      add
+      convert_d
+      setlocal            25
+
+      getlocal            26
+      convert_d
+      setlocal            24
+
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            22
+      add
+      convert_d
+      setlocal            27
+
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            23
+      add
+      convert_d
+      setlocal            28
+
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            24
+      add
+      convert_d
+      setlocal            29
+
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            25
+      add
+      convert_d
+      setlocal            30
+
+      getlocal            29
+      getlocal            27
+      subtract
+      convert_d
+      setlocal            31
+
+      getlocal            30
+      getlocal            28
+      subtract
+      convert_d
+      setlocal            32
+
+      getlocal            31
+      getlocal            17
+      multiply
+      getlocal            32
+      getlocal            18
+      multiply
+      add
+      getlocal            21
+      getproperty         QName(PackageNamespace(""), "separation")
+      add
+      convert_d
+      setlocal            33
+
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal2
+      getlocal            33
+      callproperty        QName(PackageNamespace(""), "b2Min"), 2
+      convert_d
+      setlocal2
+
+      getlocal1
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            33
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_linearSlop")
+      add
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_maxLinearCorrection")
+      negate
+      pushdouble          0
+      callproperty        QName(PackageNamespace(""), "b2Clamp"), 3
+      multiply
+      convert_d
+      setlocal            34
+
+      getlocal            21
+      getproperty         QName(PackageNamespace(""), "equalizedMass")
+      negate
+      getlocal            34
+      multiply
+      convert_d
+      setlocal            35
+
+      getlocal            21
+      getproperty         QName(PackageNamespace(""), "positionImpulse")
+      convert_d
+      setlocal            36
+
+      getlocal            21
+      getlex              QName(PackageNamespace("Box2D.Common.Math"), "b2Math")
+      getlocal            36
+      getlocal            35
+      add
+      pushdouble          0
+      callproperty        QName(PackageNamespace(""), "b2Max"), 2
+      setproperty         QName(PackageNamespace(""), "positionImpulse")
+
+      getlocal            21
+      getproperty         QName(PackageNamespace(""), "positionImpulse")
+      getlocal            36
+      subtract
+      convert_d
+      dup
+      setlocal            35
+
+      getlocal            17
+      multiply
+      convert_d
+      setlocal            37
+
+      getlocal            35
+      getlocal            18
+      multiply
+      convert_d
+      setlocal            38
+
+      getlocal            9
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            13
+      getlocal            37
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            9
+      getlocal            9
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            13
+      getlocal            38
+      multiply
+      subtract
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal            10
+      getlocal            14
+      getlocal            22
+      getlocal            38
+      multiply
+      getlocal            23
+      getlocal            37
+      multiply
+      subtract
+      multiply
+      subtract
+      convert_d
+      setlocal            10
+
+      getlocal            7
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getlocal            10
+      setproperty         QName(PackageNamespace(""), "a")
+
+      getlocal            7
+      callpropvoid        QName(PackageNamespace(""), "SynchronizeTransform"), 0
+
+      getlocal            11
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "x")
+      getlocal            15
+      getlocal            37
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            11
+      getlocal            11
+      getproperty         QName(PackageNamespace(""), "y")
+      getlocal            15
+      getlocal            38
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal            12
+      getlocal            16
+      getlocal            24
+      getlocal            38
+      multiply
+      getlocal            25
+      getlocal            37
+      multiply
+      subtract
+      multiply
+      add
+      convert_d
+      setlocal            12
+
+      getlocal            8
+      getproperty         QName(PackageNamespace(""), "m_sweep")
+      getlocal            12
+      setproperty         QName(PackageNamespace(""), "a")
+
+      getlocal            8
+      callpropvoid        QName(PackageNamespace(""), "SynchronizeTransform"), 0
+
+      inclocal_i          20
+L455:
+      getlocal            20
+      getlocal            19
+      iflt                L166
+
+      inclocal_i          5
+L459:
+      getlocal            5
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "m_constraintCount")
+      iflt                L86
+
+      getlocal2
+      pushdouble          -1.5
+      getlex              QName(PackageNamespace("Box2D.Common"), "b2Settings")
+      getproperty         QName(PackageNamespace(""), "b2_linearSlop")
+      multiply
+      greaterequals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "m_step") type QName(PackageNamespace("Box2D.Dynamics"), "b2TimeStep") end
+  trait slot QName(PackageNamespace(""), "m_allocator") end
+  trait slot QName(PackageNamespace(""), "m_constraints") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PackageNamespace(""), "m_constraintCount") type QName(PackageNamespace(""), "int") end
+ end ; instance
+ cinit
+  refid "Box2D.Dynamics.Contacts:b2ContactSolver/class/init"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class
