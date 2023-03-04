@@ -14,5 +14,6 @@ currently only faw 1, 2 and 3 are supported (feel free to find the pointer paths
 1. make sure your splits have "Game Name" set correctly, then reload the autospliter.
 2. make sure you're using the swfs from this repository.
 3. make sure you're using flash player projector (NOT DEBUGGER) 32.0.0.465
+4. make sure your flash player is named "flashplayer_32_sa" (excluding the .exe file extension)
 
 if these steps havent worked, file an issue with as much detail as can be provided
