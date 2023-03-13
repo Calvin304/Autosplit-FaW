@@ -45,19 +45,14 @@ state("flashplayer_32_sa", "Fireboy and Watergirl 3 - The Ice Temple") {
 
 init {
     version = timer.Run.GameName;
+    print("init: GameName: " + version.ToString());
     vars.intro_latest = false;
 }
 
 update {
-    /* if (current.cur_node != old.cur_node) {
-        print("node:" + current.cur_node);
-    } */
     if (current.m_intromenu != old.m_intromenu) {
         vars.intro_latest = true;
     }
-
-    
-    //print(vars.intro_latest.ToString());
 }
 
 start {
